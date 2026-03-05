@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Introduction to Public Finance</title>
+    <meta name="description"
+        content="Comprehensive revision notes on Public Finance: what it is, why study it, and the three fundamental questions of public economics.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <!-- Chapter 1 -->
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="index.html" class="nav-link active">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header disabled">
+                        <span class="folder-icon">📁</span> CH.4 — À VENIR
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content"></div>
+                </div>
+            </nav>
+        </aside>
+        <!-- ================= END SIDEBAR ================= -->
+
+        <!-- Sidebar Toggle -->
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>1.1 — What Is Public Finance?</h1>
+                <p class="subtitle">Chapter 1: Introduction — Economic Rationale for the Government</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: DEFINITION
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">What is Public Finance?</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Definition</span>
+                        <p><strong>Public finance</strong> (also called <strong>public economics</strong>) is the branch
+                            of economics that studies <span class="fluo">the role of government in the economy</span>.
+                            It examines how governments raise revenue (mainly through taxation), how they spend that
+                            revenue (public goods, social transfers, infrastructure), and how these decisions affect the
+                            well-being of individuals and the efficiency of markets.</p>
+                    </div>
+
+                    <p>Why is this field so important? Because government is not some abstract, distant entity — it is
+                        <span class="fluo">instrumental in virtually every aspect of economic life</span>. Whether you
+                        pay taxes on your
+                        salary, receive healthcare from a public hospital, drive on a publicly-funded road, or benefit
+                        from a pension when you retire, the government is directly involved. Understanding public
+                        finance means understanding the economic logic — and the trade-offs — behind all of these
+                        interventions.
+                    </p>
+
+                    <p>Public finance, in practice, revolves around three fundamental types of questions. These three
+                        "lenses" are the intellectual pillars of the entire course, and every topic we study can be
+                        viewed through one or more of them.</p>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: THREE QUESTIONS
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Three Fundamental Questions</h2>
+
+                    <div class="compare-grid three-col">
+                        <!-- POSITIVE -->
+                        <div class="compare-card">
+                            <span class="card-label">Question 1</span>
+                            <h4>🔍 Positive</h4>
+                            <p>How do government policies <strong>actually affect</strong> the economy?</p>
+                            <p>This is the descriptive approach: we look at the real world and measure what happens when
+                                a policy is implemented. We don't judge whether the outcome is "good" or "bad" — we
+                                simply observe and quantify.</p>
+                            <p class="example">Example: "Do higher income taxes reduce the number of hours people work?"
+                                — This is a factual, measurable question.</p>
+                        </div>
+
+                        <!-- NORMATIVE -->
+                        <div class="compare-card">
+                            <span class="card-label">Question 2</span>
+                            <h4>⚖️ Normative</h4>
+                            <p>How <strong>should</strong> government policies be designed to maximize social welfare?
+                            </p>
+                            <p>This is the prescriptive approach: given what we know from positive analysis, what is the
+                                <em>optimal</em> policy? This requires making value judgments about what "welfare" means
+                                and whose welfare matters.
+                            </p>
+                            <p class="example">Example: "Should the top marginal tax rate be 50% or 70%?" — This depends
+                                on your view of fairness, efficiency, and individual freedom.</p>
+                        </div>
+
+                        <!-- POLITICAL ECONOMY -->
+                        <div class="compare-card">
+                            <span class="card-label">Question 3</span>
+                            <h4>🏛️ Political Economy</h4>
+                            <p><strong>Why</strong> do governments choose to intervene the way that they do?</p>
+                            <p>This is the explanatory approach: even if we know the "optimal" policy, governments often
+                                choose something different. Why? Because of political incentives, lobbying, voter
+                                preferences, institutional constraints, and the self-interest of politicians.</p>
+                            <p class="example">Example: "Why do governments subsidize agriculture even when economists
+                                say it's inefficient?" — Because farmers are a concentrated, politically active group.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-pink">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>Key insight:</strong> Every policy debate in public finance can be decomposed into
+                            these three questions. First, we analyze what <em>is</em> (positive). Then, we discuss what
+                            <em>should be</em> (normative). Finally, we explain why reality diverges from the ideal
+                            (political economy). Mastering this distinction is essential for the exam.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: POSITIVE ECONOMICS
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Positive Public Economics</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Positive Analysis</span>
+                        <p>Positive public economics is the <span class="fluo">analysis of how things really are</span>.
+                            It deals with <em>facts</em>, <em>data</em>, and <em>empirical evidence</em> — not with
+                            opinions or value judgments. The goal is to understand the <strong>actual effects</strong>
+                            of government policies on the economy and on individuals' behaviour.</p>
+                    </div>
+
+                    <p>This branch of public economics is <strong>primarily empirical</strong>, meaning it relies
+                        heavily on data, statistical methods, and econometric techniques to establish causal
+                        relationships. For instance, a positive economist might use a natural experiment (like a tax
+                        reform that affects only certain regions) to measure how tax changes influence labor supply.</p>
+
+                    <p>Positive public economics is also deeply connected to other fields of economics:</p>
+                    <ul>
+                        <li><strong>Behavioral economics</strong> — because people don't always act rationally; they
+                            respond to framing, defaults, and psychological biases.</li>
+                        <li><strong>Labor economics</strong> — because taxes on labor directly affect wages, hours
+                            worked, and job-seeking behavior.</li>
+                        <li><strong>Political economy</strong> — because understanding <em>why</em> policies exist helps
+                            us understand the <em>consequences</em> of those policies.</li>
+                        <li><strong>International tax</strong> — because in a globalized world, capital and sometimes
+                            labor can move across borders to avoid domestic taxes.</li>
+                    </ul>
+
+                    <p>One crucial distinction in positive analysis is between <span class="fluo">direct effects</span>
+                        and
+                        <span class="fluo">indirect (unintended) effects</span>. When a government introduces a new tax
+                        on sugary
+                        drinks, the <em>direct effect</em> is that the price of those drinks goes up and consumption
+                        falls. But there may also be <em>indirect effects</em>: consumers may switch to artificial
+                        sweeteners (which have their own health risks), small businesses may lose revenue, or people may
+                        cross the border to buy cheaper drinks elsewhere. A good positive analysis accounts for both.
+                    </p>
+
+                    <div class="alert-box alert-yellow">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Important:</strong> Positive analysis is a <em>necessary first step</em> before
+                            normative analysis. You cannot decide what <em>should</em> be done without first
+                            understanding what <em>is</em> happening. This is why empirical research is the foundation
+                            of evidence-based policymaking.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: NORMATIVE ECONOMICS
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Normative Public Economics</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Normative Analysis</span>
+                        <p>Normative public economics is the <span class="fluo">analysis of how things should be</span>.
+                            It asks: given what we know about the economy, what is the <strong>best</strong> or
+                            <strong>most desirable</strong> policy? Unlike positive economics, normative economics
+                            necessarily involves <em>value judgments</em> — about fairness, justice, freedom, and social
+                            welfare.
+                        </p>
+                    </div>
+
+                    <p>This branch of public economics is <strong>primarily theoretical</strong>. It uses mathematical
+                        models of utility, welfare, and social choice to derive optimal policies. For example, a
+                        normative economist might derive the "optimal income tax schedule" — the tax rates that maximize
+                        a social welfare function — given assumptions about how people respond to taxes (which we learn
+                        from positive analysis).</p>
+
+                    <p>At the heart of normative public economics lies a fundamental tension:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <span class="card-label">Approach A</span>
+                            <h4>🗽 Laissez-Faire</h4>
+                            <p>Individuals know what's best for themselves. The government should intervene as little as
+                                possible and let markets allocate resources freely. People are rational, and their
+                                choices reveal their true preferences.</p>
+                            <p class="example">Implication: Low taxes, minimal regulation, small government.</p>
+                        </div>
+
+                        <div class="compare-card">
+                            <span class="card-label">Approach B</span>
+                            <h4>🏛️ Paternalism</h4>
+                            <p>People sometimes make choices that are bad for themselves (smoking, under-saving for
+                                retirement, ignoring health risks). The government can and should "nudge" or even
+                                mandate certain behaviors to improve people's own welfare.</p>
+                            <p class="example">Implication: Higher taxes on "sin goods", mandatory pensions, public
+                                healthcare.</p>
+                        </div>
+                    </div>
+
+                    <p>Which approach is "right"? That depends on your <strong>fundamental assumptions</strong>: your
+                        view of human rationality, your definition of welfare (is it what people <em>want</em>, or
+                        what's <em>good for them</em>?), your concept of justice (<span class="fluo">equal outcomes?
+                            equal opportunities?</span>),
+                        and the shape of social welfare functions you believe in.</p>
+
+                    <p>Normative economics also deals with two types of failures that justify government intervention:
+                    </p>
+                    <ul>
+                        <li><strong>Market failures</strong> — situations where competitive markets fail to produce
+                            efficient outcomes (externalities, public goods, imperfect information, etc.). These are the
+                            classical justifications for intervention.</li>
+                        <li><strong>Individual failures</strong> — situations where people fail to act in their own best
+                            interest, even when markets work perfectly (self-control problems, cognitive biases,
+                            procrastination). These are the newer, behavioral justifications for paternalistic policies.
+                        </li>
+                    </ul>
+
+                    <button class="btn-note" onclick="toggleNote('note-normative')">
+                        <span class="note-icon">📝</span> Key Takeaway
+                    </button>
+
+                    <div id="note-normative" class="post-it-note">
+                        <p>The line between positive and normative economics is not always sharp in practice. Many
+                            policy debates involve a mix of factual disagreements ("Do minimum wages cause
+                            unemployment?") and value disagreements ("Is some unemployment acceptable if it means higher
+                            wages for the poorest?"). Learning to distinguish these two types of disagreement is a core
+                            skill in public economics.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: SHOULD GOV INTERVENE?
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Should the Government Intervene?</h2>
+
+                    <p>Not everything should be done by the government, and not everything should be left to the market.
+                        In practice, most people — regardless of political ideology — agree that government intervention
+                        falls on a spectrum. We can organize this spectrum into three broad categories:</p>
+
+                    <div class="compare-grid three-col">
+                        <div class="compare-card">
+                            <span class="card-label">Category 1</span>
+                            <h4>✅ Nearly Universal Agreement: YES</h4>
+                            <p>These are things that virtually everyone agrees <strong>must</strong> be done by the
+                                government. They typically involve activities that require coercive authority,
+                                coordination at scale, or natural monopoly characteristics.</p>
+                            <p class="example">Examples: National defense, police, justice system, legislation,
+                                diplomacy, visa policy, census/data collection, birth certificates, land registry,
+                                company registry, driver's licenses.</p>
+                        </div>
+
+                        <div class="compare-card">
+                            <span class="card-label">Category 2</span>
+                            <h4>🔄 Debatable</h4>
+                            <p>These are the areas that are <strong>actively debated</strong> in public finance.
+                                Reasonable people disagree about whether the government should be involved, and if so,
+                                how much. <em>This is where most of the course content lives.</em></p>
+                            <p class="example">Examples: Healthcare, pensions, unemployment insurance, heavy
+                                redistribution, subsidies for trains/transport, education, housing policy, beer brewing
+                                (historically state-run in some countries).</p>
+                        </div>
+
+                        <div class="compare-card">
+                            <span class="card-label">Category 3</span>
+                            <h4>❌ Nearly Universal Agreement: NO</h4>
+                            <p>These are things that virtually everyone agrees the government should
+                                <strong>not</strong> regulate. They involve personal choices that do not create
+                                significant externalities or market failures.
+                            </p>
+                            <p class="example">Examples: What shirts to wear, whether to eat meat, how long to sleep,
+                                whether to exercise.</p>
+                        </div>
+                    </div>
+
+                    <div class="exam-tip">
+                        <p>On an exam, if you're asked "should the government intervene in X?", never answer with a
+                            simple yes or no. Instead, discuss which category X falls into, identify the market failure
+                            (if any), assess the costs and benefits of intervention, and consider whether government
+                            failure might make things worse. This systematic approach demonstrates analytical thinking.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: WHY STUDY PUBLIC FINANCE?
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Study Public Finance?</h2>
+
+                    <p>There are three compelling reasons to study public finance, each appealing to a different
+                        motivation:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Practical Relevance</strong>
+                            <p>Government is one of the <em>largest players</em> in any modern economy. Consider just
+                                one example: the Czech Republic (Czechia) has around <span class="fluo">18,000 public
+                                    entities</span> — schools, hospitals, municipalities, infrastructure agencies — and
+                                employs roughly <span class="fluo">450,000 people directly</span> (and about 1 million
+                                people when you include state-owned enterprises and indirect employment). This is not a
+                                minor sector of the economy — it's a massive organizational structure that touches the
+                                lives of every citizen.</p>
+                            <p>Across the OECD (the club of wealthy democracies), <span class="fluo">tax revenue
+                                    averages around 34% of GDP</span>. This means that roughly one-third of all economic
+                                activity is channelled through the government. And this proportion has <em>increased
+                                    dramatically over the past 100 years</em> — at the start of the 20th century,
+                                government spending in most countries was below 10% of GDP. Understanding this enormous
+                                growth in government is one of the key puzzles of public finance.</p>
+                            <p>Government spending is typically <em>on par with or even higher</em> than tax revenue,
+                                which means many governments <span class="fluo">run budget deficits</span>. This raises
+                                further questions about
+                                public debt, fiscal sustainability, and intergenerational fairness.</p>
+                        </li>
+                        <li>
+                            <strong>Policy Impact</strong>
+                            <p>Public finance is not just an academic exercise — it has <em>direct, immediate
+                                    consequences</em> for millions of people. When a policymaker decides how to design
+                                social transfers, unemployment benefits, or the tax system, those decisions shape
+                                people's income, health, opportunities, and quality of life.</p>
+                            <p>The fundamental question is: <em>What can policymakers do to increase the welfare of
+                                    society?</em> But answering this requires first answering a deeper question: <em>How
+                                    do we measure social welfare?</em> Is it GDP per capita? Is it the welfare of the
+                                poorest person? Is it average life satisfaction? Different measurement choices lead to
+                                different policy recommendations.</p>
+                        </li>
+                        <li>
+                            <strong>Philosophy & Politics</strong>
+                            <p>At its deepest level, public finance is a branch of <em>political philosophy</em>. It
+                                asks: When is the government the best way to organize ourselves? In which areas? Can
+                                people take good care of themselves (laissez-faire), or do they need guidance
+                                (paternalism)?</p>
+                            <p>It also engages with questions of <strong>redistribution and inequality</strong>: Should
+                                we care about inequality of <em>outcomes</em> (how much money people end up with) or
+                                inequality of <em>opportunity</em> (whether everyone starts with a fair chance)? And how
+                                should we <em>collectively decide</em> what the public sector does — through voting,
+                                delegation, direct democracy, or technocratic expertise?</p>
+                        </li>
+                    </ol>
+
+                    <button class="btn-note" onclick="toggleNote('note-why')">
+                        <span class="note-icon">📝</span> Why This Matters for You
+                    </button>
+
+                    <div id="note-why" class="post-it-note">
+                        <p>As a student in economics, you will encounter public finance in your career whether you work
+                            in government, consulting, NGOs, or the private sector. Tax policy affects corporate
+                            decision-making. Public spending affects demand and employment. Social transfers affect
+                            labor supply. Understanding these mechanisms gives you a competitive edge in any economic
+                            role.</p>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+        <!-- ================= END MAIN CONTENT ================= -->
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

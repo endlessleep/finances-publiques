@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Why Study Inequality & Theory</title>
+    <meta name="description"
+        content="Why study inequality, the Kuznets curve, and the fundamental axioms of inequality measurement.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre2-1.html" class="nav-link active">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header disabled">
+                        <span class="folder-icon">📁</span> CH.4 — À VENIR
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content"></div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>2.1 — Why Study Inequality & Theory</h1>
+                <p class="subtitle">Chapter 2: Inequality</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ WHY STUDY INEQUALITY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Study Inequality?</h2>
+
+                    <p>Inequality — the uneven distribution of income, wealth, or opportunities across individuals in a
+                        society — is one of the <span class="fluo">central topics in public finance</span>. But why
+                        should economists and
+                        policymakers care about it? There are two fundamentally different types of motivation, and
+                        understanding the distinction between them is crucial.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <span class="card-label">Motivation 1</span>
+                            <h4>🔧 Instrumental Reasons</h4>
+                            <p>Inequality matters because of its <strong>consequences</strong>. Even if you don't care
+                                about inequality for its own sake, you might care about the damage it causes. Stiglitz
+                                (2012) argues that increased inequality has <em>measurable, negative effects</em> on
+                                society:</p>
+                            <ul>
+                                <li><strong>Decreased social cohesion</strong> — when the gap between rich and poor
+                                    grows, trust between social groups erodes, political polarization increases, and the
+                                    shared sense of community weakens.</li>
+                                <li><strong>Increased crime</strong> — areas with higher inequality tend to have higher
+                                    crime rates, because extreme poverty creates desperation and reduces social
+                                    investment.</li>
+                                <li><strong>Worse health outcomes</strong> — more unequal societies tend to have worse
+                                    average health, even controlling for average income. The stress of relative
+                                    deprivation affects physical and mental health.</li>
+                            </ul>
+                            <p class="example">In other words: even a selfish society should care about inequality,
+                                because inequality makes <em>everyone</em> worse off through these channels.</p>
+                        </div>
+
+                        <div class="compare-card">
+                            <span class="card-label">Motivation 2</span>
+                            <h4>⚖️ Intrinsic Motivation</h4>
+                            <p>Inequality matters <strong>in itself</strong>, based on a broader theory of justice or
+                                social welfare. This is a normative position: we believe that a more equal distribution
+                                is <em>morally better</em>, regardless of its practical consequences.</p>
+                            <p>The classic justification comes from <strong>utilitarianism</strong>: if we assume that
+                                the marginal utility of income is decreasing (an extra €100 matters much more to someone
+                                earning €500/month than to someone earning €50,000/month), then <span
+                                    class="fluo">excessive inequality reduces the sum of total utility</span>.
+                                Redistributing from the rich to the poor increases total welfare.</p>
+                            <p class="example">This distinction was formalized by Atkinson (2015): instrumental reasons
+                                focus on <em>consequences</em>; intrinsic motivation focuses on <em>values</em>.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-pink">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>Key distinction (Atkinson, 2015):</strong> You should be able to argue for
+                            reducing inequality from <em>both</em> perspectives on an exam. The instrumental argument is
+                            based on empirical evidence (inequality causes X, Y, Z); the intrinsic argument is based on
+                            moral philosophy and welfare theory (inequality is unjust because...).</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ KUZNETS CURVE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Kuznets Curve</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Theory — Kuznets (1955)</span>
+                        <p>The <strong>Kuznets Curve</strong> is the hypothesis that industrialization and economic
+                            development lead <span class="fluo">first to an increase</span> and <span class="fluo">then
+                                to a decrease</span> in inequality. The relationship between mean income and inequality
+                            follows an <strong>inverted-U shape</strong> (∩).</p>
+                    </div>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/inequality_mean-income_kuznets-curve.png"
+                            alt="Kuznets Curve: inverted-U relationship between mean income and inequality"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>The mechanism behind this inverted-U shape works in three distinct phases:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Phase 1 — Low development, low inequality</strong>
+                            <p>In early-stage economies, most people work in the same sector (typically agriculture).
+                                Incomes are low for everyone but also relatively similar. There is little inequality
+                                because there is little variation — everyone is poor together.</p>
+                        </li>
+                        <li>
+                            <strong>Phase 2 — Industrialization, rising inequality</strong>
+                            <p>As the economy begins to industrialize, new, more productive sectors emerge. But only a
+                                <em>minority</em> of workers initially benefit from this new wealth — those who move
+                                into industry, those who own capital, those in urban areas. The rest remain in
+                                agriculture or traditional sectors with lower productivity. This gap drives a sharp
+                                increase in inequality. Industrial workers earn more than farmers; skilled workers earn
+                                more than unskilled; some regions develop faster than others.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Phase 3 — Advanced development, falling inequality</strong>
+                            <p>Over time, more and more workers move into the modern sector, benefiting from higher
+                                productivity and wages. Education spreads, social mobility increases, and governments
+                                introduce redistributive policies (progressive taxes, social insurance, public
+                                services). These forces <em>compress</em> the income distribution, and inequality falls.
+                                The point $y^*$ on the graph represents the level of mean income at which inequality
+                                peaks before declining.</p>
+                        </li>
+                    </ol>
+
+                    <div class="exam-tip">
+                        <p>The Kuznets Curve is a <em>hypothesis</em>, not a law. It describes a historical pattern
+                            observed in some industrializing countries, but it does not mean that economic growth
+                            <em>automatically</em> reduces inequality. As we'll see next, recent data tells a more
+                            complex story.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- ═══════ KUZNETS REVISITED ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Kuznets Curve Revisited — UK & USA</h2>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/kuznets-curve-revisited_uk-usa_gini-vs-gdp.png"
+                            alt="Kuznets Curve Revisited: UK and USA historical data showing N-shaped pattern"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>When we look at the actual historical data for the UK and USA over several centuries, the picture
+                        is <strong>more complex than the simple inverted-U</strong>. Instead of a clean ∩ shape, we
+                        observe something closer to an <span class="fluo">N-shape</span> or even an
+                        <strong>S-shape</strong>,
+                        with three distinct phases:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Rising inequality during industrialization (pre-1940)</strong>
+                            <p>In both the UK (especially around 1867–1913, during the peak of the Industrial
+                                Revolution) and the USA (1860–1929), inequality rose sharply. A small class of
+                                industrialists, entrepreneurs, and capital owners became extraordinarily wealthy, while
+                                urban workers and rural populations saw much smaller gains.</p>
+                        </li>
+                        <li>
+                            <strong>Falling inequality, mid-20th century</strong>
+                            <p>Between roughly 1913–1978 (UK) and 1933–1979 (USA), inequality fell dramatically. This
+                                was driven by a combination of powerful forces: progressive taxation, the expansion of
+                                the welfare state, universal education, strong labor unions, and the destruction of
+                                large fortunes by two world wars and the Great Depression.</p>
+                        </li>
+                        <li>
+                            <strong>Rising inequality again, since the 1980s</strong>
+                            <p>Starting around 1980, inequality began rising again in both countries — sharply in the
+                                USA, more moderately in the UK. The reasons include: <strong>globalization</strong>
+                                (outsourcing jobs), <strong>skill-biased technological change</strong> (technology
+                                favoring highly educated workers), <strong>declining tax progressivity</strong> (top tax
+                                rates were cut), <strong>financialization</strong> (capital income growing faster than
+                                labor income), and <strong>weakening unions</strong>.</p>
+                        </li>
+                    </ol>
+
+                    <div class="alert-box alert-red">
+                        <span class="alert-icon">🚨</span>
+                        <span><strong>Critical insight:</strong> The Kuznets hypothesis — that growth alone will
+                            eventually reduce inequality — is <em>not confirmed</em> by the recent data. Economic growth
+                            does not <strong>automatically</strong> reduce inequality. Policies, institutions, and
+                            structural economic changes all play a crucial role. A society can become richer and more
+                            unequal at the same time.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ AXIOMS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Axioms of Inequality Measurement</h2>
+
+                    <p>Before we can measure inequality, we need to agree on what <em>properties</em> a good inequality
+                        measure should have. Economists have identified several fundamental axioms — logical
+                        requirements that any reasonable inequality index should satisfy. Understanding these axioms is
+                        essential because they determine <em>which measures we can trust</em> and <em>how to interpret
+                            them</em>.</p>
+                </section>
+
+                <!-- ═══════ AXIOM 1 ═══════ -->
+                <section class="content-card">
+                    <span class="key-concept">Axiom 1</span>
+                    <h2 class="section-title">Transfer Principle (Pigou-Dalton Principle)</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Axiom 1</span>
+                        <p><strong>Transfer Principle:</strong> If we transfer a given sum of money from any person A to
+                            any <em>poorer</em> person B — without changing their relative ranking — then <span
+                                class="fluo">inequality must fall</span>. Conversely, a transfer from a poor person to a
+                            richer one must increase inequality.</p>
+                    </div>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/inequality-comparison_two-income-distributions.png"
+                            alt="Two distributions: (0,10,10,10,10) vs (3,7,10,10,10) — the transfer reduces inequality"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>This is the most intuitive axiom. Consider the two distributions shown above: $A = (0, 10, 10,
+                        10, 10)$ and $B = (3, 7, 10, 10, 10)$. Both have the same total income (40), but in distribution
+                        B, 3 units have been transferred from the second person (10→7) to the first person (0→3). The
+                        poorest person is now less poor, and no one's ranking changed. According to the Transfer
+                        Principle:</p>
+
+                    <div class="code-block" style="text-align: center; font-size: 1.1rem;">
+                        $A(0, 10, 10, 10, 10) \succ_I B(3, 7, 10, 10, 10)$
+                    </div>
+
+                    <p style="margin-top: 1rem;">This notation means "A has <em>more</em> inequality than B." The
+                        transfer from a richer person to a poorer one — without reversing their positions — reduced
+                        inequality. Any reasonable inequality measure must capture this.</p>
+                </section>
+
+                <!-- ═══════ AXIOM 2 ═══════ -->
+                <section class="content-card">
+                    <span class="key-concept">Axiom 2</span>
+                    <h2 class="section-title">Anonymity (Symmetry)</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Axiom 2</span>
+                        <p><strong>Anonymity Principle:</strong> All permutations of personal labels are regarded as
+                            <span class="fluo">distributionally equivalent</span>. In other words, the level of
+                            inequality depends only on the <em>set of incomes</em> that exist in the society, not on
+                            <em>who</em> receives which income.
+                        </p>
+                    </div>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/income-distribution_same-inequality_different-order.png"
+                            alt="Three distributions with same incomes but different individual assignments — all equally unequal"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>The image above shows three distributions that all contain exactly the same set of incomes: $(3,
+                        7, 10, 10, 10)$. The only difference is which specific individual receives which income. If two
+                        people swap their incomes, the <em>distribution</em> hasn't changed — and neither should our
+                        measure of inequality.</p>
+
+                    <div class="code-block" style="text-align: center; font-size: 1.1rem;">
+                        $A(3, 7, 10, 10, 10) \sim_I B(10, 10, 3, 7, 10) \sim_I C(7, 10, 10, 10, 3)$
+                    </div>
+
+                    <p style="margin-top: 1rem;">This axiom matters because inequality measures must capture the
+                        <em>dispersion</em> of incomes in a society, not the identity of the individuals. Whether it's
+                        person 1 or person 5 who is poorest doesn't affect the overall level of inequality — what
+                        matters is that <em>someone</em> has a low income.
+                    </p>
+                </section>
+
+                <!-- ═══════ AXIOM 3 ═══════ -->
+                <section class="content-card">
+                    <span class="key-concept">Axiom 3</span>
+                    <h2 class="section-title">Scale Invariance</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Axiom 3</span>
+                        <p><strong>Scale Invariance:</strong> Multiplying all incomes by the same constant <span
+                                class="fluo">does not change</span> the inequality measure. If everyone becomes twice as
+                            rich (or twice as poor), inequality stays the same.</p>
+                    </div>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/scale-invariance_income-distribution_example.png"
+                            alt="Two distributions: (0,10,10,10,10) and (0,20,20,20,20) — same inequality despite different income levels"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>The distributions above — $A = (0, 10, 10, 10, 10)$ and $B = (0, 20, 20, 20, 20)$ — have the same
+                        <em>relative</em> structure. Every income in B is exactly double the corresponding income in A.
+                        The ratios between individuals haven't changed: the poorest person still has 0%, and the others
+                        still share equally.
+                    </p>
+
+                    <div class="code-block" style="text-align: center; font-size: 1.1rem;">
+                        $A(0, 10, 10, 10, 10) \sim_I B(0, 20, 20, 20, 20)$
+                    </div>
+
+                    <p style="margin-top: 1rem;">This axiom captures the idea that inequality measures should be about
+                        <strong>relative</strong> differences, not absolute income levels. A country where everyone
+                        earns double is richer, but not more or less <em>equal</em>. This is why indices like the Gini
+                        coefficient are expressed as ratios (between 0 and 1) — they measure <em>relative</em>
+                        inequality.
+                    </p>
+
+                    <div class="exam-tip">
+                        <p>An important consequence: if all wages in a country doubled due to inflation (with prices
+                            also doubling), the Gini coefficient would <em>not</em> change. Scale invariance ensures
+                            that inequality measures aren't affected by the general price level or the unit of currency.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- ═══════ AXIOM 4 ═══════ -->
+                <section class="content-card">
+                    <span class="key-concept">Axiom 4</span>
+                    <h2 class="section-title">Decomposability</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Axiom 4</span>
+                        <p><strong>Decomposability:</strong> Total inequality can be expressed as the <span
+                                class="fluo">sum of inequality between groups</span> plus <span class="fluo">inequality
+                                within groups</span>.</p>
+                    </div>
+
+                    <p>This axiom is extremely useful for policy analysis. Consider a society with distribution $A = (0,
+                        10, 10, 10, 10)$. We can split this into two subgroups: $B = (0, 10)$ and $C = (10, 10, 10)$.
+                        Total inequality in A can then be decomposed into:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>Between-Group Inequality</h4>
+                            <p>The inequality that comes from <em>differences between the group averages</em>. Group B
+                                has mean 5, Group C has mean 10 — this difference contributes to total inequality.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Within-Group Inequality</h4>
+                            <p>The inequality <em>inside</em> each group. Within Group B, incomes range from 0 to 10
+                                (high inequality). Within Group C, all incomes are 10 (zero inequality).</p>
+                        </div>
+                    </div>
+
+                    <p>Why is this important? Because it lets policymakers identify <span class="fluo">where inequality
+                            comes
+                            from</span>. For example: is inequality in France mostly driven by differences between
+                        regions
+                        (between-group), or by differences within the same city (within-group)? The answer determines
+                        which policies are most effective.</p>
+
+                    <button class="btn-note" onclick="toggleNote('note-axioms')">
+                        <span class="note-icon">📝</span> Additional Axioms
+                    </button>
+
+                    <div id="note-axioms" class="post-it-note">
+                        <p>The four axioms above are the most commonly discussed, but there are others:</p>
+                        <ul>
+                            <li><strong>Translation invariance:</strong> Adding the same constant to all incomes does
+                                not change inequality. (Note: this conflicts with scale invariance — you can't satisfy
+                                both simultaneously, so different indices choose different axioms.)</li>
+                            <li><strong>Population principle:</strong> If we replicate the population (every person is
+                                cloned with the same income), inequality stays the same.</li>
+                        </ul>
+                        <p>For a comprehensive treatment, see Cowell (2000), <em>Measuring Inequality</em>.</p>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

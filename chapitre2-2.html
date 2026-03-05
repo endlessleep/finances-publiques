@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Measuring Inequality</title>
+    <meta name="description"
+        content="Inequality indices (Gini, Atkinson, Theil), the Lorenz curve, and how to measure income, wealth, consumption, and opportunities.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link active">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header disabled">
+                        <span class="folder-icon">📁</span> CH.4 — À VENIR
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content"></div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>2.2 — Measuring Inequality</h1>
+                <p class="subtitle">Chapter 2: Inequality</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ INDICES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Inequality Indices</h2>
+
+                    <p>Once we agree on the axioms that a good inequality measure should satisfy, we can construct
+                        specific <strong>indices</strong>. Each index captures different aspects of the income
+                        distribution. Here are the main families:</p>
+
+                    <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--clr-accent); font-size: 1.1rem;">
+                        Decile Ratios</h3>
+
+                    <p>The simplest way to measure inequality is to compare specific points in the income distribution.
+                        <strong>Decile ratios</strong> take the income at one percentile and divide it by the income at
+                        another:
+                    </p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Ratio</th>
+                                    <th>What It Compares</th>
+                                    <th>What It Captures</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>90/10</td>
+                                    <td>Income at 90th percentile ÷ Income at 10th percentile</td>
+                                    <td>Overall spread: how much more the rich earn compared to the poor</td>
+                                </tr>
+                                <tr>
+                                    <td>90/50</td>
+                                    <td>Income at 90th percentile ÷ Median income</td>
+                                    <td>Upper-half inequality: how stretched the top is relative to the middle</td>
+                                </tr>
+                                <tr>
+                                    <td>80/20</td>
+                                    <td>Income at 80th percentile ÷ Income at 20th percentile</td>
+                                    <td>A less extreme version of 90/10, excluding the very tails</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="margin-top: 1rem;">Decile ratios are <strong>easy to understand and communicate</strong>
+                        (e.g., "the top earner makes 9 times what the bottom earner makes"), but they <span
+                            class="fluo">only look at two
+                            points</span> in the distribution and ignore everything in between.</p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--clr-accent); font-size: 1.1rem;">The
+                        Gini Coefficient</h3>
+
+                    <div class="definition-box">
+                        <span class="def-label">Formula</span>
+                        <p>The <strong>Gini coefficient</strong> is the most widely used inequality measure. It compares
+                            every pair of incomes in the population:</p>
+                        <p style="text-align: center; margin-top: 0.75rem; font-size: 1.1rem;">
+                            $G = \frac{\sum_{i=1}^{n} \sum_{j=1}^{n} |y_i - y_j|}{2n^2 \bar{y}}$
+                        </p>
+                        <p style="margin-top: 0.75rem;">The numerator sums the <em>absolute differences</em> between
+                            every pair of incomes $(i, j)$. The denominator normalizes this by the number of pairs
+                            ($n^2$) and the mean income ($\bar{y}$), so the result is a number between <span
+                                class="fluo">0</span> (perfect equality) and <span class="fluo">1</span> (maximum
+                            inequality).</p>
+                    </div>
+
+                    <p>Intuitively, the Gini coefficient asks: <em>"If I pick two people at random, how different are
+                            their incomes, on average, relative to the mean?"</em> A Gini of 0.30 means that the
+                        expected difference between two random individuals is 60% of the mean income (since the formula
+                        divides by $2\bar{y}$).</p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--clr-accent); font-size: 1.1rem;">
+                        Other Indices</h3>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>Atkinson Index</h4>
+                            <p>Incorporates an explicit <em>inequality aversion parameter</em> $\varepsilon$. The higher
+                                $\varepsilon$, the more weight the index places on income transfers at the bottom of the
+                                distribution. This makes it more sensitive to poverty than the Gini, and directly linked
+                                to social welfare theory.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Generalized Entropy (GE) Measures</h4>
+                            <p>A family of indices that includes the <strong>Theil index</strong> (GE(1)) and the
+                                <strong>Mean Log Deviation</strong> (GE(0)). Their key advantage is that they are
+                                <em>perfectly decomposable</em>: total inequality can be split exactly into
+                                between-group and within-group components (Axiom 4).
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ LORENZ CURVE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Lorenz Curve</h2>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/lorenz-curve_visualizing-income-distribution.png"
+                            alt="Lorenz Curve showing cumulative income share vs cumulative population share"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>The <strong>Lorenz curve</strong> is the standard way to <em>visualize</em> income distribution
+                        in a society. It works by plotting two things against each other:</p>
+
+                    <ul>
+                        <li><strong>X-axis:</strong> Cumulative share of the population, ranked from lowest to highest
+                            income (0% to 100%)</li>
+                        <li><strong>Y-axis:</strong> Cumulative share of total income held by that population group</li>
+                    </ul>
+
+                    <p>Two lines appear on the graph:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>Line of Perfect Equality (Diagonal)</h4>
+                            <p>If income were <em>perfectly distributed</em>, the bottom 10% would hold exactly 10% of
+                                income, the bottom 50% would hold 50%, and so on. This gives a straight 45° diagonal
+                                line. It serves as a benchmark — the closer the Lorenz curve is to this line, the more
+                                equal the society.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Lorenz Curve (Blue curve)</h4>
+                            <p>The actual distribution always curves <em>below</em> the diagonal (unless there is
+                                perfect equality). When the curve is far below the diagonal, it means the poorest
+                                members hold a very small share of total income. For example, if the curve passes
+                                through the point (60, 30), it means the poorest 60% of the population holds only 30% of
+                                total income.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <span class="def-label">Link to Gini</span>
+                        <p>The <strong>Gini coefficient</strong> is directly derived from the Lorenz curve. It equals
+                            the <span class="fluo">area between the diagonal and the Lorenz curve</span>, divided by the
+                            <span class="fluo">total area below the diagonal</span>:
+                        </p>
+                        <p style="text-align: center; margin-top: 0.75rem; font-size: 1.05rem;">
+                            $\text{Gini} = \frac{\text{Area between diagonal and Lorenz curve}}{\text{Total area below
+                            diagonal}} = \frac{A}{A + B}$
+                        </p>
+                        <p style="margin-top: 0.5rem;">If the Lorenz curve overlaps the diagonal (perfect equality), the
+                            area is 0 → Gini = 0. If the curve hugs the bottom and right edges (one person has
+                            everything), the area is maximal → Gini approaches 1.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ MEASURING INCOME ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Measuring Income</h2>
+
+                    <p>Income seems like a simple concept, but measuring it correctly is one of the <span
+                            class="fluo">hardest
+                            problems</span> in empirical public finance. The choices we make about <em>how</em> to
+                        measure
+                        income can completely change our conclusions about inequality.</p>
+
+                    <p><strong>Why measure income?</strong> Because it is the primary indicator of whether an individual
+                        has access to a minimum level of resources — it reflects purchasing power, economic security,
+                        and standard of living.</p>
+
+                    <p><strong>Challenges:</strong></p>
+
+                    <ul>
+                        <li><strong>Quality of reporting</strong> — People underreport their income in surveys
+                            (especially the very rich and those with informal income).</li>
+                        <li><strong>Household vs. individual income</strong> — Should we measure the income of
+                            individuals or households? Households pool resources, but household members may not share
+                            equally.</li>
+                        <li><strong>Transitory vs. permanent income</strong> — A student may have very low income
+                            <em>this year</em> but high expected lifetime income. A one-year snapshot can be misleading.
+                        </li>
+                        <li><strong>Variation in price levels</strong> — €1,000/month buys very different amounts in
+                            Paris vs. rural Poland. We need to adjust for purchasing power.</li>
+                        <li><strong>Different income concepts</strong> — Which income we measure matters enormously. The
+                            course distinguishes four:</li>
+                    </ul>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/income-measurement_steps_market-gross-disposable-extended.png"
+                            alt="Steps from market income to extended income: adding transfers, subtracting taxes, equivalizing, adding public services"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <div class="table-wrapper" style="margin-top: 1rem;">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Concept</th>
+                                    <th>What It Includes</th>
+                                    <th>Formula</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Market Income</td>
+                                    <td>Earnings (all persons) + capital income + private transfers</td>
+                                    <td>What you earn from the economy, <em>before</em> any government involvement</td>
+                                </tr>
+                                <tr>
+                                    <td>Gross Income</td>
+                                    <td>Market income + state transfers (pensions, unemployment benefits, social aid)
+                                    </td>
+                                    <td>Market income + government transfers</td>
+                                </tr>
+                                <tr>
+                                    <td>Disposable Income</td>
+                                    <td>Gross income − direct taxes (income tax, social contributions)</td>
+                                    <td>What you <strong>actually have to spend</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Extended Income</td>
+                                    <td>Disposable income + value of public services (education, health, infrastructure)
+                                    </td>
+                                    <td>The most complete picture of living standards</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert-box alert-pink">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>Key insight:</strong> Inequality is typically <em>highest</em> for market income
+                            and <em>lowest</em> for extended income. The gap between them measures the
+                            <strong>redistributive impact</strong> of the government — how much taxes, transfers, and
+                            public services reduce inequality.</span>
+                    </div>
+
+                    <p>An additional adjustment is <span class="fluo">equivalization</span>: dividing household
+                        disposable income
+                        by the number of "equivalent adults" to account for household size. A household of 4 with
+                        €4,000/month is not as well off as a single person with €4,000/month, because costs are shared
+                        but not proportionally (a larger house costs more, but not 4× more).</p>
+                </section>
+
+                <!-- ═══════ DATA CHALLENGES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Data Challenges: Surveys vs. Administrative Data</h2>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <div style="text-align: center; margin-bottom: 0.75rem;">
+                                <img src="images/survey-of-consumer-finances_sampling-types.png"
+                                    alt="Response rates: area-probability sample (~65-70%) vs list sample (~30-35%)"
+                                    style="max-width: 100%; border-radius: 8px;">
+                            </div>
+                            <h4>Survey Sampling Problem</h4>
+                            <p>Surveys like the US Survey of Consumer Finances use two types of samples. The standard
+                                <strong>area-probability sample</strong> (random geographic selection) achieves a
+                                ~65-70% response rate. But the <strong>list sample</strong> — specifically targeting
+                                wealthy households — gets only ~30-35% response rates. The richest people are
+                                <em>hardest to survey</em>, which means standard surveys systematically underestimate
+                                top-end wealth and income.
+                            </p>
+                        </div>
+                        <div class="compare-card">
+                            <div style="text-align: center; margin-bottom: 0.75rem;">
+                                <img src="images/poverty-reduction_admin-vs-survey-data.png"
+                                    alt="Administrative data shows larger poverty reduction from public transfers than survey data"
+                                    style="max-width: 100%; border-radius: 8px;">
+                            </div>
+                            <h4>Admin vs. Survey Data</h4>
+                            <p>When measuring the poverty-reducing impact of public transfers, <strong>administrative
+                                    data</strong> (from tax records, benefit programs) consistently shows <em>larger
+                                    effects</em> than <strong>survey data</strong> (CPS). This gap is especially stark
+                                for vulnerable groups like single mothers and disabled households, because respondents
+                                often forget or underreport government benefits received.</p>
+                        </div>
+                    </div>
+
+                    <div class="exam-tip">
+                        <p>When discussing inequality data on an exam, always acknowledge measurement limitations.
+                            Mention whether the data uses surveys or administrative records, note the income concept
+                            (market vs. disposable), and flag potential biases (underreporting by the rich,
+                            non-response, transitory income fluctuations).</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ MEASURING WEALTH, CONSUMPTION, OPPORTUNITIES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Beyond Income: Wealth, Consumption & Opportunities</h2>
+
+                    <div class="compare-grid three-col">
+                        <div class="compare-card">
+                            <span class="card-label">Dimension 2</span>
+                            <h4>💎 Wealth</h4>
+                            <p><strong>Why measure it?</strong> Wealth (assets minus debts) is even <em>more
+                                    concentrated</em> than income. It captures longrun economic power, security, and
+                                intergenerational advantage.</p>
+                            <p><strong>Challenges:</strong> Wealth is extremely hard to measure. The very rich engage in
+                                tax evasion and use complex financial structures to hide assets. What should be
+                                "included" (pension rights? housing?) and how to value illiquid assets are major
+                                questions.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label">Dimension 3</span>
+                            <h4>🛒 Consumption</h4>
+                            <p><strong>Why measure it?</strong> Consumption may better reflect living standards than
+                                income, because people smooth their consumption over time (borrowing when young, saving
+                                when old). It indicates whether someone can <em>attain a given standard of living</em>.
+                            </p>
+                            <p><strong>Challenges:</strong> Consumption vs. consumption <em>expenditure</em> (owning a
+                                house = consumption but no expenditure), quality differences, micro-macro data
+                                mismatches, and household vs. personal consumption.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label">Dimension 4</span>
+                            <h4>🎯 Opportunities</h4>
+                            <p><strong>Why measure it?</strong> Many philosophers and economists argue we should care
+                                about <em>equality of opportunity</em> rather than (or in addition to) equality of
+                                outcomes. The key question: does your economic fate depend on your talent and effort, or
+                                on your parents' income?</p>
+                            <p><strong>Challenges:</strong> Defining and measuring "opportunity" requires long-run panel
+                                data (tracking the same people over decades). It's also possible to measure inequality
+                                in education, health, or through composite indicators.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

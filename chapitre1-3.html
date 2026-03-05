@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Market Failures & Intervention</title>
+    <meta name="description"
+        content="Market efficiency, Pareto optimality, the First Welfare Theorem, types of market failures, and government intervention tools.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link active">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header disabled">
+                        <span class="folder-icon">📁</span> CH.4 — À VENIR
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content"></div>
+                </div>
+            </nav>
+        </aside>
+        <!-- ================= END SIDEBAR ================= -->
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>1.3 — Market Failures & Government Intervention</h1>
+                <p class="subtitle">Chapter 1: Introduction — Economic Rationale for the Government</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: MARKET EFFICIENCY
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Market Efficiency & the Invisible Hand</h2>
+
+                    <p>Before we can understand <em>why</em> government intervention is sometimes necessary, we need to
+                        understand the theoretical benchmark: the <strong>perfectly competitive market</strong>. This is
+                        the starting point against which all deviations (market failures) are measured.</p>
+
+                    <div class="definition-box">
+                        <span class="def-label">Adam Smith (1776)</span>
+                        <p><em>"Competition will lead the individual, in the pursuit of his private interests, to pursue
+                                the public interest, as if led by an <span class="fluo">invisible hand</span>."</em></p>
+                        <p style="margin-top: 0.75rem;">This is the foundational insight of market economics: when
+                            individuals act selfishly — pursuing their own profit and utility — the resulting market
+                            outcome can be <strong>socially efficient</strong>, without any central planner directing
+                            the process. Prices act as signals that coordinate the decentralized decisions of millions
+                            of buyers and sellers.</p>
+                    </div>
+
+                    <p>The metaphor of the "invisible hand" is often misunderstood. Smith was not saying that markets
+                        are <em>always</em> perfect or that selfishness is <em>always</em> good. He was making a more
+                        subtle point: under specific conditions (which we'll examine next), the pursuit of self-interest
+                        leads to outcomes that happen to benefit society as a whole. <strong>The key question for public
+                            finance is: what happens when those conditions are NOT met?</strong></p>
+
+                    <p>In a perfectly competitive market, supply and demand interact to reach an
+                        <strong>equilibrium</strong> — a price-quantity combination where no buyer or seller has an
+                        incentive to change their behavior. At this point, every unit produced provides more benefit to
+                        consumers than it costs to produce. The market, left to itself, has achieved efficiency. And if
+                        this were always the case — <em>no government would be needed</em>.
+                    </p>
+
+                    <p>But of course, reality is far messier than this idealized model. And that's where public finance
+                        begins.</p>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: PARETO EFFICIENCY
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Pareto Efficiency</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Definition</span>
+                        <p><strong>Pareto efficiency</strong> is a state of resource allocation from which <span
+                                class="fluo">it is impossible to make any one person better off without making at least
+                                one other person worse off</span>.</p>
+                    </div>
+
+                    <p>This is the central concept of welfare economics and a critical benchmark in public finance. When
+                        an economist says a market outcome is "efficient," they almost always mean <em>Pareto
+                            efficient</em>.</p>
+
+                    <p>Let's unpack what this means with a simple example. Imagine a room with 10 people and 10 apples.
+                        If all 10 apples are given to person A, is that Pareto efficient? <strong>Yes!</strong> Because
+                        you cannot give an apple to person B without taking one away from person A, making A worse off.
+                        This example reveals an important (and often counterintuitive) truth: <span class="fluo">Pareto
+                            efficiency says nothing about fairness</span>. An extremely unequal distribution can be
+                        Pareto efficient. This is precisely why the distribution branch of government is necessary —
+                        efficiency alone is not enough.</p>
+
+                    <div class="definition-box">
+                        <span class="def-label">Related Concept</span>
+                        <p><strong>Pareto improvement:</strong> A change in resource allocation that makes <em>at least
+                                one person better off</em> without making <em>anyone worse off</em>. If a Pareto
+                            improvement is possible, the current allocation is <em>not</em> Pareto efficient. Moving
+                            from a Pareto-inferior state to a Pareto-efficient one is a Pareto improvement.</p>
+                    </div>
+
+                    <div class="alert-box alert-yellow">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Common exam trap:</strong> Students often confuse "Pareto efficient" with "fair"
+                            or "optimal." A Pareto-efficient allocation can be deeply unfair. And there are usually
+                            <em>many</em> Pareto-efficient allocations — the concept tells us nothing about which one to
+                            choose. That's where normative economics (value judgments about fairness) comes in.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: FIRST WELFARE THEOREM
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The First Welfare Theorem</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Fundamental Theorem</span>
+                        <p><strong>First Welfare Theorem:</strong> <span class="fluo">Every competitive equilibrium is
+                                Pareto efficient.</span></p>
+                        <p style="margin-top: 0.5rem;">In other words, if a market is truly competitive (satisfying
+                            certain assumptions), the resulting allocation of resources will be Pareto efficient — no
+                            one can be made better off without making someone else worse off.</p>
+                    </div>
+
+                    <p>This theorem is the theoretical foundation behind the market-based approach to organizing the
+                        economy. It provides the <em>intellectual justification</em> for using competitive markets as
+                        the default mechanism for resource allocation.</p>
+
+                    <p>But the theorem only holds under very <strong>strict assumptions</strong>:</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Assumption</th>
+                                    <th>What It Means</th>
+                                    <th>Reality Check</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Many buyers & sellers</td>
+                                    <td>No one has market power; all agents are "price-takers" who cannot individually
+                                        influence the market price</td>
+                                    <td>Often violated (monopolies, oligopolies, large firms with pricing power)</td>
+                                </tr>
+                                <tr>
+                                    <td>Homogeneous goods</td>
+                                    <td>Products are identical across firms, so consumers choose purely on price</td>
+                                    <td>Most goods are differentiated (brands, quality, features)</td>
+                                </tr>
+                                <tr>
+                                    <td>Free entry & exit</td>
+                                    <td>Firms can enter or leave the market without barriers</td>
+                                    <td>Regulatory barriers, patents, capital requirements, network effects</td>
+                                </tr>
+                                <tr>
+                                    <td>No transaction costs</td>
+                                    <td>Buying, selling, and contracting are costless</td>
+                                    <td>Search costs, legal costs, negotiation costs are pervasive</td>
+                                </tr>
+                                <tr>
+                                    <td>Perfect information</td>
+                                    <td>All agents know everything relevant — prices, quality, risks</td>
+                                    <td>Information is costly, asymmetric, and often deliberately hidden</td>
+                                </tr>
+                                <tr>
+                                    <td>Local nonsatiation</td>
+                                    <td>People always prefer more to less (preferences are not satisfied)</td>
+                                    <td>Generally reasonable for most economic goods</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="margin-top: 1.25rem;">The First Welfare Theorem gives policymakers a
+                        <strong>benchmark</strong> against which to judge actual market outcomes. The logic of
+                        government intervention is: if we observe a market outcome that deviates from this benchmark, we
+                        should identify <em>which assumption is violated</em> and design a policy to correct it.
+                    </p>
+
+                    <div class="alert-box alert-pink">
+                        <span class="alert-icon">⚡</span>
+                        <span><strong>Big assumption (Second-Best Theory):</strong> The theorem implicitly assumes that
+                            making the world <em>a little bit more</em> like perfect competition will bring us closer to
+                            the efficient benchmark. But this is not always true! In a world with multiple market
+                            failures, fixing one failure without fixing the others can actually make things
+                            <em>worse</em>. This is known as the "Theory of the Second Best" (Lipsey & Lancaster, 1956)
+                            — a nuance that sophisticated policy analysis must account for.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: MARKET FAILURES
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Seven Market Failures</h2>
+
+                    <p>When one or more of the assumptions of perfect competition are violated, we get a <strong>market
+                            failure</strong> — a situation where the market, left to itself, produces an <span
+                            class="fluo">inefficient
+                            outcome</span>. Public finance identifies seven major categories of market failure, each of
+                        which
+                        provides a potential justification for government intervention.</p>
+
+                    <!-- FAILURE 1 -->
+                    <div class="definition-box">
+                        <span class="def-label">Failure 1</span>
+                        <p><strong>Imperfect Competition</strong></p>
+                        <p style="margin-top: 0.5rem;">Perfect competition requires so many firms producing a
+                            homogeneous good that none of them can influence the market price. When this assumption
+                            fails, we get various forms of imperfect competition:</p>
+                    </div>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>Monopoly</h4>
+                            <p>A single firm controls the entire market. It can restrict output and charge prices above
+                                marginal cost, creating <em>deadweight loss</em> — society loses welfare because some
+                                trades that would benefit both buyers and sellers don't happen.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Oligopoly</h4>
+                            <p>A few firms dominate the market. They may collude (explicitly or tacitly) to keep prices
+                                high, or they may engage in strategic competition that still results in prices above the
+                                competitive level.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Natural Monopoly</h4>
+                            <p>Some industries have such large fixed costs that it's cheaper for <em>one firm</em> to
+                                serve the entire market than for multiple firms to compete. Example: water supply
+                                networks, electricity grids. Here, the government may need to regulate or operate the
+                                firm directly.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Monopolistic Competition</h4>
+                            <p>Each firm produces a <em>slightly different</em> product (branding, quality, features),
+                                giving it some pricing power. Not as harmful as monopoly, but still leads to prices
+                                above marginal cost.</p>
+                        </div>
+                    </div>
+
+                    <p><strong>Government solution:</strong> Antitrust policy (breaking up monopolies, preventing
+                        mergers), competition regulation, industry standards, and direct state provision for natural
+                        monopolies.</p>
+
+                    <hr class="section-divider">
+
+                    <!-- FAILURE 2 -->
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Failure 2</span>
+                        <p><strong>Incomplete Markets</strong></p>
+                        <p style="margin-top: 0.5rem;">In a perfectly competitive world, every good or service whose
+                            value exceeds its cost is produced. In reality, many beneficial goods or services are
+                            <em>not</em> provided by private markets because of transaction costs, risk, enforcement
+                            costs, and the absence of free entry and exit.
+                        </p>
+                    </div>
+
+                    <p>Two key phenomena drive incomplete markets:</p>
+                    <ul>
+                        <li><strong>Adverse selection:</strong> Before a transaction, one party has more information
+                            than the other. For example, people who know they are sick are more likely to buy health
+                            insurance, driving up costs and potentially causing the insurance market to collapse.</li>
+                        <li><strong>Moral hazard:</strong> After a transaction, one party changes their behavior because
+                            the risk has been transferred. For example, a person with fire insurance may be less careful
+                            about fire prevention.</li>
+                    </ul>
+
+                    <hr class="section-divider">
+
+                    <!-- FAILURE 3 -->
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Failure 3</span>
+                        <p><strong>Imperfect Information</strong></p>
+                        <p style="margin-top: 0.5rem;">Perfect competition assumes all agents have all relevant
+                            information. In reality, disclosing information is costly, withholding it can be profitable,
+                            and consumers are <em>rationally inattentive</em> — they simply don't have the time or
+                            cognitive resources to research everything.</p>
+                    </div>
+
+                    <p>Information itself has characteristics of a <strong>public good</strong>: once produced, it can
+                        be shared at near-zero cost, and it's difficult to exclude people from using it. This means
+                        private markets may <em>under-produce information</em>. Think about consumer product safety
+                        testing, pharmaceutical drug trials, or economic statistics — these are often provided or
+                        mandated by the government precisely because private markets would not supply them adequately.
+                    </p>
+
+                    <hr class="section-divider">
+
+                    <!-- FAILURE 4 -->
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Failure 4</span>
+                        <p><strong>Public Goods</strong></p>
+                        <p style="margin-top: 0.5rem;">Public goods are goods that are <span
+                                class="fluo">non-rival</span> (one person's consumption doesn't reduce another's) and
+                            <span class="fluo">non-excludable</span> (you can't prevent people from consuming them).
+                            Examples: national defense, lighthouses, clean air, street lighting.
+                        </p>
+                    </div>
+
+                    <p>Because people can benefit from a public good without paying for it (the <span
+                            class="fluo">free-rider
+                            problem</span>), private markets systematically under-provide public goods. No
+                        profit-maximizing firm would build a lighthouse if every ship could use it for free. This is a
+                        classic case for government provision, funded through taxation.</p>
+
+                    <hr class="section-divider">
+
+                    <!-- FAILURE 5 -->
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Failure 5</span>
+                        <p><strong>Externalities</strong></p>
+                        <p style="margin-top: 0.5rem;">An externality occurs when an economic activity affects third
+                            parties who are not directly involved in the transaction. <strong>Negative
+                                externalities</strong> (pollution, noise, traffic congestion) impose costs on others;
+                            <strong>positive externalities</strong> (education, vaccination, research) confer benefits
+                            on others.
+                        </p>
+                    </div>
+
+                    <p>Markets systematically <span class="fluo">over-produce</span> goods with negative externalities
+                        and
+                        <span class="fluo">under-produce</span> goods with positive externalities, because the
+                        decision-makers don't bear
+                        the full costs or reap the full benefits of their actions. Government solutions include carbon
+                        taxes (making polluters pay), subsidies for education, and emissions regulations.
+                    </p>
+
+                    <hr class="section-divider">
+
+                    <!-- FAILURE 6 -->
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Failure 6</span>
+                        <p><strong>Negative Spirals — Inequality (Distribution Branch)</strong></p>
+                        <p style="margin-top: 0.5rem;">Even when markets are efficient, the resulting distribution of
+                            income and opportunities may create <em>vicious circles</em> — the rich get richer, the poor
+                            get poorer, and initial disadvantages compound over time through feedback loops.</p>
+                    </div>
+
+                    <p>Research by Saez (2022) shows dramatic differences between pre-tax and post-tax income
+                        distributions: government redistribution (through progressive taxation and social transfers)
+                        significantly compresses the income distribution. Chetty et al. (2014) demonstrate that
+                        <strong>income rank is highly hereditary</strong> — children born to wealthy parents are far
+                        more likely to become wealthy adults. This suggests that "equality of opportunity" is largely an
+                        illusion without active government policy.
+                    </p>
+
+                    <p><strong>Government tools:</strong> Merit goods, specific egalitarianism (providing certain goods
+                        to everyone regardless of income, like education and healthcare), progressive taxation combined
+                        with social transfers, unemployment benefits, pensions, and welfare programs.</p>
+
+                    <hr class="section-divider">
+
+                    <!-- FAILURE 7 -->
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Failure 7</span>
+                        <p><strong>Unemployment & Macroeconomic Disturbances (Stabilization Branch)</strong></p>
+                        <p style="margin-top: 0.5rem;">Markets can experience aggregate failures — recessions, financial
+                            crises, high unemployment, deflation, or runaway inflation. These are not failures of
+                            individual markets but of the economic system as a whole, and they fall under Musgrave's
+                            stabilization branch.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: INFLUENCING MARKET OUTCOMES
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Influencing the Market Outcome</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Definition</span>
+                        <p>The <strong>market outcome</strong> is the price-quantity combination observed in a market.
+                            When the government identifies a market failure, it has several tools available to shift
+                            this outcome toward something more efficient or equitable.</p>
+                    </div>
+
+                    <p>There are two main categories of intervention, plus a newer, more subtle approach:</p>
+
+                    <div class="compare-grid three-col">
+                        <div class="compare-card">
+                            <span class="card-label">Tool 1</span>
+                            <h4>📏 Regulating Quantity</h4>
+                            <p><strong>Direct regulation, limits, and public provision.</strong> The government directly
+                                controls how much of something is produced, consumed, or sold.</p>
+                            <p class="example">Examples: Emissions caps, quotas on fishing, rent controls, building
+                                codes, speed limits, banning certain substances, or directly providing goods (public
+                                schools, military).</p>
+                        </div>
+
+                        <div class="compare-card">
+                            <span class="card-label">Tool 2</span>
+                            <h4>💰 Regulating Price</h4>
+                            <p><strong>Taxes and subsidies.</strong> Instead of directly controlling quantities, the
+                                government changes the price signals that guide market decisions. A tax raises the
+                                effective price, discouraging consumption; a subsidy lowers it, encouraging consumption.
+                            </p>
+                            <p class="example">Examples: Carbon taxes, fuel taxes, VAT, income taxes, subsidies for
+                                renewable energy, subsidies for education.</p>
+                        </div>
+
+                        <div class="compare-card">
+                            <span class="card-label">Tool 3</span>
+                            <h4>🧠 Nudges</h4>
+                            <p><strong>"Behavioral engineering."</strong> Popularized by Thaler & Sunstein (2008),
+                                nudges alter people's behavior in predictable ways <em>without banning any options or
+                                    significantly changing economic incentives</em>.</p>
+                            <p class="example">Examples: Putting fruit at eye level in a cafeteria, making organ
+                                donation the default option, sending personalized tax reminders.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <span class="def-label">Key Quote — Thaler & Sunstein (2008)</span>
+                        <p><em>"A nudge is any aspect of the choice architecture that alters people's behavior in a
+                                predictable way without forbidding any options or significantly changing their economic
+                                incentives."</em></p>
+                        <p style="margin-top: 0.5rem;">Nudges are easy to implement, cheap, and easy to avoid (they
+                            preserve freedom of choice). They work because of cognitive biases: people tend to stick
+                            with default options, follow social norms, and respond to the way choices are presented
+                            ("framing").</p>
+                    </div>
+
+                    <div class="exam-tip">
+                        <p>Nudges are an increasingly important topic in public economics exams. Know the key
+                            characteristics: (1) they preserve freedom of choice (no banning), (2) they exploit
+                            cognitive biases, (3) they're cheap to implement, and (4) they complement (but don't
+                            replace) traditional tools like taxes and regulation.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: TAXATION
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Other Side of the Coin: Taxation</h2>
+
+                    <p>Everything the government does through its three branches — stabilization, allocation, and
+                        distribution — <strong>costs money</strong>. Public goods need to be funded. Social transfers
+                        need to be financed. Infrastructure needs to be built. And the most important source of
+                        government revenue is <span class="fluo">taxation</span>.</p>
+
+                    <p>This creates an inherent tension at the heart of public finance: taxes are necessary to fund
+                        beneficial government programs, but taxes <em>also</em> distort economic decisions and reduce
+                        efficiency. Every tax creates some <span class="fluo">deadweight loss</span> — some economic
+                        activity that would have
+                        happened but doesn't because the tax changed incentives.</p>
+
+                    <p>The central question of tax policy — which will be explored in depth in later chapters — is:</p>
+
+                    <div class="definition-box">
+                        <span class="def-label">The Tax Dilemma</span>
+                        <p><strong>How can we levy taxes to fund necessary government activities without unduly
+                                deteriorating equity (fairness) and efficiency (minimizing waste)?</strong></p>
+                        <p style="margin-top: 0.5rem;">This question involves trade-offs between:</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li><strong>Revenue adequacy:</strong> collecting enough money to fund public services</li>
+                            <li><strong>Economic efficiency:</strong> minimizing the distortionary effects of taxes on
+                                economic behavior</li>
+                            <li><strong>Equity (fairness):</strong> distributing the tax burden in a way that is
+                                perceived as just</li>
+                            <li><strong>Simplicity:</strong> keeping the tax system understandable and cheap to
+                                administer</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-pink">
+                        <span class="alert-icon">📌</span>
+                        <span><strong>Preview:</strong> The rest of this course will build on these foundational
+                            concepts. We will explore specific market failures in detail, study the design of tax
+                            systems, analyze public goods provision, examine social insurance programs, and evaluate
+                            redistribution policies — always using the three-question framework (positive, normative,
+                            political economy) established in this introduction.</span>
+                    </div>
+
+                    <button class="btn-note" onclick="toggleNote('note-summary')">
+                        <span class="note-icon">📝</span> Chapter Summary
+                    </button>
+
+                    <div id="note-summary" class="post-it-note">
+                        <p><strong>Key takeaways from Chapter 1:</strong></p>
+                        <ul>
+                            <li>Public finance studies the role of government in the economy through positive,
+                                normative, and political economy lenses.</li>
+                            <li>The economic problem (scarcity) can be solved by tradition, command, or markets — modern
+                                economies use all three.</li>
+                            <li>Musgrave identified three branches: stabilization, allocation, and distribution.</li>
+                            <li>The First Welfare Theorem says competitive markets are efficient — but only under strict
+                                assumptions.</li>
+                            <li>When those assumptions fail (7 types of market failure), government intervention may
+                                improve outcomes.</li>
+                            <li>But government failure is also real — good policy design must account for both market
+                                and government limitations.</li>
+                            <li>The government can intervene through quantity regulation, price regulation
+                                (taxes/subsidies), or nudges.</li>
+                            <li>Taxation is the primary funding mechanism, but it creates its own distortions and
+                                trade-offs.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+        <!-- ================= END MAIN CONTENT ================= -->
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Fiscal Dominance</title>
+    <meta name="description"
+        content="What is fiscal dominance, the dynamic budget constraint, four policy regimes, and why fiscal dominance is dangerous.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre3-1.html" class="nav-link active">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header disabled">
+                        <span class="folder-icon">📁</span> CH.4 — À VENIR
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content"></div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>3.1 — Fiscal Dominance</h1>
+                <p class="subtitle">Chapter 3: Fiscal-Monetary Policy Nexus</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ WHAT IS FISCAL DOMINANCE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">What is Fiscal Dominance?</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Definition</span>
+                        <p><strong>Fiscal dominance</strong> arises when a country's <span class="fluo">fiscal policy
+                                (government spending and borrowing) dictates or constrains its monetary policy</span>
+                            (central bank actions), often compromising the central bank's ability to manage inflation
+                            and ensure price stability.</p>
+                        <p style="margin-top: 0.75rem;">In summary, the fiscal dominance problem reflects a situation
+                            where government debt pressures <em>compel</em> central banks to prioritize fiscal needs
+                            over monetary policy goals, potentially fueling inflation and undermining economic
+                            stability.</p>
+                    </div>
+
+                    <p>In a well-functioning economy, the central bank sets interest rates independently to control
+                        inflation, while the government manages its spending and revenue responsibly. <strong>Fiscal
+                            dominance</strong> breaks this arrangement: the government's excessive spending or borrowing
+                        leaves the central bank with no choice but to accommodate — typically by printing money
+                        (monetization) or keeping interest rates artificially low — to prevent a debt crisis.</p>
+
+                    <p>This is one of the most important concepts in the intersection of monetary and fiscal policy, and
+                        it has direct, real-world implications: <span class="fluo">hyperinflation in Zimbabwe, the
+                            European debt crisis
+                            in 2010-2012, and even the recent post-Covid inflation spike</span> can all be analyzed
+                        through the lens of fiscal dominance.</p>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ DYNAMIC BUDGET CONSTRAINT ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Dynamic Budget Constraint</h2>
+
+                    <p>To understand fiscal dominance formally, we need the <strong>government's dynamic budget
+                            constraint</strong> — the equation that governs how public debt evolves over time.</p>
+
+                    <div class="definition-box">
+                        <span class="def-label">Key Equation — Discrete Time</span>
+                        <p style="text-align: center; margin-top: 0.5rem; font-size: 1.1rem;">
+                            $b_{t+1} = \frac{d_t - \mu_t h_t}{(1+\pi_t)(1+g_t)} + \frac{1+r_t}{1+g_t} b_t$
+                        </p>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1rem;">
+                        <span class="def-label">Key Equation — Continuous Time (Simplified)</span>
+                        <p style="text-align: center; margin-top: 0.5rem; font-size: 1.1rem;">
+                            $\dot{b}_t \equiv d_t - \mu_t h_t + (r_t - g_t)b_t$
+                        </p>
+                    </div>
+
+                    <div class="table-wrapper" style="margin-top: 1.5rem;">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Meaning</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>$b_t$</td>
+                                    <td>Debt-to-GDP ratio at time $t$</td>
+                                </tr>
+                                <tr>
+                                    <td>$d_t$</td>
+                                    <td>Primary deficit (government spending minus revenue, <em>excluding</em> interest
+                                        payments)</td>
+                                </tr>
+                                <tr>
+                                    <td>$\mu_t h_t$</td>
+                                    <td>Seigniorage — revenue the central bank generates by printing money ($\mu_t$ =
+                                        money growth rate, $h_t$ = monetary base / GDP)</td>
+                                </tr>
+                                <tr>
+                                    <td>$\pi_t$</td>
+                                    <td>Inflation rate</td>
+                                </tr>
+                                <tr>
+                                    <td>$g_t$</td>
+                                    <td>Real GDP growth rate</td>
+                                </tr>
+                                <tr>
+                                    <td>$r_t$</td>
+                                    <td>Real interest rate on government debt</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">The key insight is in the term <strong>$(r_t - g_t)$</strong> — the
+                        difference between the real interest rate and the growth rate. This is the <span
+                            class="fluo">snowball
+                            effect</span>:</p>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/debt-dynamics_stability_r-vs-g.png"
+                            alt="Debt dynamics diagram: r vs g determines whether debt is stable or explosive">
+                    </div>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <span class="card-label">Case 1</span>
+                            <h4>📈 When $r > g$</h4>
+                            <p>The interest rate exceeds growth → the debt <strong>grows faster than the
+                                    economy</strong>. This is the <em>explosive path</em>: even if the government
+                                balances its primary budget, the debt ratio rises relentlessly because interest payments
+                                compound faster than GDP grows.</p>
+                            <p>Primary deficits <strong>must</strong> be covered by seigniorage to make the budget
+                                sustainable. Otherwise, the debt ratio follows an explosive path.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label">Case 2</span>
+                            <h4>📉 When $r < g$</h4>
+                                    <p>Growth exceeds the interest rate → the government faces a <strong>soft budget
+                                            constraint</strong>. The debt ratio can stabilize <em>even with primary
+                                            deficits not covered by seigniorage</em>, because GDP growth "dilutes" the
+                                        existing debt.</p>
+                                    <p>This is the favorable scenario. Darby (1983) called it <em>"Some Pleasant
+                                            Monetarist Arithmetic"</em> — in reality, $r < g$ often holds for extended
+                                            periods.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-pink">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>What can be adjusted?</strong> When $r > g$, the government has only two levers:
+                            increase <strong>seigniorage</strong> (forcing the central bank to print money → inflation)
+                            or reduce the <strong>primary deficit</strong> (via higher taxes or lower spending). Fiscal
+                            dominance occurs when the government refuses to adjust the deficit and forces the central
+                            bank to generate seigniorage instead.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ FOUR REGIMES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Four Policy Regimes</h2>
+
+                    <p>How do monetary policy and fiscal policy interact? Sargent & Wallace (1981), Leeper (1991), and
+                        Sims (1994) showed that the interaction between the two policies can be classified into
+                        <strong>four distinct regimes</strong>, depending on whether each policy is "active" (pursuing
+                        its own goals aggressively) or "passive" (adjusting to accommodate the other).
+                    </p>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/monetary-vs-fiscal-policy-regimes.png"
+                            alt="Matrix of four fiscal-monetary policy regimes">
+                    </div>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #4CAF50;">
+                            <span class="card-label" style="background: #E8F5E9; color: #2E7D32;">✅ Textbook Case</span>
+                            <h4>MP Active + FP Passive</h4>
+                            <p>The <strong>ideal regime</strong> in modern macroeconomics. The central bank
+                                <em>actively</em> pursues price stability by reacting sufficiently strongly to inflation
+                                (Taylor rule). Fiscal policy <em>passively</em> adjusts taxes and spending to ensure
+                                debt sustainability.
+                            </p>
+                            <p>Result: <strong>stable inflation and sustainable debt</strong>. This is how most OECD
+                                countries aim to operate.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F44336;">
+                            <span class="card-label" style="background: #FFEBEE; color: #C62828;">⚠️ Fiscal
+                                Dominance</span>
+                            <h4>MP Passive + FP Active</h4>
+                            <p>Fiscal policy <em>refuses to adjust</em> taxes or spending. The government runs
+                                persistent deficits that are not financed entirely by future taxes. The central bank is
+                                forced to let the money stock respond (monetization) in order to achieve fiscal
+                                sustainability.</p>
+                            <p>Result: <strong>inflation is determined by the fiscal position</strong>, not by monetary
+                                policy. The central bank loses control over prices.</p>
+                        </div>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 0;">
+                        <div class="compare-card" style="border-left: 4px solid #FF9800;">
+                            <span class="card-label" style="background: #FFF3E0; color: #E65100;">❓ Indeterminacy</span>
+                            <h4>MP Passive + FP Passive</h4>
+                            <p>Neither policy area takes the lead. Nobody anchors the price level. Multiple equilibria
+                                are possible, and inflation is <strong>indeterminate</strong> — the economy can drift to
+                                any price level without a stabilizing force.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #9C27B0;">
+                            <span class="card-label" style="background: #F3E5F5; color: #6A1B9A;">💣 Explosive</span>
+                            <h4>MP Active + FP Active</h4>
+                            <p>Both policies try to control the economy simultaneously. The central bank raises rates to
+                                fight inflation while the government keeps spending. These <strong>contradictory
+                                    signals</strong> create macroeconomic instability and potentially explosive
+                                dynamics.</p>
+                        </div>
+                    </div>
+
+                    <div class="exam-tip">
+                        <p>For exams: know the 2×2 matrix by heart. The key distinction is between <em>who adjusts</em>:
+                            in the textbook case, fiscal policy adjusts to monetary policy; in fiscal dominance,
+                            monetary policy adjusts to fiscal policy. The other two corners (both passive, both active)
+                            produce pathological outcomes.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ WHY IS IT BAD ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why is Fiscal Dominance Bad?</h2>
+
+                    <p>Fiscal dominance is not merely a theoretical curiosity — it has caused some of the worst economic
+                        disasters in history. There are <strong>four major channels</strong> through which fiscal
+                        dominance damages the economy:</p>
+
+                    <!-- HYPERINFLATION -->
+                    <div class="definition-box">
+                        <span class="def-label">Consequence 1</span>
+                        <p><strong>Hyperinflation</strong> — The Most Extreme Outcome</p>
+                        <p style="margin-top: 0.5rem;">When the central bank must generate seigniorage to cover fiscal
+                            costs, this can — in extreme but historically <em>quite common</em> cases — generate
+                            <strong>hyperinflation</strong> (Cagan, 1956). A complete meltdown of the monetary system
+                            takes place: prices double every few days or weeks, the currency becomes worthless, and the
+                            economy reverts to barter.
+                        </p>
+                        <p style="margin-top: 0.5rem; font-style: italic; color: var(--clr-text-muted);">Historical
+                            examples: Germany (1923), Zimbabwe (2008), Venezuela (2017-present), Hungary (1946 — the
+                            worst hyperinflation ever recorded).</p>
+                    </div>
+
+                    <!-- CURRENCY CRISES -->
+                    <div class="definition-box" style="margin-top: 1rem;">
+                        <span class="def-label">Consequence 2</span>
+                        <p><strong>Currency Crises</strong></p>
+                        <p style="margin-top: 0.5rem;">Fiscal dominance may undermine fixed exchange rate regimes and
+                            cause higher inflation as well as persistent declines in output. <strong>Krugman
+                                (1979)</strong> developed a model explaining the collapse of the Bretton-Woods system
+                            through fiscal dominance: the central bank wants to fix the exchange rate, but must
+                            <em>also</em> monetize government deficits. This leads to a <em>gradual loss of foreign
+                                exchange reserves</em> and an inevitable currency crisis.
+                        </p>
+                    </div>
+
+                    <div class="table-wrapper" style="margin-top: 1rem;">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Central Bank Balance Sheet (Krugman Model)</th>
+                                </tr>
+                                <tr>
+                                    <th>Assets</th>
+                                    <th>Liabilities</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>FX reserves ($e \cdot B_{F,t}$)</td>
+                                    <td rowspan="2">Monetary Base ($M_{0,t}$)</td>
+                                </tr>
+                                <tr>
+                                    <td>Government bonds ($B_{H,t}$)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>As the central bank buys more government bonds (monetization), it must sell foreign reserves to
+                        keep the exchange rate fixed. When reserves run out → the peg collapses → currency crash.</p>
+
+                    <!-- INABILITY TO CONTROL INFLATION -->
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Consequence 3</span>
+                        <p><strong>Inability to Control Inflation</strong> — "Some Unpleasant Monetarist Arithmetic"</p>
+                        <p style="margin-top: 0.5rem;"><strong>Sargent & Wallace (1981)</strong> showed a paradoxical
+                            result: in an economy where the quantity theory of money holds but monetary policy is
+                            dominated by fiscal needs (with $r > g$), <span class="fluo">lower money supply growth and
+                                inflation <em>at present</em> means higher inflation <em>in the future</em></span>.</p>
+                        <p style="margin-top: 0.5rem;">Why? Because tighter money today means more government bonds are
+                            issued instead of being monetized → higher future debt → even more monetization needed
+                            later. And if money demand depends on <em>expected</em> inflation, lower money supply growth
+                            may even lead to higher inflation <em>now</em>, because people anticipate future
+                            monetization.</p>
+                    </div>
+
+                    <!-- SELF-FULFILLING CRISES -->
+                    <div class="definition-box" style="margin-top: 1rem;">
+                        <span class="def-label">Consequence 4</span>
+                        <p><strong>Self-Fulfilling Sovereign Debt Crises</strong></p>
+                        <p style="margin-top: 0.5rem;">Darby (1983) noted that $r < g$ often holds for long periods —
+                                <em>"Some Pleasant Monetarist Arithmetic"</em>. But governments tend to
+                                <strong>over-rely</strong> on such favorable circumstances. Neither $g$ nor $r$ are
+                                fully in the government's hands:</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li>Growth could become <em>negative</em> during crisis times.</li>
+                            <li>If government debt exceeds some threshold, <strong>risk premiums</strong> increase,
+                                causing $r > g$.</li>
+                            <li>This triggers a <em>self-fulfilling prophecy</em>: investors fear default → they demand
+                                higher yields → higher yields worsen the debt dynamic → confirming the initial fear.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-red">
+                        <span class="alert-icon">🚨</span>
+                        <span><strong>Real-world example:</strong> During the 2010-2012 European sovereign debt crisis,
+                            10-year government bond yields spiked dramatically for peripheral Eurozone countries. Greece
+                            reached ~30%, Portugal ~15%, Ireland ~14%, Italy and Spain ~7%. These were classic
+                            self-fulfilling dynamics: rising yields → worsening fiscal position → even higher yields.
+                            Only the ECB's intervention ("whatever it takes" — Draghi, 2012) broke the spiral.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════ SOLUTION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Solution: Prohibition of Monetary Financing</h2>
+
+                    <p>How do modern economies prevent fiscal dominance? Through <strong>institutional design</strong>:
+                    </p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Central bank independence</strong>
+                            <p>Central banks must be independent from the government — both <em>politically</em> (no
+                                instructions from politicians) and <em>financially</em> (no dependence on government
+                                funding). They must have a <strong>clear mandate focused on price stability</strong> as
+                                their main goal.</p>
+                        </li>
+                        <li>
+                            <strong>Legal prohibition of monetary financing</strong>
+                            <p>The EU enshrines this in <strong>Article 123 TFEU</strong> (ex Art. 101 TEC): "Overdraft
+                                facilities or any other type of credit facility with the ECB or national central banks
+                                in favour of Union institutions, central governments, regional, local or other public
+                                authorities shall be <span class="fluo">prohibited</span>, as shall the purchase
+                                <em>directly from them</em> of debt instruments."
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Seigniorage as by-product, not policy tool</strong>
+                            <p>Seigniorage is treated as a welcome by-product helping to keep the central bank
+                                financially independent, but it is generally <strong>low</strong> (less than 0.3% of
+                                GDP, typically even lower) in a low-inflation environment.</p>
+                        </li>
+                    </ol>
+
+                    <div class="alert-box alert-yellow">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>First-best vs. second-best:</strong> While in theory, the first-best solution
+                            might be <em>coordination</em> of monetary and fiscal policy, the <strong>second-best
+                                solution</strong> of fully independent monetary policy is pursued in practice. Why?
+                            Because coordination requires trust, and political incentives make it too tempting for
+                            governments to pressure central banks.</span>
+                    </div>
+
+                    <button class="btn-note" onclick="toggleNote('note-ch3-1')">
+                        <span class="note-icon">📝</span> Key Takeaway
+                    </button>
+
+                    <div id="note-ch3-1" class="post-it-note">
+                        <p><strong>Fiscal dominance = fiscal policy controls monetary policy.</strong> It arises when
+                            the government refuses to adjust its deficits and forces the central bank to monetize debt.
+                            The dynamic budget constraint shows that when $r > g$, this leads to explosive debt or
+                            inflation. The solution is institutional: independent central banks with a price stability
+                            mandate and a legal prohibition of monetary financing.</p>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — The Czech Case</title>
+    <meta name="description"
+        content="Is there fiscal dominance in Czechia? FTPL, Covid deficits, public debt, CNB independence, and how fiscal policy feeds into monetary policy forecasting.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link active">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header disabled">
+                        <span class="folder-icon">📁</span> CH.4 — À VENIR
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content"></div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>3.2 — Is There Fiscal Dominance in Czechia?</h1>
+                <p class="subtitle">Chapter 3: Fiscal-Monetary Policy Nexus</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ CONTEXT ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Context: Post-Covid Inflation</h2>
+
+                    <p>The Czech price level went up <strong>more than in most other European countries</strong> between
+                        2019 and 2024. In parallel, the fiscal situation deteriorated significantly. This has raised the
+                        question: <span class="fluo">to what extent was inflation stimulated by loose fiscal policy, or
+                            even by a
+                            fiscal dominance problem?</span></p>
+
+                    <div class="definition-box">
+                        <span class="def-label">FTPL — Fiscal Theory of the Price Level</span>
+                        <p>The recent "Great Inflation" episode has increased interest in the <strong>Fiscal Theory of
+                                the Price Level</strong> (FTPL). Unlike standard monetarist theory (which says inflation
+                            is always a monetary phenomenon), the FTPL argues that the <em>price level is determined by
+                                the government's intertemporal budget constraint</em>.</p>
+                        <p style="margin-top: 0.75rem; font-style: italic;"><em>"The centerpiece of the FTPL is the
+                                government's intertemporal budget constraint, which equates the market value of the
+                                initial real public debt to the present value of expected real primary surpluses."</em>
+                        </p>
+                    </div>
+
+                    <p><strong>Barro & Bianchi (2023)</strong> suggest that higher government spending might explain the
+                        magnitude of the inflation spike in the Czech Republic. But is this explanation plausible? Let's
+                        examine the evidence.</p>
+                </section>
+
+                <!-- ═══════ COVID DEFICITS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Covid-Related Budget Deficits & Consolidation</h2>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Period</th>
+                                    <th>Fiscal Development</th>
+                                    <th>Key Drivers</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2020</td>
+                                    <td>Fiscal balance deteriorated sharply</td>
+                                    <td>Covid pandemic + large-scale one-off measures (lockdown support, wage subsidies)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2021–2022</td>
+                                    <td>Improvement hampered</td>
+                                    <td>2022 Russian invasion of Ukraine + energy cost crisis; additional fiscal support
+                                        needed</td>
+                                </tr>
+                                <tr>
+                                    <td>2023</td>
+                                    <td>Gradual consolidation</td>
+                                    <td>More gradual pace than the 2012–2013 consolidation episode</td>
+                                </tr>
+                                <tr>
+                                    <td>2024+</td>
+                                    <td>Positive impact of consolidation package</td>
+                                    <td>Government consolidation measures → Czechia avoided excessive deficit procedure
+                                        (EU)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- ═══════ PUBLIC DEBT ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Public Debt Trajectory</h2>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>📊 What Happened</h4>
+                            <ul>
+                                <li>Public debt rose sharply in 2020 due to the Covid pandemic and other measures</li>
+                                <li>The rise continued in 2021 and 2022</li>
+                                <li>In 2024–2026, debt is set to increase only slowly due to improved fiscal balance and
+                                    renewed economic growth</li>
+                            </ul>
+                        </div>
+                        <div class="compare-card">
+                            <h4>📐 Key Figures</h4>
+                            <ul>
+                                <li>Debt ratio is currently approaching <strong>~45% of GDP</strong></li>
+                                <li>Still well below the thresholds of national as well as EU legislation</li>
+                                <li>The 55% debt brake level may be reached in the next 5–7 years</li>
+                                <li>But: FTPL explanation of the inflation spike seems <strong>unlikely</strong> at
+                                    these debt levels</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-pink">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>EU perspective:</strong> The Czech public finance situation is viewed largely
+                            <em>negatively</em> in domestic policy debates, but <em>not by international investors</em>.
+                            It is actually relatively good in the EU-wide context. Czechia now meets <strong>both fiscal
+                                Maastricht limits</strong> (deficit < 3% GDP, debt < 60% GDP). Fiscal space is smaller
+                                than in the past, but it does exist.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ EA SOVEREIGN DEBT CRISIS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Lesson from History: The EA Sovereign Debt Crisis</h2>
+
+                    <p>The Eurozone crisis of 2010–2012 provides the clearest modern example of <em>self-fulfilling
+                            fiscal dominance dynamics</em>. Bond yields on 10-year government bonds spiked dramatically
+                        for peripheral countries:</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Peak 10Y Yield</th>
+                                    <th>Pre-Crisis (~2006)</th>
+                                    <th>Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>🇬🇷 Greece</td>
+                                    <td>~30%</td>
+                                    <td>~4%</td>
+                                    <td>Massive fiscal deficit, debt restructuring, bailout</td>
+                                </tr>
+                                <tr>
+                                    <td>🇵🇹 Portugal</td>
+                                    <td>~15%</td>
+                                    <td>~4%</td>
+                                    <td>Low growth, high deficit, required EU/IMF program</td>
+                                </tr>
+                                <tr>
+                                    <td>🇮🇪 Ireland</td>
+                                    <td>~14%</td>
+                                    <td>~4%</td>
+                                    <td>Banking crisis → sovereign crisis, bailout</td>
+                                </tr>
+                                <tr>
+                                    <td>🇮🇹 Italy</td>
+                                    <td>~7%</td>
+                                    <td>~4%</td>
+                                    <td>High legacy debt, low growth, contagion from Greece</td>
+                                </tr>
+                                <tr>
+                                    <td>🇪🇸 Spain</td>
+                                    <td>~7%</td>
+                                    <td>~4%</td>
+                                    <td>Housing bust, banking sector stress</td>
+                                </tr>
+                                <tr>
+                                    <td>🇩🇪 Germany</td>
+                                    <td>~1.5%</td>
+                                    <td>~4%</td>
+                                    <td>Flight to quality → yields fell</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>The Maastricht criterion for bond yields (convergence condition for Euro adoption) is below a
+                        certain threshold. During the crisis, <span class="fluo">multiple countries breached this
+                            threshold spectacularly</span> —
+                        demonstrating how quickly fiscal sustainability concerns can spiral into a full-blown crisis.
+                    </p>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ CZECH FISCAL-MONETARY NEXUS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Fiscal-Monetary Nexus in Practice: The Czech Case</h2>
+
+                    <p>How do fiscal and monetary policy actually interact in Czechia? The institutional framework is
+                        designed to <strong>prevent</strong> fiscal dominance:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Strong CNB independence</strong>
+                            <p>The Czech National Bank (CNB) is strongly independent from the government. There is a
+                                <strong>prohibition of taking instructions</strong> from any political entity and a
+                                <strong>prohibition of monetary financing</strong>. The Finance Minister may participate
+                                in Board meetings but <em>cannot vote</em>.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>No explicit coordination</strong>
+                            <p>There is no explicit coordination mechanism between monetary policy and government
+                                economic policy. Fiscal policy is carried out independently by the government. Monetary
+                                policy takes account of fiscal developments, but as an <em>exogenous input</em> — it
+                                doesn't subordinate itself to fiscal needs.</p>
+                        </li>
+                        <li>
+                            <strong>Fiscal discretion as forecast input</strong>
+                            <p>The CNB treats fiscal discretion (government fiscal measures) as an exogenous input into
+                                its macroeconomic forecasts. The overall CNB fiscal outlook must be consistent with its
+                                macro-forecast, but the CNB does not try to influence fiscal decisions.</p>
+                        </li>
+                        <li>
+                            <strong>No seigniorage or profit transfers</strong>
+                            <p>So far there have been <strong>no seigniorage or profit transfers</strong> from the CNB
+                                to the government — a key indicator that monetary financing has not occurred.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- ═══════ CNB FORECASTING ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">How Fiscal Policy Enters CNB's Forecasting</h2>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/fiscal-policy_impulse_to_gdp-growth.png"
+                            alt="Transmission from fiscal policy discretionary measures → fiscal impulse → changes in real GDP growth">
+                    </div>
+
+                    <p>The diagram above shows the transmission mechanism from fiscal policy to GDP growth, as modeled
+                        by the CNB:</p>
+
+                    <div class="compare-grid three-col">
+                        <div class="compare-card">
+                            <span class="card-label">Step 1</span>
+                            <h4>Fiscal Policy Measures</h4>
+                            <p>Discretionary decisions by the government: changes in tax rates, spending programs,
+                                transfers, subsidies, etc.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label">Step 2</span>
+                            <h4>Fiscal Impulse</h4>
+                            <p>The budgetary impact on the economy via changes in: public consumption, household
+                                disposable income, private consumption, investment, and price deflators.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label">Step 3</span>
+                            <h4>GDP Growth Impact</h4>
+                            <p>These effects translate into changes in real GDP growth. Two approaches:
+                                <strong>aggregate view</strong> (total effect) and <strong>structural view</strong>
+                                (specific transmission channels).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper" style="margin-top: 1.5rem;">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Core model</td>
+                                    <td>Does not have a fully-fledged fiscal bloc — fiscal discretion is added by
+                                        experts</td>
+                                </tr>
+                                <tr>
+                                    <td>Government consumption</td>
+                                    <td>Directly included in the forecast</td>
+                                </tr>
+                                <tr>
+                                    <td>Fiscal impulse</td>
+                                    <td>Uses fiscal multipliers for sub-categories of revenues and expenditures</td>
+                                </tr>
+                                <tr>
+                                    <td>Baseline scenario</td>
+                                    <td>Only well-specified and (likely to be) approved measures are included</td>
+                                </tr>
+                                <tr>
+                                    <td>Alternative scenarios</td>
+                                    <td>Other measures under discussion could be part of alternative scenarios</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="exam-tip">
+                        <p>The Czech case illustrates the <strong>textbook regime</strong> (MP active + FP passive): the
+                            CNB independently controls inflation, treats fiscal policy as a given, and does not monetize
+                            government debt. The answer to "is there fiscal dominance in Czechia?" is
+                            <strong>no</strong>, at least not in the acute sense — but long-term fiscal sustainability
+                            is not assured without further policy actions.
+                        </p>
+                    </div>
+
+                    <button class="btn-note" onclick="toggleNote('note-ch3-2')">
+                        <span class="note-icon">📝</span> Key Takeaway
+                    </button>
+
+                    <div id="note-ch3-2" class="post-it-note">
+                        <p><strong>Czechia is far from an acute fiscal dominance problem.</strong> The CNB is strongly
+                            independent, there is no monetary financing, and debt levels remain below EU thresholds.
+                            However, long-term fiscal sustainability is not assured without further policy actions. The
+                            FTPL explanation for Czech inflation is unlikely given the relatively moderate debt-to-GDP
+                            ratio (~45%).</p>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

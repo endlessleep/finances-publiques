@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Global Inequality</title>
+    <meta name="description"
+        content="Cross-country inequality comparisons, long-run trends, the Great Gatsby Curve, global inequality decomposition, and the Elephant Curve.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link active">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header disabled">
+                        <span class="folder-icon">📁</span> CH.4 — À VENIR
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content"></div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>2.3 — Inequality Across Countries & Global Inequality</h1>
+                <p class="subtitle">Chapter 2: Inequality</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ CROSS-COUNTRY OVERVIEW ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Inequality Across Countries</h2>
+
+                    <p>How does inequality compare across the world? The two graphs below show that inequality levels
+                        vary <strong>enormously</strong> between countries — even among those at similar levels of
+                        development.</p>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/income-inequality_across-countries_gini-90-10.png"
+                            alt="Cross-country comparison of Gini coefficient and 90/10 ratio — from Slovenia (lowest inequality) to South Africa (highest)"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>The <strong>top panel</strong> ranks countries by their Gini coefficient (disposable income). At
+                        the low end: Slovenia, Slovakia, Czech Republic, and the Nordic countries — all with Gini values
+                        around 0.25–0.28. At the high end: the USA (~0.39), Mexico, Chile, Costa Rica, and South Africa
+                        (highest, well above 0.60).</p>
+
+                    <p>The <strong>bottom panel</strong> shows the same countries using the 90/10 ratio. The message is
+                        consistent: in Nordic countries, a person at the 90th percentile earns about 3 times what
+                        someone at the 10th percentile earns. In Latin America and South Africa, this ratio can exceed
+                        10–15×.</p>
+
+                    <div class="alert-box alert-pink">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>Key takeaway:</strong> Inequality is not a natural constant — it varies
+                            dramatically across countries with similar GDP levels. This means that <em>policy
+                                choices</em> (tax structure, welfare state, labor market regulation) play a decisive
+                            role in shaping inequality.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════ INCOME VS WEALTH ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Income vs. Wealth Inequality</h2>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <div style="text-align: center; margin-bottom: 0.75rem;">
+                                <img src="images/income-vs-wealth-inequality_cross-country.png"
+                                    alt="Scatter plot: top 10% income share vs top 10% wealth share — wealth is always more concentrated"
+                                    style="max-width: 100%; border-radius: 8px;">
+                            </div>
+                            <h4>Cross-Country Comparison</h4>
+                            <p>This scatter plot places each country by its <strong>top 10% income share</strong> (X)
+                                vs. <strong>top 10% wealth share</strong> (Y). The striking finding: wealth inequality
+                                is <em>always higher</em> than income inequality. In the USA, the top 10% holds about
+                                45% of income but ~70% of wealth. In South Africa, both are extreme.</p>
+                            <p>Why? Because wealth accumulates over time through savings, capital gains, and inheritance
+                                — all of which disproportionately benefit those who already have more.</p>
+                        </div>
+                        <div class="compare-card">
+                            <div style="text-align: center; margin-bottom: 0.75rem;">
+                                <img src="images/income-vs-wealth-distribution_heatmap.png"
+                                    alt="Heatmap showing correlation between position in income vs wealth distribution"
+                                    style="max-width: 100%; border-radius: 8px;">
+                            </div>
+                            <h4>Income-Wealth Heatmap</h4>
+                            <p>This heatmap shows how individuals' positions in the income distribution correlate with
+                                their positions in the wealth distribution. The strong diagonal concentration means:
+                                <em>people wealthy in income tend to be wealthy in assets too</em>.
+                            </p>
+                            <p>But the correlation isn't perfect: some individuals have high income but low wealth
+                                (young professionals with student debt) and others have high wealth but low income
+                                (asset-rich retirees). This is why both dimensions matter for measuring living
+                                standards.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ LONG-RUN TRENDS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Long-Run Inequality Trends</h2>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/long-run-inequality_gini_cross-country.png"
+                            alt="Gini coefficient over time for multiple countries since 1960"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>This graph tracks the Gini coefficient in several countries since the 1960s. The trajectories are
+                        strikingly different: the <strong>USA</strong> shows a persistent upward trend in inequality
+                        since ~1980; <strong>France</strong> remains relatively stable and lower; <strong>South
+                            Africa</strong> maintains extremely high inequality throughout.</p>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/long-run-top-decile-income-share_global.png"
+                            alt="Top decile income share over 100+ years for multiple countries"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>Looking further back — over more than a century — we see the <strong>top decile income
+                            share</strong> (the share of total income going to the richest 10%) across many countries. A
+                        common pattern emerges in Western countries: <strong>① high inequality before 1940</strong> →
+                        <strong>② dramatic compression after WWII</strong> (driven by progressive taxation, destruction
+                        of capital, and the welfare state) → <strong>③ resurgence since ~1980</strong>.
+                    </p>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/long-run-top-decile_income_france_vs_us.png"
+                            alt="France vs USA: top decile income share over 100 years — divergence since 1980"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>The France vs. USA comparison is especially instructive. Before 1940, both had similarly high
+                        inequality. After the war, both experienced dramatic reduction. But since 1980, their paths
+                        diverge sharply: <strong>US inequality soared back</strong> (tax cuts for the rich,
+                        deregulation, weakened unions), while <strong>France saw only a moderate increase</strong>
+                        (maintained stronger redistributive policies). This proves that the post-1980 rise was not
+                        inevitable — it was shaped by specific policy choices.</p>
+                </section>
+
+                <!-- ═══════ GREAT GATSBY CURVE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Great Gatsby Curve</h2>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/great-gatsby-curve_inequality_vs_mobility.png"
+                            alt="The Great Gatsby Curve: higher inequality correlates with lower intergenerational mobility"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>The <strong>Great Gatsby Curve</strong> is one of the most striking empirical relationships in
+                        economics. It plots the <strong>Gini coefficient</strong> (X-axis) against
+                        <strong>intergenerational income mobility</strong> (Y-axis) for different countries. The result:
+                        there is a <em>strong negative relationship</em> — <span class="fluo">more unequal societies
+                            have less social mobility</span>.
+                    </p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>🇩🇰 Nordic Countries</h4>
+                            <p>Low inequality <em>and</em> high mobility. Your parents' income has a relatively weak
+                                influence on your own economic outcomes. The "land of opportunity" is actually
+                                Scandinavia.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>🇺🇸 United States</h4>
+                            <p>Higher inequality <em>and</em> lower mobility. Despite the "American Dream" narrative,
+                                the data shows that income rank is highly hereditary. If you're born poor in the US,
+                                you're more likely to <em>stay</em> poor than in Denmark or Sweden.</p>
+                        </div>
+                    </div>
+
+                    <div class="exam-tip">
+                        <p>The Great Gatsby Curve is a powerful exam concept. It challenges the common argument that
+                            "inequality is fine as long as there's mobility." The data shows that <em>inequality itself
+                                undermines mobility</em> — through mechanisms like unequal access to education,
+                            healthcare, social networks, and the compounding advantages of inherited wealth.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ PUBLIC POLICY IMPACT ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Impact of Public Policy: Market vs. Disposable Income</h2>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/public-policy_market-vs-disposable-income-gini.png"
+                            alt="Market income Gini vs disposable income Gini: government redistribution reduces inequality, but by varying amounts"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>This figure provides the most direct evidence that <strong>public policy matters</strong>. It
+                        compares the Gini coefficient for market income (before any government intervention) to the Gini
+                        for disposable income (after taxes and transfers) across countries.</p>
+
+                    <p>The key findings:</p>
+                    <ul>
+                        <li><strong>Market income Gini is high everywhere</strong> — even in Germany, Canada, and the
+                            USA, pre-redistribution inequality is substantial.</li>
+                        <li><strong>Germany and Canada</strong> achieve <em>large reductions</em> through progressive
+                            taxes and generous social transfers.</li>
+                        <li><strong>The USA</strong> achieves a <em>much smaller reduction</em> — its tax system is less
+                            progressive and its transfers are less generous.</li>
+                    </ul>
+
+                    <p>The <strong>gap</strong> between market and disposable Gini is the <span class="fluo">measure of
+                            redistributive
+                            effort</span>. Large gaps = strong welfare states. Small gaps = limited redistribution.</p>
+
+                    <p><strong>Main policy tools for redistribution:</strong></p>
+                    <ul>
+                        <li>Progressive income tax (higher tax rates for higher incomes)</li>
+                        <li>Earned income discounts / tax credits for low earners</li>
+                        <li>Differential treatment of capital vs. labor income</li>
+                        <li>Inheritance taxes</li>
+                        <li>Social security systems</li>
+                        <li>Public education (equalizing opportunities)</li>
+                    </ul>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ GLOBAL INEQUALITY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Global Inequality</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Two Components</span>
+                        <p>Global inequality can be decomposed into two fundamentally different components:</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li><strong>Within-country inequality:</strong> Differences between individuals
+                                <em>inside</em> the same country (e.g., rich vs. poor in France).
+                            </li>
+                            <li><strong>Between-country inequality:</strong> The inequality that would exist <em>if
+                                    everyone within each country had the same income</em>, but countries had different
+                                average incomes (e.g., the gap between a Norwegian and a Nigerian average income).</li>
+                        </ul>
+                    </div>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/global-inequality_long-run_gini.png"
+                            alt="Global Gini coefficient since 1800: rising from 1820 to ~1990, then slight decline"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>The global Gini coefficient rose dramatically from 1820 to about 1990–2000, as industrialized
+                        countries pulled far ahead of the rest of the world. Since then, it has <em>slightly
+                            declined</em>, driven mainly by rapid growth in China and India. But global inequality
+                        remains extremely high — the world Gini is around 0.65–0.70, significantly higher than the most
+                        unequal individual country.</p>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/global-inequality_decomposition_between-vs-within.png"
+                            alt="Theil decomposition: between-country inequality declining, within-country inequality rising"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>This decomposition using the <strong>Theil index</strong> reveals a crucial shift:
+                        <strong>between-country</strong> inequality has been declining (thanks to Asian growth), but
+                        <strong>within-country</strong> inequality has been rising. The implication: today, <span
+                            class="fluo">global inequality is increasingly driven by domestic inequality within
+                            countries rather than gaps between nations</span>.
+                    </p>
+                </section>
+
+                <!-- ═══════ ELEPHANT CURVE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Elephant Curve</h2>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/elephant-curve_global-income-growth.png"
+                            alt="The Elephant Curve (1988-2008): income growth by global percentile"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>The <strong>Elephant Curve</strong> (Lakner & Milanovic, 2016) is one of the most famous charts
+                        in contemporary economics. It shows the <span class="fluo">cumulative income growth between 1988
+                            and 2008</span> for each
+                        percentile of the <em>global</em> income distribution. Its shape resembles an elephant — with a
+                        back, a dip, and a raised trunk — and it tells the story of globalization's winners and losers:
+                    </p>
+
+                    <div class="compare-grid three-col">
+                        <div class="compare-card">
+                            <span class="card-label">🐘 The Back</span>
+                            <h4>Global Middle Class (P20–P60)</h4>
+                            <p>The biggest winners of globalization: <strong>Asian middle classes</strong>, especially
+                                in China and India, who experienced massive income gains (~60-80% growth). Hundreds of
+                                millions of people were lifted out of poverty.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label">🐘 The Dip</span>
+                            <h4>Western Middle Class (P70–P90)</h4>
+                            <p>The <strong>losers of globalization</strong>: working and middle classes in developed
+                                countries (US, Europe), who saw <em>near-zero income growth</em>. Their jobs were
+                                outsourced, automated, or faced wage competition from low-cost countries.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label">🐘 The Trunk</span>
+                            <h4>Global Top 1%</h4>
+                            <p>The other big winners: the world's <strong>ultra-rich</strong>, who captured an enormous
+                                share of global income growth through capital gains, financial markets, and the global
+                                economy. Their incomes surged.</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/elephant-curve_global-income-gains.png"
+                            alt="Share of global income gains by percentile: top 1% and top 2-5% capture disproportionate share"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>This companion figure makes the point even more dramatically: it shows <em>who captured</em> the
+                        global income gains. The <strong>top 1% and top 2-5%</strong> captured a disproportionately
+                        large share of the total growth. Global growth was not distributed evenly — it was captured
+                        primarily by the Asian emerging middle class and the global elite.</p>
+
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <img src="images/elephant-curve-revisited_global-income-growth.png"
+                            alt="Elephant Curve Revisited: comparing 1988-2008 vs 2008-2018"
+                            style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);">
+                    </div>
+
+                    <p>The <strong>revisited version</strong> compares the pattern across two periods (1988–2008 vs.
+                        2008–2018), revealing that the elephant shape is evolving: growth has become somewhat more
+                        diffuse and less concentrated at the very top, with the emergence of a broader global middle
+                        class. But the fundamental pattern persists: three zones (A — global middle class growth; B —
+                        Western stagnation; C — elite gains).</p>
+
+                    <div class="alert-box alert-red">
+                        <span class="alert-icon">🚨</span>
+                        <span><strong>Why this matters for public finance:</strong> The Elephant Curve explains
+                            <em>why</em> populist movements have surged in Western democracies. The stagnation of Zone B
+                            (P70–P90) represents real economic frustration — and it creates political demand for
+                            protectionism, redistribution, and anti-globalization policies. Understanding this dynamic
+                            is essential for designing politically sustainable public finance.</span>
+                    </div>
+
+                    <button class="btn-note" onclick="toggleNote('note-ch2')">
+                        <span class="note-icon">📝</span> Chapter 2 Summary
+                    </button>
+
+                    <div id="note-ch2" class="post-it-note">
+                        <p><strong>Key takeaways from Chapter 2:</strong></p>
+                        <ul>
+                            <li>We study inequality for <em>instrumental</em> reasons (it causes harm) and
+                                <em>intrinsic</em> reasons (it's unjust).
+                            </li>
+                            <li>The Kuznets Curve (inverted-U) is a historical hypothesis, not a law — recent data shows
+                                an N-shape.</li>
+                            <li>Good inequality measures must satisfy axioms: Transfer Principle, Anonymity, Scale
+                                Invariance, Decomposability.</li>
+                            <li>The Gini coefficient (linked to the Lorenz curve) is the most common index, but Atkinson
+                                and GE measures have advantages.</li>
+                            <li>Income can be measured as market, gross, disposable, or extended — each tells a
+                                different story about inequality.</li>
+                            <li>Wealth is <em>far more concentrated</em> than income. The Great Gatsby Curve shows
+                                inequality undermines mobility.</li>
+                            <li>Public policy (taxes + transfers) significantly reduces inequality — but by varying
+                                amounts across countries.</li>
+                            <li>Globally, between-country inequality is falling, but within-country inequality is
+                                rising.</li>
+                            <li>The Elephant Curve reveals globalization's winners (Asian middle class + global elite)
+                                and losers (Western middle class).</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
