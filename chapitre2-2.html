@@ -83,9 +83,9 @@
                 <section class="content-card">
                     <h2 class="section-title">Inequality Indices</h2>
 
-                    <p>Once we agree on the axioms that a good inequality measure should satisfy, we can construct
-                        specific <strong>indices</strong>. Each index captures different aspects of the income
-                        distribution. Here are the main families:</p>
+                    <p>Once we agree on the axioms a good inequality measure should follow, we can build
+                        specific <strong>indices</strong>. Each index captures different parts of the income
+                        distribution. Here are the main types:</p>
 
                     <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--clr-accent); font-size: 1.1rem;">
                         Decile Ratios</h3>
@@ -146,9 +146,10 @@
                             inequality).</p>
                     </div>
 
-                    <p>Intuitively, the Gini coefficient asks: <em>"If I pick two people at random, how different are
-                            their incomes, on average, relative to the mean?"</em> A Gini of 0.30 means that the
-                        expected difference between two random individuals is 60% of the mean income (since the formula
+                    <p>In simple terms, the Gini coefficient asks: <em>"If I pick two people at random, how different
+                            are
+                            their incomes, on average, compared to the mean?"</em> A Gini of 0.30 means that the
+                        average difference between two random people is 60% of the mean income (because the formula
                         divides by $2\bar{y}$).</p>
 
                     <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--clr-accent); font-size: 1.1rem;">
@@ -157,17 +158,18 @@
                     <div class="compare-grid">
                         <div class="compare-card">
                             <h4>Atkinson Index</h4>
-                            <p>Incorporates an explicit <em>inequality aversion parameter</em> $\varepsilon$. The higher
-                                $\varepsilon$, the more weight the index places on income transfers at the bottom of the
-                                distribution. This makes it more sensitive to poverty than the Gini, and directly linked
+                            <p>Includes a specific <em>inequality aversion parameter</em> $\varepsilon$. The higher
+                                $\varepsilon$, the more the index cares about income transfers at the bottom of the
+                                distribution. This makes it react more to poverty than the Gini, and it's directly
+                                linked
                                 to social welfare theory.</p>
                         </div>
                         <div class="compare-card">
                             <h4>Generalized Entropy (GE) Measures</h4>
                             <p>A family of indices that includes the <strong>Theil index</strong> (GE(1)) and the
-                                <strong>Mean Log Deviation</strong> (GE(0)). Their key advantage is that they are
-                                <em>perfectly decomposable</em>: total inequality can be split exactly into
-                                between-group and within-group components (Axiom 4).
+                                <strong>Mean Log Deviation</strong> (GE(0)). Their main advantage is that they can be
+                                <em>perfectly broken down</em>: total inequality can be split exactly into
+                                between-group and within-group parts (Axiom 4).
                             </p>
                         </div>
                     </div>
@@ -181,8 +183,7 @@
 
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <img src="images/lorenz-curve_visualizing-income-distribution.png"
-                            alt="Lorenz Curve showing cumulative income share vs cumulative population share"
-                           >
+                            alt="Lorenz Curve showing cumulative income share vs cumulative population share">
                     </div>
 
                     <p>The <strong>Lorenz curve</strong> is the standard way to <em>visualize</em> income distribution
@@ -236,37 +237,38 @@
                 <section class="content-card">
                     <h2 class="section-title">Measuring Income</h2>
 
-                    <p>Income seems like a simple concept, but measuring it correctly is one of the <span
+                    <p>Because income seems like a simple idea, but measuring it correctly is one of the <span
                             class="fluo">hardest
-                            problems</span> in empirical public finance. The choices we make about <em>how</em> to
+                            problems</span> in real-world public finance. The choices we make about <em>how</em> to
                         measure
-                        income can completely change our conclusions about inequality.</p>
+                        income can completely change what we conclude about inequality.</p>
 
-                    <p><strong>Why measure income?</strong> Because it is the primary indicator of whether an individual
-                        has access to a minimum level of resources — it reflects purchasing power, economic security,
+                    <p><strong>Why measure income?</strong> Because it is the main sign of whether someone
+                        has enough resources — it shows purchasing power, economic security,
                         and standard of living.</p>
 
                     <p><strong>Challenges:</strong></p>
 
                     <ul>
-                        <li><strong>Quality of reporting</strong> — People underreport their income in surveys
-                            (especially the very rich and those with informal income).</li>
+                        <li><strong>Quality of reporting</strong> — People report less income than they actually have in
+                            surveys
+                            (especially the very rich and those with unofficial income).</li>
                         <li><strong>Household vs. individual income</strong> — Should we measure the income of
                             individuals or households? Households pool resources, but household members may not share
                             equally.</li>
-                        <li><strong>Transitory vs. permanent income</strong> — A student may have very low income
-                            <em>this year</em> but high expected lifetime income. A one-year snapshot can be misleading.
+                        <li><strong>Short-term vs. lifetime income</strong> — A student may have very low income
+                            <em>this year</em> but high expected income over their life. A one-year picture can be
+                            misleading.
                         </li>
-                        <li><strong>Variation in price levels</strong> — €1,000/month buys very different amounts in
+                        <li><strong>Price differences</strong> — €1,000/month buys very different things in
                             Paris vs. rural Poland. We need to adjust for purchasing power.</li>
-                        <li><strong>Different income concepts</strong> — Which income we measure matters enormously. The
-                            course distinguishes four:</li>
+                        <li><strong>Different income types</strong> — Which income we measure matters a lot. The
+                            course looks at four:</li>
                     </ul>
 
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <img src="images/income-measurement_steps_market-gross-disposable-extended.png"
-                            alt="Steps from market income to extended income: adding transfers, subtracting taxes, equivalizing, adding public services"
-                           >
+                            alt="Steps from market income to extended income: adding transfers, subtracting taxes, equivalizing, adding public services">
                     </div>
 
                     <div class="table-wrapper" style="margin-top: 1rem;">
@@ -313,11 +315,11 @@
                             public services reduce inequality.</span>
                     </div>
 
-                    <p>An additional adjustment is <span class="fluo">equivalization</span>: dividing household
+                    <p>An extra step is <span class="fluo">equivalization</span>: dividing household
                         disposable income
-                        by the number of "equivalent adults" to account for household size. A household of 4 with
-                        €4,000/month is not as well off as a single person with €4,000/month, because costs are shared
-                        but not proportionally (a larger house costs more, but not 4× more).</p>
+                        by the number of "equivalent adults" to account for household size. A family of 4 with
+                        €4,000/month is not as well off as one person with €4,000/month, because costs are shared
+                        but not equally (a bigger house costs more, but not 4× more).</p>
                 </section>
 
                 <!-- ═══════ DATA CHALLENGES ═══════ -->
@@ -328,38 +330,37 @@
                         <div class="compare-card">
                             <div style="text-align: center; margin-bottom: 0.75rem;">
                                 <img src="images/survey-of-consumer-finances_sampling-types.png"
-                                    alt="Response rates: area-probability sample (~65-70%) vs list sample (~30-35%)"
-                                   >
+                                    alt="Response rates: area-probability sample (~65-70%) vs list sample (~30-35%)">
                             </div>
                             <h4>Survey Sampling Problem</h4>
                             <p>Surveys like the US Survey of Consumer Finances use two types of samples. The standard
-                                <strong>area-probability sample</strong> (random geographic selection) achieves a
-                                ~65-70% response rate. But the <strong>list sample</strong> — specifically targeting
-                                wealthy households — gets only ~30-35% response rates. The richest people are
-                                <em>hardest to survey</em>, which means standard surveys systematically underestimate
-                                top-end wealth and income.
+                                <strong>area-probability sample</strong> (random geographic selection) gets around
+                                65-70% of people to respond. But the <strong>list sample</strong> — which targets
+                                wealthy households specifically — gets only about 30-35% responses. The richest people
+                                are
+                                <em>hardest to survey</em>, which means regular surveys tend to underestimate
+                                wealth and income at the top.
                             </p>
                         </div>
                         <div class="compare-card">
                             <div style="text-align: center; margin-bottom: 0.75rem;">
                                 <img src="images/poverty-reduction_admin-vs-survey-data.png"
-                                    alt="Administrative data shows larger poverty reduction from public transfers than survey data"
-                                   >
+                                    alt="Administrative data shows larger poverty reduction from public transfers than survey data">
                             </div>
                             <h4>Admin vs. Survey Data</h4>
-                            <p>When measuring the poverty-reducing impact of public transfers, <strong>administrative
-                                    data</strong> (from tax records, benefit programs) consistently shows <em>larger
-                                    effects</em> than <strong>survey data</strong> (CPS). This gap is especially stark
-                                for vulnerable groups like single mothers and disabled households, because respondents
-                                often forget or underreport government benefits received.</p>
+                            <p>When measuring how much public transfers reduce poverty, <strong>administrative
+                                    data</strong> (from tax records, benefit programs) always shows <em>bigger
+                                    effects</em> than <strong>survey data</strong> (CPS). This gap is very clear
+                                for vulnerable groups like single mothers and disabled households, because people
+                                often forget or don't report government benefits they received.</p>
                         </div>
                     </div>
 
                     <div class="exam-tip">
-                        <p>When discussing inequality data on an exam, always acknowledge measurement limitations.
-                            Mention whether the data uses surveys or administrative records, note the income concept
-                            (market vs. disposable), and flag potential biases (underreporting by the rich,
-                            non-response, transitory income fluctuations).</p>
+                        <p>When talking about inequality data on an exam, always mention measurement problems.
+                            Say whether the data uses surveys or official records, note the income type
+                            (market vs. disposable), and point out possible biases (rich people underreporting,
+                            people not answering, short-term income changes).</p>
                     </div>
                 </section>
 
@@ -372,34 +373,36 @@
                             <span class="card-label">Dimension 2</span>
                             <h4>💎 Wealth</h4>
                             <p><strong>Why measure it?</strong> Wealth (assets minus debts) is even <em>more
-                                    concentrated</em> than income. It captures longrun economic power, security, and
-                                intergenerational advantage.</p>
-                            <p><strong>Challenges:</strong> Wealth is extremely hard to measure. The very rich engage in
-                                tax evasion and use complex financial structures to hide assets. What should be
-                                "included" (pension rights? housing?) and how to value illiquid assets are major
+                                    concentrated</em> than income. It shows long-term economic power, security, and
+                                advantages passed between generations.</p>
+                            <p><strong>Challenges:</strong> Wealth is very hard to measure. The very rich hide their
+                                money through
+                                tax evasion and complex financial structures. What should count
+                                (pension rights? housing?) and how to value things that can't easily be sold are big
                                 questions.</p>
                         </div>
                         <div class="compare-card">
                             <span class="card-label">Dimension 3</span>
                             <h4>🛒 Consumption</h4>
-                            <p><strong>Why measure it?</strong> Consumption may better reflect living standards than
-                                income, because people smooth their consumption over time (borrowing when young, saving
-                                when old). It indicates whether someone can <em>attain a given standard of living</em>.
+                            <p><strong>Why measure it?</strong> Consumption may show living standards better than
+                                income, because people spread their spending over time (borrowing when young, saving
+                                when old). It shows whether someone can <em>reach a certain standard of living</em>.
                             </p>
-                            <p><strong>Challenges:</strong> Consumption vs. consumption <em>expenditure</em> (owning a
-                                house = consumption but no expenditure), quality differences, micro-macro data
-                                mismatches, and household vs. personal consumption.</p>
+                            <p><strong>Challenges:</strong> Consumption vs. consumption <em>spending</em> (owning a
+                                house = consumption but no spending), quality differences, data problems,
+                                and household vs. personal consumption.</p>
                         </div>
                         <div class="compare-card">
                             <span class="card-label">Dimension 4</span>
                             <h4>🎯 Opportunities</h4>
-                            <p><strong>Why measure it?</strong> Many philosophers and economists argue we should care
+                            <p><strong>Why measure it?</strong> Many thinkers argue we should care
                                 about <em>equality of opportunity</em> rather than (or in addition to) equality of
-                                outcomes. The key question: does your economic fate depend on your talent and effort, or
+                                results. The key question: does your economic future depend on your talent and effort,
+                                or
                                 on your parents' income?</p>
-                            <p><strong>Challenges:</strong> Defining and measuring "opportunity" requires long-run panel
-                                data (tracking the same people over decades). It's also possible to measure inequality
-                                in education, health, or through composite indicators.</p>
+                            <p><strong>Challenges:</strong> Defining and measuring "opportunity" needs long-term
+                                data (following the same people over decades). We can also measure inequality
+                                in education, health, or through combined indicators.</p>
                         </div>
                     </div>
                 </section>
