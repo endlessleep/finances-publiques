@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Internalizing Externalities</title>
+    <meta name="description"
+        content="How to solve externalities through private negotiations (Coase Theorem) and public interventions (Taxes, Quotas, Permits).">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.4 — PUBLIC GOODS & EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link active">4.3 Internalizing Externalities</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>4.3 — Internalizing Externalities</h1>
+                <p class="subtitle">Chapter 4: Public Goods & Externalities</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ THE TWO SOLUTIONS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Two Main Solutions</h2>
+                    <p>When the market fails because of externalities, we have two main ways to fix it:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h3>1. Private Solutions</h3>
+                            <p><strong>Coase Theorem (Coase, 1960)</strong></p>
+                            <p>The market might fix itself through <span class="fluo">private negotiations</span> without government help.</p>
+                        </div>
+                        <div class="compare-card highlight">
+                            <h3>2. Public Solutions</h3>
+                            <p>The government intervenes using:</p>
+                            <ul style="padding-left: 1.2rem;">
+                                <li><strong>Price Regulation:</strong> Taxes & Subsidies.</li>
+                                <li><strong>Quantity Regulation:</strong> Quotas & Bans.</li>
+                                <li><strong>Marketable Permits:</strong> Cap-and-trade systems.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ═══════ COASE THEOREM ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Coase Theorem (Private Solution)</h2>
+                    <p>Coase asked: <em>Are externalities really outside the market?</em> Can private deals make the price reflect external costs?</p>
+
+                    <div class="definition-box">
+                        <p><strong>Coase Theorem — Part I:</strong> If property rights are well-defined and <span class="fluo">bargaining is costless</span>, then agents will negotiate to reach the socially optimal quantity.</p>
+                        <p style="margin-top: 0.5rem;"><strong>Coase Theorem — Part II:</strong> The efficient outcome doesn't depend on who owns the rights. It only changes who gets the money (income distribution), not the final quantity.</p>
+                    </div>
+
+                    <div class="alert-box note">
+                        <p><strong>Example: The River Pollution</strong></p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+                            <li><strong>Case 1: Swimmers own the river.</strong> Firms pay them for each unit of pollution. Payment = <span class="fluo">Marginal Damage (MD)</span>.</li>
+                            <li><strong>Case 2: Firms own the river.</strong> Swimmers pay firms to pollute less. Payment = <span class="fluo">Marginal Damage (MD)</span>.</li>
+                        </ul>
+                        <p style="margin-top: 0.5rem;">➡️ <strong>Result:</strong> In both cases, the negotiation leads to the same optimal quantity.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ COASE GRAPHICAL ANALYSIS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Coase Theorem Graphically</h2>
+                    <div class="graph-container">
+                        <img src="images/coase_theorem_graph.png" alt="Coase Theorem Negotiation Graph"
+                            class="graph-img-small">
+                        <div class="graph-caption">
+                            <p><strong>How to read:</strong> The market starts at $Q_1$ (where $PMC = PMB$). Through negotiation, agents move to $Q^*$ (where $SMC = SMB$), which is the social optimum.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="alert-box caution">
+                        <p><strong>Why Coase often fails (Problems):</strong></p>
+                        <ol style="margin-top: 0.5rem; padding-left: 1.2rem;">
+                            <li><strong>The Assignment Problem:</strong> It's hard to define who owns what, especially with many people.</li>
+                            <li><strong>Transaction Costs:</strong> Negotiating takes time and money. Coordination is hard for global issues (like climate change).</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- ═══════ PRICE REGULATION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Public Solution: Price Regulation</h2>
+                    <p>When Coase fails, the state uses <strong>Price Regulation</strong> to change behavior by changing prices.</p>
+
+                    <div class="definition-box">
+                        <p><strong>Pigouvian Tax (Pigou, 1920):</strong> A corrective tax set equal to the external marginal cost. It makes the firm's cost equal to the social cost ($PMC = SMC$).</p>
+                    </div>
+
+                    <div class="graph-container">
+                        <img src="images/pigouvian_tax_effect.png" alt="Pigouvian Tax Effect Graph"
+                            class="graph-img-small">
+                        <div class="graph-caption">
+                            <p><strong>Tax Effect:</strong> The tax shifts the supply curve up by the amount of the damage. This forces producers to reduce quantity from $Q_1$ to $Q^*$.</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1rem;"><strong>Fines & Sanctions:</strong> Similar to taxes but more indirect. Companies change methods to avoid paying high fines.</p>
+                </section>
+
+                <!-- ═══════ QUANTITY REGULATION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Public Solution: Quantity Regulation</h2>
+                    <p>Instead of prices, the state can directly mandate <span class="fluo">how much</span> of an activity is allowed.</p>
+                    
+                    <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                        <li><strong>Output Regulation:</strong> Limits on the final quantity (e.g., fishing quotas, emission standards).</li>
+                        <li><strong>Input Regulation:</strong> Requirements on how to produce (e.g., mandating specific filters).</li>
+                        <li><strong>Bans:</strong> Zero quantity allowed (e.g., smoking bans in public places).</li>
+                    </ul>
+
+                    <div class="compare-grid" style="margin-top: 1rem;">
+                        <div class="compare-card">
+                            <h4>Price vs Quantity</h4>
+                            <p>In a perfect world, they are the same. In practice, <strong>Price</strong> is more flexible but <strong>Quantity</strong> is easier when we don't know the exact demand curves.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ═══════ MARKETABLE PERMITS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Marketable Permits (Cap-and-Trade)</h2>
+                    <p>A combination of both: The government sets a <strong>Cap</strong> (quantity) but lets firms <strong>Trade</strong> (price).</p>
+
+                    <div class="alert-box tip">
+                        <p><strong>How it works:</strong> Each firm gets a permit to emit. If a firm emits less, it can sell its permit to a firm that needs to emit more. This ensures the total pollution stays under the limit efficiently.</p>
+                    </div>
+
+                    <div class="alert-box warning">
+                        <p><strong>Limits:</strong> Lobbying, equity issues (who gets the permits first?), and "hotspots" where pollution is concentrated locally.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ RECAP POST-IT ═══════ -->
+                <section class="post-it-note luxury">
+                    <div class="post-it-header">
+                        <span class="post-it-icon">🧠</span>
+                        <h3>ULTRA RECAP</h3>
+                    </div>
+                    <ul class="post-it-list">
+                        <li><strong>Coase:</strong> Market fixes it if rights are clear & bargaining is free.</li>
+                        <li><strong>Taxes:</strong> Correct through prices (Pigouvian).</li>
+                        <li><strong>Quotas:</strong> Correct through direct quantity control.</li>
+                        <li><strong>Permits:</strong> Efficient mix of quantity limits and market trading.</li>
+                    </ul>
+                </section>
+
+            </div> <!-- cards-container -->
+        </main>
+
+        <!-- ================= SCRIPTS ================= -->
+        <script>
+            function toggleSidebar() {
+                document.querySelector('.app-wrapper').classList.toggle('sidebar-collapsed');
+            }
+
+            function toggleAccordion(button) {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+                const content = item.querySelector('.accordion-content');
+                content.classList.toggle('show');
+            }
+        </script>
+    </div> <!-- app-wrapper -->
+</body>
+
+</html>
