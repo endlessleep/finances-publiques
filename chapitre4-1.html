@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Public Goods</title>
+    <meta name="description"
+        content="Market failures, taxonomy of goods, rivalry and excludability, and the problem of public goods.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.4 — PUBLIC GOODS & EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre4-1.html" class="nav-link active">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>4.1 — Public Goods</h1>
+                <p class="subtitle">Chapter 4: Public Goods & Externalities</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ MARKET FAILURES OVERVIEW ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Market Failures: An Overview</h2>
+
+                    <p>A <strong>market failure</strong> happens when the market does not allocate resources efficiently.
+                        Even if everyone acts rationally, the <span class="fluo">total welfare of society is not maximized</span>.
+                    </p>
+
+                    <div class="definition-box">
+                        <p><strong>Main sources of market failure:</strong></p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li><strong>Imperfect competition:</strong> Companies have power over prices.</li>
+                            <li><strong>Incomplete markets:</strong> Some goods or risks aren't covered by markets.</li>
+                            <li><strong>Imperfect information:</strong> People don't know everything they need to.</li>
+                            <li><strong>Public goods:</strong> Goods that are non-excludable and non-rival.</li>
+                            <li><strong>Externalities:</strong> Effects on third parties not counted by the market.</li>
+                        </ul>
+                    </div>
+                    <p style="margin-top: 1rem;">In this chapter, we focus specifically on <strong>Public Goods</strong> and <strong>Externalities</strong>.</p>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ TAXONOMY OF GOODS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Taxonomy of Goods</h2>
+
+                    <p>To understand why markets fail for certain goods, we use two criteria:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>Rivalry</h4>
+                            <p>If one person consumes a good, does it <span class="fluo">reduce the amount available</span> for others?</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Excludability</h4>
+                            <p>Is it <span class="fluo">possible to prevent</span> someone who doesn't pay from using the good?</p>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper" style="margin-top: 2rem;">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Excludable</th>
+                                    <th>Non-Excludable</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Rival</strong></td>
+                                    <td><strong>Private Goods</strong><br><small>(Food, Clothes)</small></td>
+                                    <td><strong>Common Resources</strong><br><small>(Fish in the sea)</small></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Non-Rival</strong></td>
+                                    <td><strong>Club Goods</strong><br><small>(Netflix, Gym)</small></td>
+                                    <td><strong>Public Goods</strong><br><small>(Defense, Street lights)</small></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ THE PUBLIC GOODS PROBLEM ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Public Goods Problem</h2>
+
+                    <p>Why is there a problem with public goods? It comes down to why the private sector often fails to provide them.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #F44336;">
+                            <span class="card-label" style="background: #FFEBEE; color: #C62828;">Private Failure</span>
+                            <h4>The Incentive Problem</h4>
+                            <p><strong>Non-excludability:</strong> Since it's impossible to stop people from using the good without paying, private firms have <span class="fluo">no incentive to produce it</span>. This leads to <strong>undersupply</strong>.</p>
+                            <p><strong>Non-rivalry:</strong> The marginal cost of an extra user is zero. This can lead to <strong>underconsumption</strong> if a price is charged.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #4CAF50;">
+                            <span class="card-label" style="background: #E8F5E9; color: #2E7D32;">Public Solution</span>
+                            <h4>The Government's Role</h4>
+                            <p>The government can step in and provide these goods using two types of funding:</p>
+                            <ul style="padding-left: 1rem;">
+                                <li><strong>User fees:</strong> Paying based on use (benefit principle).</li>
+                                <li><strong>Taxation:</strong> Paying based on wealth (ability-to-pay).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-pink" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>The Free-Rider Problem:</strong> People prefer not to pay, hoping to use the good for free while others pay. This makes voluntary funding almost impossible.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ CLASSROOM EXPERIMENT ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Experiment: The Public Goods Game</h2>
+
+                    <p>This experiment shows the conflict between individual interest and the common good.</p>
+
+                    <div class="definition-box">
+                        <p><strong>The Setup:</strong></p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li>Everyone has 10 tokens.</li>
+                            <li>You secretly choose how many to put into a "public pot".</li>
+                            <li>The pot is multiplied (e.g., by 1.5) and split equally between everyone.</li>
+                        </ul>
+                        <p style="margin-top: 0.75rem;"><strong>The Result:</strong> Individually, the best choice is to contribute 0. But if everyone contributes 0, the whole group loses. If everyone contributes 10, everyone wins big.</p>
+                    </div>
+
+                    <div class="exam-tip" style="margin-top: 1.5rem;">
+                        <p>Research shows that:
+                            <br>1. Early rounds have high cooperation (~50%).
+                            <br>2. With repetition, contributions <span class="fluo">fall toward zero</span> as people stop trusting free-riders.
+                            <br>3. <strong>Punishment works:</strong> If you can pay to "punish" free-riders, cooperation stays high. This is the logic behind taxation and enforcement.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ OPTIMAL QUANTITY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Optimal Quantity</h2>
+
+                    <p>How much of a public good should the government provide? Since there are no market prices, we have to find the "efficient" level manually.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>Demand (MWTP)</h4>
+                            <p>The <strong>Marginal Willingness to Pay</strong>. For public goods, we sum demand <em>vertically</em> (adding up how much every person values the same unit).</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Supply (MC)</h4>
+                            <p>The <strong>Marginal Cost</strong> of providing the good, usually determined through cost-benefit analysis and the government budget.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-red" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>Efficiency Condition:</strong> Marginal Willingness to Pay = Marginal Cost. 
+                        In public finance, this is decided through the <span class="fluo">political process</span> rather than market competition.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch4-1')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch4-1" class="post-it-note">
+                        <p><strong>Public Goods Summary:</strong></p>
+                        <ul>
+                            <li>Public goods are <strong>non-rival</strong> and <strong>non-excludable</strong>.</li>
+                            <li>This creates a <strong>free-rider problem</strong> where the private sector produces too little.</li>
+                            <li>The government solves this through <strong>enforcement (taxes)</strong>.</li>
+                            <li>The efficient level is where the <strong>total social benefit equals the cost</strong>.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Externalities</title>
+    <meta name="description"
+        content="What are externalities, their classification, formal definition, and the double dividend of taxation.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.4 — PUBLIC GOODS & EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link active">4.2 Externalities</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>4.2 — Externalities</h1>
+                <p class="subtitle">Chapter 4: Public Goods & Externalities</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ WHAT ARE EXTERNALITIES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">What are Externalities?</h2>
+
+                    <p>An <strong>externality</strong> is a cost or benefit that happens when someone's action has an
+                        <span class="fluo">uncompensated effect</span> on someone else. In other words, the person doing the action doesn't pay for the harm (negative) or get paid for the benefit (positive).
+                    </p>
+
+                    <div class="definition-box">
+                        <p><strong>Common examples:</strong></p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li><strong>Negative:</strong> A factory pollutes a river, hurting people nearby.</li>
+                            <li><strong>Positive:</strong> A bee farmer's bees pollinate nearby crops for free.</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-pink" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span>Because these effects are NOT counted in the market price, they lead to <strong>inefficient resource allocation</strong> (market failure).</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ CLASSIFICATION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Classification of Externalities</h2>
+
+                    <p>Externalities are usually categorized by their <strong>impact</strong> and their <strong>source</strong>:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>Positive vs. Negative</h4>
+                            <p>Does it create a <strong>benefit</strong> or a <strong>cost</strong> for others?</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Production vs. Consumption</h4>
+                            <p>Does the effect come from <strong>making</strong> a product or <strong>using</strong> it?</p>
+                        </div>
+                    </div>
+
+                    <div class="exam-tip" style="margin-top: 1.5rem;">
+                        <p><strong>Other types to know:</strong>
+                            <br>• <strong>Local vs. Global:</strong> Noise pollution (local) vs. Climate change (global).
+                            <br>• <strong>Positional:</strong> My success makes you look worse (e.g., grading on a curve).
+                            <br>• <strong>Network:</strong> A tool becomes more useful as more people use it (e.g., WhatsApp).
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ FORMAL DEFINITION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Externalities Formally</h2>
+
+                    <p>Economists Buchanan and Stubblebine (1962) defined an externality using <strong>utility functions</strong>.
+                        If person A's utility ($uA$) depends not just on their own actions ($X$), but also on person B's action ($Y1$):</p>
+
+                    <div class="equation-container">
+                        $$uA = uA(X_1, X_2, ..., X_m, Y_1)$$
+                    </div>
+
+                    <p>An externality exists if the effect of B's action on A's utility is not zero:</p>
+                    <div class="equation-container">
+                        $$\frac{\partial uA}{\partial Y_1} \neq 0$$
+                    </div>
+
+                    <p style="margin-top: 1rem;">• <strong>Positive:</strong> If $\partial uA / \partial Y_1 > 0$ (benefit).
+                        <br>• <strong>Negative:</strong> If $\partial uA / \partial Y_1 < 0$ (cost).
+                    </p>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ PRIVATE VS SOCIAL VALUE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Private vs. Social Value</h2>
+
+                    <p>To analyze externalities, we must distinguish between what the <strong>individual</strong> pays/gets and what the <strong>society</strong> pays/gets.</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Term</th>
+                                    <th>Meaning</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>PMC</strong></td>
+                                    <td><strong>Private Marginal Cost:</strong> Direct cost to the producer.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SMC</strong></td>
+                                    <td><strong>Social Marginal Cost:</strong> PMC + External Cost.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PMB</strong></td>
+                                    <td><strong>Private Marginal Benefit:</strong> Direct benefit to the consumer.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SMB</strong></td>
+                                    <td><strong>Social Marginal Benefit:</strong> PMB + External Benefit.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ GRAPHICAL ANALYSIS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Graphical Analysis</h2>
+
+                    <!-- 🔴 Negative Production Externality -->
+                    <div class="definition-box" style="border-left: 4px solid #F44336; margin-bottom: 2rem;">
+                        <p><strong>1. Negative Production Externality (e.g., Pollution)</strong></p>
+                        <div class="image-wrapper">
+                            <img src="images/negative_production_externality.png" alt="Negative Production Externality Diagram">
+                        </div>
+                        <p style="margin-top: 1rem;">Companies only care about <strong>PMC</strong>. But society pays <strong>SMC</strong>.
+                            Because the price is too low, the market produces <strong>Q1</strong>, which is <span class="fluo">higher than the socially optimal quantity Q*</span>.
+                            <br>➡️ Result: <strong>OVERPRODUCTION</strong> and Deadweight Loss.
+                        </p>
+                    </div>
+
+                    <!-- 🔴 Negative Consumption Externality -->
+                    <div class="definition-box" style="border-left: 4px solid #F44336; margin-bottom: 2rem;">
+                        <p><strong>2. Negative Consumption Externality (e.g., Smoking)</strong></p>
+                        <div class="image-wrapper">
+                            <img src="images/negative_consumption_externality.png" alt="Negative Consumption Externality Diagram">
+                        </div>
+                        <p style="margin-top: 1rem;">Individuals only see their own benefit (<strong>PMB</strong>), ignoring the harm to others. The social benefit <strong>SMB</strong> is lower.
+                            <br>➡️ Result: <strong>OVERCONSUMPTION</strong> and Deadweight Loss.
+                        </p>
+                    </div>
+
+                    <!-- 🟢 Positive Consumption Externality -->
+                    <div class="definition-box" style="border-left: 4px solid #4CAF50;">
+                        <p><strong>3. Positive Consumption Externality (e.g., Vaccination)</strong></p>
+                        <div class="image-wrapper">
+                            <img src="images/positive_consumption_externality.png" alt="Positive Consumption Externality Diagram">
+                        </div>
+                        <p style="margin-top: 1rem;">Individuals underestimate the value (<strong>SMB > PMB</strong>) because they don't count the benefits to others (like herd immunity).
+                            <br>➡️ Result: <strong>UNDERCONSUMPTION</strong>. Government often needs to use subsidies or rules to reach Q2.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ DOUBLE DIVIDEND ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Double Dividend of Taxation</h2>
+
+                    <p>Usually, taxes create "deadweight loss" because they discourage work or trade. But taxing negative externalities is different.</p>
+
+                    <div class="image-wrapper">
+                        <img src="images/double_dividend_taxation.png" alt="Double Dividend of Taxation Diagram">
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">A <strong>Pigouvian Tax</strong> (like a carbon tax) provides two benefits at once:</p>
+                    <ul style="padding-left: 1.5rem;">
+                        <li><strong>1. Efficiency Gain:</strong> It fixes the market failure by moving production from Q1 to the social optimum Q*. It <span class="fluo">eliminates the deadweight loss</span>.</li>
+                        <li><strong>2. Revenue Gain:</strong> It generates tax revenue (the green area) that can be used to fund other good things (like education) or reduce other distorting taxes.</li>
+                    </ul>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">💰</span>
+                        <span>Unlike normal taxes, a tax on externalities <strong>improves</strong> overall economic welfare while making money for the government.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch4-2')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch4-2" class="post-it-note">
+                        <p><strong>Externalities Summary:</strong></p>
+                        <ul>
+                            <li>Negative effects lead to <strong>overproduction/overconsumption</strong>.</li>
+                            <li>Positive effects lead to <strong>underproduction/underconsumption</strong>.</li>
+                            <li><strong>Internalizing</strong> means making the agent pay for the external cost.</li>
+                            <li><strong>Pigouvian taxes</strong> fix the market AND generate useful revenue (double dividend).</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
