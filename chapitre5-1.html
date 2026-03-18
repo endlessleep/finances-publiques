@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Role & Scale of Government</title>
+    <meta name="description"
+        content="The role of public budgets, government scale (Tax/GDP), and the modern pressures of the triple bind.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS & EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.5 — CENTRAL & LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre5-1.html" class="nav-link active">5.1 Role & Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM & Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism & Innovation</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>5.1 — Role & Pressures of Public Budgets</h1>
+                <p class="subtitle">Chapter 5: Central and Local Government Public Finance</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ THE SCALE OF GOVERNMENT ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Scale of the Modern State</h2>
+                    <p>Understanding the modern state requires analyzing the <strong>Tax-to-GDP ratio</strong>. This metric reveals the percentage of a nation's total economic output that is collected through taxes to fund public services.</p>
+
+                    <div class="definition-box">
+                        <p><strong>Empirical Observation (Tax/GDP Trends):</strong></p>
+                        <p>Historically, the role of the state was minimal before 1900. Throughout the 20th century, especially after 1945, there was an <span class="fluo">explosion in public spending</span>. Today, we observe clear regional differences:</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li><strong>Europe:</strong> Characterized by high taxation levels (often above 40%), reflecting a strong commitment to the <strong>Welfare State</strong>.</li>
+                            <li><strong>United States:</strong> Maintains a lower level of taxation compared to Europe, favoring private market mechanisms.</li>
+                            <li><strong>Emerging Economies:</strong> Often show even lower levels, though countries like China are catching up rapidly in infrastructure and R&D investment.</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚖️</span>
+                        <span><strong>The Macro-Tradeoff:</strong> A larger state allows for better correction of <strong>externalities</strong> and social redistribution, but it also carries the risk of inefficiency if resources are not managed with strict discipline.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ EXPECTATIONS & SECTORS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">What Do We Expect from the State?</h2>
+                    <p>The "Social State" or "Welfare State" is not just about producing goods; it is primarily about <strong>redistribution</strong> and <strong>insurance against risk</strong>.</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Sector</th>
+                                    <th>Primary Role</th>
+                                    <th>Economic Logic</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Social Protection</strong></td>
+                                    <td>Pensions, unemployment, disability.</td>
+                                    <td>Redistribution & Risk Insurance.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Health</strong></td>
+                                    <td>Universal access to medical care.</td>
+                                    <td>Positive Consumption Externality.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Education</strong></td>
+                                    <td>Primary to Higher Education.</td>
+                                    <td>Investment in Human Capital.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>General Services</strong></td>
+                                    <td>Public administration, defense.</td>
+                                    <td>Pure Public Goods.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="margin-top: 1rem;">According to Piketty (2020), the rise of the modern state is defined by the shift from a "Regalian State" (police, defense) to a "Social State" (health, education, transfers).</p>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ THE TRIPLE BIND ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Triple Bind (Barber, 2015)</h2>
+                    <p>Modern governments face a structural conflict known as the <strong>Triple Bind</strong>. This represents three contradictory pressures that make fiscal management extremely difficult in the 21st century.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>1. Revenue Pressure</h4>
+                            <p>Global competition creates a <span class="fluo">downward pressure</span> on the ability of states to raise taxes without losing mobile capital or talent.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>2. Debt Constraints</h4>
+                            <p>Following historical crises, there is an urgent need to <strong>reduce debt burdens</strong> to maintain fiscal sustainability and credit ratings.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>3. Demand for Quality</h4>
+                            <p>Citizens continuously demand <strong>improved quality</strong> and efficiency in public service delivery (health, digital infrastructure, etc.).</p>
+                        </div>
+                    </div>
+
+                    <div class="exam-tip" style="margin-top: 1.5rem;">
+                        <p><strong>The Barber Paradox:</strong> You must deliver <strong>more</strong> (better services) with <strong>less</strong> (less debt) while being unable to increase <strong>income</strong> (taxes). This drives the absolute necessity for <strong>Value for Money</strong> reforms.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ FUTURE EXPENDITURE PRESSURES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Anticipated Spending Pressures (2025-2050)</h2>
+                    <p>The state is not shrinking; if anything, new global challenges are forcing it to expand in strategic directions.</p>
+
+                    <div class="definition-box">
+                        <p><strong>The Robinson Framework (2020):</strong></p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li><strong>Demographic Shift:</strong> Aging populations lead to escalating healthcare and pension costs.</li>
+                            <li><strong>Climate Transformation:</strong> Massive public investment is required for decarbonization and energy transition.</li>
+                            <li><strong>Infrastructure Decay:</strong> Renewal of old infrastructure (transport, water, digital) in advanced nations.</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🎖️</span>
+                        <span><strong>The 2025 Additions:</strong> Since the recent geopolitical shifts, we must add <strong>Defense</strong> and <strong>Strategic Resilience</strong> (energy security, supply chain independence) to the list of non-negotiable spending priorities.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ PRINCIPLES OF MODERN BUDGETING ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Principles of Modern Budgeting</h2>
+                    <p>To survive the triple bind, the way we "do" budgeting must change. Modern public finance management relies on five pillars:</p>
+
+                    <ul class="post-it-list" style="columns: 2;">
+                        <li><strong>Performance Oriented:</strong> Outcomes matter more than inputs.</li>
+                        <li><strong>Holistic:</strong> Encompassing all levels (central + local).</li>
+                        <li><strong>Multi-year:</strong> Planning beyond the 12-month election cycle.</li>
+                        <li><strong>Responsibility:</strong> Giving managers more flexibility (non-binding).</li>
+                        <li><strong>Evaluated:</strong> Constant review of results and efficiency.</li>
+                    </ul>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch5-1')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch5-1" class="post-it-note">
+                        <p><strong>Summary for Exam:</strong></p>
+                        <ul>
+                            <li>States have evolved from <strong>Regalian</strong> to <strong>Social</strong>.</li>
+                            <li><strong>Triple Bind:</strong> High demand vs. Low debt vs. Limited tax.</li>
+                            <li><strong>Coming Pressures:</strong> Health, Climate, Defense, and Infrastructure.</li>
+                            <li><strong>Budgeting:</strong> Must move from "spending" to "performing".</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
