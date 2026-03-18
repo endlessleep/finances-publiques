@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Protecting the Environment</title>
+    <meta name="description"
+        content="Environmental externalities, CO2 emissions analysis, international agreements (Kyoto, Paris), and the intergenerational challenge.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.4 — PUBLIC GOODS & EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link active">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>4.4 — Protecting the Environment</h1>
+                <p class="subtitle">Chapter 4: Public Goods & Externalities</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ THE GLOBAL CHALLENGE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">A Global Challenge: How Much to Reduce?</h2>
+                    <p>Economic debates today focus on <span class="fluo">how much</span> to reduce pollution, not whether externalities exist. Since activities create both costs and benefits, we must find the optimal level.</p>
+
+                    <div class="definition-box">
+                        <p><strong>Nature of Environmental Externalities:</strong></p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li><strong>Global:</strong> Climate change affects everyone, regardless of borders.</li>
+                            <li><strong>Diffuse:</strong> Damage is not localized in one spot.</li>
+                            <li><strong>Long-term:</strong> Effects last for centuries.</li>
+                        </ul>
+                        <p style="margin-top: 0.5rem;">➡️ <strong>Conclusion:</strong> We need international cooperation, as national solutions are insufficient.</p>
+                    </div>
+
+                    <div class="alert-box note">
+                        <p><strong>Historical Awareness: The Great Smog (1952)</strong></p>
+                        <p>Before the mid-20th century, air was "taken for granted." The Great Smog of London changed this: estimates show <strong>12,000 deaths</strong> and 200,000 injured. Awareness grew as the environment became a <span class="fluo">scarce resource</span>.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ CO2 EMISSIONS TRENDS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">CO2 Emissions: Empirical Trends</h2>
+                    <p>History shows a direct link between industrial growth and pollution. We can identify three phases:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h3>1. Before 1900</h3>
+                            <p>Emissions were near zero. The economy was mostly agricultural and non-industrialized.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h3>2. 1900 — 1950</h3>
+                            <p>Moderate increases as early industrialization began in the West.</p>
+                        </div>
+                        <div class="compare-card highlight">
+                            <h3>3. Post-1950 Explosion</h3>
+                            <p>A massive spike in emissions globally. Linked to rapid economic growth and fossil fuel energy (coal, oil).</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;"><strong>Analysis by Region:</strong></p>
+                    <ul style="padding-left: 1.5rem;">
+                        <li><span class="fluo">China:</span> Rapid increase after 2000; currently the largest total emitter.</li>
+                        <li><span class="fluo">USA/Europe:</span> Reached a plateau and now show a steady decline due to environmental policies.</li>
+                    </ul>
+                </section>
+
+                <!-- ═══════ TOTAL VS PER CAPITA ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Total vs. Per Capita: Who is Responsible?</h2>
+                    <p>The "responsibility" for climate change depends on how you measure it:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>Option 1: Total Emissions</h4>
+                            <p>Chine is #1. Large countries always look more "guilty" because of their sheer size.</p>
+                        </div>
+                        <div class="compare-card highlight">
+                            <h4>Option 2: Per Capita (Per Person)</h4>
+                            <p>The <strong>USA and Canada</strong> have some of the highest emissions per person, while India/Africa are very low.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box caution">
+                        <p><strong>The Political Conflict:</strong> This creates a major debate. Developing nations (like China/India) argue they need to grow, while developed nations (like the US) argue that everyone must cut down now.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ INTERNATIONAL AGREEMENTS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Global Governance: Kyoto & Paris</h2>
+                    <p>Since climate change is a global externality, we need global rules.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h3>Kyoto Protocol (1997)</h3>
+                            <p>The first major attempt. Focused on quotas for developed countries and carbon permit trading.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h3>Paris Agreement (2015)</h3>
+                            <p>Goal: Keep warming <span class="fluo">below 2°C</span> (ideally 1.5°C). Countries set their own "Nationally Determined Contributions" (NDCs).</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1rem;"><strong>Difficulties:</strong></p>
+                    <ul style="padding-left: 1.5rem;">
+                        <li><strong>Political Instability:</strong> US withdrawal under Trump (rejoined by Biden, withdrawn again by Trump in 2025).</li>
+                        <li><strong>Funding:</strong> Promises to provide $100B per year to developing nations often go unmet.</li>
+                    </ul>
+                </section>
+
+                <!-- ═══════ COVID-19 AND POLLUTION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">COVID-19: A Proof of Reversibility</h2>
+                    <p>The 2020 lockdowns provided a massive empirical experiment. When economic activity stopped, pollution dropped instantly.</p>
+
+                    <div class="alert-box tip">
+                        <p><strong>China & Wuhan Case Study:</strong></p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+                            <li>Satellite data showed NO2 pollution clouds completely disappearing over industrial zones.</li>
+                            <li><strong>Lesson:</strong> Pollution is reversible, but it requires radical shifts in economic behavior.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ═══════ INTERGENERATIONAL EXTERNALITIES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Coase Fails: The Future Generation</h2>
+                    <p>Can the **Coase Theorem** solve climate change? <strong>No.</strong></p>
+
+                    <div class="definition-box">
+                        <p><strong>The Intergenerational Problem:</strong> Negotiation is impossible because the people most affected (those born in 2100) are not yet alive to bargain.</p>
+                        <p style="margin-top: 0.5rem;"><strong>Economic Solution:</strong> We must "decide for them" by using <span class="fluo">Public Debt</span> to invest in green tech now, with future generations repaying that debt (intertemporal trade-off).</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ ADDITIONAL DEFINITIONS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Supplementary Definitions</h2>
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h3>1. Pecuniary Externality</h3>
+                            <p>Only changes prices and profits, not real welfare. (e.g., a factory using more electricity raises prices for others).</p>
+                        </div>
+                        <div class="compare-card">
+                            <h3>2. Common Resource Problem</h3>
+                            <p>Consumption of a rival, non-excludable good leads to depletion. (e.g., overfishing, oil reserves).</p>
+                        </div>
+                        <div class="compare-card">
+                            <h3>3. Positional Externality</h3>
+                            <p>Value depends on your rank relative to others. (e.g., getting a degree makes others' degrees look less scarce).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ═══════ RECAP POST-IT ═══════ -->
+                <section class="post-it-note luxury">
+                    <div class="post-it-header">
+                        <span class="post-it-icon">🌱</span>
+                        <h3>PROTECTING THE FUTURE</h3>
+                    </div>
+                    <ul class="post-it-list">
+                        <li><strong>Global Risk:</strong> National solutions can't fix global warming.</li>
+                        <li><strong>Metric Matters:</strong> Total vs. Per Capita defines who pays.</li>
+                        <li><strong>No Coase:</strong> Future generations can't sit at the table.</li>
+                        <li><strong>Knowledge Gap:</strong> We don't know the long-term impact of crowding out nature.</li>
+                    </ul>
+                </section>
+
+            </div> <!-- cards-container -->
+        </main>
+
+        <!-- ================= SCRIPTS ================= -->
+        <script>
+            function toggleSidebar() {
+                document.querySelector('.app-wrapper').classList.toggle('sidebar-collapsed');
+            }
+
+            function toggleAccordion(button) {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+                const content = item.querySelector('.accordion-content');
+                content.classList.toggle('show');
+            }
+        </script>
+    </div> <!-- app-wrapper -->
+</body>
+
+</html>
