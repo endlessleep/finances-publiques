@@ -233,38 +233,55 @@
                 <section class="content-card">
                     <h2 class="section-title">Graphical Analysis</h2>
 
-                    <!-- 🔴 Negative Production Externality -->
+                    <!-- 📊 Negative Production Externality -->
                     <div class="definition-box" style="border-left: 4px solid #F44336; margin-bottom: 2rem;">
                         <p><strong>1. Negative Production Externality (e.g., Pollution)</strong></p>
                         <div class="image-wrapper">
-                            <img src="images/negative_production_externality.png" alt="Negative Production Externality Diagram" style="max-height: 250px;">
+                            <img src="negative_prod.png" alt="Negative Production Externality Diagram" style="max-height: 250px;">
                         </div>
-                        <p style="margin-top: 1rem;">Companies only care about <strong>PMC</strong>. But society pays <strong>SMC</strong>.
-                            Because the price is too low, the market produces <strong>Q1</strong>, which is higher than the optimal quantity <strong>Q*</strong>.
-                            <br>➡️ Result: <strong>OVERPRODUCTION</strong> and Deadweight Loss.
-                        </p>
+                        <div class="pedagogical-details" style="margin-top: 1rem; font-size: 0.95rem;">
+                            <p><strong>Technical Breakdown:</strong></p>
+                            <ul style="padding-left: 1.5rem;">
+                                <li><strong>Demand:</strong> $D = PMB = SMB$ (Private benefit equals social benefit).</li>
+                                <li><strong>Private Supply:</strong> $S = PMC$ (Only direct manufacturing costs).</li>
+                                <li><strong>Social Cost:</strong> $SMC = PMC + MD$ (Located <strong>above</strong> private supply due to damage).</li>
+                            </ul>
+                            <p style="margin-top: 0.5rem;">➡️ <strong>Result:</strong> Market equilibrium is at $Q_1$ (where $PMC = PMB$), but the social optimum is at $Q^*$ (where $SMC = SMB$). This leads to <span class="fluo">overproduction</span> and a Deadweight Loss (DWL) triangle between $SMC$ and $PMB$.</p>
+                        </div>
                     </div>
 
-                    <!-- 🔴 Negative Consumption Externality -->
+                    <!-- 🚬 Negative Consumption Externality -->
                     <div class="definition-box" style="border-left: 4px solid #F44336; margin-bottom: 2rem;">
-                        <p><strong>2. Negative Consumption Externality (e.g., Smoking)</strong></p>
-                        <div class="image-wrapper">
-                            <img src="images/negative_consumption_externality.png" alt="Negative Consumption Externality Diagram" style="max-height: 250px;">
+                        <p><strong>2. Negative Consumption Externality (e.g., Cigarettes)</strong></p>
+                        <div class="image-wrapper" style="background: white; border-radius: 8px; padding: 10px;">
+                            <img src="negative_cons.png" alt="Negative Consumption Externality Diagram" style="max-height: 250px;">
                         </div>
-                        <p style="margin-top: 1rem;">People only see their own benefit (<strong>PMB</strong>), ignoring the harm to others. The social benefit <strong>SMB</strong> is lower.
-                            <br>➡️ Result: <strong>OVERCONSUMPTION</strong> and Deadweight Loss.
-                        </p>
+                        <div class="pedagogical-details" style="margin-top: 1rem; font-size: 0.95rem;">
+                            <p><strong>Technical Breakdown:</strong></p>
+                            <ul style="padding-left: 1.5rem;">
+                                <li><strong>Private Demand:</strong> $D = PMB$ (Individual utility from smoking).</li>
+                                <li><strong>Social Demand:</strong> $SMB = PMB - MD$ (Located <strong>lower</strong> because of external harm).</li>
+                                <li><strong>Supply:</strong> $S = PMC = SMC$ (Assumed no production externality).</li>
+                            </ul>
+                            <p style="margin-top: 0.5rem;">➡️ <strong>Result:</strong> Consumers ignore the Marginal Damage ($MD$), leading to an equilibrium at $Q_1$ instead of $Q_2$. This causes <span class="fluo">overconsumption</span> and a DWL triangle between $SMB$ and $PMC$.</p>
+                        </div>
                     </div>
 
                     <!-- 🟢 Positive Consumption Externality -->
                     <div class="definition-box" style="border-left: 4px solid #4CAF50;">
-                        <p><strong>3. Positive Consumption Externality (e.g., Vaccination)</strong></p>
-                        <div class="image-wrapper">
-                            <img src="images/positive_consumption_externality.png" alt="Positive Consumption Externality Diagram" style="max-height: 250px;">
+                        <p><strong>3. Positive Consumption Externality (e.g., Education / Vaccination)</strong></p>
+                        <div class="image-wrapper" style="background: white; border-radius: 8px; padding: 10px;">
+                            <img src="positive_cons.png" alt="Positive Consumption Externality Diagram" style="max-height: 250px;">
                         </div>
-                        <p style="margin-top: 1rem;">Individuals underestimate the value (<strong>SMB > PMB</strong>) because they don't count the benefits to others.
-                            <br>➡️ Result: <strong>UNDERCONSUMPTION</strong>.
-                        </p>
+                        <div class="pedagogical-details" style="margin-top: 1rem; font-size: 0.95rem;">
+                            <p><strong>Technical Breakdown:</strong></p>
+                            <ul style="padding-left: 1.5rem;">
+                                <li><strong>Private Demand:</strong> $D = PMB$ (Individual benefit).</li>
+                                <li><strong>Social Demand:</strong> $SMB = PMB + MB$ (Located <strong>higher</strong> due to external benefits).</li>
+                                <li><strong>Supply:</strong> $S = PMC = SMC$.</li>
+                            </ul>
+                            <p style="margin-top: 0.5rem;">➡️ <strong>Result:</strong> Individual choice leads to $Q_1$, but the optimum is at $Q_2$. Because individuals ignore the benefits to others ($MB$), there is <strong>underconsumption</strong> and a DWL triangle between $SMB$ and $PMC$.</p>
+                        </div>
                     </div>
                 </section>
 
@@ -321,14 +338,24 @@
 
                     <p>Usually, taxes cause "deadweight loss" (inefficiency). But taxing negative externalities is special.</p>
 
-                    <div class="image-wrapper">
-                        <img src="images/double_dividend_taxation.png" alt="Double Dividend of Taxation Diagram" style="max-height: 250px;">
+                    <div class="image-wrapper" style="background: white; border-radius: 8px; padding: 10px;">
+                        <img src="double_div.png" alt="Double Dividend of Taxation Diagram" style="max-height: 250px;">
                     </div>
 
-                    <p style="margin-top: 1.5rem;">A <strong>Pigouvian Tax</strong> (like a carbon tax) provides two benefits:</p>
+                    <div class="pedagogical-details" style="margin-top: 1.5rem; font-size: 0.95rem;">
+                        <p><strong>How the Pigouvian Tax Works:</strong></p>
+                        <ul style="padding-left: 1.5rem;">
+                            <li><strong>Demande :</strong> $D = PMB = SMB$</li>
+                            <li><strong>Offre privée :</strong> $S = PMC$</li>
+                            <li><strong>Coût social :</strong> $SMC$ (situé au-dessus de $PMC$)</li>
+                        </ul>
+                        <p style="margin-top: 0.5rem;"><strong>Correction par la Taxe :</strong> La Taxe Pigouvienne ($T$) est fixée exactement à l'écart entre le coût social ($SMC$) et le coût privé ($PMC$). Elle <span class="fluo">déplace l'offre vers le haut</span> (de $PMC$ à $SMC$), ramenant la production de $Q_1$ à l'optimum social $Q^*$.</p>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">Ce mécanisme offre deux bénéfices simultanés :</p>
                     <ul style="padding-left: 1.5rem;">
-                        <li><strong>1. Efficiency Gain:</strong> It fixes the market by moving quantity to Q*. It eliminates the <span class="fluo">deadweight loss</span>.</li>
-                        <li><strong>2. Revenue Gain:</strong> It generates money that can be used to fund other good things, like <strong>education</strong>.</li>
+                        <li><strong>1. Efficiency Gain:</strong> La taxe corrige l'externalité et élimine l'inefficacité (la perte sèche ou triangle rouge sur le graphique).</li>
+                        <li><strong>2. Revenue Gain:</strong> Elle génère des recettes fiscales qui peuvent être réinvesties dans des biens publics comme l'<strong>éducation</strong>.</li>
                     </ul>
 
                     <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
