@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — The Grossman Model</title>
+    <meta name="description" content="Health as durable capital, Grossman (1972) framework, equilibrium condition, comparative statics, and Arrow (1963) critique.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.7 — HEALTH ECONOMICS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre7-1.html" class="nav-link active">7.1 The Grossman Model</a>
+                        <a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a>
+                        <a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a>
+                        <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>7.1 — The Grossman Model</h1>
+                <p class="subtitle">Chapter 7: Health Economics — Theory, Systems, and the Cost of Aging</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ WHY HEALTH NEEDS ITS OWN ECONOMICS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Does Healthcare Need Its Own Economics?</h2>
+                    <p>Healthcare markets <span class="fluo">violate the standard assumptions</span> required for the First Welfare Theorem to hold. Unlike ordinary commodity markets, healthcare is characterised by <span class="fluo">uncertainty</span> (you do not know when or whether you will fall ill), <span class="fluo">information asymmetry</span> (physicians know far more than patients), and <span class="fluo">externalities</span> (vaccination benefits everyone, not just the vaccinated individual).</p>
+
+                    <p style="margin-top: 1rem;">Kenneth Arrow's seminal 1963 paper demonstrated that healthcare is <span class="fluo">fundamentally different from normal goods</span>, and that the standard welfare theorems break down when these key market conditions fail. This is why governments intervene so heavily in health markets across the world.</p>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #2563EB;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">17.2%</h4>
+                            <p>US health spending as % of GDP</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #10B981;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">11.2%</h4>
+                            <p>OECD comparable country average</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #EF4444;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">2.5×</h4>
+                            <p>US per capita vs. OECD average</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ ARROW (1963) ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Arrow (1963) — Why Health Markets Fail</h2>
+                    <p>Arrow's 1963 paper in the <em>American Economic Review</em> remains the foundational analysis of why healthcare markets cannot function like competitive commodity markets. He identifies five key market failures:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #3B82F6;">
+                            <h4>🎲 Uncertainty</h4>
+                            <p>Illness is <span class="fluo">fundamentally unpredictable</span>. Consumers cannot assess provider quality <em>ex ante</em>, and do not know when they will need care. This violates the standard assumption that consumers have complete information about what they are buying.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>🔍 Information Asymmetry</h4>
+                            <p>Physicians know <span class="fluo">far more than patients</span> about diagnosis, treatment options, and prognosis. This creates an <span class="fluo">agency problem</span>: the doctor acts both as the advisor (telling you what you need) and the supplier (selling it to you).</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>🌍 Externalities</h4>
+                            <p>Vaccination, infectious disease control, and public hygiene create <span class="fluo">social benefits</span> far beyond the individual receiving care. These <span class="fluo">positive externalities</span> mean that private markets systematically under-provide these services relative to the social optimum.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <h4>🏥 Non-Competitive Structure</h4>
+                            <p>Licensing requirements, patent protections, geographic monopolies (especially in rural areas), and high entry barriers <span class="fluo">limit competition</span>. Healthcare providers often face little competitive pressure, enabling prices well above marginal cost.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-red" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Important Clarification:</strong> Healthcare is <span class="fluo">NOT a public good</span>! It is easily <span class="fluo">excludable</span> (you can deny treatment to someone who does not pay) and it is <span class="fluo">rival</span> (a hospital bed used by one patient cannot be used by another). However, it exhibits so many <em>other</em> market failures that standard competitive outcomes are still inefficient. If health <em>care</em> is so difficult for economists, maybe we can try analysing <em>health</em> instead → this is the Grossman approach.</span>
+                    </div>
+
+                    <p style="margin-top: 0.75rem; color: var(--clr-text-muted); font-size: 0.9rem;">Arrow, K.J. (1963). Uncertainty and the Welfare Economics of Medical Care. <em>AER</em>, 53(5).</p>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ GROSSMAN MODEL INTRO ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Grossman Model (1972) — Health as Durable Capital</h2>
+                    <p>Michael Grossman's 1972 model represents a radical <span class="fluo">departure from standard demand theory</span>. The key insight is that people do not demand <em>healthcare</em> for its own sake — they demand <span class="fluo">health</span>. Medical care is merely an <em>input</em> that produces health. In other words, the demand for medical care is a <span class="fluo">derived demand</span>.</p>
+
+                    <p style="margin-top: 1rem;">Health is modelled as a <span class="fluo">durable capital stock</span> (analogous to physical capital like machinery) that produces a flow of <span class="fluo">"healthy time"</span>. This healthy time has value in two ways:</p>
+
+                    <div class="compare-grid" style="margin-top: 1rem;">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>🛋️ Consumption Good</h4>
+                            <p>Healthy time enters the utility function directly — you <span class="fluo">feel better when you are healthy</span>. Being sick reduces your well-being regardless of income. This is the <span class="fluo">consumption motive</span> for investing in health.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #3B82F6;">
+                            <h4>💼 Investment Good</h4>
+                            <p>Healthy time enables work and earnings — being ill means <span class="fluo">lost wages and productivity</span>. Health capital generates a <span class="fluo">monetary return</span> analogous to physical or human capital. This is the <span class="fluo">investment motive</span>.</p>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper" style="margin-top: 1.5rem;">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Traditional View</th>
+                                    <th>Grossman's Innovation</th>
+                                    <th>Why It Matters</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>What is health?</strong></td>
+                                    <td>Health → utility directly (you feel well)</td>
+                                    <td>Health stock $H_t$ produces healthy time $h_t = \varphi(H_t)$</td>
+                                    <td>Health has both consumption <strong>AND</strong> investment value</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Role of medical care</strong></td>
+                                    <td>Medical care is chosen to maximise welfare</td>
+                                    <td>Healthy time enables work and consumption</td>
+                                    <td>Optimal health stock trades off cost vs. return</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Individual behaviour</strong></td>
+                                    <td>Passive consumer of health services</td>
+                                    <td>Individuals <span class="fluo">actively produce their own health</span></td>
+                                    <td>Explains age, income, education gradients</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Demand for care</strong></td>
+                                    <td>No role for individual investment behaviour</td>
+                                    <td>Demand for care = <span class="fluo">derived demand</span> for capital</td>
+                                    <td>Grounds demand for care in optimisation theory</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ FORMAL FRAMEWORK ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Grossman Model — The Formal Framework</h2>
+                    <p>The individual maximises <span class="fluo">lifetime utility</span> subject to health dynamics and a budget constraint. Utility depends on both the health stock (you feel better when healthy) and on income/consumption.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <p><strong>Objective Function:</strong></p>
+                        <p style="text-align: center; font-size: 1.15rem; margin: 0.75rem 0;"><span class="fluo">$U = U\bigl[u_t(c_t, H_t);\; u_{t+1}(c_{t+1}, H_{t+1});\; \ldots;\; u_n(c_n, H_n)\bigr]$</span></p>
+                        <p>where $c_t$ = consumption and $H_t$ = health stock at time $t$.</p>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #F59E0B;">
+                        <p><strong>Health Dynamics — The Capital Accumulation Equation:</strong></p>
+                        <p style="text-align: center; font-size: 1.15rem; margin: 0.75rem 0;"><span class="fluo">$H_{t+1} = H_t + I_t - \delta_t H_t$</span></p>
+                        <p>= current stock + gross investment − depreciation</p>
+                        <p style="margin-top: 0.75rem;"><strong>Investment Function:</strong></p>
+                        <p style="text-align: center; font-size: 1.1rem; margin: 0.5rem 0;">$I_t = I(M_t, TH_t;\; E_i)$</p>
+                        <p>where $M$ = medical care, $TH$ = own time devoted to health, and $E_i$ = education, environment and other individual characteristics.</p>
+                        <p style="margin-top: 0.75rem;">The <span class="fluo">depreciation rate $\delta_t$ increases with age</span> — this is how the model captures biological aging. As you get older, your body deteriorates faster, and maintaining the same health stock requires increasingly costly investment.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ EQUILIBRIUM CONDITION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Solving the Model — The Equilibrium Condition</h2>
+                    <p>Following <span class="fluo">human capital theory</span>, individuals invest in themselves (e.g. through training or education) to increase their productivity. The optimal amount of investment is determined by comparing costs and benefits — costs mostly occur in the short-term, while benefits accrue in the future in the form of enhanced income and wellness.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <p><strong>The Optimisation Problem:</strong></p>
+                        <p style="text-align: center; font-size: 1.1rem; margin: 0.75rem 0;"><span class="fluo">$\max \sum_{t} \delta^t \, U(H_t, Y_t)$</span></p>
+                        <p>subject to:</p>
+                        <p style="text-align: center; margin: 0.5rem 0;">$H_t = H_{t-1} + I_{t-1} - \delta_t \, H_{t-1}$</p>
+                        <p>and income equation:</p>
+                        <p style="text-align: center; margin: 0.5rem 0;">$Y_t = p_t \cdot w_t + (1 - p_t) \cdot b_t$</p>
+                        <p>where $p_t$ = probability of being healthy, $w_t$ = wage when healthy, and $b_t$ = income when ill (e.g. sick leave benefit).</p>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #10B981;">
+                        <p><strong>The Equilibrium Condition (Grossman, 1972):</strong></p>
+                        <p>The solution is that the <span class="fluo">marginal cost of investing in health capital equals the marginal benefit</span>:</p>
+                        <p style="text-align: center; font-size: 1.3rem; margin: 1rem 0;"><span class="fluo">$r + \delta = w \times \frac{\text{marginal product of health investment}}{\text{direct cost of investment in health}}$</span></p>
+
+                        <ul style="padding-left: 1.5rem; margin-top: 0.75rem;">
+                            <li><strong>Marginal cost</strong> (left-hand side) = the interest rate $r$ plus the health depreciation rate $\delta$. This is the <span class="fluo">user cost of health capital</span> — analogous to the rental price of a machine.</li>
+                            <li><strong>Marginal benefit</strong> (right-hand side) = the ratio of wages to the cost paid for the extra unit of health. <span class="fluo">Higher wages call for higher investment in health</span>, because being sick costs you more in lost earnings.</li>
+                            <li>The <span class="fluo">marginal product of health investment increases as health diminishes</span> — when your health stock is very low, a small investment yields a large improvement. Conversely, at high health levels, diminishing returns set in.</li>
+                            <li>Direct cost may <span class="fluo">decrease</span> (vaccination — cheap, high return) or <span class="fluo">increase</span> (brain surgery — expensive, complex) depending on the type of care.</li>
+                        </ul>
+                    </div>
+
+                    <!-- USER IMAGE: Optimal Health Capital -->
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <img src="health_capital_optimal_investment.png" alt="Optimal Investment in Health Capital — MEC curve intersects user cost r+δ at H*" style="max-width: 100%; border-radius: 12px; border: 1px solid #E2E8F0;">
+                        <p style="margin-top: 0.5rem; color: var(--clr-text-muted); font-size: 0.9rem;"><em>The graph shows the optimal health stock $H^*$ where the downward-sloping MEC curve (marginal efficiency of health capital, $\frac{wG(H)}{C(H)}$) intersects the horizontal user cost line ($r + \delta$). At the intersection (point X), marginal benefit = marginal cost, determining the optimal level of health capital.</em></p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ COMPARATIVE STATICS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Grossman Model — Comparative Statics</h2>
+                    <p>The model generates several <span class="fluo">testable predictions</span> about how changes in economic conditions affect the demand for health and healthcare:</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Change</th>
+                                    <th>Mechanism</th>
+                                    <th>Prediction</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>↑ Age</strong></td>
+                                    <td>$\delta_t$ rises → user cost $(r + \delta_t)$ increases → lower optimal $H^*$</td>
+                                    <td><span class="fluo">Health declines with age</span> — maintaining health becomes increasingly expensive as the depreciation rate rises.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>↑ Education</strong></td>
+                                    <td>Higher efficiency of health investment → lower effective price of producing health → higher $H^*$</td>
+                                    <td><span class="fluo">Education-health gradient</span> — more educated individuals are healthier, partly because they produce health more efficiently.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>↑ Price of care</strong></td>
+                                    <td>Higher cost of the health input $M$ → investment in health becomes more expensive → lower $H^*$</td>
+                                    <td><span class="fluo">Demand is downward-sloping</span> — as the price of healthcare rises, individuals invest less in health.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>↑ Wages</strong></td>
+                                    <td>Higher opportunity cost of being sick → higher marginal benefit of health → higher $H^*$</td>
+                                    <td><span class="fluo">Income-health gradient</span> — higher earners invest more because illness costs them more in foregone earnings.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">💀</span>
+                        <span><strong>Key Insight:</strong> <span class="fluo">Death occurs when $H$ falls below the minimum threshold $H_{\min}$</span> — the model endogenises lifespan. A person "dies" when their health stock has depreciated to the point where maintaining it above the survival threshold is no longer worth the cost.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ EVALUATING GROSSMAN ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Evaluating the Grossman Model</h2>
+                    <p>The Grossman model formalises a fairly <span class="fluo">intuitive process</span> — people invest in their own health, and this investment is subject to the usual cost-benefit logic of capital theory.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #10B981;">
+                        <p><strong>Key Insights and Strengths:</strong></p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Maintaining good health <span class="fluo">requires more resources as we get older</span>, because the opportunity cost of maintaining health increases with the depreciation rate $\delta_t$.</li>
+                            <li>Individuals who earn higher wages will <span class="fluo">invest more in their health</span>, because being sick is more costly for them in terms of lost earnings.</li>
+                            <li>The rate of depreciation $\delta_t$ is critically important — it is the key parameter that determines the <span class="fluo">life-cycle pattern</span> of health investment.</li>
+                            <li>Despite its limitations, the Grossman model remains the <span class="fluo">foundational demand-side model</span> in health economics and is still the starting point for most theoretical work in the field.</li>
+                        </ul>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #EF4444;">
+                        <p><strong>Limitations:</strong></p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Assumes rational, forward-looking agents — but health decisions are often <span class="fluo">emotional, habitual, or poorly informed</span>.</li>
+                            <li>Ignores <span class="fluo">supplier-induced demand</span> — doctors can shift the patient's demand curve (information asymmetry).</li>
+                            <li>Treats health production as a deterministic process — in reality, the relationship between medical inputs and health outcomes is <span class="fluo">highly uncertain</span>.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ UNUSUAL FEATURES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Unusual Features of Health Demand</h2>
+                    <p>Several empirical features of health demand set it apart from other goods:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #3B82F6;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">−0.2</h4>
+                            <p><span class="fluo">Price elasticity of health demand</span> (RAND)</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #F59E0B;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">>1.0</h4>
+                            <p><span class="fluo">Income elasticity at country level</span></p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #10B981;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">≈1.0</h4>
+                            <p>Income elasticity at individual level</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <ul style="padding-left: 1.5rem;">
+                            <li><strong>Derived demand:</strong> People demand <span class="fluo">health</span>, not healthcare per se — this is the Grossman insight in action.</li>
+                            <li><strong>Supplier-induced demand:</strong> Physicians can <span class="fluo">shift the patient's demand curve</span> because of the information asymmetry — a doctor who is paid per procedure can recommend more procedures than strictly necessary.</li>
+                            <li><strong>Price elasticity:</strong> Demand is relatively <span class="fluo">inelastic</span> ($-0.2$), particularly for emergency and inpatient care. Higher elasticity is observed for outpatient and preventive care, where patients have more discretion.</li>
+                            <li><strong>Income elasticity paradox:</strong> At the <span class="fluo">country level</span>, health spending rises more than proportionally with GDP ($>1.0$), making it appear a luxury good. At the <span class="fluo">individual level</span>, elasticity is near 1.0 ($\approx 1.0$), making it a normal good. This <span class="fluo">aggregation paradox</span> arises because richer countries also tend to adopt more expensive medical technologies.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch7-1')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch7-1" class="post-it-note">
+                        <p><strong>Chapter 7.1 — The Grossman Model:</strong></p>
+                        <ul>
+                            <li><span class="fluo">Arrow (1963):</span> Healthcare markets fail because of uncertainty, information asymmetry, externalities, and non-competitive structure. But healthcare is NOT a public good.</li>
+                            <li><span class="fluo">Grossman (1972):</span> People demand health, not healthcare. Health is a durable capital stock whose depreciation rate $\delta_t$ increases with age.</li>
+                            <li>Equilibrium: <span class="fluo">$r + \delta = w \times \frac{MP_H}{C_H}$</span> — invest in health until marginal cost (user cost of capital) equals marginal benefit (wages × marginal product / cost).</li>
+                            <li>Comparative statics: health declines with age, rises with education and wages, falls with healthcare prices. <span class="fluo">Death = $H < H_{\min}$</span>.</li>
+                            <li>Health demand is <span class="fluo">price-inelastic ($-0.2$)</span> and exhibits an income elasticity paradox (luxury at country level, normal at individual level).</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

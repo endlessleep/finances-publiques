@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Insurance Economics</title>
+    <meta name="description" content="Expected utility, adverse selection, moral hazard, RAND experiment, and Czech co-payment evidence.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.7 — HEALTH ECONOMICS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a>
+                        <a href="chapitre7-2.html" class="nav-link active">7.2 Insurance Economics</a>
+                        <a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a>
+                        <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>7.2 — Insurance Economics</h1>
+                <p class="subtitle">Chapter 7: Health Economics — Theory, Systems, and the Cost of Aging</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ EXPECTED UTILITY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Insurance: Expected Utility Theory Applied to Health</h2>
+                    <p>To understand health insurance, we apply the standard <span class="fluo">expected utility framework</span>. Consider a person with income $W$ (regardless of health status), who faces a probability $p$ of becoming sick. If sick, they incur a medical cost $d$ to recover.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <p><strong>Insurance Contract:</strong> The individual pays a premium $t$ in all states (healthy or sick), and receives a payout $b$ only if sick.</p>
+                        <p style="margin-top: 0.75rem;"><strong>Expected Utility:</strong></p>
+                        <p style="text-align: center; font-size: 1.15rem; margin: 0.75rem 0;"><span class="fluo">$E(U) = p \cdot U(W - t - d + b) + (1 - p) \cdot U(W - t)$</span></p>
+                        <p>where $U'' < 0$ (the individual is <span class="fluo">risk-averse</span> — concave utility function).</p>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #10B981;">
+                        <p><strong>Actuarially Fair Insurance:</strong></p>
+                        <p>Insurers' expected profits: $EP = t - p \cdot b$</p>
+                        <p style="margin-top: 0.5rem;">Competition among insurers drives expected profits to zero: $EP = 0$, which implies:</p>
+                        <p style="text-align: center; font-size: 1.2rem; margin: 0.75rem 0;"><span class="fluo">$b = \frac{t}{p}$</span></p>
+                        <p>This is called <span class="fluo">actuarially fair insurance</span> — the premium exactly equals the expected payout. The <span class="fluo">actuarially fair premium</span> is therefore $t = p \cdot b$ (the payout multiplied by the probability of needing it).</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ WHY BUY INSURANCE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Do People Buy (or Not Buy) Insurance?</h2>
+                    <p>Individuals face <span class="fluo">uncertain health states</span> with associated consumption levels. Whether they choose to buy insurance depends on their risk preferences and the pricing of the contract.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>Risk-Averse Agents Buy</h4>
+                            <p>A <span class="fluo">risk-averse</span> agent (concave utility, $U'' < 0$) will pay a premium <em>above</em> the actuarially fair price to avoid the uncertainty of a large medical bill. The maximum excess they will pay above the fair price is called the <span class="fluo">risk premium</span>.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>Loading Costs Push Some Out</h4>
+                            <p>In practice, real premiums exceed the actuarially fair price because insurers add <span class="fluo">loading costs</span> — administrative overhead, profit margins, and marketing. These loading costs can push <span class="fluo">low-risk individuals out of the market</span>, because the premium exceeds their risk premium. When healthy individuals exit → adverse selection begins.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ ADVERSE SELECTION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Adverse Selection — The Unravelling Problem</h2>
+                    <p>Adverse selection is the most fundamental insurance market failure. It follows directly from Akerlof's (1970) <span class="fluo">"lemons" logic</span>: individuals who know they are <em>most likely to need care</em> are the ones who disproportionately buy insurance.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #EF4444;">
+                        <p><strong>The "Death Spiral" Dynamic:</strong></p>
+                        <ol style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>In a <span class="fluo">pooling equilibrium</span>, the insurer charges a single average premium to all customers (healthy and sick).</li>
+                            <li>This average premium is <span class="fluo">too high for healthy individuals</span> (they are net losers) and <span class="fluo">too low for sick individuals</span> (they are net winners). Healthy individuals begin to leave the pool.</li>
+                            <li>As healthy people exit, the pool becomes sicker on average → the insurer must <span class="fluo">raise premiums</span>.</li>
+                            <li>Higher premiums cause <span class="fluo">more healthy people to exit</span> → premiums rise again → the cycle continues.</li>
+                            <li>In the worst case, this <span class="fluo">"death spiral"</span> leads to <span class="fluo">complete market collapse</span> — only the sickest remain, and no affordable insurance product exists.</li>
+                        </ol>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">📚</span>
+                        <span><strong>Theory:</strong> Rothschild-Stiglitz (1976) showed that a <span class="fluo">separating equilibrium</span> can exist — insurers offer a menu of contracts that induce self-selection (high-deductible/low-premium for healthy; low-deductible/high-premium for sick). However, this equilibrium is potentially <span class="fluo">inefficient</span> and may not always exist.</span>
+                    </div>
+
+                    <p style="margin-top: 0.75rem; color: var(--clr-text-muted); font-size: 0.9rem;">Akerlof (1970), <em>AER</em> | Rothschild & Stiglitz (1976), <em>QJE</em></p>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ MORAL HAZARD ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Moral Hazard — The Behavioural Response to Coverage</h2>
+                    <p>Once insured, individuals change their behaviour in ways that <span class="fluo">increase costs</span>. This is the moral hazard problem — insurance distorts incentives.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>Ex-Ante Moral Hazard</h4>
+                            <p>Insured individuals <span class="fluo">invest less in prevention</span> — diet, exercise, safety precautions. If the cost of illness is partly borne by the insurer, the individual has less incentive to stay healthy. This shifts the health production function downward.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>Ex-Post Moral Hazard</h4>
+                            <p>Insurance <span class="fluo">lowers the effective price at point of use</span>, leading to increased utilisation. Patients consume more healthcare because their out-of-pocket cost is far below the actual social cost of the services they receive.</p>
+                        </div>
+                    </div>
+
+                    <!-- USER IMAGE: Moral Hazard Deadweight Loss -->
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <img src="health_insurance_moral_hazard_deadweight_loss.png" alt="Moral Hazard — Deadweight Loss from Insurance" style="max-width: 100%; border-radius: 12px; border: 1px solid #E2E8F0;">
+                        <p style="margin-top: 0.5rem; color: var(--clr-text-muted); font-size: 0.9rem;"><em>Without insurance, the patient faces the true cost ($100) and consumes the efficient quantity $Q_1$ (point A). With insurance and a low co-payment (~$10), consumption rises to $Q_2$ (point C). Between $Q_1$ and $Q_2$, the social cost of care exceeds the social benefit, creating a <strong>deadweight loss triangle</strong>. This illustrates the fundamental trade-off: insurance increases access but also generates overconsumption.</em></p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ RAND EXPERIMENT ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Empirical Evidence: RAND and the Czech Experiment</h2>
+                    <p>Two landmark experiments provide the strongest empirical evidence on moral hazard in health insurance:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #3B82F6;">
+                            <h4>🇺🇸 RAND Health Insurance Experiment (1974–82)</h4>
+                            <p>The RAND experiment is the <span class="fluo">gold standard</span> of health economics research. Participants were randomly assigned to insurance plans with varying co-payment rates (from 0% to 95%).</p>
+                            <p style="margin-top: 0.5rem;"><strong>Key Finding:</strong> More generous coverage <span class="fluo">increased healthcare utilisation by approximately 30%</span>. However, most of the increase was <span class="fluo">low-value care</span> — there were <span class="fluo">no significant health outcome differences</span> for most people. The only exception: the poorest and sickest individuals <em>did</em> benefit from more generous coverage.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>🇨🇿 Czech Co-payment Experiment (2008–15)</h4>
+                            <p>In 2008, the Czech Republic introduced a <span class="fluo">90 CZK fee</span> (approximately €3.50) for each GP visit and emergency attendance.</p>
+                            <p style="margin-top: 0.5rem;"><strong>Key Findings:</strong></p>
+                            <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                                <li>Unscheduled emergency attendances <span class="fluo">fell by 41%</span> in 2008 compared to 2007.</li>
+                                <li>A significant decrease in GP visits was observed, particularly for <span class="fluo">people aged 50+</span>.</li>
+                                <li><span class="fluo">No statistically significant effect</span> on hospitalisations — people still went to hospital when truly ill.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1rem;">
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #2563EB;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">~30%</h4>
+                            <p><span class="fluo">Utilisation increase</span> with generous coverage (RAND)</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #10B981;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">No sig. diff.</h4>
+                            <p>Health outcomes for most people</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #EF4444;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">−41%</h4>
+                            <p><span class="fluo">Emergency visits</span> after Czech co-payment</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ PROVIDER PAYMENT ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Insurance: Provider Payment Methods</h2>
+                    <p>How insurers pay providers creates powerful <span class="fluo">incentive structures</span> that shape healthcare delivery. The general formula for physician payment is:</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <p style="text-align: center; font-size: 1.2rem; margin: 0.5rem 0;"><span class="fluo">$P = \alpha + \beta \cdot c$</span></p>
+                        <p>where $\alpha$ = fixed payment for a given diagnosis, $\beta$ = payment proportional to costs $c$ (tests, nursing, etc.).</p>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>Fee-for-Service ($\alpha = 0,\; \beta > 1$)</h4>
+                            <p>There is no fixed payment for practice, but the insurance company pays the <span class="fluo">full cost of all services rendered plus a surcharge</span>. The provider earns more by doing more — this <span class="fluo">leads to excessive care</span> (supplier-induced demand).</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>Capitation ($\alpha > 0,\; \beta = 0$)</h4>
+                            <p>Payments are made <span class="fluo">for the number and type of patients</span>, but not for services rendered. The provider earns the same regardless of how much care they provide — this <span class="fluo">may lead to insufficient care</span>.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>DRG System ($\alpha > 0,\; \beta = 1$)</h4>
+                            <p>The modern trend: <span class="fluo">Diagnosis Related Groups (DRG)</span>. Patients are sorted into diagnostic groups, and providers receive a <span class="fluo">fixed payment per diagnosis</span>. This balances the incentive to under-provide (capitation) and over-provide (fee-for-service).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch7-2')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch7-2" class="post-it-note">
+                        <p><strong>Chapter 7.2 — Insurance Economics:</strong></p>
+                        <ul>
+                            <li>Actuarially fair insurance: $b = t/p$. <span class="fluo">Risk-averse</span> agents pay a premium above the fair price.</li>
+                            <li><span class="fluo">Adverse selection</span> (Akerlof 1970): sick buy disproportionately → "death spiral" → market collapse. Solution: mandate.</li>
+                            <li><span class="fluo">Moral hazard:</span> ex-ante (less prevention) + ex-post (more utilisation). Insurance lowers effective price → overconsumption → <span class="fluo">deadweight loss</span>.</li>
+                            <li>RAND: +30% utilisation, no health benefit for most. Czech: 90 CZK fee → <span class="fluo">−41% emergency visits</span>.</li>
+                            <li>Provider payment: fee-for-service (over), capitation (under), <span class="fluo">DRG (balanced)</span>.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Healthcare Systems</title>
+    <meta name="description" content="Beveridge, Bismarck, National Health Insurance models, OECD data, the US outlier, government role, and system efficiency.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.7 — HEALTH ECONOMICS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a>
+                        <a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a>
+                        <a href="chapitre7-3.html" class="nav-link active">7.3 Healthcare Systems</a>
+                        <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>7.3 — Healthcare Systems</h1>
+                <p class="subtitle">Chapter 7: Health Economics — Theory, Systems, and the Cost of Aging</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ FOUR MODELS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Four Healthcare System Models</h2>
+                    <p>Every country's healthcare system can be classified into one of four broad models, each with distinct <span class="fluo">financing and provision mechanisms</span>. In reality, most countries are hybrids — but understanding the pure types is essential for comparison.</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Financing</th>
+                                    <th>Provision</th>
+                                    <th>Examples</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Beveridge</strong></td>
+                                    <td><span class="fluo">Tax-funded</span></td>
+                                    <td>Government-owned</td>
+                                    <td>UK (NHS), Spain, Nordic countries</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bismarck</strong></td>
+                                    <td><span class="fluo">Social insurance</span></td>
+                                    <td>Mix public/private</td>
+                                    <td>Germany, France, Japan, Czech Republic</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>National Health Insurance</strong></td>
+                                    <td><span class="fluo">Tax-funded</span></td>
+                                    <td>Private providers</td>
+                                    <td>Canada, Taiwan, South Korea</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Out-of-Pocket</strong></td>
+                                    <td>Individual payment</td>
+                                    <td>Private</td>
+                                    <td>Many low-income countries</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>US (hybrid)</strong></td>
+                                    <td><span class="fluo">Mix of all models</span></td>
+                                    <td>Mix of all models</td>
+                                    <td>Medicare, Medicaid, employer-sponsored, uninsured</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #3B82F6;">
+                            <h4>🇬🇧 Beveridge (1942)</h4>
+                            <p>Named after William Beveridge, who designed the UK's NHS. The government <span class="fluo">both finances and provides</span> healthcare, funded from general taxation. Citizens pay nothing at the point of use (or very small co-payments). The government controls costs through <span class="fluo">global budgets and waiting lists</span>. Strengths: universal access, low administrative costs, strong cost control. Weaknesses: rationing by waiting, less patient choice.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>🇩🇪 Bismarck (1883)</h4>
+                            <p>Named after Otto von Bismarck, who created Germany's social insurance system. Workers and employers pay into <span class="fluo">non-profit insurance funds ("sickness funds")</span>, which then purchase care from a mix of public and private providers. The system is <span class="fluo">employment-based</span> but regulated to ensure universal coverage. Strengths: high patient satisfaction (91% in Switzerland), provider choice. Weaknesses: higher administrative costs, equity concerns for non-employed.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ SYSTEM PERFORMANCE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Comparing System Performance (2025 Data)</h2>
+                    <p>How do these models compare in practice? The evidence is <span class="fluo">mixed and context-dependent</span>:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>✅ Beveridge Advantages</h4>
+                            <p>Beveridge systems achieve <span class="fluo">better cost control</span> and <span class="fluo">lower administrative overhead</span>. Single-payer financing eliminates the duplicated billing and marketing costs of multi-insurer systems. Total administrative costs in the UK NHS are roughly 2% of spending, versus 15–20% in the US.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #3B82F6;">
+                            <h4>✅ Bismarck Advantages</h4>
+                            <p>Bismarck systems score higher on <span class="fluo">patient satisfaction</span> — Switzerland reaches 91%. Patients have more <span class="fluo">choice of provider</span> and typically shorter waiting times for elective procedures. The employment-based financing also creates a clear link between contributions and entitlement.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">📊</span>
+                        <span>A <strong>2025 study across 38 OECD countries</strong> found <span class="fluo">no evidence that public → private transition improves efficiency</span>. Health outcomes show slight advantages for Beveridge systems, but these are <span class="fluo">not consistently statistically significant</span>.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ OECD SPENDING ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">OECD Health Spending — The US Outlier (2024 Data)</h2>
+                    <p>The United States is the most extreme outlier in international health spending comparisons, spending far more than any other country while achieving <span class="fluo">mediocre health outcomes</span>.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #EF4444;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">$14,800</h4>
+                            <p>US per capita (PPP)</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #3B82F6;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">$6,000</h4>
+                            <p>OECD average (PPP)</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #F59E0B;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">17.2%</h4>
+                            <p>US share of GDP</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <ul style="padding-left: 1.5rem;">
+                            <li>In 1970, the gap was small: <span class="fluo">US 6.0% vs. comparable countries 4.9%</span>. The divergence accelerated dramatically from the 1980s onward.</li>
+                            <li>The high-spending cluster (Switzerland, Norway, Germany) spends roughly <span class="fluo">two-thirds of the US level</span>.</li>
+                            <li>Despite having the <span class="fluo">highest spending in the world</span>, the US <span class="fluo">does not lead</span> on life expectancy or infant mortality. This is the "US paradox".</li>
+                        </ul>
+                        <p style="margin-top: 0.75rem; color: var(--clr-text-muted); font-size: 0.9rem;">Source: OECD Health at a Glance 2025; Peterson-KFF Health System Tracker (March 2026).</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ EXPENDITURES RISING ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Expenditures Rising Fast</h2>
+                    <p>Health spending as a share of GDP has risen in <span class="fluo">virtually every country</span> between 2000 and 2024. Increases typically range from 2 to 5 percentage points of GDP. Countries like the US, South Korea, and the UK are at the top of the distribution with particularly large increases, while very few countries show stagnation or slight decline.</p>
+
+                    <div class="alert-box alert-red" style="margin-top: 1rem;">
+                        <span class="alert-icon">📈</span>
+                        <span><strong>Key Fact:</strong> The health share of GDP <span class="fluo">increases everywhere</span> — creating <span class="fluo">structural budgetary pressure</span>. Unlike pensions, education, or long-term care (where some countries see stabilisation or decline), health spending is the <span class="fluo">only major expenditure category that rises in every single country</span>.</span>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">Looking to the future, projections of age-related spending to 2070 confirm that this trajectory will continue. The main drivers are:</p>
+                    <ul style="padding-left: 1.5rem;">
+                        <li><strong>Pensions</strong> — the principal driver of total age-related spending growth.</li>
+                        <li><strong>Healthcare</strong> — <span class="fluo">systematically positive increases</span> in every country without exception. Remember the Grossman model: as the population ages ($\delta_t$ rises), maintaining individual health becomes more expensive.</li>
+                        <li><strong>Long-term care</strong> — also rising strongly, driven by the expansion of the 80+ cohort.</li>
+                        <li><strong>Education and unemployment</strong> — sometimes stable or even negative, partially offsetting other increases.</li>
+                    </ul>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ GOVERNMENT ROLE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Government Role in Healthcare Financing</h2>
+                    <p>Healthcare is financed through three main channels: <span class="fluo">direct government budgets</span> (general taxation), <span class="fluo">social health insurance</span> (compulsory contributions), and <span class="fluo">private spending</span> (out-of-pocket payments and voluntary insurance). The mix varies enormously:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #3B82F6;">
+                            <h4>🇸🇪 Nordic Countries</h4>
+                            <p>Public financing dominant: <span class="fluo">80–90% of total health spending</span> is publicly funded through general taxation. Very low out-of-pocket costs. The state is the dominant payer, regulator, and often provider.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>🇩🇪 Continental Europe</h4>
+                            <p>Financing is primarily through <span class="fluo">social insurance</span> (employer + employee contributions). The government's role is mainly regulatory — setting the rules for the insurance funds and ensuring coverage. A higher proportion of private supplementary insurance compared to Beveridge systems.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>🇺🇸 United States</h4>
+                            <p>The <span class="fluo">private share is very high</span> compared to other rich countries. Healthcare is split between employer-sponsored insurance, Medicare (65+), Medicaid (low-income), and a significant uninsured population. This hybrid structure creates administrative complexity and cost inflation.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <h4>🌍 Emerging Economies</h4>
+                            <p>A <span class="fluo">mixed system with a strong private component</span>. Out-of-pocket payments dominate in many low- and middle-income countries, creating catastrophic health expenditure risks for the poorest households.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ WHY GOVERNMENTS INTERVENE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Governments Intervene in Healthcare</h2>
+                    <p>Given the market failures identified by Arrow (1963) and the insurance failures described in Section 7.2, governments intervene in healthcare for several reasons:</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #10B981;">
+                        <ul style="padding-left: 1.5rem;">
+                            <li><strong>Market failures:</strong> Information asymmetry, externalities (vaccination, disease surveillance), and public goods elements require government correction.</li>
+                            <li><strong>Adverse selection mandate:</strong> The government can <span class="fluo">impose a mandate for insurance</span> and thus eliminate the adverse selection market failure that would otherwise cause the "death spiral" described in Section 7.2.</li>
+                            <li><strong>Merit goods:</strong> Society may decide that healthcare <span class="fluo">should be universal regardless of ability to pay</span> — this is a normative judgement that goes beyond efficiency.</li>
+                            <li><strong>Redistribution:</strong> Health insurance acts as a mechanism for <span class="fluo">income and risk redistribution</span> — the healthy subsidise the sick, and the wealthy subsidise the poor.</li>
+                            <li><strong>Human capital:</strong> A healthy workforce → <span class="fluo">higher productivity → GDP growth</span>. Public health investment has external returns beyond the individual.</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-red" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>However:</strong> Government provision creates its own problems. <span class="fluo">Moral hazard</span> (over-provision, over-consumption) can be even <span class="fluo">more pronounced</span> in government-run schemes, where the budget constraint is softer and political pressure favours expansion of services.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ EFFICIENCY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Efficiency: Does More Spending Buy Better Health?</h2>
+                    <p>One of the most striking findings in health economics is the <span class="fluo">weak relationship between spending and outcomes</span>:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #F59E0B;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">0.26</h4>
+                            <p>Correlation (expenditures, life expectancy) <span class="fluo">with US included</span></p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #10B981;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">0.46</h4>
+                            <p>Correlation <span class="fluo">without US</span></p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">Life expectancy across OECD countries in 2023 ranges from roughly 75 to 85 years. The correlation with per-capita health spending is <span class="fluo">surprisingly low</span> — and drops dramatically when the US is included, because the US spends by far the most but achieves outcomes well below countries that spend half as much.</p>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1rem;">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>Key Insight:</strong> More spending ≠ proportionally better health. What matters is the <span class="fluo">efficiency of the system</span> — how well resources are allocated, not just how many resources are deployed. The US paradox illustrates this powerfully.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ SCARCITY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Fundamental Problem — Scarcity</h2>
+                    <p>Healthcare needs are effectively unlimited, but resources are finite. Every health dollar spent has an <span class="fluo">opportunity cost</span> — it could have been spent on education, infrastructure, or defence.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #3B82F6;">
+                            <h4>⚙️ Technical Efficiency</h4>
+                            <p>Maximise output from given inputs — <span class="fluo">minimise the cost per procedure</span>. This is about doing things right: using the fewest resources to achieve a given health outcome.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>📊 Allocative Efficiency</h4>
+                            <p>Direct resources to the interventions producing the <span class="fluo">greatest health gains</span>. This is about doing the right things: spending should be channelled where the marginal health benefit per dollar is highest.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #F59E0B;">
+                        <p><strong>Equity vs. Efficiency Trade-Off:</strong></p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li><span class="fluo">Horizontal equity:</span> Equal treatment for equal need — two patients with the same condition should receive the same care regardless of income, geography, or social status.</li>
+                            <li><span class="fluo">Vertical equity:</span> Greater resources for greater need — sicker patients or those with greater barriers to access should receive proportionally more resources.</li>
+                        </ul>
+                        <p style="margin-top: 0.5rem;">In practice, pursuing equity often conflicts with pure efficiency, and every healthcare system must find its own balance.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch7-3')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch7-3" class="post-it-note">
+                        <p><strong>Chapter 7.3 — Healthcare Systems:</strong></p>
+                        <ul>
+                            <li>Four models: <span class="fluo">Beveridge</span> (tax + public), <span class="fluo">Bismarck</span> (social insurance + mixed), NHI (tax + private), Out-of-Pocket. US is a hybrid.</li>
+                            <li>Beveridge: better cost control. Bismarck: higher satisfaction. No evidence public→private improves outcomes.</li>
+                            <li>US spends <span class="fluo">$14,800/capita</span> (2.5× OECD average) but does not lead on life expectancy — the "US paradox".</li>
+                            <li>Health spending is the <span class="fluo">only expenditure that rises in every country</span> — structural budgetary pressure.</li>
+                            <li>Correlation spending vs. life expectancy: 0.26 (with US) → 0.46 (without US). <span class="fluo">Efficiency matters more than volume.</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

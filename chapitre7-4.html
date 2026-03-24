@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Aging, Costs &amp; Policy</title>
+    <meta name="description" content="Aging populations, age-cost gradient, Red Herring debate, Breyer (2019), Medicare, policy tools, and health sector reform.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.7 — HEALTH ECONOMICS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a>
+                        <a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a>
+                        <a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a>
+                        <a href="chapitre7-4.html" class="nav-link active">7.4 Aging, Costs &amp; Policy</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>7.4 — Aging, Costs &amp; Policy</h1>
+                <p class="subtitle">Chapter 7: Health Economics — Theory, Systems, and the Cost of Aging</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ AGING POPULATIONS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Aging Populations: A Global Transformation</h2>
+                    <p>The world is undergoing an <span class="fluo">unprecedented demographic transformation</span>. Populations are aging rapidly in virtually every country, creating immense pressure on healthcare systems that were designed for younger populations.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #3B82F6;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">61.2M</h4>
+                            <p>Americans aged 65+ (2024)</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #F59E0B;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">18.0%</h4>
+                            <p>Share of US population (up from 12.4% in 2004)</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #EF4444;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">1.7B</h4>
+                            <p>Global 65+ population by 2053</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <ul style="padding-left: 1.5rem;">
+                            <li>By <strong>2030</strong>: 1 in 5 Americans (<span class="fluo">20.7%</span>) will be aged 65+.</li>
+                            <li>By <strong>2060</strong>: the 65+ population nearly <span class="fluo">doubles</span>; the 85+ cohort <span class="fluo">triples</span>.</li>
+                            <li>The <span class="fluo">fastest growth</span> in aging is in <span class="fluo">low- and middle-income countries</span> — precisely the countries with the least fiscal capacity to respond. Unlike OECD nations, they are aging <em>before</em> they get rich.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ AGE-COST GRADIENT ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Age–Cost Gradient</h2>
+                    <p>Healthcare spending is <span class="fluo">not evenly distributed</span> across the population. Older individuals consume a disproportionately large share of resources due to the accumulation of chronic conditions.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #3B82F6;">
+                            <h4 style="font-size: 1.8rem; margin-bottom: 0;">16% → 37%</h4>
+                            <p>65+ share of <em>population</em> vs. share of <em>spending</em></p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #EF4444;">
+                            <h4 style="font-size: 1.8rem; margin-bottom: 0;">95%</h4>
+                            <p>Over-60s with <span class="fluo">≥1 chronic condition</span></p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <ul style="padding-left: 1.5rem;">
+                            <li><span class="fluo">79% of people over 60</span> have <strong>multiple</strong> chronic conditions (multimorbidity) — diabetes, hypertension, cardiovascular disease, arthritis, and dementia often coexist.</li>
+                            <li>Medicare beneficiaries with <span class="fluo">4+ chronic conditions</span> cost an average of <strong>$21,342/year</strong>, compared to just $2,025 for those with none — a <span class="fluo">10:1 cost ratio</span>.</li>
+                            <li>Per-capita cost for the <span class="fluo">85+ age group</span> is nearly <strong>twice that</strong> of the 65–84 age group.</li>
+                            <li><span class="fluo">Chronic disease management</span> is the primary cost mechanism — not acute episodes, but ongoing treatment, medications, monitoring, and long-term care.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ RED HERRING DEBATE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Is Aging Really Driving Costs? The Scholarly Debate</h2>
+                    <p>The relationship between population aging and healthcare spending is <span class="fluo">more nuanced than it appears</span>. Two competing views have shaped the debate:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>🐟 "Red Herring" Hypothesis</h4>
+                            <p>Zweifel et al. (1999) argued that <span class="fluo">costs concentrate in the last years of life regardless of age</span>. A person dying at 70 and one dying at 90 incur similar end-of-life costs. For hospital care, <span class="fluo">time-to-death renders the aging effect largely null</span> — what matters is not how old you are, but how close you are to dying.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>📈 Demographic Pressure View</h4>
+                            <p>Aging <span class="fluo">strongly predicts long-term care expenditure</span>, even after controlling for proximity to death. The key question is <span class="fluo">morbidity expansion vs. compression</span>: are additional life-years healthy or sick? The empirical evidence is mixed — in some countries, disability-free life expectancy has risen; in others, it has not.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">📊</span>
+                        <span><strong>Current Consensus (~2025):</strong> Aging accounts for <span class="fluo">approximately 20%</span> of spending growth. <span class="fluo">Price and technology increases</span> are the bigger drivers. The answer depends on the cost category examined — hospital costs are proximity-driven, long-term care costs are age-driven.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ BREYER (2019) ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Breyer (2019) — Aging and Healthcare Expenditure</h2>
+                    <p>Friedrich Breyer's 2019 synthesis in the <em>Oxford Research Encyclopedia of Economics and Finance</em> provides the most nuanced treatment by <span class="fluo">carefully distinguishing between cost categories</span>:</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #8B5CF6;">
+                        <ul style="padding-left: 1.5rem;">
+                            <li><strong>Acute care costs:</strong> Primarily <span class="fluo">proximity-to-death driven</span>. Hospital and physician costs spike in the final 1–2 years of life, regardless of the age at which death occurs. The "red herring" hypothesis holds here.</li>
+                            <li><strong>Long-term care costs:</strong> Genuinely <span class="fluo">age-driven</span>. The probability of needing residential or home care rises sharply after 80, and these costs accumulate over years, not weeks.</li>
+                            <li>Breyer's <span class="fluo">decomposition approach</span> separates demographic from non-demographic factors (technology, relative prices, policy changes), showing that both camps are partially right — the answer depends entirely on <span class="fluo">which cost category</span> you examine.</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-red" style="margin-top: 1rem;">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>Policy Implication:</strong> Long-term care systems face <span class="fluo">genuine demographic pressure</span> even if acute hospital costs do not. This distinction is critical for fiscal planning — countries need to prepare separately for acute care (proximity-driven) and long-term care (age-driven).</span>
+                    </div>
+
+                    <p style="margin-top: 0.75rem; color: var(--clr-text-muted); font-size: 0.9rem;">Breyer, F. (2019). Health Care and Aging. In <em>Oxford Research Encyclopedia of Economics and Finance</em>.</p>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ MEDICARE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Medicare — The Fiscal Challenge</h2>
+                    <p>Medicare is the US public health insurance programme for Americans aged 65+. It illustrates the <span class="fluo">fiscal time bomb</span> created by the intersection of aging demographics and healthcare cost growth:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #EF4444;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">9.7%</h4>
+                            <p>Annual Medicare spending growth</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #F59E0B;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">2033</h4>
+                            <p>Projected Trust Fund depletion</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #3B82F6;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">>5%</h4>
+                            <p>Medicare as share of GDP (projected)</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <ul style="padding-left: 1.5rem;">
+                            <li>The Hospital Insurance Trust Fund is projected to be <span class="fluo">depleted by 2033</span>, implying an 11% shortfall in payments to hospitals.</li>
+                            <li>Every <span class="fluo">baby boomer</span> will be aged 65+ by 2030 — the largest demographic wave in US history entering the system simultaneously.</li>
+                            <li>Projections are <span class="fluo">assumption-sensitive</span> and politically contested — small changes to growth rate assumptions can shift depletion dates by years.</li>
+                            <li>The <span class="fluo">core question</span>: how to finance healthcare for a structurally older population without crowding out all other public spending?</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ POLICY TOOLS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Policy Tools for Health System Design</h2>
+                    <p>Governments have a range of instruments to correct market failures, manage costs, and ensure equitable access. Each tool addresses a specific theoretical rationale:</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Instrument</th>
+                                    <th>Examples</th>
+                                    <th>Theoretical Rationale</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Mandates</strong></td>
+                                    <td>ACA individual mandate, Swiss compulsory insurance</td>
+                                    <td><span class="fluo">Solves adverse selection</span> — forces healthy individuals into the pool.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Subsidies</strong></td>
+                                    <td>ACA premium subsidies, Medicaid expansion</td>
+                                    <td><span class="fluo">Access and equity</span> — ensures low-income households can afford coverage.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Price regulation</strong></td>
+                                    <td>Reference pricing, drug price negotiation</td>
+                                    <td><span class="fluo">Addresses market power</span> — prevents monopoly pricing by pharma.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Risk adjustment</strong></td>
+                                    <td>Medicare Advantage risk scores</td>
+                                    <td><span class="fluo">Reduces cream-skimming</span> — insurers get more for sicker patients.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Single payer</strong></td>
+                                    <td>Canada, Taiwan</td>
+                                    <td><span class="fluo">Administrative efficiency + monopsony</span> — one buyer negotiating prices.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Public provision</strong></td>
+                                    <td>UK NHS, Veterans Health Administration</td>
+                                    <td><span class="fluo">Cost control + eliminates profit motive</span>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ DEVELOPING WORLD ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Health Sector Reform — The Developing World</h2>
+                    <p>For developing countries, the challenges are even more acute. The <span class="fluo">World Bank (1999) framework</span> remains the recommended approach in development economics courses:</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #10B981;">
+                        <ul style="padding-left: 1.5rem;">
+                            <li><strong>Key principle:</strong> <span class="fluo">Separate financing from provision</span> of healthcare services — the government can finance care without necessarily running hospitals.</li>
+                            <li>Define <span class="fluo">essential public health functions</span> requiring government provision (immunisation, disease surveillance, basic primary care).</li>
+                            <li>Create <span class="fluo">regulatory frameworks</span> for mixed public-private systems — the private sector can provide care, but the government sets quality standards and ensures access.</li>
+                            <li>Appropriate roles for government vs. private sector vary by <span class="fluo">country income level</span> and <span class="fluo">institutional capacity</span> — what works in Germany will not necessarily work in Uganda.</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 0.75rem; color: var(--clr-text-muted); font-size: 0.9rem;">Source: World Bank (1999). Health Sector Reform.</p>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch7-4')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch7-4" class="post-it-note">
+                        <p><strong>Chapter 7.4 — Aging, Costs & Policy:</strong></p>
+                        <ul>
+                            <li><span class="fluo">61.2M</span> Americans aged 65+ (2024); by 2060, 65+ doubles, 85+ triples. The fastest growth is in low-income countries.</li>
+                            <li>Age-cost gradient: 65+ = 16% of population but <span class="fluo">37% of spending</span>. 4+ chronic conditions: $21k/year vs. $2k with none.</li>
+                            <li>"Red herring" vs. demographic pressure: aging ≈ <span class="fluo">20% of cost growth</span>. Acute care is proximity-driven; <span class="fluo">long-term care is age-driven</span> (Breyer 2019).</li>
+                            <li>Medicare Trust Fund depletion by <span class="fluo">2033</span> — 9.7% annual spending growth.</li>
+                            <li>Policy tools: <span class="fluo">mandates</span> (adverse selection), subsidies (equity), price regulation (market power), risk adjustment (cream-skimming), single payer (efficiency), public provision (cost control).</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
