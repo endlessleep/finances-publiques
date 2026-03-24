@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — PAYG vs. Funded Systems</title>
+    <meta name="description" content="PAYG mechanics, funded systems, Defined Benefit vs Defined Contribution, rates of return, and advantages and drawbacks.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link active">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>6.3 — PAYG vs. Funded Systems</h1>
+                <p class="subtitle">Chapter 6: The Economics of Old-Age Pensions</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ PAYG MECHANICS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Pay-As-You-Go (PAYG): The Mechanics</h2>
+                    <p>In a PAYG system, <span class="fluo">current workers finance current retirees</span>. There is no fund that accumulates over time — every euro collected in payroll taxes is immediately transferred to pensioners.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <p><strong>The PAYG Budget Constraint:</strong></p>
+                        <p style="text-align: center; font-size: 1.2rem; margin: 1rem 0;"><span class="fluo">$\tau \times w \times N = b \times R$</span></p>
+                        <p style="margin-top: 0.5rem;">Where: $\tau$ = contribution rate, $w$ = average wage, $N$ = number of contributors, $b$ = benefit per retiree, $R$ = number of retirees.</p>
+                        <p style="margin-top: 0.75rem;"><strong>Rearranging for the replacement rate:</strong></p>
+                        <p style="text-align: center; font-size: 1.1rem; margin: 0.75rem 0;"><span class="fluo">$\frac{b}{w} = \tau \times \frac{N}{R}$</span></p>
+                        <p>This means the <span class="fluo">replacement rate</span> (pension as a share of the average wage) depends directly on the ratio of contributors to retirees. A <span class="fluo">rising dependency ratio</span> ($N/R$ falling) forces either <span class="fluo">lower benefits</span> or <span class="fluo">higher contribution rates</span> — this is the central fiscal tension in ageing societies.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ PAYG RATE OF RETURN ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Rate of Return in a PAYG System</h2>
+                    <p>What does a participant actually "earn" by contributing to a PAYG system? The answer requires a simple derivation:</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #F59E0B;">
+                        <p><strong>Derivation:</strong></p>
+                        <p style="margin-top: 0.5rem;">Generation $t$ <strong>contributes:</strong></p>
+                        <p style="text-align: center; margin: 0.5rem 0;">$\tau \times w_t = \tau \times w_0 \times (1+g)^t$</p>
+                        <p>where $g$ = real wage growth.</p>
+                        <p style="margin-top: 0.75rem;">Generation $t$ <strong>receives benefit:</strong></p>
+                        <p style="text-align: center; margin: 0.5rem 0;">$b_{t+1} = \tau \times w_{t+1} \times \frac{N_{t+1}}{R_{t+1}} = \tau \times w_0 \times (1+g)^{t+1} \times (1+n)$</p>
+                        <p>where $n$ = population growth.</p>
+                        <p style="margin-top: 0.75rem;"><strong>Implied gross return on contribution:</strong></p>
+                        <p style="text-align: center; font-size: 1.2rem; margin: 0.75rem 0;"><span class="fluo">$(1 + r_{PAYG}) \approx (1+n)(1+g) \approx 1 + n + g$</span></p>
+                        <p>(We can ignore the small cross-term $n \times g$.)</p>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>Key Result:</strong> <span class="fluo">$r_{PAYG} \approx n + g$</span> — the implicit return on a PAYG system equals <span class="fluo">population growth ($n$)</span> plus <span class="fluo">real wage growth ($g$)</span>. A larger working population means more contributors funding each retiree; higher real wages enlarge the tax base, allowing more generous benefits.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ PAYG PROS/CONS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">PAYG Systems: Advantages and Drawbacks</h2>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>✅ No Transition Cost</h4>
+                            <p>A PAYG system can be <span class="fluo">implemented immediately</span> without requiring decades of capital accumulation — the first generation receives benefits without having contributed in full.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>✅ Automatic Risk Pooling</h4>
+                            <p>PAYG provides <span class="fluo">insurance against longevity risk, inflation, and individual capital-market fluctuations</span> through intergenerational transfers. A pensioner's income does not depend on stock prices.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>✅ Redistribution</h4>
+                            <p>Defined-benefit formulas can link contributions and benefits <span class="fluo">non-linearly</span>, reducing old-age poverty and compressing lifetime income inequality. Low earners can receive more than they contributed.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>✅ Resilience to Financial Crises</h4>
+                            <p>Benefits are <span class="fluo">not directly exposed</span> to stock-market crashes, protecting pensioners from asset-price collapses (e.g. the 2008–09 crisis destroyed funded pension values).</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>❌ Demographic Sensitivity</h4>
+                            <p>The implicit return $n + g$ <span class="fluo">falls as populations age</span> and productivity growth slows — precisely the conditions prevailing in most advanced economies today.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>❌ Political Risk</h4>
+                            <p>Promises can be <span class="fluo">revised downward by future governments</span>. Benefit cuts, means-testing, and retirement-age increases are politically painful but fiscally necessary.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>❌ No Capital Accumulation</h4>
+                            <p>Contributions are immediately transferred out — they do not build up a <span class="fluo">productive capital stock</span>, potentially depressing the economy's savings rate.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>❌ Ponzi-Scheme Logic</h4>
+                            <p>Long-run solvency requires <span class="fluo">perpetual demographic renewal</span>. A permanently shrinking population renders PAYG unsustainable without continuous reforms.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ FUNDED MECHANICS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Funded (Capitalised) Systems: The Mechanics</h2>
+                    <p>In a funded system, <span class="fluo">contributions are invested in financial assets</span>; benefits come from the accumulated savings plus returns.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #10B981;">
+                        <p><strong>Key Result:</strong></p>
+                        <p style="text-align: center; font-size: 1.2rem; margin: 0.75rem 0;"><span class="fluo">$r_{funded} \approx r$</span></p>
+                        <p>where $r$ = real rate of return on invested assets (equities, bonds, real estate, etc.).</p>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">Funded systems come in three main variants:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #3B82F6;">
+                            <h4>Defined Contribution (DC)</h4>
+                            <p>Workers accumulate <span class="fluo">individual accounts</span>; the pension at retirement equals the account balance (contributions plus investment returns). The <span class="fluo">individual bears all investment and longevity risk</span>. Examples: <span class="fluo">Chile (1981)</span>, Australian Superannuation, US 401(k).</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>Defined Benefit (DB) — Funded</h4>
+                            <p>The employer (or state) promises a <span class="fluo">specific benefit formula</span> — typically a share of final or career-average salary times years of service. The sponsor must invest enough assets to meet the obligation. The <span class="fluo">sponsor bears investment risk</span>. Examples: traditional UK and US occupational pension funds.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <h4>Notional Defined Contribution (NDC)</h4>
+                            <p>A <span class="fluo">hybrid</span>: accounts are "notional" (no real fund exists) but contributions earn a return equal to wage-bill growth — essentially <span class="fluo">PAYG with DC-style transparency</span>. Examples: <span class="fluo">Sweden (1998)</span>, Italy (1995 Dini reform), Poland.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ DB vs DC DETAILED ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Defined Benefit vs. Defined Contribution: Full Comparison</h2>
+                    <p>These are two fundamentally different ways to structure a funded pension promise. Understanding their differences is critical for pension policy analysis.</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Dimension</th>
+                                    <th>Defined Benefit (DB)</th>
+                                    <th>Defined Contribution (DC)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Promise</strong></td>
+                                    <td>A specific benefit formula, e.g. $b = \alpha \times \text{years} \times w_{ref}$ where $\alpha \approx 1\text{-}2\%$ is the accrual rate.</td>
+                                    <td>Only the contribution rate is fixed. The benefit = whatever the accumulated account can finance.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Who bears the risk?</strong></td>
+                                    <td>The <span class="fluo">sponsor</span> (employer or government). If assets underperform, the sponsor must top up the fund.</td>
+                                    <td>The <span class="fluo">worker</span>. Poor returns or retiring in a downturn directly reduce the pension.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Benefit formula</strong></td>
+                                    <td>$b = \alpha \times \text{years of service} \times w_{ref}$</td>
+                                    <td>$b = \frac{\text{Account Balance}}{\text{Annuity Factor}(LE, r)}$</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Portability</strong></td>
+                                    <td><span class="fluo">Low</span>. Rights are hard to transfer when changing employers; early leavers typically lose value.</td>
+                                    <td><span class="fluo">High</span>. The account follows the worker across employers; the balance is always their own.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Redistribution</strong></td>
+                                    <td>Formula can include redistributive elements (minimum pension, capped accrual rate).</td>
+                                    <td><span class="fluo">None by design</span>. Lifetime income inequality passes directly into pension inequality.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Examples</strong></td>
+                                    <td>Traditional US &amp; UK occupational pensions; pre-reform Italian and French public schemes.</td>
+                                    <td>Chilean AFP system (1981), Australian Superannuation, US 401(k).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">📊</span>
+                        <span><strong>Global Trend:</strong> Most OECD countries have shifted new workers <span class="fluo">from DB to DC or NDC</span> over the past three decades, transferring longevity and investment risk from the state to the individual. This raises <span class="fluo">adequacy concerns for low-income workers</span> who cannot afford investment losses.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ FUNDED PROS/CONS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Funded Systems: Advantages and Drawbacks</h2>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>✅ Demographic Independence</h4>
+                            <p>Returns depend on <span class="fluo">capital markets</span>, not on the ratio of workers to retirees. A shrinking or ageing population does not directly erode the real rate of return on invested assets.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>✅ Capital Accumulation</h4>
+                            <p>Contributions build a <span class="fluo">productive capital stock</span>, potentially raising output and wages over time — a positive externality for the broader economy.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>✅ Transparency</h4>
+                            <p>In DC systems, account balances are <span class="fluo">visible</span>; individuals can observe their accrued rights and plan their retirement accordingly.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>✅ Higher Potential Returns</h4>
+                            <p>Historically, diversified equity portfolios have delivered <span class="fluo">real returns of 4–7% annually</span>, well above $n + g$ in low-growth economies. This can provide significantly higher pensions for the same contribution rate.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>❌ Transition Cost</h4>
+                            <p>Shifting from PAYG requires a generation that <span class="fluo">pays twice</span> — funding both the inherited PAYG liability (current retirees who are owed benefits) and their own personal accounts. This fiscal gap can be politically impossible.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>❌ Investment &amp; Longevity Risk</h4>
+                            <p>In DC systems, individuals bear <span class="fluo">market risk</span> (a crash just before retirement) and <span class="fluo">longevity risk</span> (outliving savings). Neither is easy to insure against.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>❌ Inadequate Redistribution</h4>
+                            <p>Pure DC systems <span class="fluo">mirror lifetime earnings inequality into retirement income inequality</span>. There is no automatic floor for low earners — they retire poor.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>❌ Financial-System Dependence</h4>
+                            <p>Large pension funds create <span class="fluo">systemic risk</span>; poor governance, mismanagement (e.g. the Maxwell scandal in the UK), or regulatory failure can destroy retirement savings for millions.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch6-3')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch6-3" class="post-it-note">
+                        <p><strong>Chapter 6.3 — PAYG vs Funded:</strong></p>
+                        <ul>
+                            <li><span class="fluo">PAYG</span> earns an implicit return of $r_{PAYG} = n + g$ (population growth + wage growth). It is immediately implementable, redistributive, and resilient to market crashes — but <span class="fluo">highly sensitive to demographics</span>.</li>
+                            <li><span class="fluo">Funded systems</span> earn $r_{funded} = r$ (the real return on capital). They are demographically independent and build capital — but carry investment risk, transition costs, and provide <span class="fluo">no automatic redistribution</span>.</li>
+                            <li><span class="fluo">DB</span> shifts risk to the sponsor (employer/state); <span class="fluo">DC</span> shifts risk to the individual. The global trend is a shift from DB to DC, raising concerns about pension adequacy.</li>
+                            <li>Which system is better? That depends on whether $n + g$ is above or below $r$ — this is <span class="fluo">Aaron's Rule</span>, covered in Section 6.4.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

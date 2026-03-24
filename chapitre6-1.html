@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Pension Economics: Basics</title>
+    <meta name="description" content="The retirement problem, life-cycle model, two-period optimisation, myopia, and the six core policy design questions.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre6-1.html" class="nav-link active">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>6.1 — Pension Economics: Basics</h1>
+                <p class="subtitle">Chapter 6: The Economics of Old-Age Pensions</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ THE RETIREMENT PROBLEM ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Retirement Problem: How to Transfer Income</h2>
+
+                    <p>Life is long and getting longer. People <span class="fluo">live longer than they earn income</span> — working roughly 40 years but potentially spending 20+ years in retirement. The central question of pension economics is: how do you guarantee a stable income over such a long period? And more importantly — <span class="fluo">who do you trust</span> to hold this promise for decades?</p>
+
+                    <div class="definition-box">
+                        <p><strong>Key Insight:</strong> Every retirement system, whatever its design, tries to do the same thing — <span class="fluo">smooth consumption across the life cycle</span>. Current workers need to build a claim on future production. All systems rely on long-term contracts, either <strong>implicit</strong> (social, political) or <strong>explicit</strong> (financial, contractual).</p>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;"><strong>The Four Mechanisms:</strong> Historically, societies have used four different ways to transfer income from working years to old age:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <span class="card-label" style="background: #FEF3C7; color: #92400E;">01</span>
+                            <h4>Store Current Production</h4>
+                            <p>Set aside physical goods or commodities while working and consume them in old age. This is <span class="fluo">highly inflexible</span> — goods perish, preferences change, and storage is costly. Rarely used beyond subsistence economies.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label" style="background: #DBEAFE; color: #1E40AF;">02</span>
+                            <h4>Raise Children</h4>
+                            <p>Invest in the next generation and rely on them for support in old age. This is the <span class="fluo">oldest and still most common</span> form of retirement provision globally. However, it is sensitive to family circumstances and limits the mobility of younger generations.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label" style="background: #D1FAE5; color: #065F46;">03</span>
+                            <h4>Accumulate Financial Wealth</h4>
+                            <p>Save part of working-age income in financial assets (stocks, bonds, property). Returns depend on <span class="fluo">capital markets</span>. This requires sophisticated financial infrastructure, financial literacy, and — crucially — <span class="fluo">rational, far-sighted behaviour</span> from individuals.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label" style="background: #EDE9FE; color: #5B21B6;">04</span>
+                            <h4>Accumulate State Pension Rights</h4>
+                            <p>Participate in a <span class="fluo">government-organised pension system</span>. The state acts as the guarantor of an intergenerational contract, replacing the private family contract with a public one. This is the dominant model in advanced economies today.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>Implication:</strong> Every society uses a different mix of these four mechanisms, and these <span class="fluo">evolve over time</span>. No system is permanent — reform is a constant feature of pension policy.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ THREE MODELS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Three Models of Retirement Provision</h2>
+                    <p>In practice, societies rely on three broad pillars for retirement. Every country blends these differently, reflecting its <span class="fluo">history, culture, labour-market institutions, and demographic structure</span>.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>👨‍👩‍👧 Family</h4>
+                            <p><strong>Where:</strong> Most developing countries, parts of Asia.</p>
+                            <p>Parents rely on their children for old-age support. This is the oldest and still the most widespread form globally. It <span class="fluo">requires strong family ties and high fertility</span>. As fertility falls and families become smaller and more geographically dispersed, the family model alone is increasingly insufficient.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #3B82F6;">
+                            <h4>📈 Financial Markets</h4>
+                            <p><strong>Where:</strong> Some OECD, some Asia.</p>
+                            <p>Individuals save during working years and draw down financial assets in retirement. This requires <span class="fluo">well-developed capital markets</span>, financial literacy, and rational long-run planning. The theoretical ideal — but full of practical problems (see below).</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>🏛️ Government</h4>
+                            <p><strong>Where:</strong> Dominant everywhere else.</p>
+                            <p>The state organises and mandates pension provision — either through <span class="fluo">forced savings</span> (funded DC), <span class="fluo">pay-as-you-go transfers</span> (PAYG DB), or a mix of both. This is the model we will analyse in the rest of this chapter.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ WHY FINANCIAL MARKETS FAIL ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Financial Markets Alone Fail</h2>
+                    <p>In theory, a rational, far-sighted individual with perfect information would save exactly the right amount during working years to finance their retirement. In practice, <span class="fluo">four major uncertainties</span> make this extremely difficult:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>⏳ Longevity Uncertainty</h4>
+                            <p>How long will you live? Saving "enough" requires knowing your date of death. Without annuity markets, individuals face the risk of either <span class="fluo">outliving their savings</span> or dying with too much left over.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>🏥 Health Cost Uncertainty</h4>
+                            <p>Future health expenditures are <span class="fluo">large, lumpy, and unpredictable</span>. A single major illness can wipe out an entire lifetime of accumulated retirement wealth in a very short period.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>📉 Financial Return Uncertainty</h4>
+                            <p>Real returns on savings <span class="fluo">vary enormously over long time horizons</span>. A worker retiring in 2009 (after the financial crisis) faced vastly different outcomes than one retiring in 2007 — even with identical savings behaviour.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>🧠 Myopia (Behavioural Bias)</h4>
+                            <p>People <span class="fluo">discount the future heavily</span> ($\delta < 1$) and consistently undersave. Behavioural evidence shows that most individuals, left to their own devices, save <span class="fluo">far below</span> what rational life-cycle models predict.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ TWO-PERIOD MODEL ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Two-Period Model: Optimal Retirement Saving</h2>
+                    <p>To understand the economics of pension saving, we use a simple <span class="fluo">two-period life-cycle model</span>. The individual lives for two periods: one where they work and earn income, and one where they are retired.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <p><strong>Setup:</strong> The individual maximises <span class="fluo">lifetime utility</span>:</p>
+                        <p style="text-align: center; font-size: 1.15rem; margin: 1rem 0;">$U = u(c_1) + \delta \cdot u(c_2)$</p>
+                        <p>where $\delta \in [0, 1]$ is the <span class="fluo">time discount factor</span> (how much you value the future relative to today).</p>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #F59E0B;">
+                        <p><strong>Period Budget Constraints:</strong></p>
+                        <p style="margin-top: 0.5rem;"><strong>Period 1 (Working):</strong> You earn wage $w$, consume $c_1$, and save $s$:</p>
+                        <p style="text-align: center; font-size: 1.1rem; margin: 0.5rem 0;"><span class="fluo">$c_1 = w - s$</span></p>
+                        <p><strong>Period 2 (Retirement):</strong> You have no earnings. You consume your savings plus interest:</p>
+                        <p style="text-align: center; font-size: 1.1rem; margin: 0.5rem 0;"><span class="fluo">$c_2 = s \cdot (1 + r)$</span></p>
+                        <p><strong>Lifetime Budget Constraint:</strong> Combining both periods:</p>
+                        <p style="text-align: center; font-size: 1.1rem; margin: 0.5rem 0;"><span class="fluo">$c_1 + \frac{c_2}{1+r} = w$</span></p>
+                        <p style="margin-top: 0.75rem; color: var(--clr-text-muted);">Variables: $w$ = wage, $s$ = savings, $r$ = interest rate, $c_1, c_2$ = consumption in periods 1 &amp; 2, $\delta$ = time discount factor.</p>
+                    </div>
+
+                    <!-- The user's image -->
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <img src="life_cycle_model_consumption_savings.png" alt="Life Cycle Model — Consumption, Earnings, and Wealth over time" style="max-width: 100%; border-radius: 12px; border: 1px solid #E2E8F0;">
+                        <p style="margin-top: 0.5rem; color: var(--clr-text-muted); font-size: 0.9rem;"><em>The Life Cycle Model: during working years (0 → R), savings accumulate. After retirement (R → T), wealth is gradually consumed (dissaving).</em></p>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 2rem;">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>Case 1: Rational Saver ($\delta = 1$)</h4>
+                            <p>When $\delta = 1$, the individual values the future <span class="fluo">exactly as much as the present</span>. Equal marginal utility in both periods implies $c_1 = c_2$.</p>
+                            <p style="margin-top: 0.5rem;"><strong>Optimal saving:</strong></p>
+                            <p style="text-align: center; font-size: 1.1rem;"><span class="fluo">$s^* = \frac{w}{2}$</span></p>
+                            <p>The individual saves exactly <span class="fluo">half their wage</span> — achieving perfectly smooth consumption across both periods. This is the theoretical ideal of the life-cycle model.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>Case 2: Myopic Individual ($\delta = 0$)</h4>
+                            <p>When $\delta = 0$, the individual <span class="fluo">does not value the future at all</span>:</p>
+                            <p style="text-align: center; font-size: 1.1rem; margin: 0.5rem 0;">$\max [u(c_1) + 0 \cdot u(c_2)] = \max [u(c_1)]$</p>
+                            <p><strong>Result:</strong> $c_1 = w$, $c_2 = 0$, <span class="fluo">$s^* = 0$</span> — the individual saves <strong>nothing</strong> and is destitute in retirement.</p>
+                            <p style="margin-top: 0.5rem;">This creates an <span class="fluo">externality borne by society</span>: a generation that saves nothing will fall into poverty and depend on public emergency welfare systems.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-red" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>Policy Response:</strong> If society deems old-age poverty unacceptable, it must either (a) provide <em>ex-post</em> relief (costly, creates moral hazard) or (b) <span class="fluo">mandate ex-ante saving</span>. This is the primary microeconomic rationale for <span class="fluo">compulsory pension contributions</span>.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ GOVERNMENT SYSTEMS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Government Systems: From Market Failure to Political Economy</h2>
+
+                    <p>Since financial markets alone fail to guarantee adequate retirement saving (because of myopia, uncertainty, and adverse selection), the government steps in to <span class="fluo">force people to save</span>. But this raises several important questions:</p>
+
+                    <ol style="padding-left: 1.5rem;">
+                        <li style="margin-bottom: 1rem;">
+                            <strong>One savings rate for everybody?</strong>
+                            <p>Everyone has a different $\delta$ (time preference). The government <span class="fluo">does not know each individual's $\delta$</span> — an information problem that makes optimal mandates difficult to design.</p>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>How should the government mandate savings?</strong>
+                            <p>Options include: (a) mandating private saving with minimum contribution rates, (b) channelling contributions into a <span class="fluo">government-managed fund</span>, or (c) using <span class="fluo">payroll taxes</span> that are immediately redistributed to current retirees — the PAYG model.</p>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Pensions become political.</strong>
+                            <p>Once the government is involved, pension policy becomes <span class="fluo">deeply political</span>. Pension promises are powerful electoral commitments. Reforms are costly — beneficiary groups are <span class="fluo">large, organised, and vote in high numbers</span>.</p>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Normative vs. Positive questions.</strong>
+                            <p><span class="fluo">Normative:</span> Who <em>should</em> bear retirement risk — individuals, employers, or the state? <span class="fluo">Positive:</span> How to design a system that is fiscally sustainable and does not distort labour markets, savings rates, or intergenerational equity.</p>
+                        </li>
+                        <li style="margin-bottom: 0;">
+                            <strong>Redistribution within and across generations.</strong>
+                            <p>Pension systems redistribute <span class="fluo">within</span> a generation (progressive benefit formulas compress lifetime inequality) and <span class="fluo">across</span> generations (current debt must be serviced by future taxpayers). Political systems handle the former much more easily than the latter.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ 6 POLICY QUESTIONS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Six Core Policy Design Questions</h2>
+                    <p>Every pension system in the world is defined by how it answers these six fundamental questions:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <span class="card-label" style="background: #DBEAFE; color: #1E40AF;">Q1</span>
+                            <h4>Voluntary or Mandatory?</h4>
+                            <p>If people are myopic ($\delta$ close to 0) and society refuses to accept old-age poverty, <span class="fluo">voluntary systems produce under-saving</span>. Mandatory contributions correct this market failure. However, a too-generous mandate forces individuals to contribute more than they would freely choose, generating a welfare loss. <strong>Mainstream answer:</strong> mandatory for a <span class="fluo">minimum tier</span> (prevent poverty); voluntary for higher replacement rates.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label" style="background: #D1FAE5; color: #065F46;">Q2</span>
+                            <h4>Universal or Means-Tested?</h4>
+                            <p><span class="fluo">Universal:</span> all eligible individuals receive a pension regardless of other income. Better at preventing poverty, stronger political support (middle class defends the system), but more expensive. <span class="fluo">Means-tested:</span> benefits flow only to those below a threshold. Cheaper, but creates a <span class="fluo">"pension trap"</span> — saving reduces benefit eligibility, discouraging private saving.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label" style="background: #FEF3C7; color: #92400E;">Q3</span>
+                            <h4>Who Bears the Risk — DB or DC?</h4>
+                            <p><span class="fluo">Defined Benefit (DB):</span> the system fixes the benefit formula (e.g. 1.5% × years × reference salary). The sponsor (employer or state) bears investment risk. <span class="fluo">Defined Contribution (DC):</span> the contribution rate is fixed; the benefit equals whatever the accumulated account can finance. The <span class="fluo">individual bears all risk</span>.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label" style="background: #EDE9FE; color: #5B21B6;">Q4</span>
+                            <h4>Funded or Pay-As-You-Go?</h4>
+                            <p><span class="fluo">Funded:</span> contributions are invested in financial assets; benefits come from accumulated returns. Return = $r$ (capital market). <span class="fluo">PAYG:</span> current workers' taxes are directly transferred to current retirees; no fund accumulates. Return = $n + g$ (population growth + wage growth). This is the <span class="fluo">central question</span> — treated in full in Section 6.3.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label" style="background: #FCE7F3; color: #9D174D;">Q5</span>
+                            <h4>Publicly or Privately Managed?</h4>
+                            <p><span class="fluo">Public management</span> has lower administration costs (economies of scale, no profit margin) but faces <span class="fluo">political interference</span> in investment decisions. <span class="fluo">Private management</span> can deliver higher risk-adjusted returns, but involves significant fees — 1–2% annually can <span class="fluo">eliminate one-third of lifetime retirement wealth</span>.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label" style="background: #FEE2E2; color: #991B1B;">Q6</span>
+                            <h4>Lump Sum or Annuity?</h4>
+                            <p><span class="fluo">Annuities</span> provide lifelong income, fully insuring longevity risk — the individual cannot outlive their wealth. However, they are inflexible (no bequest motive). <span class="fluo">Lump sums</span> offer flexibility and the ability to leave an inheritance, but expose myopic individuals to the risk of <span class="fluo">rapid dissaving</span>. Evidence from the UK and Australia shows many retirees exhaust funds within a decade.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ PENSION SYSTEMS WORLDWIDE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Pension Systems Are Widely Different</h2>
+                    <p>Design choices reflect political, historical, and institutional variation. For example, the Netherlands has <span class="fluo">40× larger private pension assets</span> than Belgium. The guaranteed basic pension is 45% of average income in Iceland but only 7% in Hungary.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>Unfunded DB (PAYG)</h4>
+                            <p>Most public systems worldwide — <span class="fluo">US Social Security</span>, Czech Republic, Germany (points system), France. Benefits are formula-based; no fund accumulates. Fiscally exposed to ageing demographics.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Funded DB</h4>
+                            <p>Traditional employer pensions in US and UK. The sponsor promises a defined benefit and must <span class="fluo">pre-fund it</span>. Declining rapidly, plagued by insufficient pre-financing and interest-rate sensitivity.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Funded DC</h4>
+                            <p>All private pension funds and modern employer plans (<span class="fluo">US 401(k)</span>, <span class="fluo">Australian Superannuation</span>). Individual accounts; contributions grow at market returns. The worker bears investment and longevity risk.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Unfunded DC (NDC)</h4>
+                            <p>Notional accounts in government systems (<span class="fluo">Sweden 1998</span>, Poland, Latvia, <span class="fluo">Italy 1995</span>). Payroll taxes yield a fictitious return based on wage-bill growth. Benefits are based on contributions plus this <span class="fluo">notional return</span>. Combines PAYG funding with DC-style transparency.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch6-1')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch6-1" class="post-it-note">
+                        <p><strong>Chapter 6.1 — The Pension Problem:</strong></p>
+                        <ul>
+                            <li>People <span class="fluo">live longer than they earn</span> — some mechanism must transfer income from working years to retirement.</li>
+                            <li>The four mechanisms are: storing goods (obsolete), raising children (declining), financial markets (risky), and <span class="fluo">state pension systems</span> (dominant in advanced economies).</li>
+                            <li>The <span class="fluo">two-period model</span> shows that a rational saver ($\delta = 1$) saves $s^* = w/2$, while a myopic one ($\delta = 0$) saves nothing — creating a market failure that justifies mandatory contributions.</li>
+                            <li>Every pension system answers six questions: voluntary/mandatory, universal/means-tested, DB/DC, funded/PAYG, public/private management, and lump sum/annuity.</li>
+                            <li>Real-world systems are <span class="fluo">wildly different</span> — from Sweden's NDC to the US 401(k) to Italy's reformed system — reflecting each country's history and political choices.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

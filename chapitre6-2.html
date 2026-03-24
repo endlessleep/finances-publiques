@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — The Demographic Challenge</title>
+    <meta name="description" content="Old-age dependency ratios, fertility trends, pension spending, and projections to 2070.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link active">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>6.2 — The Demographic Challenge</h1>
+                <p class="subtitle">Chapter 6: The Economics of Old-Age Pensions</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ DEPENDENCY RATIO ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Measuring Population Ageing</h2>
+                    <p>The single most important statistic for pension economics is the <span class="fluo">Old-Age Dependency Ratio (OADR)</span>. It tells us how many retired people each working-age person must support.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <p><strong>Definition:</strong></p>
+                        <p style="text-align: center; font-size: 1.15rem; margin: 0.75rem 0;"><span class="fluo">$\text{OADR} = \frac{\text{Population aged 65+}}{\text{Population aged 15–64}} \times 100$</span></p>
+                        <p>Intuitively: how many retired persons must each working-age person support?</p>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card">
+                            <h4>Why It Matters for Pensions</h4>
+                            <p>In a <span class="fluo">Pay-As-You-Go (PAYG) system</span>, current workers' contributions directly finance current pensioners' benefits. A rising dependency ratio means <span class="fluo">fewer contributors per beneficiary</span>, squeezing the financial balance of the system.</p>
+                        </div>
+                        <div class="compare-card">
+                            <h4>Historical Context</h4>
+                            <p>When Germany introduced Bismarck's state pension in <span class="fluo">1889</span>, life expectancy barely reached the retirement age of 70. Today, a 65-year-old German can expect to live approximately <span class="fluo">20 additional years</span>, fundamentally altering the financial maths of any pension promise.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ FERTILITY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Fertility Rates, 1960–2023</h2>
+                    <p>Fertility is the <span class="fluo">long-term driver</span> of demographic ageing. Fewer births today means fewer workers to fund pensions in 20–30 years.</p>
+
+                    <div class="definition-box">
+                        <p><strong>Empirical Trends (Source: Eurostat):</strong></p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li>In the 1960s, EU countries had on average around <span class="fluo">2+ children per woman</span>. Today, most have fallen to <span class="fluo">1.3–1.5</span> — well below the replacement level of 2.1 needed to keep population stable.</li>
+                            <li>There is significant variation within Europe: <span class="fluo">France</span> remains relatively higher (around 1.6–1.8 recently), while <span class="fluo">Southern and Eastern Europe</span> (Italy, Spain, Czech Republic) often fall to 1.2–1.4.</li>
+                            <li>A slight recovery occurred in the 2000s, but a <span class="fluo">new decline after 2010</span> has confirmed the structural nature of low fertility across the continent.</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-red" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Key Fact:</strong> <span class="fluo">Persistent low fertility = structural demographic ageing.</span> This is not a temporary trend — it is a permanent shift in the population structure that makes PAYG systems increasingly difficult to sustain.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ OADR TODAY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Old-Age Dependency Ratios, 2023</h2>
+                    <p>Where does the world stand today? The following data shows the <span class="fluo">population aged 65+ as a percentage of the working-age population (15–64)</span>.</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>OADR (2023)</th>
+                                    <th>Interpretation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Spain</strong></td>
+                                    <td>~29%</td>
+                                    <td>Relatively lower today, but <span class="fluo">one of the fastest ageing</span> populations in Europe due to extremely low fertility (1.2).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>United States</strong></td>
+                                    <td>~29%</td>
+                                    <td>Sustained by higher immigration and relatively higher fertility compared to Europe.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>EU-27 average</strong></td>
+                                    <td><span class="fluo">~33%</span></td>
+                                    <td>One in three Europeans of working age is supporting a retiree through the tax system.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Germany</strong></td>
+                                    <td>~35%</td>
+                                    <td>Among the most aged populations globally; heavily reliant on immigration to sustain the workforce.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>France</strong></td>
+                                    <td>~35%</td>
+                                    <td>Slightly better fertility (1.7) partially offsets ageing.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Italy</strong></td>
+                                    <td><span class="fluo">~38%</span></td>
+                                    <td>Second-oldest population after Japan; extremely low fertility (1.2) and limited immigration.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Japan</strong></td>
+                                    <td><span class="fluo">~49%</span></td>
+                                    <td>The <span class="fluo">highest in the world</span> — nearly one retiree for every two workers. The most extreme ageing case globally.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ PROJECTIONS TO 2070 ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Population Projections: The Dependency Ratio to 2070</h2>
+                    <p>The situation will get <span class="fluo">much worse</span> over the next 50 years. According to the European Commission's 2024 Ageing Report and UN World Population Prospects, the dependency ratio will rise sharply across all major economies.</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Region</th>
+                                    <th>2023</th>
+                                    <th>2050 (Projected)</th>
+                                    <th>2070 (Projected)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>EU-27</strong></td>
+                                    <td>~33%</td>
+                                    <td><span class="fluo">~51%</span></td>
+                                    <td><span class="fluo">~57%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Japan</strong></td>
+                                    <td>~49%</td>
+                                    <td>~60%</td>
+                                    <td><span class="fluo">~68%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>United States</strong></td>
+                                    <td>~29%</td>
+                                    <td>~35%</td>
+                                    <td><span class="fluo">~41%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">📈</span>
+                        <span><strong>Key Takeaway:</strong> The EU-27 dependency ratio <span class="fluo">nearly doubles</span> over the projection period (from 33% to 57%). This places enormous strain on existing pension arrangements and makes reform — whether through higher retirement ages, lower benefits, or higher contributions — <span class="fluo">unavoidable</span>.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ PENSION SPENDING ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Public Pension Spending, 2022</h2>
+                    <p>How much do countries actually spend on pensions as a share of their GDP? The data reveals <span class="fluo">huge variation</span> across the major economies.</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Pension Spending (% GDP)</th>
+                                    <th>Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Italy</strong></td>
+                                    <td><span class="fluo">~16%</span></td>
+                                    <td>Italy spends more on pensions than on education and defence <em>combined</em>. The highest in the OECD.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>France</strong></td>
+                                    <td><span class="fluo">~15%</span></td>
+                                    <td>Reflects a generous PAYG system with broad coverage and early retirement norms (ongoing political battles over reform).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>EU-27 Average</strong></td>
+                                    <td>~12%</td>
+                                    <td>European average — significantly higher than the US or Japan, reflecting the PAYG welfare state model.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Germany</strong></td>
+                                    <td>~10%</td>
+                                    <td>The classic Bismarckian contribution-based system, recently under pressure from rapid ageing.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Japan</strong></td>
+                                    <td>~9%</td>
+                                    <td>Surprisingly low given Japan's extreme ageing — explained by NDC-style reforms and later retirement ages.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>United States</strong></td>
+                                    <td>~7%</td>
+                                    <td>Understates true coverage — Social Security alone is 5.2% of GDP; total (including employer plans) exceeds 7%.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ AGEING DRIVES SPENDING? ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Does Ageing Drive Spending? The Cross-Country Evidence</h2>
+                    <p>Is there a clear relationship between how old a country's population is and how much it spends on pensions?</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #10B981;">
+                        <p><strong>Empirical Finding:</strong> Plotting the old-age dependency ratio against pension spending (% of GDP) across European economies and the US reveals a <span class="fluo">moderate positive correlation</span> ($R^2 \approx 0.53$). Countries with older populations <em>tend</em> to spend more — but the relationship is far from deterministic.</p>
+                        <p style="margin-top: 0.75rem;"><strong>The Japan Outlier:</strong> Japan has an OADR of ~49% but spends only ~9% of GDP on pensions. This is far below what the regression line would predict. The explanation lies in <span class="fluo">institutional differences</span> — Japan's NDC-style reforms, later retirement ages, and a cultural norm of continued work into old age all bring spending below the European pattern.</p>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>Key Insight:</strong> <span class="fluo">Ageing matters, but institutions also strongly matter.</span> A country with aggressive pension reform (Japan, Sweden) can spend significantly less than what its demographics would suggest, while a country with a generous unreformed system (Italy, France) will spend far more.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ SPENDING PROJECTIONS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Pension Spending Projections to 2070</h2>
+                    <p>According to the EU's 2024 Ageing Report (baseline scenario), pension spending as a share of GDP will follow a <span class="fluo">hump-shaped pattern</span> — rising first as the baby-boom generation retires, then stabilising as reforms take effect.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #2563EB;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">11.4%</h4>
+                            <p>EU-27 pension spending today (2022)</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #F59E0B;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">12.1%</h4>
+                            <p>EU-27 projected spending in 2045 (peak)</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #10B981;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">11.8%</h4>
+                            <p>EU-27 projected in 2070 (after reforms)</p>
+                        </div>
+                        <div class="compare-card" style="text-align: center; border-left: 4px solid #EF4444;">
+                            <h4 style="font-size: 2rem; margin-bottom: 0;">13.7%</h4>
+                            <p>Italy projected, 2070 (down from 15.5%)</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <p><strong>What drives the divergence?</strong></p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li><strong>Demographic pressure:</strong> The sharp rise in the dependency ratio <span class="fluo">mechanically raises expenditure</span>, particularly in the 2025–2045 window when the baby-boom cohort retires across Europe.</li>
+                            <li><strong>Reform effects:</strong> Many EU states have legislated <span class="fluo">increases in retirement ages</span>, tightened early-exit options, or shifted to notional defined-contribution (NDC) formulas, moderating long-run spending relative to the no-reform baseline.</li>
+                            <li><strong>Country heterogeneity:</strong> Italy's spending falls from 15.5% to 13.7% of GDP thanks to the <span class="fluo">1995 Dini reform</span>, whereas France remains above 12% throughout, reflecting gentler parametric adjustment.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch6-2')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch6-2" class="post-it-note">
+                        <p><strong>Chapter 6.2 — The Demographic Challenge:</strong></p>
+                        <ul>
+                            <li>The <span class="fluo">Old-Age Dependency Ratio</span> is the single most important metric for pension sustainability. It is currently ~33% in the EU and ~49% in Japan.</li>
+                            <li>Fertility has fallen <span class="fluo">well below replacement level</span> (2.1) across almost all of Europe, making demographic ageing a permanent structural reality.</li>
+                            <li>The OADR is projected to <span class="fluo">nearly double</span> in the EU by 2070 (from 33% to 57%), making pension reform unavoidable.</li>
+                            <li>Pension spending varies hugely (Italy 16% vs US 7%), reflecting different systems and reform histories. <span class="fluo">Ageing matters, but institutions also matter</span> — Japan is the key outlier.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

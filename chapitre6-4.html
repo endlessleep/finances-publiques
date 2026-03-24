@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Aaron's Rule</title>
+    <meta name="description" content="Aaron's condition for PAYG optimality, empirical data, Czech IRR, and reform directions.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link active">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>6.4 — Aaron's Rule</h1>
+                <p class="subtitle">Chapter 6: The Economics of Old-Age Pensions</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ COMPARING RATES OF RETURN ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Comparing Rates of Return: PAYG vs. Funded</h2>
+                    <p>The central question of pension system design is: <span class="fluo">which system delivers a better lifetime return for participants?</span></p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #3B82F6;">
+                            <h4>PAYG System</h4>
+                            <p style="text-align: center; font-size: 1.3rem; margin: 0.75rem 0;"><span class="fluo">$r_{PAYG} = n + g$</span></p>
+                            <p><strong>= population growth + real wage growth</strong></p>
+                            <p style="margin-top: 0.75rem;">Current estimates (EU): $n \approx 0\%\text{--}0.3\%$, $g \approx 0.8\%\text{--}1.2\%$</p>
+                            <p style="margin-top: 0.5rem;">→ <span class="fluo">$r_{PAYG} \approx 1\text{--}1.5\%$</span></p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>Funded System</h4>
+                            <p style="text-align: center; font-size: 1.3rem; margin: 0.75rem 0;"><span class="fluo">$r_{funded} = r$</span></p>
+                            <p><strong>= real return on invested capital</strong></p>
+                            <p style="margin-top: 0.75rem;">Historical real equity return: <span class="fluo">≈ 4–7%</span></p>
+                            <p style="margin-top: 0.5rem;">Safe asset (10yr bond, 2024): ≈ 0–2%</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>Which delivers more?</strong> It depends on whether <span class="fluo">$n + g$ is above or below $r$</span> — this is the essence of Aaron's condition. Note that this comparison abstracts from risk — funded system returns are riskier, so a risk-adjusted comparison would reduce the funded system's advantage.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ THE MICRO VS MACRO TENSION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Micro vs. Macro Tension</h2>
+                    <p>There is a fundamental conflict between what is good for each individual and what is fiscally sustainable for the whole system:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <h4>Microeconomic Optimality</h4>
+                            <p>From an individual's perspective, the <span class="fluo">higher the benefits and the lower the taxes</span>, the better. Each person wants to maximise their personal return on contributions.</p>
+                        </div>
+                        <div class="compare-card highlight">
+                            <h4>Macroeconomic Sustainability</h4>
+                            <p>But <span class="fluo">higher pensions and lower revenues widen the deficit</span> and increase debt over time. What is individually optimal can be collectively unsustainable.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <p><strong>The Government's Dilemma:</strong> The government always decides both the contribution rate and the pension benefit — and <span class="fluo">often changes either or both</span>. Individuals contribute over their working life (for example, 28% of salary in the Czech Republic) and receive a pension benefit after retirement (around 40–45% of their previous wage on average). The benefit formula is always <span class="fluo">progressive</span> — lower earners get a higher replacement rate than higher earners.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ REAL-WORLD RETURNS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Real-World Returns: Czech Republic and Beyond</h2>
+                    <p>How do these theoretical returns compare to actual experience?</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #F59E0B;">
+                        <p><strong>Estimated Internal Real Rate of Return on the Czech Pension System (2015):</strong></p>
+                        <div class="table-wrapper" style="margin-top: 0.75rem;">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>Income Level</th>
+                                        <th>Internal Rate of Return</th>
+                                        <th>Interpretation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>50% of average wage</td>
+                                        <td><span class="fluo">+1.5%</span></td>
+                                        <td>Low earners receive a positive return — the progressive formula <span class="fluo">redistributes towards them</span>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Average wage</td>
+                                        <td><span class="fluo">−1.4%</span></td>
+                                        <td>Average earners receive a <em>negative</em> real return — they would be better off investing privately (in theory).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>200% of average wage</td>
+                                        <td><span class="fluo">−3.1%</span></td>
+                                        <td>High earners face a significant implicit tax — the system strongly redistributes away from them.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #10B981;">
+                        <p><strong>Is the Czech IRR Good Enough?</strong> That depends on <span class="fluo">the alternatives and on your aversion to risk</span>:</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li>The annual <strong>nominal</strong> return on the <span class="fluo">Czech stock exchange</span> (PX index) has been <span class="fluo">5.9% since 1993</span>. During the same period, annual inflation averaged 4.3%, giving a real return of about 1.6%.</li>
+                            <li>The <span class="fluo">US S&P 500</span> has delivered an annual yield of about <span class="fluo">8.0% since 1997</span> (nominal).</li>
+                            <li>The <span class="fluo">S&P Global (World) index</span> has a 10-year annual yield of about <span class="fluo">11.5%</span> (nominal).</li>
+                            <li><strong>But beware:</strong> international investing also carries <span class="fluo">exchange rate risks</span> — returns in USD or EUR must be converted back into CZK.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ AARON'S RULE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Aaron's Rule (1966): The Condition for PAYG Optimality</h2>
+                    <p>Henry Aaron published this landmark result in the <em>American Economic Review</em> (1966, Vol. 56, No. 3). It provides the <span class="fluo">formal condition</span> for when a PAYG system is welfare-improving compared to funded savings.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <p><strong>Aaron's Condition:</strong></p>
+                        <p style="text-align: center; font-size: 1.4rem; margin: 1rem 0;"><span class="fluo">PAYG is Pareto-improving $\iff$ $n + g > r$</span></p>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>$n + g > r$ → PAYG Preferred</h4>
+                            <p>The <span class="fluo">"biological return"</span> on social insurance exceeds the market return on capital. Every cohort gains from participating in the PAYG system relative to self-funding. In this case, PAYG is <span class="fluo">Pareto-improving</span> — everyone is made better off.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>$n + g = r$ → Indifferent</h4>
+                            <p>This is the <span class="fluo">"golden rule"</span> of capital accumulation: PAYG and funded systems yield identical welfare. Neither dominates; the choice depends on distributional preferences and risk attitudes.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>$n + g < r$ → Funded Preferred</h4>
+                            <p>Capital is more productive than population growth can justify. Compulsory PAYG <span class="fluo">taxes workers at a below-market implicit return</span>, reducing welfare relative to investing in capital markets.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ AARON IN TODAY'S ECONOMIES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Aaron's Rule in Today's Economies</h2>
+                    <p>Does the condition $n + g > r$ hold in practice? Let us check with the latest available data:</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Country / Region</th>
+                                    <th>$n$ (pop. growth)</th>
+                                    <th>$g$ (real wage growth)</th>
+                                    <th>$n + g$</th>
+                                    <th>$r$ (real safe rate)</th>
+                                    <th>Aaron condition?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>EU-27</strong> (2015–24 avg.)</td>
+                                    <td>~0.1%</td>
+                                    <td>~0.9%</td>
+                                    <td><span class="fluo">~1.0%</span></td>
+                                    <td>~0.5–1.5%</td>
+                                    <td><span class="fluo">Borderline</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Germany</strong></td>
+                                    <td>~0.3%</td>
+                                    <td>~0.8%</td>
+                                    <td>~1.1%</td>
+                                    <td>~0.8%</td>
+                                    <td><span class="fluo">Marginal</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Italy</strong></td>
+                                    <td>~−0.3%</td>
+                                    <td>~0.2%</td>
+                                    <td><span class="fluo">~−0.1%</span></td>
+                                    <td>~0.8%</td>
+                                    <td style="color: #EF4444;"><strong>✗ Fails</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Japan</strong></td>
+                                    <td>~−0.4%</td>
+                                    <td>~0.3%</td>
+                                    <td><span class="fluo">~−0.1%</span></td>
+                                    <td>~0.2%</td>
+                                    <td style="color: #EF4444;"><strong>Just fails</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>United States</strong></td>
+                                    <td>~0.5%</td>
+                                    <td>~1.2%</td>
+                                    <td><span class="fluo">~1.7%</span></td>
+                                    <td>~1.5%</td>
+                                    <td style="color: #10B981;"><strong>✓ Holds</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <p><strong>What this means for policy:</strong></p>
+                        <p style="margin-top: 0.5rem;">For <span class="fluo">Italy and Japan</span> — where demographic decline means $n$ is negative — the Aaron condition fails even at historically low real interest rates. This provides a <span class="fluo">theoretical rationale for partial funded pillars</span> and explains why both countries have introduced reforms shifting weight toward funded or NDC elements.</p>
+                        <p style="margin-top: 0.75rem;">For the <span class="fluo">United States</span>, the condition holds narrowly, but the Congressional Budget Office projects Social Security outlays rising from 5.2% of GDP today to 7.0% by 2097 absent reform — illustrating that <span class="fluo">holding the Aaron condition is necessary but not sufficient</span> for long-run solvency.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ POLICY IMPLICATIONS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Policy Implications and Reform Directions</h2>
+                    <p>From theory to practice — what reform options are available to governments facing an ageing population and a failing Aaron condition?</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label" style="background: #DBEAFE; color: #1E40AF;">01</span>
+                            <h4>Raise the Retirement Age</h4>
+                            <p>As life expectancy rises, keeping benefits constant at a fixed retirement age raises $R$ mechanically. <span class="fluo">Indexing the retirement age to life expectancy</span> (as Sweden and Finland have done) restores actuarial balance without explicit benefit cuts. This is the simplest and most politically visible reform.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <span class="card-label" style="background: #FEF3C7; color: #92400E;">02</span>
+                            <h4>NDC: Best of Both Worlds?</h4>
+                            <p>Notional defined-contribution accounts (<span class="fluo">Sweden 1998, Italy 1995</span>) mimic the transparency of DC while retaining the pooling benefits of PAYG. The implicit return is pegged to wage-bill growth — close to $n + g$ — making the <span class="fluo">Aaron condition operationally visible</span> to participants.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label" style="background: #D1FAE5; color: #065F46;">03</span>
+                            <h4>Multi-Pillar Architecture</h4>
+                            <p>The World Bank (1994) advocated a <span class="fluo">three-pillar model</span>: (1) mandatory PAYG for redistribution, (2) mandatory funded for savings, (3) voluntary private saving. <span class="fluo">Diversification across pillars</span> hedges demographic, political, and financial risks simultaneously.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label" style="background: #EDE9FE; color: #5B21B6;">04</span>
+                            <h4>Pre-Funding in PAYG</h4>
+                            <p>Accumulating a reserve fund — as the <span class="fluo">US Social Security Trust Fund</span> (partially) and <span class="fluo">Norway's Government Pension Fund</span> do — can bridge demographic bulges without a full structural shift, <span class="fluo">buying time for adjustment</span> without permanently abandoning PAYG logic.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ KEY TAKEAWAYS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Chapter 6 — Key Takeaways</h2>
+
+                    <ol style="padding-left: 1.5rem;">
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Demographics are destiny for pensions.</strong>
+                            <p>The old-age dependency ratio is the <span class="fluo">single most powerful driver</span> of pension system finances. The EU-27 ratio is projected to rise from 33% to nearly 57% by 2070, with Japan already at 49%.</p>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>PAYG implicitly earns $n + g$.</strong>
+                            <p>The "biological return" on a PAYG system equals <span class="fluo">population growth plus real wage growth</span>. It is not a market return — it is a political promise backed by demographic trends.</p>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Funded systems earn $r$ — but with risk.</strong>
+                            <p>Capital markets have historically offered <span class="fluo">higher returns than $n + g$</span> in advanced economies, but that advantage comes with investment and longevity risk that workers must bear.</p>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Aaron's condition resolves the debate.</strong>
+                            <p><span class="fluo">$n + g > r \Rightarrow$ PAYG preferred.</span> In low-growth, ageing economies (Italy, Japan), the condition fails, providing a theoretical basis for partial funding. In faster-growing economies (US), it holds — though barely.</p>
+                        </li>
+                        <li>
+                            <strong>No system is optimal in isolation.</strong>
+                            <p>The academic consensus points toward <span class="fluo">diversified multi-pillar architectures</span> combining PAYG redistribution with funded savings and parametric reform (retirement-age indexation, NDC transparency).</p>
+                        </li>
+                    </ol>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">📚</span>
+                        <span><strong>Data sources:</strong> Eurostat (tps00198, 2024); EU 2024 Ageing Report; OECD Pensions at a Glance 2023; World Bank WDI; CBO Long-Term Projections 2024.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="post-it-toggle" onclick="toggleNote('note-ch6-4')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch6-4" class="post-it-note">
+                        <p><strong>Chapter 6.4 — Aaron's Rule:</strong></p>
+                        <ul>
+                            <li><span class="fluo">Aaron's Condition:</span> PAYG is Pareto-improving if and only if $n + g > r$. This is the <em>single most important result</em> in pension economics.</li>
+                            <li>In today's world, the condition <span class="fluo">fails for Italy and Japan</span> (negative $n$), is borderline for the EU, and just holds for the US.</li>
+                            <li>The Czech pension system has a <span class="fluo">negative real IRR</span> for average and high earners, but a positive one for low earners — reflecting the progressive benefit formula.</li>
+                            <li>The mainstream consensus favours <span class="fluo">multi-pillar architectures</span> — no single system can handle demographic risk, market risk, and political risk simultaneously.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const parent = button.parentElement;
+            parent.classList.toggle('active');
+            content.classList.toggle('show');
+        }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+
+        function toggleNote(id) {
+            const note = document.getElementById(id);
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
