@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Why Tax? The Five Rs & Tax Taxonomy</title>
+    <meta name="description"
+        content="Taxation fundamentals: Musgrave's three branches, the Five Rs of taxation, government revenue structure, tax taxonomy, and types of taxes.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a>
+                        <a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a>
+                        <a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a>
+                        <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.8 — PUBLIC CHOICE THEORY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a>
+                        <a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a>
+                        <a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a>
+                        <a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.9 — TAXATION &amp; TAX INCIDENCE
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre9-1.html" class="nav-link active">9.1 Why Tax? The Five Rs</a>
+                        <a href="chapitre9-2.html" class="nav-link">9.2 Efficiency &amp; Deadweight Loss</a>
+                        <a href="chapitre9-3.html" class="nav-link">9.3 Equity &amp; Progressivity</a>
+                        <a href="chapitre9-4.html" class="nav-link">9.4 Tax Incidence</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>9.1 — Why Tax? The Five Rs & Tax Taxonomy</h1>
+                <p class="subtitle">Chapter 9: Taxation & Tax Incidence — The Foundations</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: WHY TAX?
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Do Governments Tax?</h2>
+
+                    <p>To understand taxation, we first go back to the famous framework of <strong>Richard Musgrave (1939)</strong>, who identified the three branches of government:</p>
+
+                    <div class="compare-grid three-col">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label">Branch 1</span>
+                            <h4>📊 Stabilization</h4>
+                            <p>The government smooths out economic booms and recessions. During a crisis, it spends more (stimulus). During a boom, it pulls back. <span class="fluo">This branch needs money to function</span> — you cannot spend during a recession without having collected revenue before.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label">Branch 2</span>
+                            <h4>🏗️ Allocation</h4>
+                            <p>The government provides public goods and corrects market failures (externalities, monopolies, information asymmetries). Building roads, funding police, running schools — <span class="fluo">all of this requires tax revenue</span> to pay for.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label">Branch 3</span>
+                            <h4>⚖️ Distribution</h4>
+                            <p>The government redistributes income and wealth from the rich to the poor to reduce inequality. <span class="fluo">Taxation is the main tool of this branch</span> — progressive taxes take more from the wealthy and fund transfers (pensions, welfare, healthcare) for those who need them.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>The Bottom Line:</strong> The first two branches need resources (money) to function at all. The third branch uses taxation directly as its primary instrument. So <span class="fluo">taxes are not an evil necessity — they are the lifeblood of government</span>. Without taxes, there is no government, no public services, and no redistribution.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: THE FIVE Rs
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Five "Rs" of Taxation</h2>
+
+                    <p>Modern public finance has expanded Musgrave's framework into <span class="fluo">five fundamental purposes</span> of taxation. These are sometimes called the "Five Rs":</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Revenue</strong>
+                            <p>The most obvious purpose: <span class="fluo">to fund public services, infrastructure, and administration</span>. Without revenue, the government simply cannot exist. This is the baseline function — taxes pay for everything from the military to teachers' salaries to hospital equipment.</p>
+                        </li>
+                        <li>
+                            <strong>Redistribution</strong>
+                            <p>Taxes are designed to <span class="fluo">reduce inequalities between individuals and between groups</span>. A progressive income tax takes relatively more from the rich than from the poor. The collected revenue is then used for transfers (pensions, welfare, child benefits) that disproportionately help lower-income citizens. The net effect is a narrowing of the gap between rich and poor.</p>
+                        </li>
+                        <li>
+                            <strong>Repricing</strong>
+                            <p>Taxes can be used to <span class="fluo">change the market price of harmful goods</span> — making "public bads" more expensive so that people consume less of them. This is the famous <strong>Pigouvian tax</strong> logic from Chapter 4. Examples include excise taxes on <strong>tobacco</strong> (to reduce smoking and lung cancer), <strong>carbon taxes</strong> (to reduce CO₂ emissions and fight climate change), and <strong>sugar taxes</strong> (to reduce obesity). The tax "re-prices" the product to include its social cost.</p>
+                        </li>
+                        <li>
+                            <strong>Representation</strong>
+                            <p>This is a less obvious but very powerful idea: <span class="fluo">when a government relies heavily on tax revenue (rather than on natural resources or aid), it tends to have better governance and stronger democratic institutions</span>. Why? Because citizens who pay significant taxes <strong>demand accountability</strong> from their government. They want to know where their money goes and will punish corrupt or wasteful politicians. Countries that rely on oil revenues or foreign aid often have weak democratic processes because the government does not need to answer to taxpayers.</p>
+                        </li>
+                        <li>
+                            <strong>Reparation</strong>
+                            <p>The most recent and most controversial "R": <span class="fluo">using tax policy as a tool for addressing historical injustices</span>. This argument says that colonialism, slavery, and systemic exploitation created enormous wealth gaps between countries and between groups within countries. Tax policy (such as wealth taxes, land taxes, or reparation funds) could be used as a tool to partially correct these historical wrongs and redistribute wealth back to the descendants of exploited populations.</p>
+                        </li>
+                    </ol>
+
+                    <div class="exam-tip">
+                        <p><strong>For the exam:</strong> Know all Five Rs by heart and be able to give a concrete example for each. The first two (Revenue, Redistribution) are classic Musgrave. The third (Repricing) is Pigouvian. The last two (Representation, Reparation) are modern additions from development economics and political philosophy.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: REVENUE STRUCTURE
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Government Revenue: The Full Structure</h2>
+
+                    <p>Where does the government's money actually come from? The following diagram shows the <span class="fluo">complete structure of government revenue</span>, breaking it down from the total all the way to individual tax types:</p>
+
+                    <img src="government-revenue-sources-breakdown.png" alt="Government Revenue Structure Breakdown" style="max-width: 75% !important; margin: 1.5rem auto;">
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Reading the Diagram</span>
+                        <p><strong>Total Government Revenue</strong> first splits into <strong>Grants</strong> (money received from other governments or international organizations, like EU funds) and <strong>Revenue Excluding Grants</strong> (money earned domestically).</p>
+                        <p style="margin-top: 0.75rem;">Revenue Excluding Grants has three components:</p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li><strong>Tax Revenue</strong> — the largest component in virtually all developed countries. This is further split into <span class="fluo">Direct Taxes</span> (income tax, profits tax, property tax — levied directly on a person or company) and <span class="fluo">Indirect Taxes</span> (VAT, excise duties, trade taxes — levied on transactions and goods).</li>
+                            <li><strong>Non-Tax Revenue</strong> — fees, fines, profits from state-owned enterprises, dividends from public investments, licensing revenues.</li>
+                            <li><strong>Social Contributions</strong> — mandatory payments specifically earmarked for social insurance (pensions, health insurance, unemployment insurance). These are technically separate from "taxes" but function very similarly.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: TWO GUIDING QUESTIONS
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Two Fundamental Questions of Tax Design</h2>
+
+                    <p>All of tax policy ultimately reduces to <span class="fluo">two guiding questions</span>:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label">Question 1</span>
+                            <h4>⚡ HOW Do We Tax?</h4>
+                            <p>This is about <strong>efficiency</strong> and <strong>flexibility</strong>. The ideal tax system should raise revenue with the <span class="fluo">minimum possible distortion</span> to the economy. It should be easy to administer, difficult to evade, and flexible enough to adapt to changing economic conditions.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label">Question 2</span>
+                            <h4>👤 WHO Do We Tax?</h4>
+                            <p>This is about <strong>equity</strong> and <strong>transparency</strong>. The ideal tax system should distribute the burden <span class="fluo">fairly</span> — but what "fairly" means is the subject of enormous political debate. Should the rich pay proportionally more? How much more?</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-yellow">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>The Equity–Efficiency Trade-Off:</strong> These two questions constantly pull in opposite directions. The <em>most efficient</em> tax (one that causes the least distortion) might be deeply <em>unfair</em> (like a poll tax that charges everyone the same amount). The <em>most equitable</em> tax (heavily progressive income tax) might cause <em>significant distortions</em> (discouraging work and investment). All real-world tax systems are compromises between these two goals.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: TAX TAXONOMY
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Tax Taxonomy: Key Definitions</h2>
+
+                    <p>Before diving into specific taxes, you need a rock-solid understanding of the <span class="fluo">basic vocabulary</span> of taxation:</p>
+
+                    <div class="definition-box">
+                        <span class="def-label">Core Definitions</span>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li><strong>Tax</strong> = the absolute amount paid in money terms (e.g. "I paid €5,000 in tax").</li>
+                            <li><strong>Tax Base</strong> = the thing being taxed (income, wealth, consumption, a specific activity).</li>
+                            <li><strong>Tax Rate</strong> = the percentage applied to the tax base.</li>
+                            <li>Formula: <span class="fluo">$\text{Tax} = \text{Tax Base} \times \text{Tax Rate}$</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>Average Tax Rate (ATR)</h4>
+                            <p style="text-align: center; font-size: 1.1rem; margin: 0.5rem 0;"><span class="fluo">$ATR = \dfrac{\text{Total Tax Paid}}{\text{Total Income}}$</span></p>
+                            <p>The overall percentage of your <em>total</em> income that goes to taxes. This is the number you care about when you look at your paycheck and ask "what percentage of my salary did the government take?"</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>Marginal Tax Rate (MTR)</h4>
+                            <p style="text-align: center; font-size: 1.1rem; margin: 0.5rem 0;"><span class="fluo">$MTR = \dfrac{\Delta \text{Tax}}{\Delta \text{Income}}$</span></p>
+                            <p>The percentage that applies to the <em>last euro</em> you earned. If you earn €1 more, how much of it does the government take? This is the rate that matters for <strong>behavioral decisions</strong> — it determines whether you want to work one more hour.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #EF4444;">
+                        <span class="def-label" style="background: #EF4444;">Critical Distinction</span>
+                        <p><strong>Regressive, Proportional, or Progressive?</strong> These terms describe <span class="fluo">how the Average Tax Rate changes as income rises</span>:</p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li><strong>Progressive:</strong> ATR <em>increases</em> as income rises. Rich people pay a higher percentage. (Most income taxes)</li>
+                            <li><strong>Proportional (Flat):</strong> ATR stays <em>constant</em> regardless of income. Everyone pays the same percentage. (Some Eastern European countries)</li>
+                            <li><strong>Regressive:</strong> ATR <em>decreases</em> as income rises. Poor people pay a higher percentage of their income. (Sales taxes, VAT — because poor people spend a larger share of their income on consumption)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: TYPES OF TAX
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Complete Taxonomy of Taxes</h2>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Sub-Type</th>
+                                    <th>Examples</th>
+                                    <th>Direct / Indirect</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3"><strong>1. Taxes on Income</strong></td>
+                                    <td>Taxes on earnings</td>
+                                    <td>Payroll tax (employer/employee social contributions)</td>
+                                    <td>Direct</td>
+                                </tr>
+                                <tr>
+                                    <td>Taxes on individual income (non-earnings)</td>
+                                    <td>Capital gains tax (on profits from selling assets)</td>
+                                    <td>Direct</td>
+                                </tr>
+                                <tr>
+                                    <td>Taxes on corporate income</td>
+                                    <td>Corporate income tax, excess profits tax, resource tax</td>
+                                    <td>Direct</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2. Taxes on Wealth</strong></td>
+                                    <td>Stock of assets</td>
+                                    <td>Wealth tax, real estate tax, estate/inheritance tax</td>
+                                    <td>Direct</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3. Taxes on Consumption</strong></td>
+                                    <td>Spending on goods &amp; services</td>
+                                    <td>Excise tax, carbon tax, VAT (value-added tax)</td>
+                                    <td>Indirect</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4. Taxes on Activity</strong></td>
+                                    <td>Business transactions</td>
+                                    <td>Sales tax, digital services tax, trade/customs tax</td>
+                                    <td>Indirect</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🔑</span>
+                        <span><strong>Direct vs. Indirect:</strong> <span class="fluo">Direct taxes</span> are levied on a person or company directly (you receive a bill from the government). <span class="fluo">Indirect taxes</span> are embedded in the price of goods and services — when you buy a sandwich with 21% VAT, you are paying a tax, but you never receive a separate tax bill. This distinction matters because <strong>indirect taxes are less visible to citizens</strong>, which has political implications: governments find it easier to raise invisible taxes than visible ones.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="btn-note" onclick="toggleNote('note-ch9-1')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch9-1" class="post-it-note">
+                        <p><strong>Chapter 9.1 — The Big Picture:</strong></p>
+                        <ul>
+                            <li><strong>Musgrave (1939):</strong> Three branches of government — Stabilization, Allocation, Distribution. The first two need revenue; the third uses taxation directly.</li>
+                            <li><strong>Five Rs:</strong> Revenue, Redistribution, Repricing, Representation, Reparation.</li>
+                            <li>Revenue structure: Total Revenue → Grants + Revenue Excl. Grants → Tax Revenue (Direct + Indirect) + Non-Tax Revenue + Social Contributions.</li>
+                            <li><strong>Two guiding questions:</strong> HOW to tax (efficiency/flexibility) vs. WHO to tax (equity/transparency). Always an <span class="fluo">equity–efficiency trade-off</span>.</li>
+                            <li><span class="fluo">$\text{Tax} = \text{Base} \times \text{Rate}$</span>. Know ATR vs. MTR. Know Progressive vs. Proportional vs. Regressive.</li>
+                            <li>Four types of tax: Income, Wealth, Consumption, Activity. Direct (income, wealth) vs. Indirect (consumption, activity).</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

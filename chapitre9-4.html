@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Tax Incidence</title>
+    <meta name="description"
+        content="Tax incidence: statutory vs economic incidence, elasticity and burden-sharing, asymmetric pass-through, Finnish VAT experiment, and tax salience.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.1 — INTRODUCTION<span class="chevron">▼</span></button><div class="accordion-content"><a href="index.html" class="nav-link">1.1 What Is Public Finance?</a><a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a><a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.2 — INEQUALITY<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a><a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a><a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a><a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a><a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a><a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a><a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a><a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a><a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a><a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a><a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a><a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a><a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a><a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a><a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a><a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.8 — PUBLIC CHOICE THEORY<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a><a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a><a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a><a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a></div></div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.9 — TAXATION &amp; TAX INCIDENCE
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre9-1.html" class="nav-link">9.1 Why Tax? The Five Rs</a>
+                        <a href="chapitre9-2.html" class="nav-link">9.2 Efficiency &amp; Deadweight Loss</a>
+                        <a href="chapitre9-3.html" class="nav-link">9.3 Equity &amp; Progressivity</a>
+                        <a href="chapitre9-4.html" class="nav-link active">9.4 Tax Incidence</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>9.4 — Tax Incidence: Who Really Pays?</h1>
+                <p class="subtitle">Chapter 9: Taxation & Tax Incidence — Following the Money</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ INTRO ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">What Is Tax Incidence?</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Definition</span>
+                        <p><strong>Tax incidence</strong> is the study of <span class="fluo">who ultimately bears the burden of a tax</span>. It analyzes how taxes affect prices and the economic welfare of individuals. This is a <strong>positive</strong> (descriptive) analysis — it tells us what <em>actually happens</em> when a tax is imposed, not what <em>should</em> happen.</p>
+                    </div>
+
+                    <p>The key insight of tax incidence theory is a distinciton that surprises most people:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <h4>📜 Statutory (Legal) Incidence</h4>
+                            <p>Who the <span class="fluo">law says</span> should pay the tax. For example: "a 21% VAT is levied on the seller" or "employers must pay a 25% payroll tax."</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>💰 Economic Incidence</h4>
+                            <p>Who <span class="fluo">actually</span> ends up paying the tax after all market adjustments have occurred. The employer may legally owe the payroll tax, but if they cut wages in response, <span class="fluo">workers are the ones who truly pay</span>.</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1rem;"><strong>Example:</strong> A capital income tax is designed by legislators to fall on the <span class="fluo">rich (owners of capital)</span>. But capital owners may respond by raising the prices of goods they produce or by reducing wages for their employees. In the end, the tax burden is partly <span class="fluo">transferred to consumers and workers</span> — who are often poorer than the capital owners the tax was supposed to hit.</p>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ ELASTICITY & BURDEN ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Elasticity Determines Who Pays</h2>
+
+                    <p>The <span class="fluo">single most important rule</span> of tax incidence is this: <strong>the side of the market that is less responsive to price changes (more inelastic) bears a larger share of the tax burden</strong>.</p>
+
+                    <img src="tax-incidence-elasticity-comparison.png" alt="Tax Incidence: Inelastic vs Elastic Demand" style="max-width: 80% !important; margin: 1.5rem auto;">
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <h4>Inelastic Demand (Left)</h4>
+                            <p>Consumers <em>need</em> the good and cannot easily switch (think: insulin, gasoline, baby formula). When the tax shifts supply from $S_1$ to $S_2$, the consumer price $P_c$ rises a lot while the producer price $P_p$ falls only a little. <span class="fluo">Consumers bear most of the tax burden</span> because they cannot reduce their purchases.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>Elastic Demand (Right)</h4>
+                            <p>Consumers can easily switch (think: a specific brand of clothing, restaurant meals). When the tax hits, consumers dramatically reduce purchases. The producer cannot raise the price much without losing all customers, so $P_p$ drops significantly. <span class="fluo">Producers bear most of the tax burden</span> because they absorb it to maintain sales.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🔑</span>
+                        <span><strong>The Golden Rule:</strong> <span class="fluo">The more inelastic side bears the greater share of the tax.</span> If consumers are "trapped" (inelastic), they pay. If producers are "trapped" (inelastic supply, e.g. land), they pay. Elasticities — not laws — determine who actually pays the tax.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ STATUTORY VS ECONOMIC ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">It Doesn't Matter Who the Law Targets</h2>
+
+                    <p>One of the most counterintuitive results in all of economics:</p>
+
+                    <img src="tax-incidence-statutory-vs-economic.png" alt="Statutory vs Economic Incidence – Same Outcome" style="max-width: 80% !important; margin: 1.5rem auto;">
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #EF4444;">
+                        <span class="def-label" style="background: #EF4444;">The Invariance Result</span>
+                        <p>In the <strong>left panel</strong>, the tax is legally imposed on <em>producers</em> (supply shifts up from $S_1$ to $S_2$). In the <strong>right panel</strong>, the exact same tax is legally imposed on <em>consumers</em> (demand shifts down from $D_1$ to $D_2$).</p>
+                        <p style="margin-top: 0.75rem;">The result? <span class="fluo">The economic outcome is identical.</span> Consumers pay the same effective price ($P_c$), producers receive the same net price ($P_p$), and the same quantity is traded ($Q_2$). The division of the tax burden between consumers and producers is <strong>exactly the same</strong> in both cases.</p>
+                    </div>
+
+                    <p style="margin-top: 1rem;">This result has enormous policy implications: when politicians announce "we are taxing <em>corporations</em>, not workers!" they may be making a <span class="fluo">purely cosmetic distinction</span>. If the corporation responds by cutting wages or raising prices, the workers and consumers end up paying anyway. <strong>Statutory incidence is irrelevant — only economic incidence matters.</strong></p>
+
+                    <div class="exam-tip">
+                        <p><strong>For the exam:</strong> This invariance result is one of the most important insights in the course. Be able to draw both panels and explain clearly why the economic outcome is the same. The key phrase: <span class="fluo">"The final distribution of the tax burden depends on elasticities, not on whether the tax is formally imposed on buyers or sellers."</span></p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ ASYMMETRIC PASS-THROUGH ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Real-World Twist: Asymmetric Pass-Through</h2>
+
+                    <p>The textbook model predicts <span class="fluo">symmetric effects</span>: if a tax increase raises the consumer price by €2, then a tax decrease of the same amount should lower the consumer price by €2. But research has shown that <strong>reality is asymmetric</strong>.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #8B5CF6;">
+                        <span class="def-label" style="background: #8B5CF6;">Key Study: Benzarti et al. (2020) — Finnish Hairdressing</span>
+                        <p>The EU allowed Finland to run a natural experiment: VAT on hairdressing salons was <span class="fluo">decreased by 14 percentage points in 2007</span>, then <span class="fluo">increased back by 14 p.p. in 2012</span>. Beauty salons served as the control group.</p>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label" style="background: #D1FAE5; color: #065F46;">2007: Tax CUT</span>
+                            <h4>Prices Dropped Only Slightly</h4>
+                            <p>When VAT was cut, firms <span class="fluo">did not fully pass the reduction on to consumers</span>. Prices fell only partially. Instead, <strong>firm profits jumped</strong> — the hairdressers pocketed a large part of the tax savings themselves.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <span class="card-label" style="background: #FEE2E2; color: #991B1B;">2012: Tax HIKE</span>
+                            <h4>Prices Jumped Sharply</h4>
+                            <p>When VAT was increased back, firms <span class="fluo">raised prices sharply</span>. They passed nearly all of the tax increase on to consumers. Profits fell only moderately — firms protected themselves by shifting the burden to buyers.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>The Asymmetry:</strong> Tax <em>increases</em> are largely <span class="fluo">passed through to consumers</span> (prices go up). Tax <em>cuts</em> are only partially passed through (prices barely go down, firms keep the savings). This asymmetry means that <span class="fluo">raising and cutting the same tax do NOT have mirror-image effects</span>.</span>
+                    </div>
+
+                    <p style="margin-top: 1rem;">Why does this asymmetry exist? Two main explanations from the literature:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Consumer Inattention (Low Tax Salience)</strong>
+                            <p>Consumers are <span class="fluo">inattentive to taxes</span> — they don't track exact tax rates or post-tax prices carefully. This means they don't pressure firms to cut prices when taxes fall, so firms quietly pocket the savings. But when a tax <em>increase</em> raises the sticker price, consumers might notice and complain or shop elsewhere — so firms only raise prices as much as the tax, not more. (Chetty et al., 2009, confirmed this with supermarket field experiments in the US.)</p>
+                        </li>
+                        <li>
+                            <strong>Producer Market Power</strong>
+                            <p>Firms have <span class="fluo">more pricing power than the textbook model assumes</span>. They can easily justify a price increase ("VAT went up!") but face no pressure to cut prices ("VAT went down — but our costs also rose..."). Consumers accept the first excuse but never demand the second.</p>
+                        </li>
+                    </ol>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">The Chetty et al. (2009) Tax Salience Experiment</span>
+                        <p>In a US supermarket, researchers placed <span class="fluo">after-tax price tags</span> (showing the full price including sales tax) next to certain products, while keeping normal pre-tax tags on other products. Result: when consumers could <em>see</em> the full tax-inclusive price, they bought <strong>8% less</strong>. This proves that tax salience matters enormously — when taxes are <span class="fluo">hard to see</span> (embedded in the price), consumers underreact and firms exploit this.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ GRAND CONCLUSION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Chapter 9 — Grand Conclusion</h2>
+
+                    <p>Taxation is the most important instrument of government. Getting it right requires balancing <span class="fluo">four competing goals simultaneously</span>:</p>
+
+                    <div class="compare-grid" style="margin-top: 1rem;">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <h4>⚡ Efficiency</h4>
+                            <p>Minimize DWL. Tax inelastic goods. Tax many things a little. Watch the Laffer curve.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>⚖️ Equity</h4>
+                            <p>Vertical: the rich pay more (progressive). Horizontal: equals treated equally. Don't crush the poor with regressive taxes.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>🔄 Flexibility</h4>
+                            <p>Taxes should adapt to economic conditions. Progressive income taxes are natural automatic stabilizers.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <h4>🔍 Transparency</h4>
+                            <p>Citizens should know what they pay and why. Tax salience matters. Hidden taxes invite exploitation by firms.</p>
+                        </div>
+                    </div>
+
+                    <div class="exam-tip" style="margin-top: 1.5rem;">
+                        <p><strong>Exam Strategy for Chapter 9:</strong> Structure any essay around (1) the Five Rs for why we tax, (2) the efficiency angle (DWL formula, Laffer, double dividend), (3) the equity angle (vertical + horizontal, diminishing marginal utility, Czech PIT history), and (4) incidence (statutory ≠ economic, elasticities determine burden, asymmetric pass-through). Always draw at least one graph (DWL or incidence).</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="btn-note" onclick="toggleNote('note-ch9-4')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch9-4" class="post-it-note">
+                        <p><strong>Chapter 9.4 — The Big Picture:</strong></p>
+                        <ul>
+                            <li><strong>Tax incidence</strong> = who ultimately bears the burden. Positive (descriptive) analysis.</li>
+                            <li><span class="fluo">Statutory incidence ≠ economic incidence.</span> The law says who pays; the market decides who <em>really</em> pays.</li>
+                            <li><strong>Golden Rule:</strong> The <span class="fluo">more inelastic side bears more of the tax</span>. Elasticities, not laws, determine burden.</li>
+                            <li><strong>Invariance result:</strong> Whether the tax is legally on buyers or sellers, the economic outcome is identical.</li>
+                            <li><strong>Benzarti et al. (2020):</strong> Tax pass-through is <span class="fluo">asymmetric</span>. Tax hikes ↗ prices sharply; tax cuts ↘ prices only slightly. Firms pocket tax cuts.</li>
+                            <li><strong>Why asymmetry?</strong> (1) Consumer inattention / low tax salience. (2) Producer market power.</li>
+                            <li><strong>Chetty et al. (2009):</strong> Showing after-tax prices reduced purchases by 8% → <span class="fluo">tax salience matters</span>.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

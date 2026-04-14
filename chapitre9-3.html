@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Equity & Progressivity</title>
+    <meta name="description"
+        content="Equity in taxation: poll tax, vertical equity, horizontal equity, progressive tax rates, diminishing marginal utility, Czech PIT system, and redistribution.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.1 — INTRODUCTION<span class="chevron">▼</span></button><div class="accordion-content"><a href="index.html" class="nav-link">1.1 What Is Public Finance?</a><a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a><a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.2 — INEQUALITY<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a><a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a><a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a><a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a><a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a><a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a><a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a><a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a><a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a><a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a><a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a><a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a><a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a><a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a><a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a><a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.8 — PUBLIC CHOICE THEORY<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a><a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a><a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a><a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a></div></div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.9 — TAXATION &amp; TAX INCIDENCE
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre9-1.html" class="nav-link">9.1 Why Tax? The Five Rs</a>
+                        <a href="chapitre9-2.html" class="nav-link">9.2 Efficiency &amp; Deadweight Loss</a>
+                        <a href="chapitre9-3.html" class="nav-link active">9.3 Equity &amp; Progressivity</a>
+                        <a href="chapitre9-4.html" class="nav-link">9.4 Tax Incidence</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>9.3 — Equity & Progressivity</h1>
+                <p class="subtitle">Chapter 9: Taxation & Tax Incidence — Who Should Pay?</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ POLL TAX ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Extreme: The Poll Tax</h2>
+
+                    <p>Let's start with the most extreme and most "efficient" tax imaginable: the <strong>poll tax</strong>.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #EF4444;">
+                        <span class="def-label" style="background: #EF4444;">Definition</span>
+                        <p>A <strong>poll tax</strong> (also called a head tax or lump-sum tax) charges <span class="fluo">every citizen the exact same amount in money terms</span>, regardless of their income, wealth, or circumstances. A billionaire and a homeless person both pay the same €1,000.</p>
+                    </div>
+
+                    <p>From a <strong>pure efficiency</strong> perspective, the poll tax is perfect: it causes <span class="fluo">zero deadweight loss</span> because it does not depend on any economic behavior. Whether you work 80 hours or zero hours, you pay the same amount. So the tax cannot distort your choices about working, saving, or consuming.</p>
+
+                    <p>But from an <strong>equity</strong> perspective, it is a <span class="fluo">catastrophe</span>. The most famous attempt to implement a poll tax was by <strong>Margaret Thatcher in the UK in 1990</strong>. She replaced property taxes (based on house value) with a "Community Charge" — a flat tax on every adult. Here is what happened:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>💥 The Result</h4>
+                            <p><span class="fluo">Massive riots across the UK</span>. Hundreds of thousands of people protested because the tax was brutally unfair — a duke living in a castle paid the same as a cleaner living in a tiny flat. The tax was quickly abolished, and Thatcher resigned shortly after. This event proved that <span class="fluo">efficiency without equity is politically impossible</span>.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>📋 Still Exists in Small Forms</h4>
+                            <p>Some small "poll taxes" still exist today: flat garbage collection fees, TV license fees (where every household pays the same), and mandatory health insurance premiums that are the same for everyone. In the US, some argue that certain healthcare costs function as a <span class="fluo">de facto poll tax</span> (Saez & Zucman, 2019).</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>The Lesson:</strong> Diverging from the poll tax — by taxing people differently based on their income, wealth, or circumstances — brings <span class="fluo">more equity but also more distortion</span>. All of tax policy is about how far to move away from the poll tax "baseline" toward greater fairness.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ VERTICAL EQUITY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Vertical Equity: The Rich Should Pay More</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Definition</span>
+                        <p><strong>Vertical equity</strong> states that groups with <span class="fluo">more resources should pay higher taxes</span> than groups with fewer resources. In other words, the tax system should be <strong>progressive</strong> — the rich should carry a proportionally heavier burden.</p>
+                    </div>
+
+                    <p>There are three possible structures for tax rates:</p>
+
+                    <div class="compare-grid three-col">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label" style="background: #D1FAE5; color: #065F46;">Type 1</span>
+                            <h4>Progressive Tax Rates</h4>
+                            <p>The ATR <span class="fluo">rises</span> with income. Higher earners pay a larger percentage of their total income. This is the most common system for personal income taxes in the world.</p>
+                            <p class="example">Example: 15% on the first €30k, 25% on €30k-60k, 35% above €60k.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <span class="card-label" style="background: #FEF3C7; color: #92400E;">Type 2</span>
+                            <h4>Proportional (Flat) Rates</h4>
+                            <p>The ATR stays <span class="fluo">the same</span> across all income groups. Everyone pays the same percentage, regardless of income.</p>
+                            <p class="example">Example: Everyone pays 15% of income. A person earning €20k pays €3k; a person earning €200k pays €30k.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <span class="card-label" style="background: #FEE2E2; color: #991B1B;">Type 3</span>
+                            <h4>Regressive Rates</h4>
+                            <p>The ATR <span class="fluo">decreases</span> as income rises. Lower earners pay a higher percentage. This typically happens indirectly through consumption taxes (VAT).</p>
+                            <p class="example">Example: A 20% VAT takes a larger share of a poor person's income since they spend nearly 100% of income on consumption.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #2563EB;">
+                        <span class="def-label">Czech PIT: A Complex History</span>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li><strong>Until 2008:</strong> Progressive personal income tax rate with multiple brackets (classic European style).</li>
+                            <li><strong>2008–2021:</strong> A flat/proportional PIT rate of <span class="fluo">15%</span>. But it was adjusted at both extremes: a <strong>tax credit</strong> at the bottom (CZK 24,840/year, effectively zeroing out taxes for the poorest) and a <strong>solidary surcharge</strong> at the top (extra 7% on gross earnings exceeding 4× the average salary ≈ CZK 139k/month). So even the "flat" tax was <span class="fluo">de facto progressive</span>.</li>
+                            <li><strong>2021+:</strong> Two rates: <span class="fluo">15%</span> on the first CZK 141k/month, then <span class="fluo">23%</span> above that. Tax credit extended each year. This is now an officially progressive schedule again.</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Critical Exam Point:</strong> A country can have a <span class="fluo">progressive PIT rate but a proportional or even regressive overall tax rate</span>. Why? Because when you add payroll taxes, VAT, excise taxes, and social contributions, the total burden on low- and middle-income earners can be enormous. <span class="fluo">Overall progressivity depends on the entire tax system, not just income tax.</span></span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ DIMINISHING MARGINAL UTILITY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Deep Why: Diminishing Marginal Utility of Income</h2>
+
+                    <p>Why should the rich pay more? The most powerful economic justification comes from the concept of <span class="fluo">diminishing marginal utility of income</span>:</p>
+
+                    <img src="marginal-utility-of-income-diminishing.png" alt="Diminishing Marginal Utility of Income" style="max-width: 65% !important; margin: 1.5rem auto;">
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Reading the Graph</span>
+                        <p>The curve shows that <strong>total utility rises with income, but at a decreasing rate</strong>. The first euros you earn have <span class="fluo">enormous value</span> — they buy food, shelter, medicine, safety. But as income increases, each additional euro buys increasingly trivial things — a third vacation, a second car, a fancier watch. The marginal utility (the slope of the curve) <span class="fluo">falls continuously</span>.</p>
+                        <p style="margin-top: 0.75rem;"><strong>The Implication:</strong> If €1 is worth far more to a poor person than to a rich person, then <span class="fluo">transferring €1 from the rich to the poor increases total societal welfare</span>. The rich person barely notices the loss; the poor person's life improves significantly. This is the core economic argument for <strong>progressive taxation and redistribution</strong>.</p>
+                    </div>
+
+                    <p style="margin-top: 1rem;">The political debate about <em>how progressive</em> taxes should be ultimately reduces to a question about the <strong>shape of the utility function</strong>:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <h4>If utility is very concave...</h4>
+                            <p>Marginal utility drops very fast. The case for aggressive redistribution is strong. Taking €1,000 from a millionaire and giving it to a minimum-wage worker creates a massive net welfare gain. <span class="fluo">→ High progressive taxes are justified.</span></p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>If utility is nearly linear...</h4>
+                            <p>Marginal utility barely decreases. An extra €1 is almost as valuable to a rich person as to a poor person. The case for redistribution is weak. <span class="fluo">→ Low, flat taxes are justified.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🔑</span>
+                        <span><strong>The Bottom Line:</strong> The debate between "left" (high redistribution) and "right" (low taxes) in politics is, at its deepest level, <span class="fluo">a debate about the curvature of the utility function</span>. This may sound abstract, but it is the single most important question in all of public finance.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ HORIZONTAL EQUITY ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Horizontal Equity: Treat Equals Equally</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Definition</span>
+                        <p><strong>Horizontal equity</strong> states that <span class="fluo">similar individuals should be treated similarly by the tax system</span>. Two people in the same economic situation should pay the same amount of tax.</p>
+                    </div>
+
+                    <p>This sounds simple, but the problem is: <span class="fluo">how do you define "similar"?</span> Consider this dilemma:</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #F59E0B;">
+                        <p><strong>Who should pay more tax:</strong> a single mother raising 4 children on a €30,000 salary, or a disabled man living alone on the same €30,000 salary? They have the same gross income, but their <em>ability to pay</em> is very different. The mother has enormous childcare expenses. The disabled man has high medical costs. How do you compare their situations fairly?</p>
+                    </div>
+
+                    <p>Horizontal equity is a <span class="fluo">constant source of political debates</span> and is the main reason why tax codes are so complex. Every exemption, deduction, and special provision in the tax law exists because legislators tried to achieve horizontal equity by distinguishing between people with different circumstances:</p>
+
+                    <ul>
+                        <li>Tax deductions for <strong>dependent children</strong> (parents face higher costs than non-parents).</li>
+                        <li>Special rates for <strong>married couples</strong> vs. single individuals.</li>
+                        <li>Deductions for <strong>mortgage interest</strong> (homeowners vs. renters).</li>
+                        <li>Exemptions for <strong>disabled persons</strong>, <strong>students</strong>, or <strong>caregivers</strong>.</li>
+                    </ul>
+
+                    <p>Each of these exceptions tries to improve fairness, but they also increase complexity, create administrative costs, and open doors for tax avoidance (rich people hiring lawyers to exploit loopholes). This is yet another <span class="fluo">trade-off</span>: more fairness = more complexity = more opportunities for abuse.</p>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="btn-note" onclick="toggleNote('note-ch9-3')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch9-3" class="post-it-note">
+                        <p><strong>Chapter 9.3 — The Big Picture:</strong></p>
+                        <ul>
+                            <li><strong>Poll tax</strong> = same amount for everyone. Zero DWL, but brutally unfair. Thatcher's 1990 disaster proved efficiency without equity is impossible.</li>
+                            <li><strong>Vertical equity:</strong> The rich should pay more → progressive, proportional, or regressive rates.</li>
+                            <li>Czech PIT: progressive until 2008, "flat" 15% from 2008-2021 (but de facto progressive with tax credit + solidary surcharge), two-rate schedule since 2021.</li>
+                            <li><span class="fluo">A progressive PIT does not guarantee a progressive overall tax system.</span> Payroll taxes and VAT can make the total burden regressive.</li>
+                            <li><strong>Diminishing marginal utility</strong> of income = the core justification for progressive taxation. The left-vs-right debate is really about <span class="fluo">the curvature of the utility function</span>.</li>
+                            <li><strong>Horizontal equity:</strong> Similar people should pay similar taxes. Hard to define "similar" → leads to complex exemptions, deductions, and loopholes.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
