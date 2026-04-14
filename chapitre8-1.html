@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Political Economy & Preference Revelation</title>
+    <meta name="description"
+        content="Public Choice Theory: political economy, government failure, collective decision-making, preference revelation, the paradox of voting, and voter turnout.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a>
+                        <a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a>
+                        <a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a>
+                        <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.8 — PUBLIC CHOICE THEORY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre8-1.html" class="nav-link active">8.1 Political Economy &amp; Preferences</a>
+                        <a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a>
+                        <a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a>
+                        <a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>8.1 — Political Economy & Preference Revelation</h1>
+                <p class="subtitle">Chapter 8: Public Choice Theory — How Democracies Actually Work</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: WHAT IS POLITICAL ECONOMY?
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">What Is Political Economy?</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">Definition</span>
+                        <p><strong>Political economy</strong> is the <span class="fluo">positive analysis of government</span>. Instead of asking "what <em>should</em> the government do?" (normative analysis from Chapter 1), we now ask a much more realistic question: <span class="fluo">"Why do governments actually do what they do?"</span></p>
+                    </div>
+
+                    <p>This is a critical shift in perspective. Until now, we have been studying the ideal world — what a perfectly rational, perfectly kind government <em>should</em> do about pensions, healthcare, externalities, and inequality. But in the real world, governments are not robots. They are made of <strong>human beings</strong> — politicians, bureaucrats, lobbyists, and voters — and each one of them has their own personal interests, biases, and weaknesses.</p>
+
+                    <p>This means that what the government <em>actually does</em> is often very different from what economic theory says it <em>should</em> do. Why does this gap exist? Because of a concept called <span class="fluo">government failure</span>.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #EF4444;">
+                        <span class="def-label" style="background: #EF4444;">Key Concept</span>
+                        <p><strong>Government failure</strong> is the inability or unwillingness of the government to act primarily in the interest of its citizens. Just like markets can fail (monopolies, externalities, public goods), <span class="fluo">governments can fail too</span> — and sometimes the damage is even worse than market failure.</p>
+                    </div>
+
+                    <p>The consequences of government failure can be absolutely <strong>catastrophic</strong>. Consider the most famous case study in the entire field of political economy:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <span class="card-label" style="background: #FEE2E2; color: #991B1B;">Catastrophic Failure</span>
+                            <h4>🇰🇵 North Korea</h4>
+                            <p>An authoritarian government that uses the state only for the benefit of the ruling elite. Result: <span class="fluo">widespread poverty, famine, and zero economic growth</span> for decades. The government extracts all value from citizens and gives almost nothing back.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label" style="background: #D1FAE5; color: #065F46;">Inclusive Success</span>
+                            <h4>🇰🇷 South Korea</h4>
+                            <p>A democratic government with inclusive institutions that protect property rights, encourage innovation, and share wealth broadly. Result: <span class="fluo">one of the richest nations on Earth</span>, with world-class technology, education, and healthcare.</p>
+                        </div>
+                    </div>
+
+                    <p>These are <strong>genetically identical people</strong>, living on the same peninsula, speaking the same language. The only difference is the <em>political system</em>. This is the most powerful proof that <span class="fluo">institutions — the rules of the political game — are the single most important factor for economic growth</span> (Acemoglu and Robinson, 2012, <em>Why Nations Fail</em>).</p>
+
+                    <div class="alert-box alert-blue">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>The Big Lesson:</strong> A country's wealth is not determined by its natural resources, geography, or culture. It is determined by the <span class="fluo">quality of its institutions</span> — whether they are "inclusive" (sharing power and wealth broadly) or "extractive" (concentrating power in a small elite). This is why public choice theory matters so much.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: COLLECTIVE DECISION-MAKING
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Not Just Direct Democracy?</h2>
+
+                    <p>Before diving into the problems, let's ask a basic question: <em>Why don't we just let every citizen vote on every decision?</em></p>
+
+                    <p>If you live in a small village of 50 people, direct democracy works perfectly well. Everyone gathers in the town square, debates the issue, and votes. The problem appears when you try to scale this up. Imagine asking <span class="fluo">10 million citizens to vote on every single law, tax rate, and budget decision</span> — it would be completely impossible. The <strong>transaction costs</strong> (time, information, organization) would be astronomical.</p>
+
+                    <p>This is why virtually every country in the world uses <strong>representative democracy</strong>: citizens elect a small group of politicians who make decisions on their behalf. But this creates a whole new set of problems — the politicians may not truly represent what the voters want.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #F59E0B;">
+                        <span class="def-label" style="background: #F59E0B;">Famous Quote</span>
+                        <p>Anthony Downs (1957) described the brutal truth of representative democracy: <em>"Parties formulate policies in order to win elections, rather than win elections in order to formulate policies."</em></p>
+                        <p style="margin-top: 0.75rem;">In other words, politicians don't ask: <em>"What is the best policy for the country?"</em> They ask: <span class="fluo">"What policy will help me win the next election?"</span> This completely changes how government works in practice.</p>
+                    </div>
+
+                    <p>When a society tries to make collective decisions through representative democracy, it immediately faces <strong>three fundamental problems</strong>:</p>
+
+                    <div class="compare-grid three-col">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label">Problem 1</span>
+                            <h4>🔍 Preference Revelation</h4>
+                            <p>How do we even <em>know</em> what people want? It is extremely hard to extract the true preferences of millions of citizens.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label">Problem 2</span>
+                            <h4>⚖️ Preference Aggregation</h4>
+                            <p>Even if we know what people want, how do we <em>combine</em> millions of different opinions into one single decision? (2a: Decision rules, 2b: Translating votes into seats)</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <span class="card-label">Problem 3</span>
+                            <h4>🏛️ Power Exercise</h4>
+                            <p>Once politicians are elected, how do we <em>prevent them</em> from using their power for personal profit instead of serving the citizens?</p>
+                        </div>
+                    </div>
+
+                    <div class="exam-tip">
+                        <p><strong>Structure for the exam:</strong> This chapter follows exactly these three problems. Problem 1 = this section (8.1). Problem 2 = sections 8.2 and 8.3. Problem 3 = section 8.4. If you get an essay question on public choice theory, organize your answer around these three pillars.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: PREFERENCE REVELATION
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Problem 1: Preference Revelation</h2>
+
+                    <p>The first and deepest problem of democracy is this: <span class="fluo">it is incredibly hard to find out what people actually want</span>. When you buy a private good (like a sandwich), your preference is revealed automatically — you either buy it or you don't. But in a democracy, the process of revealing preferences is full of distortions, noise, and manipulation.</p>
+
+                    <p>Let's examine every major obstacle one by one:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Too Many Opinions, Too Few Candidates</strong>
+                            <p>In a modern society, millions of people each have their own unique combination of views on taxes, healthcare, immigration, education, climate, and dozens of other topics. But on election day, you can only choose between <span class="fluo">3 to 10 political parties</span>. This means you are always forced to vote for the "lesser evil" — the candidate who matches <em>some</em> of your views, but definitely not all of them. Your true preferences are <strong>never fully expressed</strong>.</p>
+                        </li>
+                        <li>
+                            <strong>Who Is Allowed to Vote?</strong>
+                            <p>Not everyone participates in the democratic process. There are <span class="fluo">age limits</span> (children cannot vote even though government decisions massively affect their futures), and throughout history there has been <span class="fluo">discrimination</span> — women could not vote until the early 20th century, and racial minorities were excluded in many countries. Even today, immigrants and residents without citizenship often cannot vote, even though they pay taxes and obey the laws.</p>
+                        </li>
+                        <li>
+                            <strong>Information Asymmetries</strong>
+                            <p>Most voters are <span class="fluo">rationally ignorant</span>. Understanding complex policy details (like the optimal carbon tax rate or the best pension reform design) requires enormous effort. Since a single vote almost never changes the outcome, it is perfectly rational for most citizens to <strong>not bother learning</strong> about the issues in depth. This means millions of people vote based on superficial impressions, media headlines, or emotional reactions — not on careful analysis of policy consequences.</p>
+                        </li>
+                        <li>
+                            <strong>Individual Biases and Cognitive Shortcomings</strong>
+                            <p>Even when voters try to make good decisions, their brains betray them. Behavioral economics has identified many cognitive biases that distort political preferences:</p>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                <li><strong>Scope neglect:</strong> People react emotionally to one story about a sick child but feel almost nothing about a statistic showing 10,000 children dying. They cannot properly process large numbers.</li>
+                                <li><strong>Intensive vs. extensive margin:</strong> Voters focus on how much help <em>each person</em> receives (intensive), but ignore how <em>many people</em> are actually affected (extensive). A policy that gives €100 to 1 million people might be better than one giving €10,000 to 100 people — but the second one "feels" more generous.</li>
+                                <li><strong>Delayed gratification:</strong> Humans systematically prefer small rewards now over large rewards later. This means voters naturally hate policies with short-term costs but long-term benefits (like climate investment or pension reform).</li>
+                                <li><strong>Contingent valuation:</strong> If you ask people how much they would pay to save a natural park, their answers depend wildly on how the question is framed — not on the park's actual value.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>External Manipulation</strong>
+                            <p>Powerful actors can <span class="fluo">actively manipulate voter preferences</span>. Special interest groups spend billions on <strong>lobbying</strong> — hiring professionals who meet politicians privately and push them to pass laws that benefit a small group at the expense of the majority. Corporations buy massive <strong>advertising campaigns</strong> to shape public opinion. Rich donors fund political parties in exchange for future favors. In some countries, politicians literally <span class="fluo">buy votes with gifts</span> (donuts, money, free services).</p>
+                        </li>
+                        <li>
+                            <strong>Transaction Costs (Voter Turnout)</strong>
+                            <p>Simply <em>going to vote</em> takes time and effort: you must register, travel to the polling station, sometimes wait in line for hours. For many people — especially the poor, the elderly, or those with demanding jobs — this cost is enough to <span class="fluo">prevent them from voting at all</span>. This means the preferences of non-voters are completely invisible to the democratic process.</p>
+                        </li>
+                    </ol>
+
+                    <div class="alert-box alert-yellow">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Summary of the Problem:</strong> The democratic voting process is a <span class="fluo">very imperfect mirror</span> of what citizens truly want. Between limited choices, cognitive biases, information gaps, and active manipulation, the "will of the people" is always distorted. This is not a reason to abandon democracy — it is a reason to understand its limits and try to improve it.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: THE PARADOX OF VOTING
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Paradox of Voting: Why Does Anyone Bother?</h2>
+
+                    <p>Here is the most famous paradox in all of public choice theory. If you think about it carefully, <span class="fluo">it makes absolutely no rational sense to vote</span>. Let's do the math together.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <span class="def-label">The Voting Calculus</span>
+                        <p>Economists model the decision to vote using this simple formula:</p>
+                        <p style="text-align: center; font-size: 1.4rem; margin: 1rem 0;"><span class="fluo">$R = pB - C + D$</span></p>
+                        <p>Where:</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li><strong>$R$</strong> = your net reward from voting. You vote only if $R > 0$.</li>
+                            <li><strong>$p$</strong> = the probability that <em>your single vote</em> will change the outcome of the election (being "pivotal").</li>
+                            <li><strong>$B$</strong> = the benefit you get if your preferred candidate wins instead of losing.</li>
+                            <li><strong>$C$</strong> = the cost of voting (travel time, waiting, lost work hours).</li>
+                            <li><strong>$D$</strong> = the "civic duty" or psychological benefit of simply participating (feeling like a good citizen).</li>
+                        </ul>
+                    </div>
+
+                    <p>Here is where it becomes absolutely devastating. In a national election with <strong>millions of voters</strong>, the probability $p$ that your single vote will be the deciding one is effectively <span class="fluo">zero</span>. Statistically, your vote being pivotal is about as likely as being struck by lightning while simultaneously winning the lottery. This means that:</p>
+
+                    <p style="text-align: center; font-size: 1.15rem; margin: 1rem 0;">$p \approx 0 \quad \Rightarrow \quad pB \approx 0 \quad \Rightarrow \quad R \approx -C + D$</p>
+
+                    <p>So the entire "rational" benefit of voting ($pB$) essentially disappears! You are left only with the <strong>cost</strong> ($C$) and the <strong>civic-duty feeling</strong> ($D$). Without the $D$ term, <span class="fluo">no rational person should ever vote</span> — and yet, hundreds of millions of people around the world vote in every election. This is the paradox.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>🤔 The Cold Math Says...</h4>
+                            <p>Your individual vote is statistically meaningless. The time you spend voting would be better used doing <em>literally anything else</em> — reading a book, working, or sleeping. Rational people should stay home on election day.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>🗳️ ...But Humans Are Not Math Robots</h4>
+                            <p>People vote because they feel a <strong>moral duty</strong>, because their friends and family vote, because they believe "every vote matters" even if the math says otherwise, and because voting makes them feel good about themselves.</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-note" onclick="toggleNote('note-paradox')">
+                        <span class="note-icon">📝</span> Why People Still Vote
+                    </button>
+
+                    <div id="note-paradox" class="post-it-note">
+                        <p><strong>The $D$ Term — What Saves Democracy:</strong></p>
+                        <ul>
+                            <li><strong>Civic duty and social norms:</strong> In societies where voting is seen as a moral obligation (like France), turnout is high because the $D$ is huge. People feel <span class="fluo">guilty</span> if they don't vote.</li>
+                            <li><strong>Habit formation:</strong> Once you vote in your first election, it becomes a habit. Psychologically, you feel like a "voter" and keep doing it automatically.</li>
+                            <li><strong>Group mobilization:</strong> Political parties, unions, and community groups actively push their members to vote. The social pressure creates an enormous $D$ bonus.</li>
+                            <li><strong>Belief that close elections matter:</strong> Even if the math says your vote doesn't matter, many voters <em>believe</em> that election outcomes are determined by small margins — and they're not entirely wrong (think of the 2000 US election, decided by 537 votes in Florida).</li>
+                            <li><strong>Psychological benefits:</strong> Voting gives people a feeling of control, belonging, and participation. It satisfies a deep human need to be part of something collective.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: VOTER TURNOUT
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">What Drives Voter Turnout?</h2>
+
+                    <p>If we accept that people do vote (despite the paradox), the next obvious question is: <span class="fluo">what determines whether a specific person goes to the polling station or stays home?</span> Research has identified two categories of factors:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label">Category 1</span>
+                            <h4>👤 Individual-Level Factors</h4>
+                            <p>These are characteristics of the voter themselves:</p>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.25rem;">
+                                <li><strong>Age:</strong> Older people vote much more than young people. Why? They have more free time, more habit, and more at stake (pensions, healthcare).</li>
+                                <li><strong>Opportunity cost:</strong> A busy surgeon working 14-hour shifts has a much higher cost of voting than a retired teacher. The higher your opportunity cost, the less likely you vote.</li>
+                                <li><strong>Social status and education:</strong> Wealthier and more educated citizens vote more, because they understand politics better and feel more powerful.</li>
+                                <li><strong>Political interest:</strong> Some people simply care more about politics — they follow the news, discuss policies, and feel strongly about candidates.</li>
+                            </ul>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label">Category 2</span>
+                            <h4>🌍 External / Aggregate Factors</h4>
+                            <p>These are features of the election or the environment:</p>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.25rem;">
+                                <li><strong>Weather:</strong> Rain and cold weather reduce turnout. People literally don't want to go outside.</li>
+                                <li><strong>Campaign spending:</strong> When parties spend more on advertisements and get-out-the-vote campaigns, turnout increases.</li>
+                                <li><strong>Close polls:</strong> When polls show a very tight race, turnout increases because voters feel their vote might actually matter more.</li>
+                                <li><strong>Election type:</strong> Presidential elections attract much higher turnout than local or European Parliament elections. People care more about big, visible contests.</li>
+                                <li><strong>Voting rules:</strong> Is voting mandatory (like in Belgium or Australia)? Is it on a weekday or weekend? Can you vote by mail? These structural details have massive effects.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <p><strong>Real-World Evidence — Czech Republic:</strong> Turnout in Czech elections to the Chamber of Deputies has generally fluctuated between <span class="fluo">55% and 65%</span> in recent decades. This is lower than many Western European countries but higher than the United States. Interestingly, turnout varies dramatically by region: urban areas (Prague) tend to have higher turnout than rural areas, partly because Prague residents are wealthier, more educated, and have easier access to polling stations.</p>
+                    </div>
+
+                    <div class="definition-box" style="border-left: 4px solid #8B5CF6;">
+                        <p><strong>Real-World Evidence — Slovakia (2020):</strong> Slovak election data shows <span class="fluo">huge differences in turnout across counties</span>. Some counties had turnout above 70%, while others were below 50%. These differences strongly correlate with wealth, education levels, and the urban/rural divide — proving that individual-level and aggregate factors work together to create big geographic patterns.</p>
+                    </div>
+
+                    <div class="exam-tip">
+                        <p><strong>Exam Strategy:</strong> If you are asked about voter turnout, always start with the <span class="fluo">paradox of voting formula ($R = pB - C + D$)</span> to set up the theoretical frame. Then explain why $p \approx 0$ in large elections. Finally, explain why people still vote using the $D$ term and the two categories of factors (individual + external). This shows both theoretical depth and empirical awareness.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="btn-note" onclick="toggleNote('note-ch8-1')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch8-1" class="post-it-note">
+                        <p><strong>Chapter 8.1 — The Big Picture:</strong></p>
+                        <ul>
+                            <li><strong>Political economy</strong> is the <span class="fluo">positive</span> study of government: not what it <em>should</em> do, but what it <em>actually does</em> and why.</li>
+                            <li><span class="fluo">Government failure</span> = when governments are unable or unwilling to serve citizens' interests. North vs. South Korea is the ultimate proof that institutions determine wealth (Acemoglu & Robinson, 2012).</li>
+                            <li>Representative democracy creates <strong>3 problems</strong>: (1) Preference revelation, (2) Preference aggregation, (3) Power exercise.</li>
+                            <li>Downs (1957): Politicians design policies to <span class="fluo">win elections</span>, not to maximize social welfare.</li>
+                            <li>Preference revelation is distorted by: limited candidates, information asymmetries, cognitive biases (scope neglect, delayed gratification), lobbying, and transaction costs.</li>
+                            <li>The <span class="fluo">paradox of voting</span>: $R = pB - C + D$. Since $p \approx 0$ in large elections, only the civic duty term $D$ explains why people vote.</li>
+                            <li>Turnout depends on <strong>individual factors</strong> (age, education, opportunity cost) and <strong>external factors</strong> (weather, close polls, campaign spending).</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

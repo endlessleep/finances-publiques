@@ -105,6 +105,18 @@
                         <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.8 — PUBLIC CHOICE THEORY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a>
+                        <a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a>
+                        <a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a>
+                        <a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a>
+                    </div>
+                </div>
             </nav>
         </aside>
 
@@ -123,39 +135,39 @@
                 <section class="content-card">
                     <h2 class="section-title">Market Failures: An Overview</h2>
 
-                    <p>A <strong>market failure</strong> happens when the market does not allocate resources efficiently.
-                        Even if everyone acts rationally, the <span class="fluo">total welfare of society is not maximized</span>.
+                    <p>A <strong>market failure</strong> happens when the free market makes bad choices and wastes resources.
+                        Even if everyone acts smartly for themselves, the <span class="fluo">total happiness and wealth of society is not maximized</span>.
                     </p>
 
                     <div class="definition-box">
-                        <p><strong>Main sources of market failure:</strong> The following are the key situations where markets, left to themselves, fail to deliver an efficient outcome:</p>
+                        <p><strong>Main reasons for market failure:</strong> These are the key situations where free markets fail to do a good job and need help:</p>
                         <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
-                            <li><strong>Imperfect competition:</strong> When firms have <span class="fluo">market power</span> (monopoly, oligopoly), they can set prices above marginal cost, leading to lower output and higher prices than the competitive equilibrium.</li>
-                            <li><strong>Incomplete markets:</strong> Some goods, services, or risks are simply <span class="fluo">not covered by private markets</span> — for instance, insurance against very rare catastrophic events, or credit for the poorest households.</li>
-                            <li><strong>Imperfect information:</strong> Markets assume that buyers and sellers have <span class="fluo">full information</span>. In reality, asymmetric information leads to adverse selection (bad products drive out good ones) and moral hazard (people take more risks when insured).</li>
-                            <li><strong>Public goods:</strong> Goods that are <span class="fluo">non-excludable and non-rival</span> — the market cannot charge for them, so the private sector won't provide them.</li>
-                            <li><strong>Externalities:</strong> Effects on <span class="fluo">third parties</span> that are not reflected in market prices — pollution, education spillovers, etc.</li>
+                            <li><strong>Imperfect competition:</strong> When a few companies have <span class="fluo">too much power</span> (like a monopoly), they can unfairly raise prices, making people pay more for less.</li>
+                            <li><strong>Incomplete markets:</strong> Some important services are simply <span class="fluo">not sold by private companies</span> — for example, insurance against huge rare disasters, or cheap bank loans for very poor families.</li>
+                            <li><strong>Imperfect information:</strong> Markets only work when buyers and sellers know <span class="fluo">the whole truth</span>. But usually, one side hides important secrets (like selling a broken used car), which destroys trust.</li>
+                            <li><strong>Public goods:</strong> Things that are <span class="fluo">non-excludable and non-rival</span> — like streetlights. Since companies can't force people to pay for looking at a streetlight, they refuse to build them.</li>
+                            <li><strong>Externalities:</strong> When a private action accidentally hurts or helps <span class="fluo">innocent bystanders</span> — like a factory blowing smoke onto a neighbor's house.</li>
                         </ul>
                     </div>
-                    <p style="margin-top: 1rem;">In this chapter, we focus specifically on <strong>Public Goods</strong> and <strong>Externalities</strong>.</p>
+                    <p style="margin-top: 1rem;">In this chapter, we will look closely at <strong>Public Goods</strong> and <strong>Externalities</strong>.</p>
                 </section>
 
                 <hr class="section-divider">
 
                 <!-- ═══════ TAXONOMY OF GOODS ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Taxonomy of Goods</h2>
+                    <h2 class="section-title">Types of Goods</h2>
 
-                    <p>To understand why markets fail for certain goods, we use two criteria:</p>
+                    <p>To understand why markets fail, we sort objects using two simple questions:</p>
 
                     <div class="compare-grid">
                         <div class="compare-card">
-                            <h4>Rivalry</h4>
-                            <p>If one person consumes a good, does it <span class="fluo">reduce the amount available</span> for others?</p>
+                            <h4>Rivalry (Sharing)</h4>
+                            <p>If I use this item, does it <span class="fluo">leave less</span> for you to use?</p>
                         </div>
                         <div class="compare-card">
-                            <h4>Excludability</h4>
-                            <p>Is it <span class="fluo">possible to prevent</span> someone who doesn't pay from using the good?</p>
+                            <h4>Excludability (Payment)</h4>
+                            <p>Is it <span class="fluo">possible to easily block</span> someone from using it if they refuse to pay?</p>
                         </div>
                     </div>
 
@@ -164,31 +176,31 @@
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>Excludable</th>
-                                    <th>Non-Excludable</th>
+                                    <th>Excludable (Can block non-payers)</th>
+                                    <th>Non-Excludable (Cannot block anyone)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Rival</strong></td>
-                                    <td><strong>Private Goods</strong><br><small>(Food, Clothes)</small></td>
-                                    <td><strong>Common Resources</strong><br><small>(Fish in the sea)</small></td>
+                                    <td><strong>Rival</strong><br>(Leaves less for others)</td>
+                                    <td><strong>Private Goods</strong><br><small>(Apples, T-shirts)</small></td>
+                                    <td><strong>Common Resources</strong><br><small>(Fish in the free ocean)</small></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Non-Rival</strong></td>
-                                    <td><strong>Club Goods</strong><br><small>(Netflix, Gym)</small></td>
-                                    <td><strong>Public Goods</strong><br><small>(Defense, Street lights)</small></td>
+                                    <td><strong>Non-Rival</strong><br>(Doesn't run out)</td>
+                                    <td><strong>Club Goods</strong><br><small>(Netflix password, Gym membership)</small></td>
+                                    <td><strong>Public Goods</strong><br><small>(Army defense, Streetlights)</small></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <div class="definition-box" style="margin-top: 2rem;">
-                        <h4>Pureness of Public Goods</h4>
-                        <p>In theory, we distinguish between:</p>
+                        <h4>Pure vs. Impure Public Goods</h4>
+                        <p>In real life, we separate these into two groups:</p>
                         <ul>
-                            <li><strong>Pure Public Goods:</strong> Perfectly non-rival and non-excludable (e.g., national defense).</li>
-                            <li><strong>Impure Public Goods:</strong> Goods that are mostly non-rival but can suffer from <span class="fluo">congestion</span> (e.g., a highway that becomes rival when there's too much traffic).</li>
+                            <li><strong>Pure Public Goods:</strong> 100% non-rival and 100% non-excludable (like the country's military defense).</li>
+                            <li><strong>Impure Public Goods:</strong> Things that are mostly non-rival but can break down due to <span class="fluo">crowding</span> (like a free highway that becomes a nightmare during rush hour).</li>
                         </ul>
                     </div>
                 </section>
@@ -199,30 +211,30 @@
                 <section class="content-card">
                     <h2 class="section-title">The Public Goods Problem</h2>
 
-                    <p>Why is there a problem with public goods? It comes down to why the private sector often fails to provide them.</p>
+                    <p>Why are public goods a problem? Because private businesses refuse to create them.</p>
 
                     <div class="compare-grid">
                         <div class="compare-card" style="border-left: 4px solid #F44336;">
-                            <span class="card-label" style="background: #FFEBEE; color: #C62828;">Private Failure</span>
-                            <h4>The Incentive Problem</h4>
-                            <p><strong>Non-excludability:</strong> Since it's impossible to stop people from using the good without paying, private firms have <span class="fluo">no incentive to produce it</span>. This leads to <strong>undersupply</strong>.</p>
-                            <p><strong>Non-rivalry:</strong> The marginal cost of an extra user is zero. This can lead to <strong>underconsumption</strong> if a price is charged.</p>
+                            <span class="card-label" style="background: #FFEBEE; color: #C62828;">Market Failure</span>
+                            <h4>The Motivation Problem</h4>
+                            <p><strong>Non-excludability:</strong> Because businessmen cannot stop people from using the good safely for free, they have <span class="fluo">zero motivation to build it</span>. This leads to <strong>not enough being built</strong>.</p>
+                            <p><strong>Non-rivalry:</strong> Adding one more user costs the business absolutely nothing ($0). If they charge money, they block people unnecessarily, leading to <strong>under-usage</strong>.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #4CAF50;">
-                            <span class="card-label" style="background: #E8F5E9; color: #2E7D32;">Public Solution</span>
-                            <h4>The Government's Role</h4>
-                            <p>The government can step in and provide these goods using two types of funding:</p>
+                            <span class="card-label" style="background: #E8F5E9; color: #2E7D32;">The State Solution</span>
+                            <h4>The Government's Job</h4>
+                            <p>The government must step in and buy these goods for society using two methods:</p>
                             <ul style="padding-left: 1rem;">
-                                <li><strong>User fees:</strong> Paying based on use (the <strong>benefit principle</strong>).</li>
-                                <li><strong>Taxation:</strong> Paying based on wealth (the <strong>ability-to-pay principle</strong>).</li>
+                                <li><strong>User fees:</strong> You only pay when you use it (like a toll road). This is the <strong>benefit principle</strong>.</li>
+                                <li><strong>Taxes:</strong> Rich people pay more, poor pay less. This is the <strong>ability-to-pay principle</strong>.</li>
                             </ul>
-                            <p style="margin-top: 1rem;"><strong>Equity-Efficiency Trade-offs:</strong> Sometimes the government provides <strong>Merit Goods</strong> (like education or healthcare) even if they are excludable, because society deems them essential for equity.</p>
+                            <p style="margin-top: 1rem;"><strong>Fairness over Money:</strong> Sometimes the government forces everyone to pay for <strong>Merit Goods</strong> (like free hospitals or schools) because society believes everyone deserves them, even poor people.</p>
                         </div>
                     </div>
 
                     <div class="alert-box alert-red" style="margin-top: 1.5rem;">
                         <span class="alert-icon">🞰</span>
-                        <span><strong>The Free-Rider Problem:</strong> Since no one can be excluded from using a public good, everyone has an incentive to <span class="fluo">not pay</span> while still benefiting. Rational agents hope that <em>others</em> will contribute, creating a collective action problem that makes <span class="fluo">voluntary funding almost impossible</span>. This is why taxation — enforced, mandatory contribution — is the standard solution.</span>
+                        <span><strong>The Free-Rider Problem:</strong> Because no one can be stopped from enjoying a public good (like a clean park), every selfish person wants to <span class="fluo">secretly not pay</span> and let other people pay for them. Everyone hopes their neighbor will open their wallet first. Because of this sneaky cheating, <span class="fluo">asking for voluntary donations always fails</span>. This is exactly why mandatory government taxes are required to build a civilized country.</span>
                     </div>
                 </section>
 
@@ -230,28 +242,28 @@
 
                 <!-- ═══════ CLASSROOM EXPERIMENT ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Experiment: The Public Goods Game</h2>
+                    <h2 class="section-title">Game: The Public Goods Experiment</h2>
 
-                    <p>This experiment shows the conflict between individual interest and the common good.</p>
+                    <p>This famous psychology game proves the harsh battle between greedy individuals and trusting groups.</p>
 
                     <div class="definition-box">
-                        <p><strong>The Setup:</strong></p>
+                        <p><strong>The Game Rules:</strong></p>
                         <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
-                            <li>Everyone has 10 tokens.</li>
-                            <li>You secretly choose how many to put into a "public pot".</li>
-                            <li>The pot is multiplied (e.g., by 1.5) and split equally between everyone.</li>
+                            <li>Every student is given 10 tokens.</li>
+                            <li>You secretly choose how many tokens to throw into a "team pot".</li>
+                            <li>The teacher magically multiplies the team pot by 1.5, and gives equal money back to everyone, even those who gave nothing.</li>
                         </ul>
-                        <p style="margin-top: 0.75rem;"><strong>The Result:</strong> Individually, the best choice is to contribute 0. But if everyone contributes 0, the whole group loses. If everyone contributes 10, everyone wins big.</p>
+                        <p style="margin-top: 0.75rem;"><strong>The Result:</strong> For one greedy person, the smartest trick is to give 0 and steal the multiplied team money. But if everyone acts greedy and gives 0, the game breaks and everyone stays poor. If everyone bravely gives 10, everyone becomes incredibly rich together.</p>
                     </div>
 
                     <div class="exam-tip" style="margin-top: 1.5rem;">
-                        <p><strong>Typical Lab Findings (Isaac, Walker & Thomas 1984; Ledyard 1995):</strong>
-                            <br>1. <strong>Initial Cooperation:</strong> Average contributions are 40–60% of endowment. People are driven by <span class="fluo">altruism, reciprocity, and social norms</span>.
-                            <br>2. <strong>Stability Issues:</strong> With repetition, contributions <span class="fluo">decline steadily toward zero</span> as cooperators observe free-riders and stop trusting the group.
-                            <br>3. <strong>The Punishment Effect (Fehr & Gächter 2000):</strong> Being able to "pay to punish" free-riders sustains high cooperation. 
+                        <p><strong>Actual Lab Results (Isaac, Walker & Thomas 1984; Ledyard 1995):</strong>
+                            <br>1. <strong>Trust at the Start:</strong> People usually donate about half their money (40-60%) in the first round because humans are naturally <span class="fluo">kind and trusting</span>.
+                            <br>2. <strong>Trust Dies Quickly:</strong> Over many rounds, donations <span class="fluo">crash down to zero</span> because the kind people realize the greedy people are cheating them, so they stop paying too.
+                            <br>3. <strong>The Power of Punishment (Fehr & Gächter 2000):</strong> If the game allows players to pay a small fee to "hurt" the cheating free-riders, donations suddenly jump to 100% and stay there. 
                         </p>
                         <div class="definition-box" style="margin-top: 1rem; background: rgba(255,255,255,0.5);">
-                            <p><strong>Policy Analogy:</strong> Voluntary contributions fail. Punishment (enforcement) via taxation is the only way to sustain cooperation and prevent collapse.</p>
+                            <p><strong>Real World Lesson:</strong> Asking nicely for money fails. Strict laws and punishing tax evaders is the only way a society can survive and build nice things.</p>
                         </div>
                     </div>
                 </section>
@@ -260,25 +272,25 @@
 
                 <!-- ═══════ OPTIMAL QUANTITY ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">The Optimal Quantity</h2>
+                    <h2 class="section-title">Calculating the Perfect Amount</h2>
 
-                    <p>How much of a public good should the government provide? Since there are no market prices, we have to find the "efficient" level manually.</p>
+                    <p>How many streetlights or tanks should the government buy? Because there are no normal price tags, politicians must calculate the "efficient" sweet spot manually.</p>
 
                     <div class="compare-grid">
                         <div class="compare-card">
-                            <h4>Demand (MWTP)</h4>
-                            <p>The <strong>Marginal Willingness to Pay</strong>. For public goods, we sum demand <em>vertically</em> (adding up how much every person values the same unit).</p>
+                            <h4>Desire (MWTP)</h4>
+                            <p>The <strong>Marginal Willingness to Pay</strong>. Because everyone can look at the same streetlight at once, we add up the desire of the citizens <em>vertically</em> (combining everyone’s happiness for one light).</p>
                         </div>
                         <div class="compare-card">
-                            <h4>Supply (MC)</h4>
-                            <p>The <strong>Marginal Cost</strong> of providing the good, usually determined through cost-benefit analysis and the government budget.</p>
+                            <h4>Cost (MC)</h4>
+                            <p>The <strong>Marginal Cost</strong> of buying the object, which is figured out through standard government accounting.</p>
                         </div>
                     </div>
 
                     <div class="alert-box alert-red" style="margin-top: 1.5rem;">
                         <span class="alert-icon">🎯</span>
-                        <span><strong>Efficiency Condition:</strong> Marginal Willingness to Pay = Marginal Cost. 
-                        In public finance, this is decided through the <span class="fluo">political process</span> rather than market competition.</span>
+                        <span><strong>The Perfect Balance rule:</strong> Total Desire (Willingness to Pay) = Marginal Cost. 
+                        In real life, this answer isn't found perfectly in a textbook; it is fought over through <span class="fluo">voting and elections</span>.</span>
                     </div>
                 </section>
 
@@ -289,12 +301,12 @@
                     </button>
 
                     <div id="note-ch4-1" class="post-it-note">
-                        <p><strong>Public Goods — The Essential Logic:</strong></p>
+                        <p><strong>Public Goods — The Core Lesson:</strong></p>
                         <ul>
-                            <li>Public goods are <span class="fluo">non-rival</span> (my consumption doesn't reduce yours) and <span class="fluo">non-excludable</span> (you can't stop people from benefiting without paying).</li>
-                            <li>This combination creates a <span class="fluo">free-rider problem</span>: everyone wants to benefit, but no one wants to pay. The private sector therefore produces too little.</li>
-                            <li>The government solves this through <span class="fluo">mandatory taxation</span> — forcing everyone to contribute removes the free-rider incentive.</li>
-                            <li>The efficient quantity is found where the <span class="fluo">total social benefit</span> (sum of all individuals' willingness to pay) equals the <span class="fluo">marginal cost</span> of provision.</li>
+                            <li>Public goods are <span class="fluo">non-rival</span> (sharing doesn't ruin it) and <span class="fluo">non-excludable</span> (you can't block free-loaders).</li>
+                            <li>This creates the toxic <span class="fluo">free-rider problem</span>: everyone demands the item, but nobody wants to be the stupid person who pays. Private companies run away.</li>
+                            <li>The state steps in with <span class="fluo">forced taxes</span> to solve the cheating and buy the item for everyone objectively.</li>
+                            <li>The perfect amount to build is found when the <span class="fluo">combined happiness of all citizens</span> equals the <span class="fluo">factory cost</span> of the item.</li>
                         </ul>
                     </div>
                 </section>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Power Exercise & Political Corruption</title>
+    <meta name="description"
+        content="Power exercise in democracy: principal-agent problems, political corruption, rent-seeking, financing of politics, Czech conflicts of interest, and donations as investment.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a>
+                        <a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a>
+                        <a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a>
+                        <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.8 — PUBLIC CHOICE THEORY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a>
+                        <a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a>
+                        <a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a>
+                        <a href="chapitre8-4.html" class="nav-link active">8.4 Power &amp; Political Corruption</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>8.4 — Power Exercise & Political Corruption</h1>
+                <p class="subtitle">Chapter 8: Public Choice Theory — When Politicians Serve Themselves</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: POWER EXERCISE
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Problem 3: The Exercise of Power</h2>
+
+                    <p>We have now studied how citizens reveal their preferences (Problem 1) and how those preferences are aggregated into collective decisions and seats (Problem 2). But even if both of these steps worked perfectly, there is a <span class="fluo">third and final danger</span>: once politicians are elected and hold real power, <strong>what stops them from using that power for their own personal benefit instead of serving the public?</strong></p>
+
+                    <div class="definition-box">
+                        <span class="def-label">Core Problem</span>
+                        <p>The public sector is <span class="fluo">composed of private agents</span> — real human beings with their own personal ambitions, financial interests, and weaknesses. A politician is supposed to maximize <strong>social welfare</strong> (the well-being of all citizens), but their <em>personal</em> welfare (salary, power, re-election, reputation, personal wealth) often points in a completely different direction. This creates a fundamental conflict between <span class="fluo">individual welfare of the officials vs. social welfare of the citizens</span>.</p>
+                    </div>
+
+                    <p>This gap between what politicians <em>should</em> do and what they <em>actually</em> do has a formal name in economics: the <strong>principal-agent problem</strong>.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <h4>👥 The Principal (Citizens)</h4>
+                            <p>The citizens are the "boss." They <span class="fluo">hire</span> politicians by voting for them. They want the politicians to implement good policies, keep taxes reasonable, and serve the public interest. But the citizens cannot directly observe everything the politicians do — there is a massive <strong>information asymmetry</strong>.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>🏛️ The Agent (Politicians)</h4>
+                            <p>The politicians are the "employee." They were hired to serve the citizens, but they have <span class="fluo">their own private interests</span>: staying in power, enriching their friends, building personal wealth, repaying political favors. Because citizens cannot perfectly monitor them, politicians have room to <strong>secretly pursue their own agenda</strong>.</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1rem;">This principal-agent problem produces several specific pathologies:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Political Corruption</strong>
+                            <p>The most direct form of government failure: <span class="fluo">the abuse of political power for private gain</span>. This ranges from accepting cash bribes in exchange for passing specific laws, to more subtle forms like awarding government contracts to companies owned by the politician's family or friends.</p>
+                        </li>
+                        <li>
+                            <strong>Rent-Seeking</strong>
+                            <p>Instead of creating new wealth, politicians and lobbyists spend enormous energy <span class="fluo">fighting over existing wealth</span>. A company that spends €10 million lobbying for a special tax exemption worth €50 million is engaged in rent-seeking — it created zero value for society, but simply redirected public money into its own pocket. The worst part: the resources spent on lobbying (lawyers, consultants, political dinners) are <strong>completely wasted</strong> from society's perspective.</p>
+                        </li>
+                        <li>
+                            <strong>Cronyism</strong>
+                            <p>Politicians give preferential treatment — government jobs, contracts, regulatory favors — <span class="fluo">to their personal friends, family members, and political allies</span>, regardless of whether these people are qualified or whether the decision serves the public interest. The result: public institutions are staffed by incompetent loyalists instead of talented professionals.</p>
+                        </li>
+                        <li>
+                            <strong>Political Connections</strong>
+                            <p>Companies that have <span class="fluo">personal or financial ties to politicians</span> receive unfair advantages: easier access to government contracts, softer regulatory treatment, inside information about upcoming policy changes. These connections distort competition and waste public resources — taxpayers end up paying more for worse services.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: FINANCING POLITICS
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Financing Politics: The Trillion-Dollar Question</h2>
+
+                    <p>At the heart of the power exercise problem lies a very practical question: <span class="fluo">who pays for political campaigns, and what do they expect in return?</span> Running a political party is extremely expensive — you need office space, staff, advertising, travel, events, lawyers, and much more. The money has to come from somewhere, and that "somewhere" creates huge ethical dangers.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label" style="background: #D1FAE5; color: #065F46;">Option A</span>
+                            <h4>🏦 Public Financing</h4>
+                            <p>The government gives taxpayer money to political parties based on their election results. This means <span class="fluo">citizens collectively fund democracy</span>.</p>
+                            <p style="margin-top: 0.5rem;"><strong>The Good:</strong> Reduces dependence on private donors, limits the influence of rich individuals and corporations, and creates a more level playing field between large and small parties.</p>
+                            <p class="example"><strong>The Bad:</strong> Citizens are forced to finance parties they disagree with. It may entrench existing parties (new parties get less funding). Politicians might still find ways to receive secret private money on the side.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <span class="card-label" style="background: #FEF3C7; color: #92400E;">Option B</span>
+                            <h4>💰 Private Financing</h4>
+                            <p>Individuals and companies donate their own money to political parties. This means <span class="fluo">the rich have much more political influence</span> than the poor.</p>
+                            <p style="margin-top: 0.5rem;"><strong>The Good:</strong> It is voluntary — nobody is forced to pay for politics. It allows passionate citizens to support causes they believe in. It connects parties to real societal interests.</p>
+                            <p class="example"><strong>The Bad:</strong> Creates a massive risk of corruption. Companies donate money with the expectation of receiving <span class="fluo">political favors in return</span>. This turns political donations into an investment strategy with expected returns.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #EF4444;">
+                        <span class="def-label" style="background: #EF4444;">The Fundamental Dilemma</span>
+                        <p>Should we allow private companies to use their money to <span class="fluo">influence the thinking of politicians</span>? Consider the logic carefully:</p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.75rem;">
+                            <li>A company's <strong>primary legal purpose</strong> is to generate profit for its shareholders. Nothing else.</li>
+                            <li>If that company donates €500,000 to a political party, is this donation an act of <strong>generosity</strong>... or is it an <strong>investment</strong> that the company expects will generate returns exceeding €500,000?</li>
+                            <li>If politicians then <span class="fluo">return the favor using public funds</span> (giving the donating company a government contract, tax exemption, or regulatory favor), the citizens are effectively <strong>paying the bill</strong> for the company's political investment.</li>
+                            <li>Even if the "favor" is legal... <span class="fluo">is it ethical? Is it desirable?</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: CZECH CASE STUDY
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Case Study: Financing Politics in Czechia</h2>
+
+                    <p>The Czech Republic uses a <span class="fluo">mixed system</span> — both public and private financing of political parties. Let's examine how it works in practice, including the shocking empirical evidence of corruption.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <span class="def-label">Czech Financing Rules</span>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.75rem;">
+                            <li><strong>Public financing:</strong> Around <span class="fluo">CZK 500 million yearly</span> (≈€20M), plus an additional CZK 500 million in election years. Parties receive public money in proportion to their election results.</li>
+                            <li><strong>Private financing:</strong> Both natural persons (individual citizens) and legal persons (companies) are allowed to donate. Since a recent reform, donations are <span class="fluo">capped at CZK 3 million per year, per party, per person</span> (≈€120,000).</li>
+                            <li><strong>Transparency:</strong> Information on donors is publicly available, but for a long time it was only accessible <span class="fluo">in physical form</span> (paper documents at government offices). The website <strong>PolitickeFinance.cz</strong> was created by researchers to digitize and make this data accessible to citizens.</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 1rem;">Now for the disturbing findings. Researchers (Skuhrovec et al., 2015) analyzed Czech donation data and found deeply troubling patterns:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <span class="card-label" style="background: #FEE2E2; color: #991B1B;">Finding 1</span>
+                            <h4>30% of Government Suppliers Donate</h4>
+                            <p><span class="fluo">30% of companies that supply goods or services to the Czech government</span> also donate money to political parties. This is a staggeringly high overlap — it strongly suggests that companies donate in order to receive government contracts.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <span class="card-label" style="background: #FEF3C7; color: #92400E;">Finding 2</span>
+                            <h4>20% of Donors Get EU Money</h4>
+                            <p><span class="fluo">20% of corporate donors also receive EU funding</span>. This means that companies that donate to Czech parties are disproportionately likely to also receive European subsidies — possibly because their political connections help them navigate the application process.</p>
+                        </div>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label" style="background: #EDE9FE; color: #5B21B6;">Finding 3</span>
+                            <h4>5% Are Shell Companies</h4>
+                            <p>Around <span class="fluo">5% of corporate donors are shell companies</span> — firms that exist only on paper and do essentially no real economic activity. Some of these are <span class="fluo">economically inactive</span>, meaning they have no employees, no revenue, and no purpose except to channel money anonymously into politics.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #06B6D4;">
+                            <span class="card-label" style="background: #CFFAFE; color: #155E75;">Finding 4</span>
+                            <h4>8% Are Offshore</h4>
+                            <p><span class="fluo">8% of corporate donors are offshore companies</span> — businesses registered in foreign countries with very low transparency (tax havens). The true owners of these companies are often unknown, making it impossible to trace who is actually funding Czech political parties.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-red" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🚨</span>
+                        <span><strong>What This Means:</strong> The Czech political financing system has significant <span class="fluo">corruption vulnerabilities</span>. Shell companies and offshore entities suggest that some donors are deliberately hiding their identities — which means the donations could be coming from anyone: oligarchs, foreign governments, organized crime, or politicians themselves recycling public funds back into their parties.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: DONATIONS AS INVESTMENT
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Donations as Investment: The Academic Evidence</h2>
+
+                    <p>Do political donations actually pay off for the companies that make them? Researchers have tried to answer this question with data, and the results are both clear and alarming.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #EF4444;">
+                        <span class="def-label" style="background: #EF4444;">Key Research Finding — Palanský (2020)</span>
+                        <p>Companies with <span class="fluo">political connections in the Czech Republic enjoy 8–12% higher profits</span> following the establishment of a connection to a party in government. This means that if a company starts donating to a party that then wins power, the company's profits systematically jump by roughly 8–12 percentage points compared to similar companies without connections.</p>
+                    </div>
+
+                    <p style="margin-top: 1rem;">To understand how shocking this number is, compare it to other countries:</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Profit Premium from Political Connection</th>
+                                    <th>Institutional Quality</th>
+                                    <th>Source</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>🇨🇿 Czech Republic</strong></td>
+                                    <td><span class="fluo">+8 to 12%</span></td>
+                                    <td>Medium</td>
+                                    <td>Palanský (2020)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>🇮🇹 Italy</strong></td>
+                                    <td><span class="fluo">+5.7%</span></td>
+                                    <td>Medium-High</td>
+                                    <td>Cingano & Pinotti (2013)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>🇩🇰 Denmark</strong></td>
+                                    <td><span class="fluo">+3.25%</span></td>
+                                    <td>Very High</td>
+                                    <td>Amore & Bennedsen (2013)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="margin-top: 1rem;">The pattern is crystal clear: <span class="fluo">the weaker the institutions, the bigger the profit from political connections</span>. In Denmark, which has some of the strongest anti-corruption institutions in the world, connections are worth "only" 3.25%. In Italy, where corruption is a chronic problem, it rises to 5.7%. In the Czech Republic, where institutions are still developing, the premium reaches a stunning 8–12%.</p>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🔑</span>
+                        <span><strong>Economic Interpretation:</strong> This data proves that political donations in Czechia function as <span class="fluo">a genuine investment strategy</span>. A company that donates €50,000 to a political party can expect profits to increase by 8–12% if that party comes to power. This is a much higher "return on investment" than most stock market investments — making it <span class="fluo">rationally optimal for companies to invest in politics rather than in innovation or productivity</span>.</span>
+                    </div>
+
+                    <button class="btn-note" onclick="toggleNote('note-nuance')">
+                        <span class="note-icon">📝</span> Important Nuances
+                    </button>
+
+                    <div id="note-nuance" class="post-it-note">
+                        <p><strong>What the research also found:</strong></p>
+                        <ul>
+                            <li>There is <span class="fluo">limited evidence of a direct effect of higher donation amounts</span>. A company donating €100,000 doesn't necessarily get a bigger favor than one donating €10,000. What matters more is <em>having the connection at all</em>.</li>
+                            <li>The effect is <span class="fluo">weaker</span> when compared specifically to non-donating firms that are also engaged with the public sector. This suggests that some of the "connection premium" comes not from donations themselves, but from <strong>familiarity and personal relationships</strong>.</li>
+                            <li>This raises a deeper question: Is the important channel really the <span class="fluo">donation itself, or the personal/local connections</span> that donations symbolize? Perhaps the donation is just a <em>signal</em> of a relationship that was already built through personal friendship, business networks, or local politics.</li>
+                            <li><strong>Public procurement</strong> appears to be a very important channel through which connected firms benefit. Government contracts are awarded to politically connected firms at higher prices, lower quality, or with less competitive bidding.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: CHAPTER TAKEAWAYS
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Chapter 8 — Grand Conclusion</h2>
+
+                    <p>Public choice theory teaches us a deeply uncomfortable lesson about democracy:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Democracy Is Imperfect by Design</strong>
+                            <p>Arrow proved mathematically that <span class="fluo">no perfect voting system exists</span>. Preference revelation is distorted. Aggregation is arbitrary. Power is abused. Democracy is not a perfect machine — it is the <em>least bad</em> system we have found so far.</p>
+                        </li>
+                        <li>
+                            <strong>Politicians Are Self-Interested</strong>
+                            <p>Downs showed that politicians <span class="fluo">design policies to win elections</span>, not to maximize social welfare. This explains why governments often choose popular but inefficient policies (like farm subsidies) over unpopular but efficient ones (like carbon taxes).</p>
+                        </li>
+                        <li>
+                            <strong>Institutions Are Everything</strong>
+                            <p>The difference between North and South Korea, between Denmark and the Czech Republic, is not natural resources or culture — it is <span class="fluo">the quality of institutions</span>. Inclusive institutions that limit corruption, ensure transparency, and protect competition are the single most important driver of economic prosperity.</p>
+                        </li>
+                        <li>
+                            <strong>Political Corruption Is an Investment</strong>
+                            <p>In countries with weak institutions, political donations generate <span class="fluo">measurable financial returns</span>. This means corruption is <em>rational</em> for companies — which makes it even harder to fight. Only strong, independent anti-corruption institutions can break this cycle.</p>
+                        </li>
+                    </ol>
+
+                    <div class="exam-tip">
+                        <p><strong>Exam Strategy for Chapter 8:</strong> Structure any essay around the <span class="fluo">three problems</span>: (1) Preference Revelation → paradox of voting, biases, lobbying. (2) Preference Aggregation → Arrow's theorem, median voter, D'Hondt vs. Hamilton. (3) Power Exercise → principal-agent, corruption, donations as investment. Always cite at least one empirical example (Czech data, North vs. South Korea, comparative table of corruption premiums).</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="btn-note" onclick="toggleNote('note-ch8-4')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch8-4" class="post-it-note">
+                        <p><strong>Chapter 8.4 — The Big Picture:</strong></p>
+                        <ul>
+                            <li><strong>Power exercise</strong> = the danger that elected politicians use their power for <span class="fluo">personal gain instead of public welfare</span>.</li>
+                            <li>This is a <strong>principal-agent problem</strong>: citizens (principal) hire politicians (agent), but cannot perfectly observe what politicians do.</li>
+                            <li>Key pathologies: <span class="fluo">corruption</span> (abuse of power for private gain), <span class="fluo">rent-seeking</span> (fighting over existing wealth instead of creating new value), <span class="fluo">cronyism</span> (favoring friends/allies).</li>
+                            <li><strong>Financing politics</strong> creates a massive ethical dilemma: private donations can turn into <span class="fluo">investments with expected returns</span>.</li>
+                            <li><strong>Czech data (Skuhrovec 2015):</strong> 30% of government suppliers donate, 20% of donors get EU funding, 5% are shell companies, 8% are offshore.</li>
+                            <li><strong>Palanský (2020):</strong> Political connections generate <span class="fluo">8–12% higher profits</span> in Czechia (vs. 5.7% Italy, 3.25% Denmark). Weaker institutions = bigger corruption premium.</li>
+                            <li><strong>Bottom line:</strong> Only strong, transparent, independent institutions can limit the damage from the principal-agent problem in politics.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

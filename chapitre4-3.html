@@ -105,6 +105,18 @@
                         <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.8 — PUBLIC CHOICE THEORY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a>
+                        <a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a>
+                        <a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a>
+                        <a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a>
+                    </div>
+                </div>
             </nav>
         </aside>
 
@@ -122,21 +134,21 @@
                 <!-- ═══════ THE TWO SOLUTIONS ═══════ -->
                 <section class="content-card">
                     <h2 class="section-title">Two Main Solutions</h2>
-                    <p>When the market fails because of externalities, we have two main ways to fix it:</p>
+                    <p>When the free market breaks down because of side-effects (externalities), we have two big ways to fix it:</p>
 
                     <div class="compare-grid">
                         <div class="compare-card">
                             <h3>1. Private Solutions</h3>
                             <p><strong>Coase Theorem (Coase, 1960)</strong></p>
-                            <p>The market might fix itself through <span class="fluo">private negotiations</span> without government help.</p>
+                            <p>The market might actually heal itself through <span class="fluo">private deals and bargaining</span>, with zero help from the government.</p>
                         </div>
                         <div class="compare-card highlight">
                             <h3>2. Public Solutions</h3>
-                            <p>The government intervenes using:</p>
+                            <p>The government steps in like a referee using:</p>
                             <ul style="padding-left: 1.2rem;">
-                                <li><strong>Price Regulation:</strong> Taxes & Subsidies.</li>
-                                <li><strong>Quantity Regulation:</strong> Quotas & Bans.</li>
-                                <li><strong>Marketable Permits:</strong> Cap-and-trade systems.</li>
+                                <li><strong>Price Rules:</strong> Taxes (punishments) & Subsidies (rewards).</li>
+                                <li><strong>Quantity Rules:</strong> Hard limits (Quotas) & total bans.</li>
+                                <li><strong>Trading Tickets:</strong> Cap-and-trade systems (buying the right to pollute).</li>
                             </ul>
                         </div>
                     </div>
@@ -144,103 +156,103 @@
 
                 <!-- ═══════ COASE THEOREM ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">The Coase Theorem (Private Solution)</h2>
-                    <p>Coase asked: <em>Are externalities really outside the market?</em> Can private deals make the price reflect external costs?</p>
+                    <h2 class="section-title">The Coase Theorem (Private Fix)</h2>
+                    <p>Economist Ronald Coase asked a brilliant question: <em>Do we really need the government?</em> Can people just talk to each other and fix the price of the damage?</p>
 
                     <div class="definition-box">
-                        <p><strong>Coase Theorem — Part I:</strong> If property rights are well-defined and <span class="fluo">bargaining is costless</span>, then agents will negotiate to reach the socially optimal quantity.</p>
-                        <p style="margin-top: 0.5rem;"><strong>Coase Theorem — Part II:</strong> The efficient outcome doesn't depend on who owns the rights. It only changes who gets the money (income distribution), not the final quantity.</p>
+                        <p><strong>Coase Theorem — Part I:</strong> If the law is super clear about who owns the property, and if <span class="fluo">bargaining is perfectly free and easy</span>, then the two sides will naturally talk and agree on the perfect, fair solution.</p>
+                        <p style="margin-top: 0.5rem;"><strong>Coase Theorem — Part II:</strong> The final amount of pollution will be identical no matter who owns the property. The only difference is who pays money to whom (who gets richer).</p>
                     </div>
 
                     <div class="alert-box note">
-                        <p><strong>Example: The River Pollution</strong></p>
+                        <p><strong>Example: The Dirty River</strong></p>
                         <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-                            <li><strong>Case 1: Swimmers own the river.</strong> Firms pay them for each unit of pollution. Payment = <span class="fluo">Marginal Damage (MD)</span>.</li>
-                            <li><strong>Case 2: Firms own the river.</strong> Swimmers pay firms to pollute less. Payment = <span class="fluo">Marginal Damage (MD)</span>.</li>
+                            <li><strong>Case 1: The innocent swimmers own the river.</strong> The dirty factory must beg and pay the swimmers for permission to drop waste. The payment exactly equals the <span class="fluo">Damage Cost (MD)</span>.</li>
+                            <li><strong>Case 2: The factory owns the river.</strong> The swimmers are forced to collect money to pay the factory to stop polluting. The payment exactly equals the <span class="fluo">Damage Cost (MD)</span>.</li>
                         </ul>
-                        <p style="margin-top: 0.5rem;">➡️ <strong>Result:</strong> In both cases, the negotiation leads to the same optimal quantity.</p>
+                        <p style="margin-top: 0.5rem;">➡️ <strong>The Magic Result:</strong> In both completely opposite situations, the final amount of pollution agreed upon is exactly the same golden number ($Q^*$).</p>
                     </div>
                 </section>
 
                 <!-- ═══════ COASE GRAPHICAL ANALYSIS ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Coase Theorem Graphically</h2>
+                    <h2 class="section-title">Reading the Coase Graph</h2>
                     <div class="graph-container">
                         <img src="images/coase_theorem_graph.png" alt="Coase Theorem Negotiation Graph"
                             class="graph-img-small">
                         <div class="graph-caption">
-                            <p><strong>How to read:</strong> The market starts at $Q_1$ (where $PMC = PMB$). Through negotiation, agents move to $Q^*$ (where $SMC = SMB$), which is the social optimum.</p>
+                            <p><strong>How to read:</strong> The greedy market starts at $Q_1$, completely ignoring the damage. But once they sit down and negotiate, they slowly push the dial backward to $Q^*$, where society is perfectly healthy ($SMC = SMB$).</p>
                         </div>
                     </div>
                     
                     <div class="alert-box caution">
-                        <p><strong>Why Coase often fails (Problems):</strong></p>
+                        <p><strong>Why Coase fails in real life (The Bugs):</strong></p>
                         <ol style="margin-top: 0.5rem; padding-left: 1.2rem;">
-                            <li><strong>The Assignment Problem:</strong> It's hard to define who owns what, especially with many people.</li>
-                            <li><strong>Transaction Costs:</strong> Negotiating takes time and money. Coordination is hard for global issues (like climate change).</li>
+                            <li><strong>"Who owns this?":</strong> It is impossible to figure out who "owns" the sky, the ocean, or the air you breathe.</li>
+                            <li><strong>The Nightmare of Organizing:</strong> Talking is expensive. You cannot easily invite 10 million car drivers into one room to negotiate a deal with 50 million breathing citizens. For massive global problems (like climate change), the Coase trick is physically impossible.</li>
                         </ol>
                     </div>
                 </section>
 
                 <!-- ═══════ PRICE REGULATION ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Public Solution: Price Regulation</h2>
-                    <p>When Coase fails, the state uses <strong>Price Regulation</strong> to change behavior by changing prices.</p>
+                    <h2 class="section-title">Public Fixes: Price Rules (Taxes)</h2>
+                    <p>Because Coase usually fails, the government must act. The smartest trick is <strong>Price Regulation</strong> — changing how people behave by hitting their wallets.</p>
 
                     <div class="definition-box">
-                        <p><strong>Pigouvian Tax (Pigou, 1920):</strong> A corrective tax set equal to the external marginal cost. It makes the firm's cost equal to the social cost ($PMC = SMC$).</p>
+                        <p><strong>Pigouvian Tax (Pigou, 1920):</strong> A "healing tax". You force the company to pay a tax that exactly perfectly matches the pain they cause. Suddenly, their selfish cost becomes the true social cost ($PMC$ becomes exactly $SMC$).</p>
                     </div>
 
                     <div class="graph-container">
                         <img src="images/pigouvian_tax_effect.png" alt="Pigouvian Tax Effect Graph"
                             class="graph-img-small">
                         <div class="graph-caption">
-                            <p><strong>Tax Effect:</strong> The tax shifts the supply curve up by the amount of the damage. This forces producers to reduce quantity from $Q_1$ to $Q^*$.</p>
+                            <p><strong>Tax Magic:</strong> Look at the graph. The heavy tax pushes the company's supply curve strongly upward by the exact size of the pain ($MD$). This perfectly crushes their production back from a dangerous $Q_1$ to the very safe $Q^*$.</p>
                         </div>
                     </div>
 
-                    <p style="margin-top: 1rem;"><strong>Fines & Sanctions:</strong> Similar to taxes but more indirect. Companies change methods to avoid paying high fines.</p>
+                    <p style="margin-top: 1rem;"><strong>Tickets and Fines:</strong> This works just like a tax. A company will quickly invent a cleaner machine if they are terrified of paying a massive $1$ million dollar fine.</p>
                 </section>
 
                 <!-- ═══════ QUANTITY REGULATION ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Public Solution: Quantity Regulation</h2>
-                    <p>Instead of prices, the state can directly mandate <span class="fluo">how much</span> of an activity is allowed.</p>
+                    <h2 class="section-title">Public Fixes: Quantity Rules (Laws)</h2>
+                    <p>Instead of playing games with money, the government can just use absolute <span class="fluo">police power</span> to ban things.</p>
                     
                     <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
-                        <li><strong>Output Regulation:</strong> Limits on the final quantity (e.g., fishing quotas, emission standards).</li>
-                        <li><strong>Input Regulation:</strong> Requirements on how to produce (e.g., mandating specific filters).</li>
-                        <li><strong>Bans:</strong> Zero quantity allowed (e.g., smoking bans in public places).</li>
+                        <li><strong>Output Rules:</strong> "You are only allowed to catch 1,000 fish per month. Period." (Quotas).</li>
+                        <li><strong>Input Rules:</strong> "You must legally install this specific smoke filter on your chimney."</li>
+                        <li><strong>Complete Bans:</strong> "Zero smoking in restaurants. You go to jail."</li>
                     </ul>
 
                     <div class="compare-grid" style="margin-top: 1rem;">
                         <div class="compare-card">
-                            <h4>Price vs Quantity</h4>
-                            <p>In a perfect world, they are the same. In practice, <strong>Price</strong> is more flexible but <strong>Quantity</strong> is easier when we don't know the exact demand curves.</p>
+                            <h4>Fighting: Taxes vs. Bans</h4>
+                            <p>In a perfect math textbook, both give the exact same answer. In the real messy world, <strong>Taxes</strong> give factories freedom to breathe and adapt, but <strong>Bans</strong> are much safer when the government has no idea how much money people are willing to pay.</p>
                         </div>
                     </div>
                     
                     <div class="definition-box" style="margin-top: 2rem;">
-                        <h4>The Scope of Public Action</h4>
-                        <p>Governments reach the social optimum through sophisticated mechanisms:</p>
+                        <h4>How Big Does the Government Need to Be?</h4>
+                        <p>The size of the problem decides who takes charge:</p>
                         <ul style="padding-left: 1.5rem;">
-                            <li><strong>Internal:</strong> Representative democracy, voting systems (to extract preferences), and cost-benefit analysis.</li>
-                            <li><strong>International:</strong> Global externalities (like climate change) require cooperation between entities like the <span class="fluo">EU, UN, and OECD</span>.</li>
+                            <li><strong>Small Local Problems:</strong> Fixed internally by town mayors, voting, and basic democratic laws.</li>
+                            <li><strong>Massive Global Problems:</strong> Climate change or ocean death completely ignore country borders. These demand gigantic alliances like the <span class="fluo">European Union, the United Nations, or the OECD</span> to write global laws.</li>
                         </ul>
                     </div>
                 </section>
 
                 <!-- ═══════ MARKETABLE PERMITS ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Marketable Permits (Cap-and-Trade)</h2>
-                    <p>A combination of both: The government sets a <strong>Cap</strong> (quantity) but lets firms <strong>Trade</strong> (price).</p>
+                    <h2 class="section-title">Trading Tickets (Cap-and-Trade)</h2>
+                    <p>This is a clever hybrid of both rules: The state creates a strict <strong>Max Limit (Cap)</strong> but lets the factories <strong>Buy and Sell (Trade)</strong> the right to pollute.</p>
 
                     <div class="alert-box tip">
-                        <p><strong>How it works:</strong> Each firm gets a permit to emit. If a firm emits less, it can sell its permit to a firm that needs to emit more. This ensures the total pollution stays under the limit efficiently.</p>
+                        <p><strong>How the game is played:</strong> The state prints 1,000 "pollution tickets". Factory A invents a brilliant clean machine, so they don't need their tickets. They excitedly sell their spare tickets to lazy Factory B for a huge pile of money. The environment wins (only 1,000 tickets exist in total), and smart/clean companies get rich.</p>
                     </div>
 
                     <div class="alert-box warning">
-                        <p><strong>Limits:</strong> Lobbying, equity issues (who gets the permits first?), and "hotspots" where pollution is concentrated locally.</p>
+                        <p><strong>The Dark Side:</strong> Rich companies use bribes to get free tickets. Also, it accidentally creates "death zones" — if Factory B buys all the tickets in the country, the air surrounding Factory B will become highly toxic to the local poor town.</p>
                     </div>
                 </section>
 
@@ -251,10 +263,10 @@
                         <h3>ULTRA RECAP</h3>
                     </div>
                     <ul class="post-it-list">
-                        <li><strong>Coase:</strong> Market fixes it if rights are clear & bargaining is free.</li>
-                        <li><strong>Taxes:</strong> Correct through prices (Pigouvian).</li>
-                        <li><strong>Quotas:</strong> Correct through direct quantity control.</li>
-                        <li><strong>Permits:</strong> Efficient mix of quantity limits and market trading.</li>
+                        <li><strong>Coase:</strong> Neighbors can fix it naturally without government, but only if lawyers and talking are cheap.</li>
+                        <li><strong>Taxes:</strong> Forcing factories to pay for the pain through Pigouvian pricing.</li>
+                        <li><strong>Police Rules:</strong> Strict legal bans on quantities (Quotas).</li>
+                        <li><strong>Pollution Tickets:</strong> Blending strict caps with the freedom of buying and selling.</li>
                     </ul>
                 </section>
 

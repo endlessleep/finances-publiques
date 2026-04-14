@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Voting Systems & Arrow's Theorem</title>
+    <meta name="description"
+        content="Preference aggregation, decision rules, voting systems (unanimity, majority, ranking), Arrow's impossibility theorem, the median voter theorem, and political polarization.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a>
+                        <a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a>
+                        <a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a>
+                        <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.8 — PUBLIC CHOICE THEORY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a>
+                        <a href="chapitre8-2.html" class="nav-link active">8.2 Voting Systems &amp; Arrow</a>
+                        <a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a>
+                        <a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>8.2 — Voting Systems & Arrow's Impossibility Theorem</h1>
+                <p class="subtitle">Chapter 8: Public Choice Theory — The Impossibility of Perfect Democracy</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: PREFERENCE AGGREGATION INTRO
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Problem 2: Preference Aggregation</h2>
+
+                    <p>Assuming we somehow know what citizens want (Problem 1), the next challenge is: <span class="fluo">how do we combine millions of different opinions into a single collective decision?</span></p>
+
+                    <p>Consider the classic one-dimensional setting: a government must decide on the <strong>optimal quantity of public goods</strong> or the <strong>optimal tax rate</strong>. Even in this simple case — where everyone is choosing from a single line of options (e.g. "tax rate between 0% and 100%") — aggregating preferences is already difficult. In real politics, the problem is infinitely harder because decisions are <span class="fluo">multidimensional</span>: redistribution, immigration policy, moral values, national identity, urban vs. rural priorities, and dozens of other factors all matter simultaneously.</p>
+
+                    <p>Preference aggregation has two sub-problems:</p>
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <h4>2a: Decision Rule</h4>
+                            <p>What voting rule do we use? Unanimity? Simple majority? Qualified majority? Each rule has different strengths and weaknesses, and <span class="fluo">no single rule is perfect for every situation</span>.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <h4>2b: Translating Votes into Mandates</h4>
+                            <p>Once people vote, how do we convert their votes into parliamentary seats? This is largely a mathematical problem, but the <span class="fluo">math has enormous political consequences</span> (covered in section 8.3).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: DECISION RULES
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Problem 2a: Decision Rules</h2>
+
+                    <p>Every collective decision needs an <span class="fluo">ex ante-defined rule</span> — a clear agreement on how votes will be counted <em>before</em> the voting begins. The choice of rule is not neutral: different rules favor different groups and produce different outcomes. Let's examine the main options:</p>
+
+                    <div class="alert-box alert-blue" style="margin-bottom: 1.5rem;">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>Key Principle:</strong> The optimal rule can differ by context. A simple majority is elegant for everyday decisions, but <span class="fluo">stronger rules may be desirable for constitutional or irreversible decisions</span> because they protect minorities and ensure broad agreement.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: VOTING SYSTEMS I
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Six Main Voting Systems</h2>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label" style="background: #DBEAFE; color: #1E40AF;">System 1</span>
+                            <h4>🤝 Unanimity Voting</h4>
+                            <p><strong>Rule:</strong> <span class="fluo">100% of all agents must agree</span>. Every single person has a full veto right — if even one person says "no", the proposal is rejected.</p>
+                            <p style="margin-top: 0.5rem;"><strong>When it's used:</strong> Some international organizations (like the UN Security Council, where permanent members have veto power), and some partnership agreements.</p>
+                            <p style="margin-top: 0.5rem;"><strong>The Good:</strong> Perfect protection for minorities. Nobody can ever be forced into something against their will.</p>
+                            <p class="example"><strong>Problems:</strong> It is <span class="fluo">extremely rigid</span>. Any single stubborn person can block everything, even if 99% of people want it. It also creates a binary 0/1 nature — you can only say "yes" or "no" to a fixed proposal, with no room for compromise or gradual adjustment.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label" style="background: #D1FAE5; color: #065F46;">System 2</span>
+                            <h4>✋ Simple Majority Voting</h4>
+                            <p><strong>Rule:</strong> <span class="fluo">At least 50%+1 of all agents must agree</span>. The option that gets more than half the votes wins.</p>
+                            <p style="margin-top: 0.5rem;"><strong>When it's used:</strong> Most everyday parliamentary decisions, simple referendums, board votes.</p>
+                            <p style="margin-top: 0.5rem;"><strong>The Good:</strong> Elegant, simple, fast. It prevents the "tyranny of the minority" where a small group blocks everything.</p>
+                            <p class="example"><strong>Problems:</strong> Needs an odd number of agents to avoid ties. The majority can "tyrannize" the minority (51% can constantly overrule 49%). It also has 0/1 nature and might not lead to a stable equilibrium (as we will see with cycling).</p>
+                        </div>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <span class="card-label" style="background: #FEF3C7; color: #92400E;">System 3</span>
+                            <h4>🏆 Qualified Majority Voting</h4>
+                            <p><strong>Rule:</strong> A "supermajority" of <span class="fluo">$X\%$ must agree, where $X \in (50, 100)$</span>. Common thresholds: 60%, two-thirds (66.7%), or three-quarters (75%).</p>
+                            <p style="margin-top: 0.5rem;"><strong>When it's used:</strong> Constitutional amendments (changing a country's fundamental law), EU Council votes on sensitive issues, US Senate override of presidential veto (2/3).</p>
+                            <p style="margin-top: 0.5rem;"><strong>The Good:</strong> Offers a middle ground between unanimity (too rigid) and simple majority (too easy to change things). Protects minorities without completely paralyzing the system.</p>
+                            <p class="example"><strong>Problems:</strong> Requires the total number of agents to be divisible by the chosen denominator ($3x$ for 2/3 majority). Still has 0/1 binary nature. Still might not lead to a stable equilibrium.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label" style="background: #EDE9FE; color: #5B21B6;">System 4</span>
+                            <h4>🔄 Sequence of Votes</h4>
+                            <p><strong>Rule:</strong> Voting happens in <span class="fluo">multiple rounds</span>, with options being eliminated progressively. Common in presidential elections with two rounds ("runoff").</p>
+                            <p style="margin-top: 0.5rem;"><strong>When it's used:</strong> French presidential elections (first round with all candidates, second round between top two), party leadership contests.</p>
+                            <p style="margin-top: 0.5rem;"><strong>The Good:</strong> Allows voters to express more nuanced preferences. In the first round, you "vote with your heart" (for your real favorite). In the second round, you "vote with your head" (against your least favorite).</p>
+                            <p class="example"><strong>Problems:</strong> <span class="fluo">Very sensitive to setup</span> — the order in which options are presented can change the outcome. It encourages <strong>strategic voting</strong> (voting not for your first choice, but against someone else). Still 0/1 in each step.</p>
+                        </div>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #EC4899;">
+                            <span class="card-label" style="background: #FCE7F3; color: #9D174D;">System 5</span>
+                            <h4>📊 Ranking and Ordering</h4>
+                            <p><strong>Rule:</strong> Instead of choosing just one option, <span class="fluo">voters rank all alternatives</span> from best to worst. The option with the highest sum of ranks wins (Borda count method).</p>
+                            <p style="margin-top: 0.5rem;"><strong>When it's used:</strong> Eurovision Song Contest, some academic elections, sports rankings.</p>
+                            <p style="margin-top: 0.5rem;"><strong>The Good:</strong> Captures much more information about voter preferences than a simple binary vote. Can avoid the "tyranny of the majority" by considering second and third choices.</p>
+                            <p class="example"><strong>Problems:</strong> Might not lead to a stable equilibrium. All alternatives get the same weight regardless of how strongly you feel about them. Voters might not correctly observe their own full ranking. Much more complex to understand and implement.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #06B6D4;">
+                            <span class="card-label" style="background: #CFFAFE; color: #155E75;">System 6</span>
+                            <h4>👍👎 Combined Approval Voting (Democracy 2.1)</h4>
+                            <p><strong>Rule:</strong> For each option, voters can cast <span class="fluo">a vote FOR, a vote AGAINST, or express INDIFFERENCE</span>. This captures not just support, but also active opposition.</p>
+                            <p style="margin-top: 0.5rem;"><strong>When it's used:</strong> Some participatory budgeting experiments, the "Prezident21" project in the Czech Republic for presidential elections.</p>
+                            <p style="margin-top: 0.5rem;"><strong>The Good:</strong> Solves a critical problem with simple majority voting: it reveals that some options may have strong support BUT also strong opposition.</p>
+                            <p class="example"><strong>Problems:</strong> Complex to implement and explain. Still vulnerable to strategic voting (voting "against" everyone except your favorite).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: DEMOCRACY 2.1 EXAMPLE
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Democracy 2.1 in Action — The Swimming Pool Example</h2>
+
+                    <p>Imagine a city council must decide which <strong>two projects</strong> to build using public money (all projects cost the same). There are several options: a swimming pool, a park, a library, etc. Under <strong>simple majority voting</strong>, each person votes for their favorite project, and the two projects with the most votes win.</p>
+
+                    <p>But here's the problem: suppose the <span class="fluo">swimming pool gets the most votes</span>, and so it is built. However, if we looked deeper, we would discover that while 35% of people voted <em>for</em> the pool, a massive <span class="fluo">55% actively hate the idea</span> (they think it's a waste of money, or they live far away). Under simple majority, this opposition is completely invisible.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>❌ Simple Majority Result</h4>
+                            <p>The swimming pool wins because it has the <strong>most first-choice votes</strong>. But most citizens are actually <em>against</em> it. The system produced a decision that <span class="fluo">a majority of people oppose</span>.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>✅ Democracy 2.1 Result</h4>
+                            <p>Under approval voting, the swimming pool gets many "against" votes. A <strong>less controversial project</strong> (one that most people find acceptable, even if fewer people love it as #1) wins instead. The result <span class="fluo">better represents the collective preference</span>.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue">
+                        <span class="alert-icon">🔑</span>
+                        <span><strong>The Lesson:</strong> Simple majority voting can produce results that <span class="fluo">a majority of people are unhappy with</span>. More sophisticated systems like approval voting or combined approval voting try to solve this by capturing not just support, but also opposition. However, perfect solutions remain just as elusive as ever — which brings us to Arrow's fundamental discovery.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: ARROW'S IMPOSSIBILITY THEOREM
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Arrow's Impossibility Theorem: The Death of Perfect Democracy</h2>
+
+                    <p>In 1951, the brilliant mathematician and economist <strong>Kenneth Arrow</strong> asked a seemingly simple question: <em>Can we design a perfect voting system?</em> He defined what "perfect" means by listing <span class="fluo">4 characteristics that any ideal political mechanism should have</span>:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Transitivity</strong>
+                            <p>If society prefers A over B, and society prefers B over C, then society must prefer A over C. This seems obvious — it just means society's preferences are <span class="fluo">logically consistent</span> and do not go in circles.</p>
+                            <p style="margin-top: 0.5rem;">Formally: If $A \succ B$ and $B \succ C$, then $A \succ C$.</p>
+                        </li>
+                        <li>
+                            <strong>Non-Dictatorial Choice</strong>
+                            <p>The system must be <span class="fluo">genuinely democratic</span>. There should be no single person whose individual preference automatically becomes society's preference. If one person always gets their way regardless of what everyone else thinks, that's a dictatorship, not a democracy.</p>
+                        </li>
+                        <li>
+                            <strong>Independence of Irrelevant Alternatives (IIA)</strong>
+                            <p>If society must choose between A and B, the result should depend <span class="fluo">only on how people rank A vs. B</span> — not on whether there is some third option C. Think of it this way: if you prefer pizza over pasta, introducing sushi to the menu should not suddenly make you prefer pasta over pizza. The same logic should apply to collective decisions.</p>
+                            <p style="margin-top: 0.5rem;"><em>Real-world violation:</em> In the 2000 US presidential election, Ralph Nader (the "irrelevant" third-party candidate) took enough votes from Al Gore to let George W. Bush win. The presence of C changed the outcome between A and B.</p>
+                        </li>
+                        <li>
+                            <strong>Unrestricted Domain</strong>
+                            <p>The mechanism must <span class="fluo">work for all possible combinations of individual preferences</span>. You cannot design a system that only works when people happen to agree, or only works when preferences have a specific shape. The system must be universally robust.</p>
+                        </li>
+                    </ol>
+
+                    <div class="definition-box" style="border-left: 4px solid #EF4444; margin-top: 1.5rem;">
+                        <span class="def-label" style="background: #EF4444;">Arrow's Impossibility Theorem (1951)</span>
+                        <p style="font-size: 1.1rem;"><strong>Kenneth Arrow proved mathematically that <span class="fluo">no voting system can satisfy all four characteristics at the same time</span>.</strong></p>
+                        <p style="margin-top: 0.75rem;">This is not a matter of bad engineering or lack of creativity. It is a <span class="fluo">mathematical impossibility</span>. No matter how clever you are, you cannot build a perfectly democratic, perfectly consistent, perfectly independent voting system that works in all situations. Democracy is inherently imperfect.</p>
+                    </div>
+
+                    <button class="btn-note" onclick="toggleNote('note-arrow')">
+                        <span class="note-icon">📝</span> The Escape Hatch
+                    </button>
+
+                    <div id="note-arrow" class="post-it-note">
+                        <p><strong>But hope is not completely lost!</strong></p>
+                        <p>Arrow's theorem applies when all four conditions must hold simultaneously. If we <span class="fluo">relax the fourth condition</span> (unrestricted domain), things improve dramatically:</p>
+                        <ul>
+                            <li>If preferences are <strong>single-peaked</strong> (meaning each voter has one ideal point and their satisfaction decreases as you move away from it in either direction), then <span class="fluo">the majority voting equilibrium always exists</span>.</li>
+                            <li>Single-peaked preferences occur naturally when we deal with <strong>one issue at a time</strong> — like choosing a single tax rate, or deciding how much to spend on education.</li>
+                            <li>However, <strong>multi-peaked preferences</strong> do exist in reality. Example: rich families might either want excellent <em>private</em> schools (low taxes, no public funding) OR excellent <em>public</em> schools (high taxes, generous public funding) — but NOT mediocre public schools (medium taxes). This creates two peaks in their preference curve.</li>
+                            <li>When preferences are multi-peaked or multidimensional, a <strong>cyclical pattern</strong> can emerge: society prefers A over B, B over C, but C over A. This is called a <span class="fluo">Condorcet cycle</span>, and it means no stable majority winner exists.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: MEDIAN VOTER THEOREM
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Median Voter Theorem: Who Really Decides?</h2>
+
+                    <p>When preferences are single-peaked and we use majority voting, there is a beautiful and powerful result: <span class="fluo">the outcome is always the one preferred by the median voter</span> — the person who sits exactly in the middle of the preference distribution.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <span class="def-label">Classic Example</span>
+                        <p>Suppose <strong>5 citizens</strong> must decide how much to spend on public education. Each person has their ideal spending level:</p>
+                        <div class="table-wrapper" style="margin-top: 0.75rem;">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>Voter</th>
+                                        <th>Lucy</th>
+                                        <th>Tom</th>
+                                        <th>Jim</th>
+                                        <th>John</th>
+                                        <th>Jill</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Ideal Spending</strong></td>
+                                        <td>$0</td>
+                                        <td>$840</td>
+                                        <td><span class="fluo">$1,000</span></td>
+                                        <td>$1,200</td>
+                                        <td>$16,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Position</strong></td>
+                                        <td>Far Left</td>
+                                        <td>Center-Left</td>
+                                        <td><span class="fluo">MEDIAN</span></td>
+                                        <td>Center-Right</td>
+                                        <td>Far Right</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <p>If we let all five people vote between any pair of proposals using simple majority, <span class="fluo">Jim's preference ($1,000) always wins</span>. Here is the intuition:</p>
+
+                    <ul>
+                        <li><strong>$1,000 vs. $840?</strong> Jim, John, and Jill all prefer $1,000 or higher → $1,000 wins (3 vs. 2).</li>
+                        <li><strong>$1,000 vs. $1,200?</strong> Jim, Tom, and Lucy all prefer $1,000 or lower → $1,000 wins (3 vs. 2).</li>
+                        <li><strong>$1,000 vs. $16,000?</strong> Everyone except Jill prefers $1,000 → $1,000 wins (4 vs. 1).</li>
+                    </ul>
+
+                    <p>No matter which alternative you propose, the median voter's ideal point <span class="fluo">always beats it in a pairwise vote</span>. This is the <strong>median voter theorem</strong>, and it has a profound implication for politics:</p>
+
+                    <div class="alert-box alert-blue">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>The Hotelling–Downs Prediction:</strong> In a one-dimensional political competition, <span class="fluo">both parties should converge toward the median voter's position</span>. If Party A positions itself at the median and Party B does not, Party A will always steal the majority. This is why, in theory, left-wing and right-wing parties should eventually become very similar — they both chase the same median voter.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: POLITICAL POLARIZATION
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Political Polarization: Why Parties Don't Converge</h2>
+
+                    <p>The median voter theorem predicts that parties should converge to the center. But look at any newspaper today and you will see the exact opposite: <span class="fluo">politics is becoming increasingly polarized</span>. Left-wing parties are moving more to the left, right-wing parties are moving more to the right, and the "center" is shrinking. Why does reality so violently contradict the theory?</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Politics Is Multidimensional</strong>
+                            <p>The median voter theorem only works perfectly in <span class="fluo">one dimension</span> (e.g. "more taxes vs. less taxes"). But real politics involves dozens of dimensions simultaneously: economic redistribution, immigration, cultural values, identity, geography, foreign policy. When politics is multidimensional, <span class="fluo">there is no single median</span> — and no guaranteed equilibrium.</p>
+                        </li>
+                        <li>
+                            <strong>Parties Respond to Activists, Not Just Voters</strong>
+                            <p>Political parties need volunteers, donors, and passionate members to survive. These <strong>activists</strong> tend to hold much more extreme views than the average voter. Parties therefore move toward the extremes to <span class="fluo">keep their base energized</span>, even if it means losing a few centrist voters.</p>
+                        </li>
+                        <li>
+                            <strong>Turnout Is Endogenous</strong>
+                            <p>If a party moves to the center, its core supporters might feel betrayed and <span class="fluo">stay home on election day</span>. Conversely, taking a strong, extreme position <span class="fluo">mobilizes your base</span>. In many elections, mobilizing extremes is a more effective strategy than persuading the center.</p>
+                        </li>
+                        <li>
+                            <strong>Electoral Systems Matter</strong>
+                            <p>Under proportional representation (like in Czechia), small extreme parties can win seats. This gives voters an incentive to vote for niche parties, and it encourages <span class="fluo">fragmentation and coalition-building</span> rather than centrist convergence.</p>
+                        </li>
+                        <li>
+                            <strong>Politicians Have Their Own Ideology</strong>
+                            <p>The Downs model assumes politicians are purely power-seekers with no personal beliefs. But in reality, many politicians genuinely <span class="fluo">believe in their extreme positions</span>. They enter politics specifically because they want to change the world according to their vision.</p>
+                        </li>
+                    </ol>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Conclusion:</strong> The median voter theorem is an extremely useful <span class="fluo">theoretical benchmark</span>, but in realistic settings it does not prevent pressures for polarization. In fact, many of the strongest forces in modern politics actively push parties <em>away</em> from the center.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="btn-note" onclick="toggleNote('note-ch8-2')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch8-2" class="post-it-note">
+                        <p><strong>Chapter 8.2 — The Big Picture:</strong></p>
+                        <ul>
+                            <li><strong>Preference aggregation</strong> = how to combine millions of different opinions into one decision. Two sub-problems: <span class="fluo">decision rules</span> and <span class="fluo">translating votes into mandates</span>.</li>
+                            <li>Six main voting systems: Unanimity, Simple Majority, Qualified Majority, Sequence of Votes, Ranking, Combined Approval. <span class="fluo">Each has fatal flaws.</span></li>
+                            <li><strong>Democracy 2.1</strong> (approval voting) solves the problem of simple majority producing results that most people oppose, by capturing both support AND opposition.</li>
+                            <li><span class="fluo">Arrow's Impossibility Theorem (1951):</span> No voting system can simultaneously satisfy Transitivity, Non-Dictatorship, Independence of Irrelevant Alternatives, and Unrestricted Domain.</li>
+                            <li><strong>The escape:</strong> If preferences are <span class="fluo">single-peaked</span> (one issue, one ideal point), majority voting gives a stable equilibrium → the <span class="fluo">Median Voter Theorem</span>.</li>
+                            <li><strong>Hotelling–Downs:</strong> In one dimension, both parties should converge to the median. But <span class="fluo">polarization happens anyway</span> because of multidimensionality, activist pressure, endogenous turnout, and politicians' own ideology.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

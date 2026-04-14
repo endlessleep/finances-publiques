@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Translating Votes into Mandates</title>
+    <meta name="description"
+        content="Seat allocation methods: D'Hondt, Sainte-Laguë, Imperiali, Hamilton/Hare, Droop quota. Czech and Slovak electoral systems in practice.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a>
+                        <a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a>
+                        <a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a>
+                        <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.8 — PUBLIC CHOICE THEORY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a>
+                        <a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a>
+                        <a href="chapitre8-3.html" class="nav-link active">8.3 Votes into Mandates</a>
+                        <a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>8.3 — Translating Votes into Mandates</h1>
+                <p class="subtitle">Chapter 8: Public Choice Theory — The Mathematics of Seat Allocation</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: THE CORE PROBLEM
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Problem 2b: From Votes to Seats</h2>
+
+                    <p>Once citizens have voted, we face a deeply practical problem: <span class="fluo">how do we convert millions of votes into a small number of parliamentary seats?</span> A parliament might have 200 seats, but millions of votes were cast across dozens of parties. There is no obvious, "natural" way to do this conversion — it requires a mathematical formula, and <strong>different formulas produce very different parliaments</strong>.</p>
+
+                    <p>This is largely a mathematical issue, but don't underestimate its importance. The choice of seat allocation method can determine <span class="fluo">which party forms the government</span>, which coalition is possible, and ultimately which policies affect millions of lives.</p>
+
+                    <p>There are two main families of decisions that must be made:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <h4>🗺️ Constituency Design</h4>
+                            <ul style="padding-left: 1.25rem; margin-top: 0.5rem;">
+                                <li><strong>What is the level?</strong> One national constituency (like the Netherlands) or many regional ones (like Czechia with 14 regions)?</li>
+                                <li><strong>How many mandates per constituency?</strong> More seats per constituency = more proportional results.</li>
+                                <li><strong>What to do with remainders?</strong> This is where the real math happens (see below).</li>
+                            </ul>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <h4>🏛️ Political Party Rules</h4>
+                            <ul style="padding-left: 1.25rem; margin-top: 0.5rem;">
+                                <li><strong>Closed vs. open list?</strong> Closed list = the party decides the order of candidates. Open list = voters can choose which specific candidates from the party they prefer.</li>
+                                <li><strong>Threshold to enter?</strong> E.g. in Czechia, a party must get at least <span class="fluo">5% of all votes</span> to receive any seats. This prevents extreme fragmentation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: THE TWO FAMILIES OF METHODS
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Two Families of Seat Allocation Methods</h2>
+
+                    <p>The critical challenge is always <span class="fluo">dealing with remainders</span>. For example, if a party wins 33.3% of votes but there are only 10 seats, they "deserve" exactly 3.33 seats — but you can't give someone a third of a seat! How you handle that 0.33 remainder changes everything. There are two families of methods:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label" style="background: #DBEAFE; color: #1E40AF;">Family 1</span>
+                            <h4>📐 Highest Averages Methods</h4>
+                            <p>Seats are assigned one at a time using a <span class="fluo">quotient formula</span>. After each round, the winning party's quotient drops, making it harder for them to win the next seat. This creates a self-balancing mechanism.</p>
+                            <p style="margin-top: 0.5rem;"><strong>Members:</strong> D'Hondt, Sainte-Laguë, Imperiali, Huntington-Hill.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label" style="background: #D1FAE5; color: #065F46;">Family 2</span>
+                            <h4>📊 Largest Remainder Methods</h4>
+                            <p>A fixed <span class="fluo">quota</span> (election number) is calculated. Votes are divided by this quota. The integer parts give automatic seats. The remaining seats go to parties with the <span class="fluo">highest leftover fractions</span>.</p>
+                            <p style="margin-top: 0.5rem;"><strong>Members:</strong> Hamilton method with Hare quota, Hamilton method with Droop quota.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: D'HONDT METHOD
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The D'Hondt Method (Jefferson Method)</h2>
+
+                    <p>The D'Hondt method is the <span class="fluo">most widely used seat allocation method in the world</span>. It is used in Belgium, the Netherlands, Finland, Spain, Portugal, Argentina, and many other countries. Here is exactly how it works:</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <span class="def-label">The D'Hondt Formula</span>
+                        <p>After each party receives its votes $V$, mandates are assigned <strong>one at a time in successive rounds</strong>. In each round, we calculate a quotient for every party:</p>
+                        <p style="text-align: center; font-size: 1.4rem; margin: 1rem 0;"><span class="fluo">$Q = \dfrac{V}{m + 1}$</span></p>
+                        <p>Where $V$ is the number of votes received by the party, and $m$ is the number of mandates <em>already assigned</em> to that party (initially $m = 0$ for all parties). The party with the <span class="fluo">highest quotient wins the seat in that round</span>.</p>
+                    </div>
+
+                    <p>The beauty of this system is that every time a party wins a seat, its denominator increases by 1, making its quotient smaller. This means <span class="fluo">large parties gradually lose their advantage</span> as they accumulate seats, giving smaller parties a chance.</p>
+
+                    <p><strong>Let's work through a complete example step by step:</strong></p>
+
+                    <div class="definition-box" style="border-left: 4px solid #F59E0B;">
+                        <p><strong>Setup:</strong> 4 mandates must be allocated. 3 parties competed:</p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Party A: <strong>100 votes</strong> (44.4%)</li>
+                            <li>Party B: <strong>80 votes</strong> (35.6%)</li>
+                            <li>Party C: <strong>45 votes</strong> (20.0%)</li>
+                        </ul>
+                    </div>
+
+                    <div class="table-wrapper" style="margin-top: 1.5rem;">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Round</th>
+                                    <th>Party A (100 votes)</th>
+                                    <th>Party B (80 votes)</th>
+                                    <th>Party C (45 votes)</th>
+                                    <th>Winner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Round 1</strong></td>
+                                    <td><span class="fluo">$\frac{100}{0+1} = 100$</span> ✅</td>
+                                    <td>$\frac{80}{0+1} = 80$</td>
+                                    <td>$\frac{45}{0+1} = 45$</td>
+                                    <td><strong>Party A</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Round 2</strong></td>
+                                    <td>$\frac{100}{1+1} = 50$</td>
+                                    <td><span class="fluo">$\frac{80}{0+1} = 80$</span> ✅</td>
+                                    <td>$\frac{45}{0+1} = 45$</td>
+                                    <td><strong>Party B</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Round 3</strong></td>
+                                    <td><span class="fluo">$\frac{100}{1+1} = 50$</span> ✅</td>
+                                    <td>$\frac{80}{1+1} = 40$</td>
+                                    <td>$\frac{45}{0+1} = 45$</td>
+                                    <td><strong>Party A</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Round 4</strong></td>
+                                    <td>$\frac{100}{2+1} = 33.3$</td>
+                                    <td>$\frac{80}{1+1} = 40$</td>
+                                    <td><span class="fluo">$\frac{45}{0+1} = 45$</span> ✅</td>
+                                    <td><strong>Party C</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <h4>📊 Final Result</h4>
+                            <p><strong>Party A:</strong> 2 seats (50%)<br>
+                            <strong>Party B:</strong> 1 seat (25%)<br>
+                            <strong>Party C:</strong> 1 seat (25%)</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <h4>⚖️ Proportionality Check</h4>
+                            <p>Votes: 44.4% / 35.6% / 20.0%<br>
+                            Seats: 50.0% / 25.0% / 25.0%</p>
+                            <p style="margin-top: 0.5rem;">Notice that D'Hondt <span class="fluo">slightly favors the largest party</span> (Party A gets 50% of seats with only 44.4% of votes) at the expense of Party B.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-yellow">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Key Bias:</strong> The D'Hondt method systematically <span class="fluo">favors larger parties</span>. This is because the quotient formula uses $m + 1$ in the denominator, which drops more slowly for big parties. If strict proportionality is your goal, D'Hondt is not the best choice — but it does produce more stable parliaments with fewer tiny parties.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: OTHER HIGHEST AVERAGE METHODS
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Other Highest-Average Methods</h2>
+
+                    <p>The D'Hondt method is just one member of the "highest averages" family. The other members use <span class="fluo">the same mechanism but different quotient formulas</span>, which change the bias toward large or small parties:</p>
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Quotient Formula</th>
+                                    <th>Divisor Sequence</th>
+                                    <th>Bias</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>D'Hondt</strong></td>
+                                    <td>$Q = \frac{V}{m + 1}$</td>
+                                    <td>1, 2, 3, 4, 5, ...</td>
+                                    <td><span class="fluo">Favors large parties</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sainte-Laguë</strong></td>
+                                    <td>$Q = \frac{V}{2m + 1}$</td>
+                                    <td>1, 3, 5, 7, 9, ...</td>
+                                    <td><span class="fluo">More proportional</span> (fairer to small parties)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Imperiali</strong></td>
+                                    <td>$Q = \frac{V}{m + \text{seq}}$</td>
+                                    <td>1, 1.5, 2, 2.5, ...</td>
+                                    <td><span class="fluo">Strongly favors large parties</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Huntington-Hill</strong></td>
+                                    <td>$Q = \frac{V}{\sqrt{n(n+1)}}$</td>
+                                    <td>Uses geometric mean</td>
+                                    <td><span class="fluo">Balanced</span> (used for US Congress)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="margin-top: 1rem;">The key insight here is that the <strong>divisor sequence</strong> determines everything. If the divisors grow slowly (D'Hondt: 1, 2, 3...), the quotients stay high for large parties, meaning they keep winning seats. If the divisors grow fast (Sainte-Laguë: 1, 3, 5...), the quotients drop much more quickly, giving smaller parties a better chance.</p>
+
+                    <div class="exam-tip">
+                        <p><strong>For the exam:</strong> You must understand the D'Hondt method well enough to <span class="fluo">calculate a full example by hand</span>. Know the formula $Q = V/(m+1)$, work through the rounds, and explain why the method slightly favors larger parties. Knowing that Sainte-Laguë uses $2m+1$ and is more proportional earns extra credit.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: HAMILTON / HARE METHOD
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Hamilton Method (Largest Remainder Method)</h2>
+
+                    <p>The second family of methods is completely different in approach. Instead of assigning seats one by one through rounds, the Hamilton method uses a <span class="fluo">fixed quota to divide all votes at once</span>.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #10B981;">
+                        <span class="def-label" style="background: #10B981;">The Hamilton Method — Step by Step</span>
+                        <ol style="padding-left: 1.5rem; margin-top: 0.75rem;">
+                            <li><strong>Calculate the quota:</strong> Choose either the Hare quota or the Droop quota.</li>
+                            <li><strong>Divide each party's votes by the quota.</strong> This gives a number with an integer part and a remainder (decimal part).</li>
+                            <li><strong>The integer part</strong> gives each party its <span class="fluo">automatic seats</span>.</li>
+                            <li><strong>The remaining unallocated seats</strong> are distributed one by one to the parties with the <span class="fluo">highest remainders</span>, until all seats are filled.</li>
+                        </ol>
+                    </div>
+
+                    <div class="compare-grid" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <h4>Hare Quota</h4>
+                            <p style="text-align: center; font-size: 1.2rem; margin: 0.5rem 0;"><span class="fluo">$Q_{\text{Hare}} = \dfrac{\text{Total Votes}}{\text{Total Seats}}$</span></p>
+                            <p class="example">With 100,000 votes and 10 seats: $Q = 10,000$. You need 10,000 votes to earn one seat automatically.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <h4>Droop Quota (Hagenbach-Bischoff)</h4>
+                            <p style="text-align: center; font-size: 1.2rem; margin: 0.5rem 0;"><span class="fluo">$Q_{\text{Droop}} = \dfrac{\text{Total Votes}}{\text{Total Seats} + 1}$</span></p>
+                            <p class="example">With 100,000 votes and 10 seats: $Q = 9,091$. The lower quota makes it slightly easier to earn automatic seats.</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;"><strong>Complete Worked Example — Hamilton Method with Hare Quota:</strong></p>
+
+                    <div class="table-wrapper" style="margin-top: 1rem;">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Party</th>
+                                    <th>Yellows</th>
+                                    <th>Whites</th>
+                                    <th>Reds</th>
+                                    <th>Greens</th>
+                                    <th>Blues</th>
+                                    <th>Pinks</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Votes</strong></td>
+                                    <td>47,000</td>
+                                    <td>16,000</td>
+                                    <td>15,800</td>
+                                    <td>12,000</td>
+                                    <td>6,100</td>
+                                    <td>3,100</td>
+                                    <td>100,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Votes / Quota</strong></td>
+                                    <td>4.70</td>
+                                    <td>1.60</td>
+                                    <td>1.58</td>
+                                    <td>1.20</td>
+                                    <td>0.61</td>
+                                    <td>0.31</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Automatic Seats</strong></td>
+                                    <td>4</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><span class="fluo">7</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Remainder</strong></td>
+                                    <td><span class="fluo">0.70</span></td>
+                                    <td><span class="fluo">0.60</span></td>
+                                    <td>0.58</td>
+                                    <td>0.20</td>
+                                    <td><span class="fluo">0.61</span></td>
+                                    <td>0.31</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bonus Seats</strong></td>
+                                    <td>+1</td>
+                                    <td>+1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>+1</td>
+                                    <td>0</td>
+                                    <td><span class="fluo">3</span></td>
+                                </tr>
+                                <tr style="background: rgba(37, 99, 235, 0.08);">
+                                    <td><strong>TOTAL SEATS</strong></td>
+                                    <td><strong>5</strong></td>
+                                    <td><strong>2</strong></td>
+                                    <td><strong>1</strong></td>
+                                    <td><strong>1</strong></td>
+                                    <td><strong>1</strong></td>
+                                    <td><strong>0</strong></td>
+                                    <td><strong>10</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="margin-top: 1rem;">Notice something interesting: the <strong>Blues party</strong> (6,100 votes = 6.1%) received 1 seat (10%), while the <strong>Pinks party</strong> (3,100 votes = 3.1%) received zero. The Blues beat the Reds in the remainder race (<span class="fluo">0.61 > 0.58</span>) despite the Reds having far more total votes (15,800 vs. 6,100). This shows that the <strong>remainder lottery</strong> can produce surprising results.</p>
+
+                    <div class="alert-box alert-blue">
+                        <span class="alert-icon">🔑</span>
+                        <span><strong>Hamilton vs. D'Hondt:</strong> The Hamilton method tends to be <span class="fluo">more favorable to smaller parties</span> than D'Hondt, because the remainder allocation gives small parties a fighting chance. D'Hondt's round-by-round process systematically advantages parties with the most votes.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: CZECH SYSTEM IN PRACTICE
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Voting in Practice: The Czech System</h2>
+
+                    <p>The Czech Republic has developed a complex voting system that combines elements from several methods. Understanding this system is essential because it shows how <span class="fluo">theoretical methods are combined and modified to serve real political goals</span>.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #2563EB;">
+                        <span class="def-label">Czech Chamber of Deputies — Electoral Rules</span>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.75rem;">
+                            <li><strong>System type:</strong> <span class="fluo">Proportional representation</span> by political party, organized by region.</li>
+                            <li><strong>Entry threshold:</strong> A party needs at least <span class="fluo">5% of all national votes</span> to enter parliament. Without this threshold, parliament would be fragmented into dozens of tiny parties, making stable government impossible.</li>
+                            <li><strong>Coalition thresholds:</strong> If two parties form a coalition, they need <span class="fluo">8%</span>. Three or more parties in coalition need <span class="fluo">11%</span>. This prevents parties from "gaming" the system by merging just to pass the 5% barrier.</li>
+                            <li><strong>Mandate distribution across regions:</strong> Uses the <span class="fluo">Hare quota</span> to distribute mandates to different constituencies.</li>
+                            <li><strong>Mandate distribution to parties (since 2021):</strong> Uses the <span class="fluo">Imperiali quota</span> — one of the methods that most strongly favors large parties. This was a controversial reform that significantly benefited the ruling coalition at the time.</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Real-World Implication:</strong> The 2021 shift from D'Hondt to Imperiali was politically motivated — it helped the governing parties win more seats with fewer votes. This is a perfect example of <span class="fluo">how the mathematical choice of seat allocation is never politically neutral</span>. The people in power always have an incentive to choose the formula that benefits them most.</span>
+                    </div>
+
+                    <button class="btn-note" onclick="toggleNote('note-elections')">
+                        <span class="note-icon">📝</span> Comparing Election Systems
+                    </button>
+
+                    <div id="note-elections" class="post-it-note">
+                        <p><strong>Quick Comparison of Real Electoral Systems:</strong></p>
+                        <ul>
+                            <li><strong>Czech Republic (CZ):</strong> Proportional representation. Multi-party parliament with coalition governments. Parties need 5% to enter. Uses Imperiali/Hare quotas.</li>
+                            <li><strong>United States:</strong> First-past-the-post ("winner takes all") in each district. Produces a <span class="fluo">two-party system</span> because third parties can never win enough districts. The Electoral College system means a president can win without the popular vote (as in 2000 and 2016).</li>
+                            <li><strong>France:</strong> Two-round system for president and parliament. First round with all candidates; second round between top two (president) or candidates above 12.5% (parliament).</li>
+                            <li><strong>Slovakia:</strong> Single nationwide constituency with proportional representation. 5% threshold. Very proportional results but often leads to highly fragmented parliaments.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="btn-note" onclick="toggleNote('note-ch8-3')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch8-3" class="post-it-note">
+                        <p><strong>Chapter 8.3 — The Big Picture:</strong></p>
+                        <ul>
+                            <li>Translating votes into seats requires choosing <strong>constituency design</strong> and a <strong>mathematical method</strong>. Different methods produce different parliaments.</li>
+                            <li><strong>Two families:</strong> Highest Averages (D'Hondt, Sainte-Laguë, Imperiali) vs. Largest Remainder (Hamilton with Hare/Droop).</li>
+                            <li><span class="fluo">D'Hondt:</span> $Q = V/(m+1)$. Assigns seats round by round. Slightly <span class="fluo">favors large parties</span>.</li>
+                            <li><span class="fluo">Sainte-Laguë:</span> $Q = V/(2m+1)$. More proportional, <span class="fluo">fairer to small parties</span>.</li>
+                            <li><span class="fluo">Hamilton/Hare:</span> Quota = Total Votes / Seats. Integer parts give automatic seats; highest remainders get the rest. Also relatively fair to small parties.</li>
+                            <li><strong>Czech system:</strong> Proportional representation, 5% threshold, Hare for regions, Imperiali since 2021 for parties (strongly favoring large parties).</li>
+                            <li><span class="fluo">Bottom line:</span> The choice of formula is NEVER neutral — it always benefits some parties at the expense of others. This is a deeply political decision disguised as a mathematical one.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

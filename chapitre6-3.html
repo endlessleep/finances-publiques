@@ -104,6 +104,18 @@
                         <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.8 — PUBLIC CHOICE THEORY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a>
+                        <a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a>
+                        <a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a>
+                        <a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a>
+                    </div>
+                </div>
             </nav>
         </aside>
 
@@ -120,16 +132,16 @@
 
                 <!-- ═══════ PAYG MECHANICS ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Pay-As-You-Go (PAYG): The Mechanics</h2>
-                    <p>In a PAYG system, <span class="fluo">current workers finance current retirees</span>. There is no fund that accumulates over time — every euro collected in payroll taxes is immediately transferred to pensioners.</p>
+                    <h2 class="section-title">The PAYG Pipe: How It Works</h2>
+                    <p>In a Pay-As-You-Go (PAYG) system, <span class="fluo">young workers directly pay for the older retirees right now</span>. There is absolutely no savings account — every dollar the government takes from a 25-year-old today is immediately handed to a 75-year-old tomorrow.</p>
 
                     <div class="definition-box" style="border-left: 4px solid #2563EB;">
-                        <p><strong>The PAYG Budget Constraint:</strong></p>
+                        <p><strong>The Mathematical Balancing Act:</strong></p>
                         <p style="text-align: center; font-size: 1.2rem; margin: 1rem 0;"><span class="fluo">$\tau \times w \times N = b \times R$</span></p>
-                        <p style="margin-top: 0.5rem;">Where: $\tau$ = contribution rate, $w$ = average wage, $N$ = number of contributors, $b$ = benefit per retiree, $R$ = number of retirees.</p>
-                        <p style="margin-top: 0.75rem;"><strong>Rearranging for the replacement rate:</strong></p>
+                        <p style="margin-top: 0.5rem;">Where: $\tau$ = tax rate, $w$ = average salary, $N$ = total number of young workers, $b$ = monthly check for each retiree, $R$ = total number of retired people.</p>
+                        <p style="margin-top: 0.75rem;"><strong>Rewriting it to see the problem:</strong></p>
                         <p style="text-align: center; font-size: 1.1rem; margin: 0.75rem 0;"><span class="fluo">$\frac{b}{w} = \tau \times \frac{N}{R}$</span></p>
-                        <p>This means the <span class="fluo">replacement rate</span> (pension as a share of the average wage) depends directly on the ratio of contributors to retirees. A <span class="fluo">rising dependency ratio</span> ($N/R$ falling) forces either <span class="fluo">lower benefits</span> or <span class="fluo">higher contribution rates</span> — this is the central fiscal tension in ageing societies.</p>
+                        <p>This proves that the <span class="fluo">size of the grandfather's check ($b/w$)</span> depends entirely on how many young workers exist compared to old people ($N/R$). If the number of older people explodes, the government is mathematically forced to either <span class="fluo">cut the pension checks</span> or <span class="fluo">savagely raise taxes on the young</span>.</p>
                     </div>
                 </section>
 
@@ -137,25 +149,17 @@
 
                 <!-- ═══════ PAYG RATE OF RETURN ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Rate of Return in a PAYG System</h2>
-                    <p>What does a participant actually "earn" by contributing to a PAYG system? The answer requires a simple derivation:</p>
+                    <h2 class="section-title">The Hidden Profit of the Pipe (PAYG Return)</h2>
+                    <p>What profit do you actually "earn" when you pay into this pipe your whole life? Unlike a bank, there is no interest rate. Your profit depends entirely on the country's biology and economy:</p>
 
                     <div class="definition-box" style="border-left: 4px solid #F59E0B;">
-                        <p><strong>Derivation:</strong></p>
-                        <p style="margin-top: 0.5rem;">Generation $t$ <strong>contributes:</strong></p>
-                        <p style="text-align: center; margin: 0.5rem 0;">$\tau \times w_t = \tau \times w_0 \times (1+g)^t$</p>
-                        <p>where $g$ = real wage growth.</p>
-                        <p style="margin-top: 0.75rem;">Generation $t$ <strong>receives benefit:</strong></p>
-                        <p style="text-align: center; margin: 0.5rem 0;">$b_{t+1} = \tau \times w_{t+1} \times \frac{N_{t+1}}{R_{t+1}} = \tau \times w_0 \times (1+g)^{t+1} \times (1+n)$</p>
-                        <p>where $n$ = population growth.</p>
-                        <p style="margin-top: 0.75rem;"><strong>Implied gross return on contribution:</strong></p>
-                        <p style="text-align: center; font-size: 1.2rem; margin: 0.75rem 0;"><span class="fluo">$(1 + r_{PAYG}) \approx (1+n)(1+g) \approx 1 + n + g$</span></p>
-                        <p>(We can ignore the small cross-term $n \times g$.)</p>
+                        <p><strong>The Magic Rule of Return:</strong></p>
+                        <p style="text-align: center; font-size: 1.2rem; margin: 0.75rem 0;"><span class="fluo">$(1 + r_{PAYG}) \approx 1 + n + g$</span></p>
                     </div>
 
                     <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
                         <span class="alert-icon">🎯</span>
-                        <span><strong>Key Result:</strong> <span class="fluo">$r_{PAYG} \approx n + g$</span> — the implicit return on a PAYG system equals <span class="fluo">population growth ($n$)</span> plus <span class="fluo">real wage growth ($g$)</span>. A larger working population means more contributors funding each retiree; higher real wages enlarge the tax base, allowing more generous benefits.</span>
+                        <span><strong>What It Means:</strong> <span class="fluo">$r_{PAYG} \approx n + g$</span> — The profit you make from a PAYG system equals the <span class="fluo">population growth ($n$)</span> plus the country's <span class="fluo">salary growth ($g$)</span>. If your country has lots of babies and everyone is getting richer, your pension will be huge. If no one has babies and salaries are frozen, your pension will be terrible.</span>
                     </div>
                 </section>
 
@@ -163,40 +167,40 @@
 
                 <!-- ═══════ PAYG PROS/CONS ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">PAYG Systems: Advantages and Drawbacks</h2>
+                    <h2 class="section-title">The Pros and Cons of the PAYG Pipe</h2>
 
                     <div class="compare-grid">
                         <div class="compare-card" style="border-left: 4px solid #10B981;">
-                            <h4>✅ No Transition Cost</h4>
-                            <p>A PAYG system can be <span class="fluo">implemented immediately</span> without requiring decades of capital accumulation — the first generation receives benefits without having contributed in full.</p>
+                            <h4>✅ Instant Start</h4>
+                            <p>You can <span class="fluo">turn it on immediately</span>. You don't have to wait 40 years to save money in a bank; you just tax the young today and feed the old today.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #10B981;">
-                            <h4>✅ Automatic Risk Pooling</h4>
-                            <p>PAYG provides <span class="fluo">insurance against longevity risk, inflation, and individual capital-market fluctuations</span> through intergenerational transfers. A pensioner's income does not depend on stock prices.</p>
+                            <h4>✅ Total Safety</h4>
+                            <p>It provides perfect <span class="fluo">protection against bad luck</span>. If you live to be 100, or if inflation hits, the government simply takes more taxes from the young to keep you alive.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #10B981;">
-                            <h4>✅ Redistribution</h4>
-                            <p>Defined-benefit formulas can link contributions and benefits <span class="fluo">non-linearly</span>, reducing old-age poverty and compressing lifetime income inequality. Low earners can receive more than they contributed.</p>
+                            <h4>✅ Kindness (Redistribution)</h4>
+                            <p>The rules can be twisted to help the poor. A rich banker and a poor cleaner pay taxes, but the government can easily give the cleaner a larger share to keep her out of poverty.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #10B981;">
-                            <h4>✅ Resilience to Financial Crises</h4>
-                            <p>Benefits are <span class="fluo">not directly exposed</span> to stock-market crashes, protecting pensioners from asset-price collapses (e.g. the 2008–09 crisis destroyed funded pension values).</p>
+                            <h4>✅ Immune to Stock Crashes</h4>
+                            <p>Your money is <span class="fluo">totally safe from Wall Street</span>. When the 2008 Financial Crisis destroyed millions of private bank accounts, PAYG grandpas didn't lose a single penny.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #EF4444;">
-                            <h4>❌ Demographic Sensitivity</h4>
-                            <p>The implicit return $n + g$ <span class="fluo">falls as populations age</span> and productivity growth slows — precisely the conditions prevailing in most advanced economies today.</p>
+                            <h4>❌ The Biology Trap</h4>
+                            <p>Remember the magic rule ($n + g$)? That rule <span class="fluo">starts crashing</span> when the country stops having babies — which is exactly what is happening in Europe right now.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #EF4444;">
-                            <h4>❌ Political Risk</h4>
-                            <p>Promises can be <span class="fluo">revised downward by future governments</span>. Benefit cuts, means-testing, and retirement-age increases are politically painful but fiscally necessary.</p>
+                            <h4>❌ Political Lies</h4>
+                            <p>The government can <span class="fluo">secretly change the rules at any time</span>. They can promise you a great retirement today, but violently cut your checks in 20 years if they run out of money.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #EF4444;">
-                            <h4>❌ No Capital Accumulation</h4>
-                            <p>Contributions are immediately transferred out — they do not build up a <span class="fluo">productive capital stock</span>, potentially depressing the economy's savings rate.</p>
+                            <h4>❌ Zero Real Savings</h4>
+                            <p>Because the young money is instantly eaten by the old, the country never builds a giant <span class="fluo">productive savings account</span>, which can slow down the entire economy.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #EF4444;">
-                            <h4>❌ Ponzi-Scheme Logic</h4>
-                            <p>Long-run solvency requires <span class="fluo">perpetual demographic renewal</span>. A permanently shrinking population renders PAYG unsustainable without continuous reforms.</p>
+                            <h4>❌ The Pyramid Scheme</h4>
+                            <p>PAYG works exactly like an illegal Ponzi scheme. It <span class="fluo">only survives if you constantly add more new young people at the bottom</span>. Without new babies, it collapses.</p>
                         </div>
                     </div>
                 </section>
@@ -205,29 +209,29 @@
 
                 <!-- ═══════ FUNDED MECHANICS ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Funded (Capitalised) Systems: The Mechanics</h2>
-                    <p>In a funded system, <span class="fluo">contributions are invested in financial assets</span>; benefits come from the accumulated savings plus returns.</p>
+                    <h2 class="section-title">Funded (Capitalised) Systems: True Savings</h2>
+                    <p>In a funded system, your tax money is not given to an old person. It belongs to you. It is <span class="fluo">locked in a real bank and invested in the stock market</span> until you retire.</p>
 
                     <div class="definition-box" style="border-left: 4px solid #10B981;">
-                        <p><strong>Key Result:</strong></p>
+                        <p><strong>The Profit Rule:</strong></p>
                         <p style="text-align: center; font-size: 1.2rem; margin: 0.75rem 0;"><span class="fluo">$r_{funded} \approx r$</span></p>
-                        <p>where $r$ = real rate of return on invested assets (equities, bonds, real estate, etc.).</p>
+                        <p>Your profit ($r$) depends entirely on how well your stocks, bonds, and real estate perform.</p>
                     </div>
 
-                    <p style="margin-top: 1.5rem;">Funded systems come in three main variants:</p>
+                    <p style="margin-top: 1.5rem;">These genuine savings systems usually take three forms:</p>
 
                     <div class="compare-grid">
                         <div class="compare-card" style="border-left: 4px solid #3B82F6;">
-                            <h4>Defined Contribution (DC)</h4>
-                            <p>Workers accumulate <span class="fluo">individual accounts</span>; the pension at retirement equals the account balance (contributions plus investment returns). The <span class="fluo">individual bears all investment and longevity risk</span>. Examples: <span class="fluo">Chile (1981)</span>, Australian Superannuation, US 401(k).</p>
+                            <h4>The Solo Account (DC)</h4>
+                            <p>You have your own <span class="fluo">personal account with your name on it</span>. Whatever amount of money is in there on your 65th birthday is all you get. The <span class="fluo">worker takes 100% of the risk</span>. If the market crashes, you starve. Examples: American 401(k), Australian Superannuation.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #F59E0B;">
-                            <h4>Defined Benefit (DB) — Funded</h4>
-                            <p>The employer (or state) promises a <span class="fluo">specific benefit formula</span> — typically a share of final or career-average salary times years of service. The sponsor must invest enough assets to meet the obligation. The <span class="fluo">sponsor bears investment risk</span>. Examples: traditional UK and US occupational pension funds.</p>
+                            <h4>The Boss's Promise (Funded DB)</h4>
+                            <p>Your boss promises you a <span class="fluo">perfect monthly salary for life</span>. The boss is forced to invest millions in the stock market to make sure he can afford it. The <span class="fluo">boss takes 100% of the risk</span>. Used heavily by old British and American factories.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
-                            <h4>Notional Defined Contribution (NDC)</h4>
-                            <p>A <span class="fluo">hybrid</span>: accounts are "notional" (no real fund exists) but contributions earn a return equal to wage-bill growth — essentially <span class="fluo">PAYG with DC-style transparency</span>. Examples: <span class="fluo">Sweden (1998)</span>, Italy (1995 Dini reform), Poland.</p>
+                            <h4>The Beautiful Fake (NDC)</h4>
+                            <p>It is a <span class="fluo">clever trick</span> used by Sweden and Italy. You get a piece of paper that looks exactly like a personal account, but there is no real money inside. It is actually just the old PAYG pipe disguised as a private account to trick politicians into respecting the math.</p>
                         </div>
                     </div>
                 </section>
@@ -236,48 +240,38 @@
 
                 <!-- ═══════ DB vs DC DETAILED ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Defined Benefit vs. Defined Contribution: Full Comparison</h2>
-                    <p>These are two fundamentally different ways to structure a funded pension promise. Understanding their differences is critical for pension policy analysis.</p>
+                    <h2 class="section-title">The Ultimate Choice: Defined Benefit (DB) vs. Defined Contribution (DC)</h2>
+                    <p>Understanding the difference between these two systems is the most important lesson in modern pensions.</p>
 
                     <div class="table-wrapper">
                         <table class="premium-table">
                             <thead>
                                 <tr>
-                                    <th>Dimension</th>
-                                    <th>Defined Benefit (DB)</th>
-                                    <th>Defined Contribution (DC)</th>
+                                    <th>The Rule</th>
+                                    <th>The Promise (DB)</th>
+                                    <th>The Solo Account (DC)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Promise</strong></td>
-                                    <td>A specific benefit formula, e.g. $b = \alpha \times \text{years} \times w_{ref}$ where $\alpha \approx 1\text{-}2\%$ is the accrual rate.</td>
-                                    <td>Only the contribution rate is fixed. The benefit = whatever the accumulated account can finance.</td>
+                                    <td><strong>What do you get?</strong></td>
+                                    <td>A strict math formula based on your final salary (e.g., "$2,000 every month").</td>
+                                    <td>You just get whatever cash happens to be in your account when you retire.</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Who bears the risk?</strong></td>
-                                    <td>The <span class="fluo">sponsor</span> (employer or government). If assets underperform, the sponsor must top up the fund.</td>
-                                    <td>The <span class="fluo">worker</span>. Poor returns or retiring in a downturn directly reduce the pension.</td>
+                                    <td><strong>Who suffers if the market crashes?</strong></td>
+                                    <td>The <span class="fluo">Boss or the Government</span>. They must magically find the cash to pay you anyway.</td>
+                                    <td><span class="fluo">You.</span> You lose everything and your pension is destroyed.</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Benefit formula</strong></td>
-                                    <td>$b = \alpha \times \text{years of service} \times w_{ref}$</td>
-                                    <td>$b = \frac{\text{Account Balance}}{\text{Annuity Factor}(LE, r)}$</td>
+                                    <td><strong>Changing Jobs</strong></td>
+                                    <td><span class="fluo">Terrible.</span> If you quit your job after 5 years, you usually lose all your nice pension promises.</td>
+                                    <td><span class="fluo">Perfect.</span> It's your bank account. You just take your money to the next job.</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Portability</strong></td>
-                                    <td><span class="fluo">Low</span>. Rights are hard to transfer when changing employers; early leavers typically lose value.</td>
-                                    <td><span class="fluo">High</span>. The account follows the worker across employers; the balance is always their own.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Redistribution</strong></td>
-                                    <td>Formula can include redistributive elements (minimum pension, capped accrual rate).</td>
-                                    <td><span class="fluo">None by design</span>. Lifetime income inequality passes directly into pension inequality.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Examples</strong></td>
-                                    <td>Traditional US &amp; UK occupational pensions; pre-reform Italian and French public schemes.</td>
-                                    <td>Chilean AFP system (1981), Australian Superannuation, US 401(k).</td>
+                                    <td><strong>Is it fair to the poor?</strong></td>
+                                    <td>Yes. The rules are often rewritten to give extra to poor workers.</td>
+                                    <td><span class="fluo">No.</span> If you were poor your whole life, your account is tiny, and you retire poor.</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -285,7 +279,7 @@
 
                     <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
                         <span class="alert-icon">📊</span>
-                        <span><strong>Global Trend:</strong> Most OECD countries have shifted new workers <span class="fluo">from DB to DC or NDC</span> over the past three decades, transferring longevity and investment risk from the state to the individual. This raises <span class="fluo">adequacy concerns for low-income workers</span> who cannot afford investment losses.</span>
+                        <span><strong>The Global Shift:</strong> Because the "Boss's Promise" (DB) was too expensive and risky, almost all modern countries are <span class="fluo">forcing young workers into Solo Accounts (DC)</span>. This means governments are completely pushing the terrifying risk of surviving old age onto the shoulders of normal citizens.</span>
                     </div>
                 </section>
 
@@ -293,40 +287,40 @@
 
                 <!-- ═══════ FUNDED PROS/CONS ═══════ -->
                 <section class="content-card">
-                    <h2 class="section-title">Funded Systems: Advantages and Drawbacks</h2>
+                    <h2 class="section-title">The Pros and Cons of True Savings (Funded)</h2>
 
                     <div class="compare-grid">
                         <div class="compare-card" style="border-left: 4px solid #10B981;">
-                            <h4>✅ Demographic Independence</h4>
-                            <p>Returns depend on <span class="fluo">capital markets</span>, not on the ratio of workers to retirees. A shrinking or ageing population does not directly erode the real rate of return on invested assets.</p>
+                            <h4>✅ Safe from Demographics</h4>
+                            <p>Because your money comes from Apple or Tesla stock, <span class="fluo">it doesn't matter if nobody has babies anymore</span>. Your cash is safe from the fertility crash.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #10B981;">
-                            <h4>✅ Capital Accumulation</h4>
-                            <p>Contributions build a <span class="fluo">productive capital stock</span>, potentially raising output and wages over time — a positive externality for the broader economy.</p>
+                            <h4>✅ Massive Economic Power</h4>
+                            <p>All this saved money builds a <span class="fluo">terrifyingly huge mountain of wealth</span> for the country, which banks use to build new factories and technology.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #10B981;">
-                            <h4>✅ Transparency</h4>
-                            <p>In DC systems, account balances are <span class="fluo">visible</span>; individuals can observe their accrued rights and plan their retirement accordingly.</p>
+                            <h4>✅ Total Transparency</h4>
+                            <p>You can check your personal balance every morning on your phone. <span class="fluo">No politician can lie to you</span> about how much money is left.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #10B981;">
-                            <h4>✅ Higher Potential Returns</h4>
-                            <p>Historically, diversified equity portfolios have delivered <span class="fluo">real returns of 4–7% annually</span>, well above $n + g$ in low-growth economies. This can provide significantly higher pensions for the same contribution rate.</p>
+                            <h4>✅ Rich Returns</h4>
+                            <p>Historically, the stock market creates a massive <span class="fluo">4% to 7% profit every year</span>, which makes you vastly richer than the slow PAYG pipe.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #EF4444;">
-                            <h4>❌ Transition Cost</h4>
-                            <p>Shifting from PAYG requires a generation that <span class="fluo">pays twice</span> — funding both the inherited PAYG liability (current retirees who are owed benefits) and their own personal accounts. This fiscal gap can be politically impossible.</p>
+                            <h4>❌ The Double-Payment Nightmare</h4>
+                            <p>If you switch from PAYG to a Funded system today, the young workers are <span class="fluo">forced to pay twice</span>: once to save for their own account, and once to keep the current old people alive. It is politically impossible.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #EF4444;">
-                            <h4>❌ Investment &amp; Longevity Risk</h4>
-                            <p>In DC systems, individuals bear <span class="fluo">market risk</span> (a crash just before retirement) and <span class="fluo">longevity risk</span> (outliving savings). Neither is easy to insure against.</p>
+                            <h4>❌ The Deadly Casino</h4>
+                            <p>You bear all the <span class="fluo">market risk</span>. If a new war starts the day before you retire, your life savings are gone. Also, if you live too long, your account hits zero.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #EF4444;">
-                            <h4>❌ Inadequate Redistribution</h4>
-                            <p>Pure DC systems <span class="fluo">mirror lifetime earnings inequality into retirement income inequality</span>. There is no automatic floor for low earners — they retire poor.</p>
+                            <h4>❌ Brutal Inequality</h4>
+                            <p>True savings systems do not care about kindness, only math. <span class="fluo">If you are a poor worker, you will be a poor grandpa.</span> There is no safety net.</p>
                         </div>
                         <div class="compare-card" style="border-left: 4px solid #EF4444;">
-                            <h4>❌ Financial-System Dependence</h4>
-                            <p>Large pension funds create <span class="fluo">systemic risk</span>; poor governance, mismanagement (e.g. the Maxwell scandal in the UK), or regulatory failure can destroy retirement savings for millions.</p>
+                            <h4>❌ Banker Corruption</h4>
+                            <p>Giant piles of money attract sharks. Bad management, lazy bankers, or secret fees can easily <span class="fluo">steal millions</span> from the citizens without them noticing.</p>
                         </div>
                     </div>
                 </section>
@@ -340,10 +334,9 @@
                     <div id="note-ch6-3" class="post-it-note">
                         <p><strong>Chapter 6.3 — PAYG vs Funded:</strong></p>
                         <ul>
-                            <li><span class="fluo">PAYG</span> earns an implicit return of $r_{PAYG} = n + g$ (population growth + wage growth). It is immediately implementable, redistributive, and resilient to market crashes — but <span class="fluo">highly sensitive to demographics</span>.</li>
-                            <li><span class="fluo">Funded systems</span> earn $r_{funded} = r$ (the real return on capital). They are demographically independent and build capital — but carry investment risk, transition costs, and provide <span class="fluo">no automatic redistribution</span>.</li>
-                            <li><span class="fluo">DB</span> shifts risk to the sponsor (employer/state); <span class="fluo">DC</span> shifts risk to the individual. The global trend is a shift from DB to DC, raising concerns about pension adequacy.</li>
-                            <li>Which system is better? That depends on whether $n + g$ is above or below $r$ — this is <span class="fluo">Aaron's Rule</span>, covered in Section 6.4.</li>
+                            <li><span class="fluo">PAYG (The Pipe):</span> Your profit is strictly $n + g$ (population growth + wage growth). It is instantly ready and protects you from Wall Street, but it <span class="fluo">dies when people stop having babies</span>.</li>
+                            <li><span class="fluo">Funded (Real Savings):</span> Your profit is simply $r$ (stock market return). It grows massive wealth and ignores the baby crisis, but it leaves you totally exposed to <span class="fluo">terrifying market crashes and banker fees</span>.</li>
+                            <li><span class="fluo">The Promise (DB) vs Your Account (DC):</span> DB forces the boss/state to take all the risk. DC forces YOU to take all the risk. <span class="fluo">The entire world is rapidly switching to DC</span> to save the government money.</li>
                         </ul>
                     </div>
                 </section>
