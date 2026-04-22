@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Ramsey Taxation &amp; Taxing Commodities</title>
+    <meta name="description"
+        content="Ramsey (1927) rule for optimal commodity taxation, inverse elasticity rule, regressivity problem, VAT in practice, and links between commodity and income taxation.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.1 — INTRODUCTION<span class="chevron">▼</span></button><div class="accordion-content"><a href="index.html" class="nav-link">1.1 What Is Public Finance?</a><a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a><a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.2 — INEQUALITY<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a><a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a><a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a><a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a><a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a><a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a><a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a><a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a><a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a><a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a><a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a><a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a><a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a><a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a><a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a><a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.8 — PUBLIC CHOICE THEORY<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a><a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a><a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a><a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.9 — TAXATION &amp; TAX INCIDENCE<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre9-1.html" class="nav-link">9.1 Why Tax? The Five Rs</a><a href="chapitre9-2.html" class="nav-link">9.2 Efficiency &amp; Deadweight Loss</a><a href="chapitre9-3.html" class="nav-link">9.3 Equity &amp; Progressivity</a><a href="chapitre9-4.html" class="nav-link">9.4 Tax Incidence</a></div></div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.10 — OPTIMAL TAXATION &amp; PIT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre10-1.html" class="nav-link">10.1 Framework &amp; Social Welfare</a>
+                        <a href="chapitre10-2.html" class="nav-link active">10.2 Ramsey &amp; Commodity Taxation</a>
+                        <a href="chapitre10-3.html" class="nav-link">10.3 Taxing Income &amp; Labor Supply</a>
+                        <a href="chapitre10-4.html" class="nav-link">10.4 UBI, Evasion &amp; Taxing Height</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>10.2 — Ramsey Taxation &amp; Taxing Commodities</h1>
+                <p class="subtitle">Chapter 10: Optimal Taxation &amp; Personal Income Tax — The Efficiency Angle</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ LESSONS FROM LAST LECTURE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Starting from Efficiency: Lessons from Lecture 9</h2>
+
+                    <p>Before turning to the full optimal tax problem (which involves both equity and efficiency), it is useful to isolate the <span class="fluo">pure efficiency angle</span>. What does minimizing welfare loss tell us about how to tax commodities?</p>
+
+                    <p>Recall from Chapter 9.2 the two key lessons on efficiency:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label">Lesson 1</span>
+                            <h4>📊 Tax Many Things a Little</h4>
+                            <p>Rather than taxing a few goods at very high rates, it is more efficient to <span class="fluo">spread a small tax over many goods</span>. DWL grows with the <em>square</em> of the tax rate — so doubling the rate quadruples the loss. Broad-base, low-rate systems minimize total deadweight loss.</p>
+                            <p class="example">Caveat: Very broad bases increase administrative complexity and compliance costs.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <span class="card-label">Lesson 2</span>
+                            <h4>🎯 Tax Inelastic Goods</h4>
+                            <p>Goods with inelastic demand generate <span class="fluo">less DWL per euro of revenue</span> when taxed, because consumers cannot easily substitute away. The behavioral response (quantity reduction) is small regardless of the tax rate.</p>
+                            <p class="example">Caveat: Inelastic goods are often necessities (food, energy, medicine) — taxing them is regressive.</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1rem;">Now: <em>How exactly should we set the tax rate?</em> The answer comes from the <strong>Ramsey (1927)</strong> framework, which formalizes Lesson 2 into a precise rule.</p>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ RAMSEY RULE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Ramsey Rule (1927): Inverse Elasticity</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">The Ramsey Problem</span>
+                        <p><strong>Setting:</strong> Only commodity taxes are available (no income tax). Only linear (proportional) taxes are allowed. The government must raise a fixed revenue $R_0$.</p>
+                        <p style="margin-top: 0.75rem;"><strong>Optimization problem:</strong> Choose tax rates $t_1, t_2, \ldots, t_N$ for each good $i$ to:</p>
+                        <p style="text-align: center; margin: 0.75rem 0;">$\min_{t_i} \; DWL(t_1, \ldots, t_N) \quad \text{subject to} \quad \sum_i t_i \cdot q_i \geq R_0$</p>
+                        <p>This is solved using the Lagrange multiplier method to find the constrained minimum of deadweight loss.</p>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #10B981;">
+                        <span class="def-label" style="background: #10B981;">The Ramsey Rule (Result)</span>
+                        <p>The optimal tax rate on good $i$ is <span class="fluo">inversely proportional to the uncompensated elasticity of demand</span>:</p>
+                        <p style="text-align: center; margin: 1rem 0; font-size: 1.15rem;">$\frac{t_i}{p_i} = \frac{k}{\eta_i^u}$</p>
+                        <p>where $k$ is a constant (the same for all goods, determined by the revenue constraint) and $\eta_i^u$ is the uncompensated demand elasticity for good $i$.</p>
+                        <p style="margin-top: 0.75rem;"><strong>Reading the rule:</strong> The lower the elasticity (more inelastic demand), the <span class="fluo">higher the optimal tax rate</span>. The higher the elasticity (elastic demand), the lower the optimal rate. Tax rates should be set <em>inversely</em> to how responsive demand is.</p>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🔑</span>
+                        <span><strong>Intuition:</strong> A tax on an inelastic good causes little behavioral change — consumers must buy regardless of price. The revenue is collected with minimal DWL. A tax on an elastic good causes large substitution — consumers flee the taxed good, DWL is high, and revenue is low. The Ramsey rule says: <span class="fluo">target the goods that people cannot avoid buying.</span></span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ REGRESSIVITY PROBLEM ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Regressivity Problem</h2>
+
+                    <p>The Ramsey rule is elegant — but it immediately runs into a severe <span class="fluo">equity problem</span>.</p>
+
+                    <div class="definition-box" style="border-left: 4px solid #EF4444;">
+                        <span class="def-label" style="background: #EF4444;">The Problem</span>
+                        <p>Demand for <strong>necessities</strong> (food, basic energy, medicines, housing) is <em>highly inelastic</em> — poor and rich alike must purchase them regardless of price. By the Ramsey rule, we should tax necessities at <em>high rates</em>.</p>
+                        <p style="margin-top: 0.75rem;">But necessities constitute a <span class="fluo">much larger share of poor households' income</span> than rich households' income. A high tax on bread is essentially a regressive tax — it hits the poor harder in percentage terms. Pure efficiency reasoning points directly toward regressive taxation.</p>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">Three practical solutions address this conflict:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Allow for Different Elasticities by Income Group</strong>
+                            <p>In principle, we could recognize that the elasticity of demand for necessities differs across income groups — a poor person may have truly no alternative to buying bread, while a rich person could substitute expensive substitutes. Conditioning taxes on income-group elasticities would be more equitable. <span class="fluo">In practice, however, this is extremely difficult to implement</span> — we cannot charge different prices for the same good based on buyer income (without means-testing at every cashier).</p>
+                        </li>
+                        <li>
+                            <strong>Implement Exemptions on Necessities</strong>
+                            <p>The simplest and most widespread solution: <span class="fluo">apply reduced or zero tax rates on necessities</span>. This sacrifices some efficiency (since necessities are inelastic, we forego easy revenue) to improve equity (poor households' consumption basket is lighter). This is exactly what reduced VAT rates on food, medicine, and books achieve.</p>
+                        </li>
+                        <li>
+                            <strong>Complement Commodity Taxation with Income Taxation</strong>
+                            <p>The most powerful solution: <span class="fluo">use commodity taxes for efficiency gains, and income taxes for redistribution</span>. A uniform VAT at 21% is efficient and easy to collect; a progressive income tax corrects for the regressivity of the VAT. The two systems work together, each doing what it is best at. This is the dominant approach in developed economies.</p>
+                        </li>
+                    </ol>
+
+                    <div class="exam-tip">
+                        <p><strong>For the exam:</strong> The Ramsey rule → inverse elasticity → tax necessities more → regressivity problem → three solutions. This is a complete chain of logic. Know it fluently. The examiner will expect you to identify the tension between the efficiency rule and equity, and to explain why real-world VAT systems use reduced rates for food and medicine.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ VAT IN PRACTICE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Commodity Taxation in Practice: VAT in Czechia</h2>
+
+                    <p>In Czechia and most of the developed world, the primary commodity tax is <strong>Value-Added Tax (VAT)</strong>. It is economically the most significant tax — accounting for <span class="fluo">over 20% of total government revenue</span>.</p>
+
+                    <p>The Czech VAT system applies differentiated rates to address the regressivity concern identified by the Ramsey framework:</p>
+
+                    <div class="table-wrapper" style="margin-top: 1.25rem;">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Rate</th>
+                                    <th>Category</th>
+                                    <th>Applies To</th>
+                                    <th>Economic Rationale</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>21%</strong></td>
+                                    <td>Standard</td>
+                                    <td>Most goods and services</td>
+                                    <td>Broad base; goods with more elastic demand (luxuries, discretionary spending)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>12%</strong></td>
+                                    <td>Reduced</td>
+                                    <td>Food, books, medicines, hotel accommodation, public transport</td>
+                                    <td>Necessities, especially those consumed by lower-income households; reduces regressivity</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>0%</strong></td>
+                                    <td>Zero-Rated</td>
+                                    <td>Exports, intra-EU supplies</td>
+                                    <td>Avoid double taxation in international trade (VAT charged at destination)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Exempt</strong></td>
+                                    <td>No VAT</td>
+                                    <td>Financial services, education, healthcare</td>
+                                    <td>No input tax credit; complex to VAT; often subsidized for equity reasons</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🌍</span>
+                        <span><strong>International Comparison:</strong> The lecture's first graph ("Taxes on income vs. taxes on goods and services, 2022") reveals a global pattern. <span class="fluo">Developing countries rely more heavily on consumption taxes</span> (VAT, sales taxes) because informal employment makes income harder to observe, while VAT is collected at the point of sale with fewer evasion opportunities. Developed European countries tend to have <em>both</em> high income taxes and high consumption taxes — reflecting a large fiscal capacity and a powerful state. The US is an outlier — relatively high income taxes but <span class="fluo">no federal VAT</span> due to political resistance, relying more on state-level sales taxes.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ LINKS BETWEEN TWO GRAPHS ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Connecting the Macro and Micro Views of Taxation</h2>
+
+                    <p>The two graphs from the lecture complement each other and together reveal the full picture of any tax system:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label">Macro View</span>
+                            <h4>📊 Income vs. Consumption Taxes (Cross-Country)</h4>
+                            <p>This graph shows how countries <span class="fluo">choose their tax base</span>. No single model dominates. The fundamental trade-off is:</p>
+                            <ul>
+                                <li><strong>Income taxes</strong> = equity (progressive structure, ability-to-pay)</li>
+                                <li><strong>Consumption taxes</strong> = efficiency (easier to collect, broad base, less behavioral distortion of labor supply)</li>
+                            </ul>
+                            <p>Real systems are a mix, determined by administrative capacity, political economy, and distributional goals.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label">Micro View</span>
+                            <h4>📈 Marginal vs. Average Tax Rate (US)</h4>
+                            <p>This graph shows how the <span class="fluo">progressive structure works at the individual level</span>. The marginal rate (red) rises in steps (tax brackets); the average rate (blue) rises smoothly and is always below marginal.</p>
+                            <p><strong>Critical insight:</strong> Behavioral responses (how much to work, whether to evade, whether to invest) depend on the <span class="fluo">marginal rate, not the average rate</span>. This is why Mirrlees and Saez focus on the marginal rate schedule as the main design variable.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>The Policy Synthesis:</strong> Governments face two simultaneous choices: (1) <span class="fluo">tax base</span> — income or consumption? and (2) <span class="fluo">tax structure</span> — progressive or flat? The Ramsey framework helps answer question (1) for commodity taxation. Mirrlees and Saez (Chapter 10.3) answer question (2) for income taxation. Real systems combine both instruments.</span>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="btn-note" onclick="toggleNote('note-ch10-2')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch10-2" class="post-it-note">
+                        <p><strong>Chapter 10.2 — The Big Picture:</strong></p>
+                        <ul>
+                            <li><strong>Efficiency lessons:</strong> Tax many things a little (DWL ∝ t²); tax inelastic goods (less behavioral response).</li>
+                            <li><strong>Ramsey (1927):</strong> $\frac{t_i}{p_i} = \frac{k}{\eta_i^u}$ — optimal tax is inversely proportional to demand elasticity. Minimize DWL subject to revenue constraint.</li>
+                            <li><strong>Regressivity problem:</strong> Necessities are inelastic → taxed heavily by Ramsey → but necessities = large share of poor income → regressive.</li>
+                            <li><strong>Three solutions:</strong> (1) differentiate by income group [impractical], (2) exemptions on necessities [Czech VAT reduced rates], (3) complement with progressive income tax [the actual solution].</li>
+                            <li><strong>Czech VAT:</strong> 21% standard / 12% reduced (food, medicine, books) / 0% exports / exempt (finance, health, education).</li>
+                            <li><strong>Marginal vs. average rate:</strong> Behavior depends on <span class="fluo">marginal rate</span>. Average rate tells you the total burden. Never confuse them.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

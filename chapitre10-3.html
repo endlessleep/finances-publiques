@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Taxing Income, Labor Supply &amp; Mirrlees-Saez</title>
+    <meta name="description"
+        content="Taxing personal income: imperfect information, labor supply elasticities, the Laffer curve, Mirrlees (1971) optimal income tax, and Saez (2001) top marginal rate formula.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.1 — INTRODUCTION<span class="chevron">▼</span></button><div class="accordion-content"><a href="index.html" class="nav-link">1.1 What Is Public Finance?</a><a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a><a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.2 — INEQUALITY<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a><a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a><a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a><a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a><a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a><a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a><a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a><a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a><a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a><a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a><a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a><a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a><a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a><a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a><a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a><a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.8 — PUBLIC CHOICE THEORY<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a><a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a><a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a><a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.9 — TAXATION &amp; TAX INCIDENCE<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre9-1.html" class="nav-link">9.1 Why Tax? The Five Rs</a><a href="chapitre9-2.html" class="nav-link">9.2 Efficiency &amp; Deadweight Loss</a><a href="chapitre9-3.html" class="nav-link">9.3 Equity &amp; Progressivity</a><a href="chapitre9-4.html" class="nav-link">9.4 Tax Incidence</a></div></div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.10 — OPTIMAL TAXATION &amp; PIT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre10-1.html" class="nav-link">10.1 Framework &amp; Social Welfare</a>
+                        <a href="chapitre10-2.html" class="nav-link">10.2 Ramsey &amp; Commodity Taxation</a>
+                        <a href="chapitre10-3.html" class="nav-link active">10.3 Taxing Income &amp; Labor Supply</a>
+                        <a href="chapitre10-4.html" class="nav-link">10.4 UBI, Evasion &amp; Taxing Height</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>10.3 — Taxing Income: Labor Supply, Mirrlees &amp; Saez</h1>
+                <p class="subtitle">Chapter 10: Optimal Taxation &amp; Personal Income Tax — The Income Tax Schedule</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ THE INFORMATION PROBLEM ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Income Taxation Is Complicated: The Information Problem</h2>
+
+                    <p>The ideal tax would target something that is <strong>exogenous</strong> (not affected by behavior), <strong>easily observable</strong> (impossible to hide), and <strong>positively correlated with ability</strong> (so it achieves redistribution). The ideal candidate — <span class="fluo">productivity</span> — fails on all three counts.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label">The Ideal World</span>
+                            <h4>✅ Lump-Sum Tax on Productivity</h4>
+                            <p>In an ideal world, the government would observe each person's <strong>productivity</strong> (wage rate, ability) directly, and tax it with a lump-sum tax — a fixed amount that does not depend on hours worked. This would have <span class="fluo">zero behavioral distortion</span>: you cannot change your productivity level, so the tax cannot distort your choices.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <span class="card-label">The Real World</span>
+                            <h4>❌ We Only Observe Income</h4>
+                            <p>Governments cannot observe productivity directly. They only observe <span class="fluo">income = productivity × time</span>. The time dimension (effort, hours worked) is <em>chosen</em> by the individual in response to incentives. When we tax income, we tax the product of something fixed (productivity) and something flexible (time), so the tax <span class="fluo">inevitably distorts behavior</span>.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>The Core Problem:</strong> The government cannot separate "how productive you are" from "how hard you work." Taxing income punishes both. A productive person who works hard is taxed heavily. A less productive person who works little may pay little. This creates an <span class="fluo">incentive to hide productivity by working less</span> — a behavioral distortion that makes income taxation fundamentally imperfect.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ LABOR SUPPLY ELASTICITIES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Four Margins of Labor Supply Response</h2>
+
+                    <p>To quantify the behavioral cost of income taxation, we need to understand how people's labor supply responds to changes in the after-tax wage. There are <span class="fluo">four distinct margins</span> along which people can respond:</p>
+
+                    <div class="compare-grid" style="grid-template-columns: 1fr 1fr;">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label">Margin 1</span>
+                            <h4>⏱️ Intensive Margin (Hours)</h4>
+                            <p>Conditional on being employed, <span class="fluo">how many hours do you work?</span> If taxes increase, employed workers may reduce overtime, take more vacation, or work fewer shifts. This is the most commonly studied margin.</p>
+                            <p class="example">Empirically: Relatively modest response for prime-age workers. Stronger for secondary earners in dual-income households.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label">Margin 2</span>
+                            <h4>🚪 Extensive Margin (Participation)</h4>
+                            <p><span class="fluo">Do you work at all?</span> High taxes (or high benefit withdrawal rates) can push people out of the labor market entirely — especially individuals at the margin of working (mothers returning from maternity leave, low-skill workers near the minimum wage, early retirees).</p>
+                            <p class="example">Empirically: Often larger than hours elasticity, especially at the bottom of the income distribution.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #F59E0B;">
+                            <span class="card-label">Margin 3</span>
+                            <h4>⚖️ Steady-State Work vs. Leisure</h4>
+                            <p>Over the long run, how does the <span class="fluo">permanent after-tax wage</span> affect individuals' career choices — how much education to acquire, which profession to enter, how ambitious to be? High incomeome taxes on top earners may reduce the incentive to invest in high-productivity careers.</p>
+                            <p class="example">Empirically: Hard to measure separately; captured in long-run elasticity estimates.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label">Margin 4</span>
+                            <h4>🔄 Intertemporal Substitution</h4>
+                            <p>If taxes are <span class="fluo">temporarily high today and lower tomorrow</span>, workers may reduce effort now (shift work to the future) and vice versa. This matters for temporary tax cuts/hikes and for retirement timing decisions.</p>
+                            <p class="example">Empirically: Relevant for top earners and entrepreneurs who have timing flexibility over income recognition.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Labor Supply Graphs</span>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.75rem;">
+                            <div>
+                                <img src="labor-supply-basic.png" alt="Basic upward-sloping labor supply curve" style="width:100%; border-radius:6px;">
+                                <p style="font-size: 0.85rem; text-align: center; color: var(--clr-text-muted); margin-top: 0.5rem;"><strong>Basic Labor Supply:</strong> When the wage rises from $w_1$ to $w_2$, hours worked increase from $L_1$ to $L_2$ (A → B). The substitution effect dominates at this range — higher wages make work more attractive relative to leisure. Note: at very high wages, the income effect may dominate and bend the curve backward.</p>
+                            </div>
+                            <div>
+                                <img src="labor-supply-elasticity.png" alt="Inelastic vs elastic labor supply" style="width:100%; border-radius:6px;">
+                                <p style="font-size: 0.85rem; text-align: center; color: var(--clr-text-muted); margin-top: 0.5rem;"><strong>Elasticity Matters:</strong> Left (steep) = inelastic supply — hours barely respond to wage changes (e.g. full-time workers with fixed contracts). Right (flat) = elastic supply — hours respond strongly (e.g. secondary earners, freelancers, students). Taxes cause larger distortions when supply is elastic.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">📊</span>
+                        <span><strong>Empirical Consensus:</strong> The overall elasticity of labor supply to after-tax wages is approximately <span class="fluo">0.2</span> — meaning a 10% increase in the net wage leads to about a 2% increase in hours worked. This is modest but not zero. Crucially: <strong>effects are disproportionately larger for large reforms</strong> (due to frictions and long-term adjustment) and income-type substitution (e.g. converting labor income to capital income) is an important behavioral margin for high earners.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ LAFFER CURVE ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Laffer Curve: Revenue vs. Rate</h2>
+
+                    <img src="laffer-curve.png" alt="Laffer curve: tax revenue as a function of tax rate" style="max-width: 60%; margin: 0 auto 1.5rem;">
+
+                    <p>The <strong>Laffer curve</strong> shows the relationship between the tax rate and total tax revenue collected. It captures the tension between two opposite forces:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>📈 Mechanical Effect (Revenue ↑)</h4>
+                            <p>All else equal, a higher tax rate means the government takes a larger share of each dollar of income earned. <span class="fluo">Revenue increases mechanically with the rate</span>, assuming behavior does not change.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>📉 Behavioral Effect (Revenue ↓)</h4>
+                            <p>But as rates rise, individuals work less, evade more, and shift income to untaxed forms. The <span class="fluo">tax base shrinks</span>. At sufficiently high rates, this behavioral effect dominates and revenue actually falls despite the higher rate.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Implications</span>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>At $t = 0\%$: No revenue (trivially).</li>
+                            <li>At $t = 100\%$: No one works (all income is taken) → no revenue.</li>
+                            <li>Therefore, revenue is maximized at some intermediate rate $t^*$ (the peak of the curve).</li>
+                            <li><strong>The revenue-maximizing rate is NOT necessarily the socially optimal rate.</strong> A government that also cares about equity and worker welfare may choose a rate below or even above $t^*$ depending on its social welfare function.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exam-tip">
+                        <p><strong>For the exam:</strong> The Laffer curve is a logical result, not an empirical claim about where most countries are. The political debate ("we are on the wrong side of the Laffer curve") requires evidence that the behavioral effect dominates. For most countries, the empirical evidence suggests we are on the <em>left</em> (upward-sloping) side — raising top rates still raises revenue. The Saez (2001) optimal rate formula formalizes this.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ MIRRLEES ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Mirrlees (1971): The First Rigorous Model</h2>
+
+                    <p><strong>James Mirrlees (1971)</strong> — Nobel Prize 1996 — provided the first rigorous mathematical model of optimal income taxation, fully accounting for the equity–efficiency trade-off in the labor market.</p>
+
+                    <p>The key methodological innovation of Mirrlees was to recognize that <span class="fluo">the schedule of marginal tax rates is the main policy lever</span>. Consider what happens when we raise the marginal tax rate at a specific income level $Y_0$:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <h4>💸 Efficiency Cost</h4>
+                            <p>Raising the marginal rate at $Y_0$ <span class="fluo">discourages effort</span> for all individuals whose income is close to $Y_0$ — they earn exactly that amount and now face a higher tax on each additional euro. This is a distortion of the intensive margin.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>💰 Revenue Gain (Infra-marginal)</h4>
+                            <p>For individuals who earn $Y > Y_0$ (they are already above the threshold), raising the marginal rate at $Y_0$ increases their <em>average</em> tax rate but <span class="fluo">does not change their marginal rate</span>. Their incentive to exert effort at the margin is unaffected. The government collects extra revenue from them at no behavioral cost.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🔑</span>
+                        <span><strong>Mirrlees Key Insight:</strong> A tax hike at income level $Y_0$ has a <span class="fluo">dual effect</span>: (1) it distorts behavior for people <em>at</em> $Y_0$ (efficiency cost), but (2) it is a non-distortionary lump-sum tax for all people <em>above</em> $Y_0$ (pure revenue gain). The optimal marginal rate at each income level balances these two forces. This was computationally impossible to solve analytically — Mirrlees had to use numerical methods.</span>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Mirrlees Key Takeaways</span>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li><strong>Marginal rates should be positive throughout</strong> — a zero marginal rate at any point would mean leaving revenue on the table without behavioral benefit for the people above.</li>
+                            <li><strong>Transfers to the poor are efficient</strong> — the Earned Income Tax Credit (EITC) logic: subsidizing low earners through a negative income tax can increase labor force participation (extensive margin) while improving equity.</li>
+                            <li><strong>The top marginal rate:</strong> Mirrlees's numerical simulations actually gave surprisingly <em>moderate</em> optimal top rates (around 50–70%), shocking the profession at the time.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ SAEZ ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Saez (2001): Elasticities &amp; Optimal Top Rates</h2>
+
+                    <p><strong>Emmanuel Saez (2001)</strong> took Mirrlees's complex mathematical model and derived a much simpler, transparent formula using elasticities. The key contribution is to express the optimal top marginal tax rate in terms of three observable inputs.</p>
+
+                    <div class="definition-box">
+                        <span class="def-label">The Saez Formula for the Optimal Top Rate</span>
+                        <p>The revenue-maximizing (and approximately welfare-maximizing under certain SWFs) top marginal rate $t^*$ is:</p>
+                        <p style="text-align: center; margin: 1rem 0; font-size: 1.15rem;">$t^* = \frac{1}{1 + a \cdot \varepsilon}$</p>
+                        <p>where:</p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>$\varepsilon$ = elasticity of taxable income with respect to the net-of-tax rate (measures behavioral response)</li>
+                            <li>$a$ = the Pareto parameter of the income distribution at the top (measures the thickness of the tail — how many very high earners there are)</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">Using realistic calibrations with US data, Saez found <span class="fluo">optimal top marginal rates between 50% and 80%</span> — substantially higher than current US rates (~37%) and most EU rates.</p>
+
+                    <div class="compare-grid three-col" style="margin-top: 1.5rem;">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label">Factor 1</span>
+                            <h4>📉 Elasticity (ε)</h4>
+                            <p>The lower the elasticity of taxable income (less behavioral response), <span class="fluo">the higher the optimal rate</span>. If high earners cannot easily avoid the tax (no evasion, no emigration), you can tax them heavily.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label">Factor 2</span>
+                            <h4>📊 Income Distribution</h4>
+                            <p>Greater inequality (heavier right tail) <span class="fluo">increases the optimal rate</span>. When there are many very high earners, there is more revenue to be gained and more redistribution to be done.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label">Factor 3</span>
+                            <h4>⚖️ Social Welfare Function</h4>
+                            <p>A stronger preference for equity (more Rawlsian SWF, or caring about a large low-income group) <span class="fluo">pushes the optimal rate up</span>. Utilitarian planners may accept lower rates if redistribution has large efficiency costs.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Limitations of Saez (2001):</strong> (1) The model assumes <span class="fluo">no tax evasion</span> — in reality, high earners respond partly by shifting income to untaxed forms, which inflates the measured elasticity. (2) <strong>Elasticities are not perfectly observable</strong> and are extremely sensitive to the specification of the income distribution and preferences. Small changes in ε generate large changes in $t^*$. (3) The formula gives the revenue-maximizing rate — social optimality also depends on the SWF.</span>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #2563EB;">
+                        <span class="def-label">Czech Application: Dušek &amp; Šatava (2015)</span>
+                        <p>Using Czech-specific data and carefully selected input parameters (elasticity estimates, income distribution, and a mixed SWF), Dušek and Šatava (2015) estimated that the <span class="fluo">optimal marginal tax rate for the highest incomes in Czechia ranges between 33–43%</span>. This is notably lower than Saez's US estimates, reflecting:</p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Smaller inequality in Czechia (thinner high-income tail → lower optimal rate)</li>
+                            <li>Higher estimated behavioral elasticities for Czech top earners (easier to evade or shift incomes)</li>
+                            <li>Different calibration of the SWF</li>
+                        </ul>
+                        <p style="margin-top: 0.75rem;">The study also separately estimates optimal rates for <strong>employees</strong> vs. <strong>entrepreneurs</strong>, finding significantly lower optimal rates for self-employed individuals — reflecting their much higher ability to reclassify income and evade taxation.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="btn-note" onclick="toggleNote('note-ch10-3')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch10-3" class="post-it-note">
+                        <p><strong>Chapter 10.3 — The Big Picture:</strong></p>
+                        <ul>
+                            <li><strong>Information problem:</strong> Gov't observes income (= productivity × effort), not productivity alone. Taxing income always distorts effort — unlike a lump-sum tax on productivity.</li>
+                            <li><strong>Four margins of labor supply:</strong> Intensive (hours), Extensive (participation), Steady-state (career), Intertemporal (timing). Behavior depends on <span class="fluo">marginal rate, not average rate</span>.</li>
+                            <li><strong>Empirical elasticity ≈ 0.2.</strong> Larger for part-timers, secondary earners; larger for big reforms; income-type substitution is a key evasion margin.</li>
+                            <li><strong>Laffer curve:</strong> Revenue = 0 at t=0% and t=100%. Peak at $t^*$. Revenue-maximizing rate ≠ socially optimal rate.</li>
+                            <li><strong>Mirrlees (1971):</strong> Marginal rate hike at $Y_0$ → distorts only people at $Y_0$, but is non-distortionary lump sum for people above $Y_0$. Marginal rates positive everywhere; transfers efficient (EITC logic).</li>
+                            <li><strong>Saez (2001):</strong> $t^* = 1/(1+a\varepsilon)$. Optimal top rate 50–80% (US data). Higher with: low elasticity, high inequality, more Rawlsian SWF.</li>
+                            <li><strong>Dušek &amp; Šatava (2015):</strong> Optimal top rate 33–43% for Czechia. Lower than US estimates: less inequality + higher behavioral elasticities.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

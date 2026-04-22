@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — UBI, Tax Evasion &amp; Taxing Height</title>
+    <meta name="description"
+        content="Universal basic income, lower-tail transfers, imperfect information and tax evasion, bunching at kinks, shadow economies, and the Mankiw-Weinzierl height tax paradox.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.1 — INTRODUCTION<span class="chevron">▼</span></button><div class="accordion-content"><a href="index.html" class="nav-link">1.1 What Is Public Finance?</a><a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem &amp; Government</a><a href="chapitre1-3.html" class="nav-link">1.3 Market Failures &amp; Intervention</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.2 — INEQUALITY<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality &amp; Theory</a><a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a><a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a><a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a><a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS &amp; EXTERNALITIES<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a><a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a><a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a><a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.5 — CENTRAL &amp; LOCAL GOVERNMENT<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre5-1.html" class="nav-link">5.1 Role &amp; Pressures</a><a href="chapitre5-2.html" class="nav-link">5.2 PFM &amp; Budgeting</a><a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism &amp; Innovation</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a><a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a><a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a><a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a><a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a><a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a><a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs &amp; Policy</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.8 — PUBLIC CHOICE THEORY<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre8-1.html" class="nav-link">8.1 Political Economy &amp; Preferences</a><a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems &amp; Arrow</a><a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a><a href="chapitre8-4.html" class="nav-link">8.4 Power &amp; Political Corruption</a></div></div>
+                <div class="accordion-item"><button class="accordion-header" onclick="toggleAccordion(this)"><span class="folder-icon">📁</span> CH.9 — TAXATION &amp; TAX INCIDENCE<span class="chevron">▼</span></button><div class="accordion-content"><a href="chapitre9-1.html" class="nav-link">9.1 Why Tax? The Five Rs</a><a href="chapitre9-2.html" class="nav-link">9.2 Efficiency &amp; Deadweight Loss</a><a href="chapitre9-3.html" class="nav-link">9.3 Equity &amp; Progressivity</a><a href="chapitre9-4.html" class="nav-link">9.4 Tax Incidence</a></div></div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.10 — OPTIMAL TAXATION &amp; PIT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre10-1.html" class="nav-link">10.1 Framework &amp; Social Welfare</a>
+                        <a href="chapitre10-2.html" class="nav-link">10.2 Ramsey &amp; Commodity Taxation</a>
+                        <a href="chapitre10-3.html" class="nav-link">10.3 Taxing Income &amp; Labor Supply</a>
+                        <a href="chapitre10-4.html" class="nav-link active">10.4 UBI, Evasion &amp; Taxing Height</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>10.4 — UBI, Tax Evasion &amp; The Height Tax Paradox</h1>
+                <p class="subtitle">Chapter 10: Optimal Taxation &amp; Personal Income Tax — Real-World Complications</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════ BUDGET CONSTRAINT ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Tax-Transfer System as a Budget Constraint</h2>
+
+                    <p>The full picture of income taxation is not just about what you pay at the top — it also includes <span class="fluo">what transfers people receive at the bottom</span>. The tax-transfer system can be visualized as a budget constraint linking pre-tax income $z$ to after-tax income $c$.</p>
+
+                    <img src="tax-transfer-system-budget-constraint.png" alt="Tax-transfer system as budget constraint" style="max-width: 70%; margin: 1.5rem auto; border-radius: 8px;">
+
+                    <div class="definition-box">
+                        <span class="def-label">Reading the Graph</span>
+                        <p>The <strong>dotted 45° line</strong> represents the no-tax benchmark: every additional euro earned translates one-for-one into disposable income. The <strong>solid curve</strong> shows actual after-tax income $c = z - T(z)$.</p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>The <strong>slope</strong> of the curve is $1 - T'(z)$, where $T'(z)$ is the marginal tax rate. A higher marginal rate flattens the curve — each extra euro earned translates into a smaller increase in disposable income, directly reducing work incentives.</li>
+                            <li>The <strong>intercept</strong> $-T(0)$ can be positive, meaning individuals with zero income receive a transfer (negative tax). This represents welfare benefits, minimum income guarantees, or Universal Basic Income.</li>
+                            <li>The vertical gap between the 45° line and the solid curve at any income level $z$ is the <span class="fluo">tax paid (or benefit received) $T(z)$</span> at that income level.</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🔑</span>
+                        <span><strong>Core Insight:</strong> The tax-transfer system simultaneously <span class="fluo">redistributes income</span> (the vertical shift — who gets more than they earn, who gets less) and <span class="fluo">distorts incentives</span> (the slope — how much of each additional euro you keep). This graph captures the fundamental equity–efficiency trade-off in one image. Any reform must navigate both dimensions simultaneously.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ LOWER TAIL: UBI ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Problem 3 (Lower Tail): Who Gets Transfers &amp; Universal Basic Income</h2>
+
+                    <p>The lower end of the income distribution presents a distinct policy challenge: <span class="fluo">people who earn very little or nothing receive transfers rather than paying taxes</span>. Designing these transfers optimally is as important as designing the marginal rate schedule at the top.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <h4>❓ Who Should Be Eligible?</h4>
+                            <p>Traditional welfare programs use means-testing: only those below a certain income threshold qualify. But means-testing creates <span class="fluo">high effective marginal tax rates at the bottom</span> — as earned income rises, benefits are withdrawn at near-100% rates, discouraging low earners from working more.</p>
+                            <p class="example">Example: If you earn €200/month more but lose €180 in benefit → your net gain is only €20. The effective marginal rate is 90%.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <h4>💶 How Large Should Transfers Be?</h4>
+                            <p>Larger transfers reduce poverty but cost more (higher tax revenue needed) and increase the work disincentive. The optimal size depends on the SWF, the elasticity of labor supply at the bottom, and the available tax base.</p>
+                            <p class="example">The Mirrlees insight: Transfers are efficient if they increase extensive-margin participation (more people entering the labor market earns more total revenue).</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Universal Basic Income (UBI)</span>
+                        <p><strong>Definition:</strong> Providing all citizens of a country with a given sum of money, <span class="fluo">regardless of their income, resources, or employment status</span>.</p>
+                        <p style="margin-top: 0.75rem;"><strong>Aims:</strong></p>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Alleviate poverty with certainty — no one falls through the cracks</li>
+                            <li>Replace many complicated, costly, and stigmatizing welfare schemes with a single universal payment</li>
+                            <li>Remove the poverty trap — since UBI is universal, there is no benefit withdrawal as income rises, so effective marginal rates are lower at the bottom</li>
+                        </ul>
+                        <p style="margin-top: 0.75rem;"><strong>Financing:</strong> Typically proposed to be funded through a <span class="fluo">more progressive income tax</span> — higher rates on top incomes fund the universal floor payment. Novel proposals include a <strong>robot tax</strong> (Costinot &amp; Werning, 2023): as automation displaces workers, a tax on robots/automation revenue could fund the UBI, transferring income from capital to labor.</p>
+                    </div>
+
+                    <div class="alert-box alert-yellow" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">⚠️</span>
+                        <span><strong>Debate:</strong> UBI critics argue it is expensive (a universal payment to everyone, including the rich, requires large tax increases), that it could reduce labor supply by providing a subsistence income without work requirements, and that targeted transfers serve the truly poor more efficiently per euro spent. UBI proponents argue the behavioral effects of removing poverty traps may partially offset the cost, and that administrative simplicity and dignity arguments justify the universality.</span>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ TAX EVASION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Problem 2: Imperfect Information &amp; Tax Evasion</h2>
+
+                    <p>A second major problem for income taxation is that <span class="fluo">taxpayers have a direct incentive to conceal income or misreport it</span> in order to reduce their tax liability. Tax evasion is not a marginal concern — it substantially inflates observed behavioral elasticities and undermines the revenue base.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <span class="card-label">High Evasion Risk</span>
+                            <h4>🏗️ Self-Employment &amp; Entrepreneurs</h4>
+                            <p>When income is <span class="fluo">self-reported without third-party verification</span>, opportunities for evasion are abundant: underreporting revenue, overstating business expenses, mixing personal and business consumption, paying family members who do not work, delaying income recognition.</p>
+                            <p class="example">This is why optimal rates for entrepreneurs (Dušek &amp; Šatava, 2015) are estimated to be lower — not because we want to be generous, but because their higher elasticity reflects partly tax avoidance.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label">Low Evasion Risk</span>
+                            <h4>🏢 Employment with Third-Party Reporting</h4>
+                            <p>When your employer reports your salary directly to the tax authority (as in most employment relationships with PAYE/withholding systems), <span class="fluo">evasion is nearly impossible</span>. The information exists in two independent records, so misreporting is easily detected. This is why income taxes on wages are more easily collected than taxes on self-employment income.</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">Common evasion strategies include:</p>
+                    <ul>
+                        <li><strong>Misinvoicing</strong> — reporting fictitious or inflated costs between related parties across borders</li>
+                        <li><strong>Underreporting</strong> — simply declaring less income than actually earned (cash businesses)</li>
+                        <li><strong>Claiming undue deductions</strong> — inflating expenses, personal consumption as business expenses</li>
+                        <li><strong>Income shifting</strong> — converting labor income to capital income (lower rate), or shifting to family members in lower brackets</li>
+                    </ul>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #8B5CF6;">
+                        <span class="def-label">Bunching at Kinks (Saez, 2010)</span>
+                        <p>One of the most powerful pieces of evidence for behavioral responses to taxation is the phenomenon of <strong>bunching at kinks</strong>. In a progressive tax system, each bracket boundary creates a "kink" in the budget constraint — the marginal rate jumps discontinuously at these points.</p>
+                        <p style="margin-top: 0.75rem;">If there were no behavioral response at all, the distribution of income would be smooth. But empirically, <span class="fluo">we observe excess mass (bunching) in the distribution of reported income just below each kink</span> — individuals manipulate their reported income to stay just below the high-rate bracket. This bunching behavior provides clean estimates of the elasticity of taxable income.</p>
+                        <p style="margin-top: 0.75rem;"><strong>Policy implication:</strong> Bunching is evidence that the behavioral response to marginal rates is real. It also reveals that the response is partly avoidance/evasion (shifting reported income), not just real labor supply reduction.</p>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">The Shadow Economy (IMF)</span>
+                        <p>The <strong>shadow economy</strong> (also called informal economy or underground economy) refers to economic activity that is <span class="fluo">deliberately concealed from tax authorities</span>. IMF data show that shadow economies represent anywhere from 5–10% of GDP in developed countries to 30–50% of GDP in many developing nations.</p>
+                        <p style="margin-top: 0.75rem;">The shadow economy is itself a form of behavioral response to taxation — high marginal rates increase the reward to informality. It erodes the tax base, shifts the burden to compliant taxpayers, and creates unfair competition between formal and informal firms.</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ HEIGHT TAX ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Height Tax Paradox: Mankiw &amp; Weinzierl (2010)</h2>
+
+                    <p>One of the most thought-provoking results in optimal taxation is the so-called <strong>height tax</strong>, proposed seriously by Mankiw and Weinzierl (2010) as a logical implication of the Mirrlees framework.</p>
+
+                    <p>According to optimal taxation theory, the ideal tax base should have three properties:</p>
+
+                    <div class="compare-grid three-col" style="margin-top: 1rem;">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label">Property a</span>
+                            <h4>✅ Exogenous</h4>
+                            <p>The tax base should not be alterable by the individual's behavior. If people can change it to avoid taxes, the tax creates distortions and avoidance opportunities.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label">Property b</span>
+                            <h4>✅ Observable</h4>
+                            <p>The tax authority must be able to measure it accurately and objectively. Unobservable characteristics create vast opportunities for cheating and false reporting.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label">Property c</span>
+                            <h4>✅ Correlated with Ability</h4>
+                            <p>If we want redistribution, we need the tax base to be positively correlated with economic productivity so that we tax the able to give to the less able.</p>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper" style="margin-top: 1.5rem;">
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Tax Base</th>
+                                    <th>Exogenous (a)</th>
+                                    <th>Observable (b)</th>
+                                    <th>Correlated with Ability (c)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Height</strong></td>
+                                    <td>✅ Very good — you cannot change your height</td>
+                                    <td>✅ Very good — measured objectively with a ruler</td>
+                                    <td>✅ Works empirically — taller people earn more on average</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Income</strong></td>
+                                    <td>❌ Not OK — income = productivity × effort → effort is chosen, creating DWL</td>
+                                    <td>❌ Not OK — shadow economy, self-employment → systematic underreporting</td>
+                                    <td>✅ The best we have — strongly correlated with ability and productivity</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem; border-left: 4px solid #EF4444;">
+                        <span class="def-label" style="background: #EF4444;">Mankiw &amp; Weinzierl's Finding</span>
+                        <p>The mathematics of the Mirrlees model actually works for height. The optimal height tax would be substantial:</p>
+                        <p style="text-align: center; font-size: 1.05rem; margin: 1rem 0;"><span class="fluo">"A tall person earning $50,000 should pay about $4,500 more in taxes than a short person earning the same income."</span></p>
+                        <p style="text-align: right; font-size: 0.85rem; color: var(--clr-text-muted);">— Mankiw &amp; Weinzierl (2010)</p>
+                        <p>Height satisfies all three properties better than income on two of three dimensions. If the theoretical framework is correct, we should be seriously considering taxing height.</p>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">But of course, virtually no one supports a height tax. Mankiw and Weinzierl use this paradox to provoke a deeper question: <span class="fluo">what does our intuitive rejection reveal?</span> They propose two possible interpretations:</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label">Interpretation 1</span>
+                            <h4>✅ We Should Tax More Such Things</h4>
+                            <p>If we are consistent with the theory, perhaps we <em>should</em> tax other exogenous, observable, productivity-correlated characteristics — or at least consider them. This points toward taxes based on genetic predispositions, family background, innate ability, or inherited wealth (which are also exogenous and correlated with income).</p>
+                            <p class="example">This is actually the implicit logic behind wealth taxes and inheritance taxes — taxing something partially exogenous rather than earned income.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #EF4444;">
+                            <span class="card-label">Interpretation 2</span>
+                            <h4>🤔 The Theory Fails to Capture Distributive Justice</h4>
+                            <p>Perhaps our strong intuitive rejection of the height tax reveals that <span class="fluo">the utilitarian/Mirrlees framework misses something fundamental about distributive justice</span>. Our moral intuitions may require that tax burdens be connected to choices and outcomes (income earned), not to unchosen characteristics (physical traits). This connects to libertarian and Kantian critiques of purely welfarist optimal tax theory.</p>
+                        </div>
+                    </div>
+
+                    <div class="exam-tip">
+                        <p><strong>For the exam:</strong> The height tax is not just a curiosity — it is a stress test for optimal tax theory. Know the three properties (exogenous, observable, ability-correlated), know how height and income compare on each dimension, and be prepared to discuss both interpretations of the paradox. This is an excellent discussion question because it connects positive theory (what the model implies) to normative philosophy (what our intuitions require).</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- ═══════ GRAND CONCLUSION ═══════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Chapter 10 — Grand Conclusion: A Short Guide to Optimal Rates</h2>
+
+                    <p>After Mirrlees, Saez, and the empirical literature, we have a comprehensive framework for thinking about optimal tax rates. Three key factors determine the estimated optimal top marginal rate $t^*$:</p>
+
+                    <div class="compare-grid three-col">
+                        <div class="compare-card" style="border-left: 4px solid #2563EB;">
+                            <span class="card-label">Factor 1</span>
+                            <h4>📉 Elasticity</h4>
+                            <p>Lower elasticity of taxable income → <span class="fluo">higher optimal rate</span>. If high earners cannot avoid the tax (no evasion, no emigration), there is less behavioral cost to taxing them heavily.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #8B5CF6;">
+                            <span class="card-label">Factor 2</span>
+                            <h4>📊 Distribution</h4>
+                            <p>More inequality (thicker right tail of income distribution) → <span class="fluo">higher optimal rate</span>. There is more revenue to gain from the rich, and more redistribution is socially desirable.</p>
+                        </div>
+                        <div class="compare-card" style="border-left: 4px solid #10B981;">
+                            <span class="card-label">Factor 3</span>
+                            <h4>⚖️ Social Welfare Function</h4>
+                            <p>More Rawlsian or more pro-poor SWF → <span class="fluo">higher optimal rate</span>. Caring more strongly about the worst-off justifies more redistribution from the top.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box" style="margin-top: 1.5rem;">
+                        <span class="def-label">Optimal Rates: Summary across Contexts</span>
+                        <div class="table-wrapper" style="margin-top: 0.75rem;">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>Study</th>
+                                        <th>Context</th>
+                                        <th>Estimated Optimal Top Rate</th>
+                                        <th>Key Drivers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Saez (2001)</td>
+                                        <td>United States</td>
+                                        <td><span class="fluo">50–80%</span></td>
+                                        <td>High inequality, moderate elasticity, mixed SWF</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dušek &amp; Šatava (2015)</td>
+                                        <td>Czechia — Employees</td>
+                                        <td><span class="fluo">33–43%</span></td>
+                                        <td>Lower inequality, higher elasticity for Czech context</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dušek &amp; Šatava (2015)</td>
+                                        <td>Czechia — Entrepreneurs</td>
+                                        <td><span class="fluo">Lower than employees</span></td>
+                                        <td>Much higher evasion elasticity; income shifting is easy</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="alert-box alert-blue" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">🎯</span>
+                        <span><strong>The Meta-Lesson of Chapter 10:</strong> Optimal taxation is a rigorous cost-benefit framework that converts political debate into structured analysis. It shows that the "right" tax rate depends on empirical facts (elasticities, income distribution) <em>and</em> value judgments (SWF). You cannot answer the normative question without specifying both inputs. This is why the debate never ends — different countries, different inequality levels, different political philosophies, and different estimated elasticities all lead to different optimal rates. <span class="fluo">Economics can clarify the trade-offs; it cannot choose your values for you.</span></span>
+                    </div>
+                </section>
+
+                <!-- ═══════ POST-IT NOTE ═══════ -->
+                <section style="margin-top: 3rem; position: relative; padding-bottom: 2rem;">
+                    <button class="btn-note" onclick="toggleNote('note-ch10-4')">
+                        <span class="note-icon">📝</span> Key Summary
+                    </button>
+
+                    <div id="note-ch10-4" class="post-it-note">
+                        <p><strong>Chapter 10.4 — The Big Picture:</strong></p>
+                        <ul>
+                            <li><strong>Budget constraint:</strong> Slope = $1 - T'(z)$ (marginal rate). Intercept = benefit for zero-income. Captures both redistribution and distortion simultaneously.</li>
+                            <li><strong>Lower tail problem:</strong> Means-testing creates high effective marginal rates (poverty trap). UBI solves this but is expensive. Must be financed by progressive income tax (or robot tax).</li>
+                            <li><strong>Tax evasion:</strong> Third-party reporting (employment) → low evasion. Self-employment → high evasion. Bunching at kinks = behavioral evidence. Shadow economy = GDP-significant informal activity.</li>
+                            <li><strong>Height tax (Mankiw &amp; Weinzierl, 2010):</strong> Ideal tax base = exogenous + observable + correlated with ability. Height scores better than income on (a) and (b). Math works. We reject it intuitively → two interpretations: tax more characteristics, OR theory fails to capture distributive justice.</li>
+                            <li><strong>Three factors for optimal rate:</strong> Low elasticity → higher rate. High inequality → higher rate. Rawlsian SWF → higher rate.</li>
+                            <li><strong>Meta-lesson:</strong> Economics structures the debate; it cannot choose your values. Optimal rate depends on empirical inputs AND ethical commitments.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
