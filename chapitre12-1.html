@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Tax Evasion Theory & Enforcement</title>
+    <meta name="description"
+        content="Revision notes on Tax Evasion: The A-S Model, Tax Morale, the Tax Gap, and Enforcement Strategies.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+            <nav class="sidebar-nav">
+                <!-- Temporary placeholder to be updated by python script -->
+                <aside class="sidebar"></aside>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.12 — TAX EVASION & SECRECY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre12-1.html" class="nav-link active">12.1 Evasion Theory & Enforcement</a>
+                        <a href="chapitre12-2.html" class="nav-link">12.2 Offshore Wealth & Final Lessons</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Sidebar Toggle -->
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>12.1 — Tax Evasion Theory & Enforcement</h1>
+                <p class="subtitle">Chapter 12: Tax Evasion — Why people cheat and how to stop them</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: MECHANICS OF EVASION
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Mechanics of Tax Evasion</h2>
+
+                    <div class="alert-box alert-blue">
+                        <span class="alert-icon">💡</span>
+                        <span><em>"The difference between tax avoidance and tax evasion is the thickness of a prison wall."</em> Avoidance is legal optimization; <strong>evasion is illegal fraud</strong>.</span>
+                    </div>
+
+                    <p>Mathematically: <span class="fluo">Tax Paid = Tax Base × Tax Rate</span></p>
+                    <p>Therefore, there are only two ways to illegally evade taxes:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Lowering the Tax Base</strong>
+                            <p>This means hiding the money you make. You can do this by not declaring income, underreporting sales (e.g., cash businesses), or artificially inflating deductible expenses so the final "profit" looks smaller.</p>
+                        </li>
+                        <li>
+                            <strong>Lowering the Tax Rate</strong>
+                            <p>This means lying about the <em>nature</em> of the money. For example, misclassifying income as a different type that benefits from a lower tax bracket, or relocating the tax base to a hidden account.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: WHY EVADE? A-S MODEL
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Why Evade? The Allingham-Sandmo (A-S) Model</h2>
+
+                    <p>Economists originally viewed tax evasion purely as a math problem: a gamble. The <strong>Allingham-Sandmo (A-S) Model</strong> models the taxpayer as a rational actor weighing costs and benefits.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <span class="card-label">The Benefit</span>
+                            <h4>💰 Keeping the Money</h4>
+                            <p>The money saved by not paying the tax. This depends heavily on a person's risk tolerance.</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label">The Cost</span>
+                            <h4>🚔 Detection & Penalties</h4>
+                            <p>The probability of getting caught (audit rate) multiplied by the severity of the financial penalty or jail time.</p>
+                        </div>
+                    </div>
+
+                    <p><strong>The fatal flaw of the A-S Model:</strong> If we plug real-world audit rates (which are very low) and penalties into this formula, <span class="fluo">the model predicts that almost everyone should evade taxes.</span> Yet, in reality, most people comply. <em>Why?</em></p>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: TAX MORALE & NUDGES
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Tax Morale & Behavioral Nudges</h2>
+
+                    <p>Because the math alone doesn't explain compliance, economists introduced the concept of <strong>Tax Morale</strong>. This is the intrinsic motivation to pay taxes, independent of the fear of getting caught.</p>
+
+                    <p>Key drivers of Tax Morale include:</p>
+                    <ul>
+                        <li><strong>Trust & Fairness:</strong> Believing the system is fair and the government uses money well.</li>
+                        <li><strong>Reciprocity:</strong> "I pay taxes because I get good schools and hospitals in return."</li>
+                        <li><strong>Social Norms:</strong> "I pay because everyone else around me pays."</li>
+                    </ul>
+
+                    <h3 class="subsection-title mt-2">Nudging Compliance</h3>
+                    <p>Governments use behavioral economics to boost morale without expensive audits:</p>
+                    <ul>
+                        <li><strong>Social Norm Messages:</strong> Sending letters saying <em>"9 out of 10 people in your town pay on time."</em> This significantly increases payment rates.</li>
+                        <li><strong>Simplification:</strong> Pre-filling tax returns using data the government already has. If the form is easy and already filled, evasion drops massively.</li>
+                    </ul>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: THE TAX GAP & ENFORCEMENT
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Tax Gap & Third-Party Reporting</h2>
+
+                    <div class="definition-box">
+                        <span class="def-label">The Tax Gap</span>
+                        <p>The difference between the theoretical tax that <em>should</em> be collected and what is <em>actually</em> collected. It consists of three parts: <strong>Non-filing</strong> (not sending the form), <strong>Underreporting</strong> (lying on the form), and <strong>Underpayment</strong> (sending the form but not paying the bill).</p>
+                    </div>
+
+                    <p>How do we close this gap? The Danish Audit Experiment (Kleven et al.) proved a fundamental truth: <strong>Audits have very little effect on wage earners, but a huge effect on the self-employed.</strong> Why? Because of <span class="fluo">Third-Party Reporting</span>.</p>
+
+                    <div class="exam-tip">
+                        <p><strong>Crucial Insight for Exams:</strong> Third-party reporting changes the game. If your employer or bank reports your income directly to the government, <em>evasion is virtually impossible</em>. The A-S Model's "gamble" only applies to self-reported income (like cash businesses). <br><br><strong>Policy Lesson:</strong> Expanding third-party reporting (or digital tracing, like the VAT invoice trail or electronic cash registers) is far more effective at stopping evasion than simply hiring more auditors.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: BORDER EVASION (UGANDA)
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Border Evasion & Physical Enforcement</h2>
+
+                    <p>Evasion isn't just about income; it happens heavily at borders with trade taxes. To pay less duty, importers manipulate the formula (<em>Paid = Quantity × Unit Value × Rate</em>):</p>
+
+                    <ul>
+                        <li><strong>Quantity Manipulation:</strong> Claiming the container has fewer goods.</li>
+                        <li><strong>Unit Value Manipulation:</strong> Claiming the goods were extremely cheap.</li>
+                        <li><strong>Misclassification:</strong> Claiming the goods are a different category that faces a lower tax rate.</li>
+                    </ul>
+
+                    <p><strong>The Uganda Scanners Example:</strong> When Uganda installed x-ray scanners at borders, quantity manipulation and misclassification dropped massively (because the machine sees what is inside). However, the machine cannot read the "price" of a good, so <em>unit value manipulation</em> became the remaining loophole. <br><br>
+                    <strong>Lesson:</strong> When you shut down one evasion channel, firms will shift their efforts to the remaining open channels (spillover effects).</p>
+                </section>
+
+            </div>
+        </main>
+        <!-- ================= END MAIN CONTENT ================= -->
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
