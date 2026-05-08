@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances Publiques — Corporate Decisions & Profit Shifting</title>
+    <meta name="description"
+        content="Revision notes on Tax Avoidance: How corporate decisions, debt shifting, and transfer mispricing lead to profit shifting.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+
+                <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon">🏛️</span>
+                <span>Finances Publiques</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <!-- Chapter 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📂</span> CH.1 — INTRODUCTION
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="index.html" class="nav-link">1.1 What Is Public Finance?</a>
+                        <a href="chapitre1-2.html" class="nav-link">1.2 The Economic Problem & Government</a>
+                        <a href="chapitre1-3.html" class="nav-link">1.3 Market Failures & Intervention</a>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.2 — INEQUALITY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre2-1.html" class="nav-link">2.1 Why Inequality & Theory</a>
+                        <a href="chapitre2-2.html" class="nav-link">2.2 Measuring Inequality</a>
+                        <a href="chapitre2-3.html" class="nav-link">2.3 Global Inequality</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.3 — FISCAL-MONETARY NEXUS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre3-1.html" class="nav-link">3.1 Fiscal Dominance</a>
+                        <a href="chapitre3-2.html" class="nav-link">3.2 The Czech Case</a>
+                        <a href="chapitre3-3.html" class="nav-link">3.3 Smart Expenditure</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.4 — PUBLIC GOODS & EXTERNALITIES
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre4-1.html" class="nav-link">4.1 Public Goods</a>
+                        <a href="chapitre4-2.html" class="nav-link">4.2 Externalities</a>
+                        <a href="chapitre4-3.html" class="nav-link">4.3 Internalizing Externalities</a>
+                        <a href="chapitre4-4.html" class="nav-link">4.4 Protecting the Environment</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.5 — CENTRAL & LOCAL GOVERNMENT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre5-1.html" class="nav-link">5.1 Role & Pressures</a>
+                        <a href="chapitre5-2.html" class="nav-link">5.2 PFM & Budgeting</a>
+                        <a href="chapitre5-3.html" class="nav-link">5.3 Fiscal Federalism & Innovation</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.6 — OLD-AGE PENSIONS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre6-1.html" class="nav-link">6.1 Pension Basics</a>
+                        <a href="chapitre6-2.html" class="nav-link">6.2 The Demographic Challenge</a>
+                        <a href="chapitre6-3.html" class="nav-link">6.3 PAYG vs. Funded Systems</a>
+                        <a href="chapitre6-4.html" class="nav-link">6.4 Aaron's Rule</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.7 — HEALTH ECONOMICS
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre7-1.html" class="nav-link">7.1 The Grossman Model</a>
+                        <a href="chapitre7-2.html" class="nav-link">7.2 Insurance Economics</a>
+                        <a href="chapitre7-3.html" class="nav-link">7.3 Healthcare Systems</a>
+                        <a href="chapitre7-4.html" class="nav-link">7.4 Aging, Costs & Policy</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.8 — PUBLIC CHOICE THEORY
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre8-1.html" class="nav-link">8.1 Political Economy & Preferences</a>
+                        <a href="chapitre8-2.html" class="nav-link">8.2 Voting Systems & Arrow</a>
+                        <a href="chapitre8-3.html" class="nav-link">8.3 Votes into Mandates</a>
+                        <a href="chapitre8-4.html" class="nav-link">8.4 Power & Political Corruption</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.9 — TAXATION & TAX INCIDENCE
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre9-1.html" class="nav-link">9.1 Why Tax? The Five Rs</a>
+                        <a href="chapitre9-2.html" class="nav-link">9.2 Efficiency & Deadweight Loss</a>
+                        <a href="chapitre9-3.html" class="nav-link">9.3 Equity & Progressivity</a>
+                        <a href="chapitre9-4.html" class="nav-link">9.4 Tax Incidence</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.10 — OPTIMAL TAXATION & PIT
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <a href="chapitre10-1.html" class="nav-link">10.1 Framework & Social Welfare</a>
+                        <a href="chapitre10-2.html" class="nav-link">10.2 Ramsey & Commodity Taxation</a>
+                        <a href="chapitre10-3.html" class="nav-link">10.3 Taxing Income & Labor Supply</a>
+                        <a href="chapitre10-4.html" class="nav-link">10.4 UBI, Evasion & Taxing Height</a>
+                    </div>
+                </div>
+                <div class="accordion-item active">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="folder-icon">📁</span> CH.11 — TAX AVOIDANCE
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="accordion-content show">
+                        <a href="chapitre11-1.html" class="nav-link active">11.1 Profit Shifting</a>
+                        <a href="chapitre11-2.html" class="nav-link">11.2 International Reforms</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+            </nav>
+        </aside>
+
+        <!-- Sidebar Toggle -->
+        <button class="sidebar-toggle" onclick="toggleSidebar()">✕</button>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>11.1 — Corporate Decisions & Profit Shifting</h1>
+                <p class="subtitle">Chapter 11: Tax Avoidance — How Taxes Shape Firm Behavior</p>
+            </header>
+
+            <div class="cards-container">
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: WHAT FIRMS ACTUALLY DO
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">What Firms Actually Do</h2>
+
+                    <p>A firm is not just a "machine that produces goods." A firm constantly makes strategic decisions, and <strong>taxation influences almost all of them</strong>. Taxes are not simply a cut of the profits; they directly modify corporate behavior.</p>
+
+                    <p>The course identifies four major decisions influenced by taxes:</p>
+                    <ol class="numbered-explanation">
+                        <li><strong>Where and in what form to incorporate?</strong> (Location & Legal Structure)</li>
+                        <li><strong>How to finance the firm?</strong> (Debt vs. Equity)</li>
+                        <li><strong>How much to invest?</strong> (Capital Allocation)</li>
+                        <li><strong>How to redistribute profits?</strong> (Dividends vs. Share Buybacks)</li>
+                    </ol>
+
+                    <p>For example, if Country A taxes at 30% and Country B at 10%, a multinational corporation (MNC) might choose to place specific activities, declare profits, or locate its legal headquarters in Country B. This is the root cause of <span class="fluo">international tax competition</span> and the use of tax havens.</p>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: DEBT VS EQUITY & DEBT SHIFTING
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Financing Decisions: Debt vs. Equity</h2>
+
+                    <p>Firms need capital to operate, which they can raise through <strong>Debt</strong> (borrowing) or <strong>Equity</strong> (issuing shares). The tax system treats these two very differently, creating a major distortion.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <span class="card-label">Debt Financing</span>
+                            <h4>💸 Borrowing</h4>
+                            <p>Includes bank loans, bonds, or intra-group borrowing. Firms must pay interest on debt.</p>
+                            <p><strong>Crucial Tax Rule:</strong> <span class="fluo">Interest payments are generally tax-deductible.</span> This lowers the taxable profit, meaning the firm pays less corporate tax.</p>
+                        </div>
+
+                        <div class="compare-card">
+                            <span class="card-label">Equity Financing</span>
+                            <h4>📈 Shareholders</h4>
+                            <p>Shareholders provide capital in exchange for dividends or capital gains.</p>
+                            <p><strong>Crucial Tax Rule:</strong> <span class="fluo">Dividends are NOT tax-deductible.</span> Therefore, the tax system artificially favors debt over equity.</p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <span class="def-label">Debt Shifting</span>
+                        <p>This tax advantage leads to a central mechanism of profit shifting: <strong>Debt Shifting</strong>. <br><br>
+                        Imagine a high-tax subsidiary and a tax-haven subsidiary. The tax-haven subsidiary <em>lends</em> money to the high-tax subsidiary. The high-tax subsidiary pays interest, which <span class="fluo">reduces its local taxable profit</span>, while the interest income flows into the tax haven, where it is lightly taxed.</p>
+                    </div>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: INVESTMENT DECISIONS
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Investment Decisions & Depreciation</h2>
+
+                    <p>Taxes also influence how much a firm invests in machines, software, and R&D. When a firm buys a machine, it rarely deducts the entire cost immediately. Instead, governments use depreciation rules.</p>
+
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <span class="card-label">Economic Depreciation</span>
+                            <h4>📉 Gradual Deduction</h4>
+                            <p>The cost is spread over the asset's useful life (e.g., deducting 10% per year for 10 years). The tax benefit is delayed.</p>
+                        </div>
+
+                        <div class="compare-card">
+                            <span class="card-label">Expensing</span>
+                            <h4>⚡ Immediate Deduction</h4>
+                            <p>The firm deducts the <em>entire</em> cost in the year of purchase. Because money today is worth more than money tomorrow, expensing is much more advantageous.</p>
+                        </div>
+                    </div>
+
+                    <p>Governments often manipulate depreciation rules rather than the statutory corporate tax rate to stimulate investment. Why? Because a general tax cut benefits all profits (even those from past investments), whereas accelerated depreciation or <strong>R&D Tax Credits</strong> specifically target and reward <em>new</em> investments.</p>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: THE THREE CHANNELS
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">The Three Channels of Profit Shifting</h2>
+
+                    <p>You must absolutely understand the three main channels MNCs use to shift profits to low-tax jurisdictions:</p>
+
+                    <ol class="numbered-explanation">
+                        <li>
+                            <strong>Transfer Mispricing</strong>
+                            <p>MNCs consist of multiple subsidiaries that trade with each other. The prices they charge each other are called <em>transfer prices</em>. If these prices are artificially manipulated, it becomes <strong>transfer mispricing</strong>.</p>
+                            <p class="example"><strong>The Starbucks Example:</strong> A local café sells coffee for €3. Cost is €2. Without optimization, the taxable profit is €1. However, the café pays a €1 "royalty" to a Swiss subsidiary to use the Starbucks brand. The local taxable profit drops to €0, and the €1 profit is shifted to Switzerland.</p>
+                        </li>
+                        <li>
+                            <strong>Debt Shifting</strong>
+                            <p>As explained above, using intra-group loans to strip profits out of high-tax countries via deductible interest payments.</p>
+                        </li>
+                        <li>
+                            <strong>Intangible Assets & Patent Boxes</strong>
+                            <p>Unlike a physical factory, intangible assets (algorithms, brands, patents, logos) are extremely easy to move legally. Firms locate these assets in tax havens or countries with a <strong>Patent Box</strong> (a highly advantageous tax regime for IP revenue). Other subsidiaries then pay massive royalties to the tax haven.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: PAPER PROFIT SHIFTING & TAX GAP
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Paper Profit Shifting & The Tax Gap</h2>
+
+                    <div class="alert-box alert-blue">
+                        <span class="alert-icon">💡</span>
+                        <span><strong>Crucial Concept: Paper Profit Shifting.</strong> The core issue is that profits move, but the <em>real economic activity</em> does not. A subsidiary in Bermuda might declare billions in profit with only 20 employees and no physical factories. The profits on paper completely disconnect from the actual productive substance.</span>
+                    </div>
+
+                    <p>Certain countries act as major hubs (e.g., Ireland). They offer low taxation and favorable rules for IP, attracting massive amounts of corporate profits. This heavily distorts macroeconomic statistics, making these countries look artificially wealthy compared to their true domestic activity.</p>
+
+                    <div class="definition-box">
+                        <span class="def-label">The Tax Gap</span>
+                        <p>The difference between what governments <em>should theoretically collect</em> and what they <em>actually collect</em>. Estimates suggest hundreds of billions of dollars are lost globally.</p>
+                    </div>
+
+                    <p>While developed nations lose significant revenue in absolute terms, <strong>developing countries are often the most vulnerable</strong>. They rely more heavily on corporate tax revenue and lack the administrative resources to fight aggressive optimization, worsening global inequality.</p>
+                </section>
+
+                <!-- ═══════════════════════════════════════
+                     SECTION: INCIDENCE & AVOIDANCE
+                     ═══════════════════════════════════════ -->
+                <section class="content-card">
+                    <h2 class="section-title">Corporate Tax Incidence & Avoidance vs. Evasion</h2>
+
+                    <p><strong>Who really pays the corporate tax?</strong> It is not just the shareholders. The burden (incidence) can fall on:</p>
+                    <ul>
+                        <li><strong>Workers:</strong> If taxes reduce investment, productivity falls, leading to lower wages.</li>
+                        <li><strong>Consumers:</strong> Firms may pass the tax burden on by raising prices.</li>
+                    </ul>
+                    <p>Measuring this empirically is extremely difficult because many other macroeconomic factors affect wages and prices.</p>
+
+                    <h3 class="subsection-title mt-2">Tax Avoidance vs. Tax Evasion</h3>
+                    <div class="compare-grid">
+                        <div class="compare-card">
+                            <span class="card-label">Tax Avoidance</span>
+                            <h4>⚖️ Legal Optimization</h4>
+                            <p>Using legal loopholes, complex structures, and the mismatch between national systems to minimize tax. This is often an aggressive but legal "gray area".</p>
+                        </div>
+                        <div class="compare-card">
+                            <span class="card-label">Tax Evasion</span>
+                            <h4>🚨 Illegal Fraud</h4>
+                            <p>Deliberately hiding income, using fake documents, or maintaining undeclared offshore accounts.</p>
+                        </div>
+                    </div>
+
+                    <p>MNCs have a massive strategic advantage over domestic firms because they can exploit tax avoidance across multiple jurisdictions—something local businesses simply cannot do. This leads to empirical phenomena like <strong>Bunching</strong>, where firms artificially report profits just below a threshold where a higher tax rate would apply.</p>
+                </section>
+
+            </div>
+        </main>
+        <!-- ================= END MAIN CONTENT ================= -->
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
